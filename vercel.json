@@ -2,7 +2,7 @@
   "version": 2,
   "buildCommand": "npm run build",
   "outputDirectory": ".next",
-  "installCommand": "npm install --legacy-peer-deps",
+  "installCommand": "npm run vercel-install",
   "framework": "nextjs",
   "routes": [
     {
