@@ -1,0 +1,353 @@
+Starting Nmap 7.80 ( https://nmap.org ) at 2025-04-25 20:05 W. Central Africa Standard Time
+Stats: 0:00:11 elapsed; 0 hosts completed (0 up), 0 undergoing Script Pre-Scan
+NSE Timing: About 0.00% done
+Nmap scan report for stampduty.gov.ng (68.169.48.235)
+Host is up (0.61s latency).
+Not shown: 983 closed ports
+PORT     STATE    SERVICE      VERSION
+21/tcp   open     ftp          ProFTPD or KnFTPD
+| ssl-cert: Subject: commonName=example.com/organizationName=XX/stateOrProvinceName=XX/countryName=XX
+| Not valid before: 2016-12-08T22:24:01
+|_Not valid after:  2026-12-06T22:24:01
+22/tcp   open     ssh          OpenSSH 7.4 (protocol 2.0)
+| ssh-hostkey: 
+|   2048 54:36:53:3e:1e:3a:98:7b:95:a9:2e:d3:da:05:13:e2 (RSA)
+|   256 e0:fe:ad:d6:db:30:cd:04:7d:dc:cf:f3:7f:a6:75:1c (ECDSA)
+|_  256 40:2f:fd:14:b4:11:0c:14:76:0c:c9:87:fc:dd:c7:49 (ED25519)
+25/tcp   filtered smtp
+53/tcp   open     domain       ISC BIND 9.11.4-P2 (RedHat Enterprise Linux 7)
+| dns-nsid: 
+|_  bind.version: 9.11.4-P2-RedHat-9.11.4-26.P2.el7_9.9
+80/tcp   open     http         Apache httpd 2.4.6 ((CentOS) OpenSSL/1.0.2k-fips mod_fcgid/2.3.9 PHP/5.6.31 mod_jk/1.2.42)
+|_http-server-header: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips mod_fcgid/2.3.9 PHP/5.6.31 mod_jk/1.2.42
+|_http-title: Did not follow redirect to https://www.stampduty.gov.ng/
+110/tcp  open     pop3         Dovecot pop3d
+|_pop3-capabilities: TOP SASL(PLAIN LOGIN DIGEST-MD5 CRAM-MD5) AUTH-RESP-CODE USER UIDL RESP-CODES STLS CAPA PIPELINING
+| ssl-cert: Subject: commonName=www.stampduty.gov.ng
+| Subject Alternative Name: DNS:www.stampduty.gov.ng, DNS:stampduty.gov.ng
+| Not valid before: 2020-06-03T00:00:00
+|_Not valid after:  2021-06-25T12:00:00
+|_ssl-date: TLS randomness does not represent time
+143/tcp  open     imap         Dovecot imapd
+|_imap-capabilities: LITERAL+ STARTTLS Pre-login AUTH=LOGIN OK AUTH=DIGEST-MD5 listed AUTH=PLAIN ID AUTH=CRAM-MD5A0001 more IDLE IMAP4rev1 have SASL-IR capabilities LOGIN-REFERRALS post-login ENABLE
+| ssl-cert: Subject: commonName=www.stampduty.gov.ng
+| Subject Alternative Name: DNS:www.stampduty.gov.ng, DNS:stampduty.gov.ng
+| Not valid before: 2020-06-03T00:00:00
+|_Not valid after:  2021-06-25T12:00:00
+|_ssl-date: TLS randomness does not represent time
+161/tcp  filtered snmp
+443/tcp  open     ssl/ssl      Apache httpd (SSL-only mode)
+| http-methods: 
+|_  Potentially risky methods: PUT DELETE PATCH
+|_http-server-header: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips mod_fcgid/2.3.9 PHP/5.6.31 mod_jk/1.2.42
+|_http-title:  Stamp Duty - stampduty.gov.ng
+| ssl-cert: Subject: commonName=www.stampduty.gov.ng
+| Subject Alternative Name: DNS:www.stampduty.gov.ng, DNS:stampduty.gov.ng
+| Not valid before: 2024-05-20T00:00:00
+|_Not valid after:  2025-05-19T23:59:59
+|_ssl-date: TLS randomness does not represent time
+465/tcp  open     ssl/smtp     Exim smtpd 4.92.2
+| smtp-commands: web1.oasismgt.net Hello stampduty.gov.ng [105.112.192.27], SIZE 52428800, 8BITMIME, PIPELINING, AUTH PLAIN LOGIN CRAM-MD5, CHUNKING, HELP, 
+|_ Commands supported: AUTH HELO EHLO MAIL RCPT DATA BDAT NOOP QUIT RSET HELP 
+| ssl-cert: Subject: commonName=stampduty.gov.ng
+| Subject Alternative Name: DNS:stampduty.gov.ng, DNS:www.stampduty.gov.ng
+| Not valid before: 2017-06-08T00:00:00
+|_Not valid after:  2018-06-23T23:59:59
+|_ssl-date: TLS randomness does not represent time
+587/tcp  open     smtp         Exim smtpd 4.92.2
+| smtp-commands: web1.oasismgt.net Hello stampduty.gov.ng [105.112.192.27], SIZE 52428800, 8BITMIME, PIPELINING, AUTH PLAIN LOGIN CRAM-MD5, CHUNKING, STARTTLS, HELP, 
+|_ Commands supported: AUTH STARTTLS HELO EHLO MAIL RCPT DATA BDAT NOOP QUIT RSET HELP 
+| ssl-cert: Subject: commonName=stampduty.gov.ng
+| Subject Alternative Name: DNS:stampduty.gov.ng, DNS:www.stampduty.gov.ng
+| Not valid before: 2017-06-08T00:00:00
+|_Not valid after:  2018-06-23T23:59:59
+|_ssl-date: TLS randomness does not represent time
+993/tcp  open     ssl/imap     Dovecot imapd
+|_imap-capabilities: LITERAL+ Pre-login LOGIN-REFERRALS OK AUTH=DIGEST-MD5 listed AUTH=PLAIN ID AUTH=CRAM-MD5A0001 more IDLE SASL-IR have IMAP4rev1 capabilities AUTH=LOGIN post-login ENABLE
+| ssl-cert: Subject: commonName=www.stampduty.gov.ng
+| Subject Alternative Name: DNS:www.stampduty.gov.ng, DNS:stampduty.gov.ng
+| Not valid before: 2020-06-03T00:00:00
+|_Not valid after:  2021-06-25T12:00:00
+|_ssl-date: TLS randomness does not represent time
+995/tcp  open     ssl/pop3     Dovecot pop3d
+|_pop3-capabilities: USER TOP SASL(PLAIN LOGIN DIGEST-MD5 CRAM-MD5) UIDL RESP-CODES CAPA AUTH-RESP-CODE PIPELINING
+| ssl-cert: Subject: commonName=www.stampduty.gov.ng
+| Subject Alternative Name: DNS:www.stampduty.gov.ng, DNS:stampduty.gov.ng
+| Not valid before: 2020-06-03T00:00:00
+|_Not valid after:  2021-06-25T12:00:00
+|_ssl-date: TLS randomness does not represent time
+1500/tcp open     ssl/vlsi-lm?
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.0 404 Not Found
+|     Content-Length: 6022
+|     Date: Fri, 25 Apr 2025 19:08:14 GMT
+|     <!DOCTYPE html>
+|     <html lang="en">
+|     <head>
+|     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+|     <title>404 Not Found</title>
+|     <link rel="preconnect" href="https://fonts.googleapis.com" />
+|     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+|     <link
+|     href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap"
+|     rel="stylesheet"
+|     <style>
+|     :root {
+|     --isp-c-interstellar: #1a1a1a;
+|     --isp-c-gandalf-the-grey: #e6e6e6;
+|     --isp-c-jon-snow: #ffffff;
+|     --isp-c-malewicz: #1f3347;
+|     --isp-c-mood: #4ca7ff;
+|     --isp-c-blue-velvet: #1a81e5;
+|     --isp-c-deep: #1467b8;
+|     --isp-dc-monochrome: var(--isp-c-jon-snow);
+|     --isp-dc-highway-star: var(--isp-c-malewicz);
+|     --isp-dc-fremen: va
+|   GetRequest: 
+|     HTTP/1.0 200 OK
+|     Connection: close
+|     Content-Type: text/html; charset=UTF-8
+|     Pragma: no-cache
+|     Cache-Control: no-cache
+|     Expires: 0
+|     Set-Cookie: ispmgrses5=; path=/; HttpOnly; expires=Sat, 25 Apr 2026 20:07:04 BST; Secure
+|     Set-Cookie: ispmgrlang5=dragon:en; path=/; expires=Sat, 25 Apr 2026 20:07:04 BST; Secure; HttpOnly
+|     X-Frame-Options: SAMEORIGIN
+|     Date: Fri, 25 Apr 2025 19:07:04 GMT
+|     <!DOCTYPE html><html>
+|     <head>
+|     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+|     <title>Authorization</title>
+|     <link rel="mask-icon" href="https:///manimg/common/maskicon/ispmgr.svg" color="#000000">
+|     <link rel="shortcut icon" href="/manimg/dragon/default/favicon-ispmgr.ico" type="image/x-icon">
+|     <meta name="viewport" content="width=device-width, user-scalable=no">
+|     <link rel="stylesheet" href="/manimg/dragon/default/styles.9b3b2ca394b49160.css">
+|     </head>
+|     <body class="isp-fullscreen-body">
+|     <nosc
+|   HTTPOptions: 
+|     HTTP/1.0 200 OK
+|     Content-Length: 0
+|     Date: Fri, 25 Apr 2025 19:07:06 GMT
+|   RTSPRequest: 
+|     HTTP/1.1 200 OK
+|     Content-Length: 0
+|_    Date: Fri, 25 Apr 2025 19:07:08 GMT
+| ssl-cert: Subject: commonName=69.89.0.222
+| Not valid before: 2016-12-08T22:17:59
+|_Not valid after:  2026-12-06T22:17:59
+|_ssl-date: 2025-04-25T19:12:46+00:00; +2m12s from scanner time.
+3306/tcp open     mysql        MariaDB (unauthorized)
+8080/tcp open     http-proxy
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.1 200 
+|     Set-Cookie: JSESSIONID=29F75BBB2550C545BFC747CF2AD47B56; Path=/; HttpOnly
+|     Content-Type: text/html;charset=UTF-8
+|     Content-Language: en-US
+|     Date: Fri, 25 Apr 2025 19:06:07 GMT
+|     Connection: close
+|     <!DOCTYPE html>
+|     <title> Stamp Duty - stampduty.gov.ng</title>
+|     <!DOCTYPE html>
+|     <html>
+|     <head>
+|     <meta charset="utf-8">
+|     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+|     <meta name="viewport" content="width=device-width, initial-scale=1">
+|     <meta name="description" content="Stamp Duty Made Easy"/>
+|     <meta name="author" content="FIRS"/>
+|     <meta property="og:url" content="https://www.stampduty.gov.ng"/>
+|     <meta property="og:type" content="website"/>
+|     <meta property="og:title" content="Stamp Duty Made Easy"/>
+|     <meta property="og:description" content="I just paid for my Stamp Duty using"/>
+|     <meta property="og:image" content="https://www.stampduty.
+|   HTTPOptions: 
+|     HTTP/1.1 200 
+|     Allow: GET, HEAD, POST, PUT, DELETE, OPTIONS, PATCH
+|     Content-Length: 0
+|     Date: Fri, 25 Apr 2025 19:06:10 GMT
+|     Connection: close
+|   RTSPRequest: 
+|     HTTP/1.1 505 
+|     Content-Type: text/html;charset=utf-8
+|     Content-Language: en
+|     Content-Length: 1766
+|     Date: Fri, 25 Apr 2025 19:06:11 GMT
+|     <!doctype html><html lang="en"><head><title>HTTP Status 505 
+|     HTTP Version Not Supported</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 505 
+|_    HTTP Version Not Supported</h1><hr class="line" /><p><b>Type</b> Exception Report</p><p><b>Message</b> Invalid character found in the HTTP protocol</p><p><b>Description</b> The server does not support, or refuses to support, the major version of HTTP that was used in the request message.</p><p><b>Exception</b></p><pre>java.lang.IllegalArgume
+| http-methods: 
+|_  Potentially risky methods: PUT DELETE PATCH
+|_http-title:  Stamp Duty - stampduty.gov.ng
+9090/tcp open     zeus-admin?
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 403 Forbidden
+|     Content-Type: application/json; charset=utf-8
+|     Connection: close
+|     Content-Length: 463
+|     "server_info": {
+|     "hostname": "web1.oasismgt.net",
+|     "primary_ip": "68.169.48.235"
+|     "monitoring_info": {
+|     "message_type": "ERROR",
+|     "message": "/nice%20ports%2C/Tri%6Eity.txt%2ebak is not a valid monitoring endpoint. See docs at http://stash.eapps.com/projects/EMP/repos/eapps-monitoring-plugins/browse/README.md.",
+|     "http_response_code": "403",
+|     "datetime": "25 April 2025 20:07:53 BST"
+|     "http_request": "GET /nice%20ports%2C/Tri%6Eity.txt%2ebak HTTP/1.0"
+|   GetRequest: 
+|     HTTP/1.1 403 Forbidden
+|     Content-Type: application/json; charset=utf-8
+|     Connection: close
+|     Content-Length: 393
+|     "server_info": {
+|     "hostname": "web1.oasismgt.net",
+|     "primary_ip": "68.169.48.235"
+|     "monitoring_info": {
+|     "message_type": "ERROR",
+|     "message": "/ is not a valid monitoring endpoint. See docs at http://stash.eapps.com/projects/EMP/repos/eapps-monitoring-plugins/browse/README.md.",
+|     "http_response_code": "403",
+|     "datetime": "25 April 2025 20:06:06 BST"
+|_    "http_request": "GET / HTTP/1.0"
+3 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port1500-TCP:V=7.80%T=SSL%I=7%D=4/25%Time=680BDD52%P=i686-pc-windows-wi
+SF:ndows%r(GetRequest,1E7E,"HTTP/1\.0\x20200\x20OK\r\nConnection:\x20close
+SF:\r\nContent-Type:\x20text/html;\x20charset=UTF-8\r\nPragma:\x20no-cache
+SF:\r\nCache-Control:\x20no-cache\r\nExpires:\x200\r\nSet-Cookie:\x20ispmg
+SF:rses5=;\x20path=/;\x20HttpOnly;\x20expires=Sat,\x2025\x20Apr\x202026\x2
+SF:020:07:04\x20BST;\x20Secure\r\nSet-Cookie:\x20ispmgrlang5=dragon:en;\x2
+SF:0path=/;\x20expires=Sat,\x2025\x20Apr\x202026\x2020:07:04\x20BST;\x20Se
+SF:cure;\x20HttpOnly\r\nX-Frame-Options:\x20SAMEORIGIN\r\nDate:\x20Fri,\x2
+SF:025\x20Apr\x202025\x2019:07:04\x20GMT\r\n\r\n<!DOCTYPE\x20html><html>\n
+SF:<head>\n<meta\x20http-equiv=\"Content-Type\"\x20content=\"text/html;\x2
+SF:0charset=UTF-8\">\n<title>Authorization</title>\n<link\x20rel=\"mask-ic
+SF:on\"\x20href=\"https:///manimg/common/maskicon/ispmgr\.svg\"\x20color=\
+SF:"#000000\">\n<link\x20rel=\"shortcut\x20icon\"\x20href=\"/manimg/dragon
+SF:/default/favicon-ispmgr\.ico\"\x20type=\"image/x-icon\">\n<meta\x20name
+SF:=\"viewport\"\x20content=\"width=device-width,\x20user-scalable=no\">\n
+SF:<link\x20rel=\"stylesheet\"\x20href=\"/manimg/dragon/default/styles\.9b
+SF:3b2ca394b49160\.css\">\n</head>\n<body\x20class=\"isp-fullscreen-body\"
+SF:>\n<nosc")%r(HTTPOptions,4B,"HTTP/1\.0\x20200\x20OK\r\nContent-Length:\
+SF:x200\r\nDate:\x20Fri,\x2025\x20Apr\x202025\x2019:07:06\x20GMT\r\n\r\n")
+SF:%r(RTSPRequest,4B,"HTTP/1\.1\x20200\x20OK\r\nContent-Length:\x200\r\nDa
+SF:te:\x20Fri,\x2025\x20Apr\x202025\x2019:07:08\x20GMT\r\n\r\n")%r(FourOhF
+SF:ourRequest,17DB,"HTTP/1\.0\x20404\x20Not\x20Found\r\nContent-Length:\x2
+SF:06022\r\nDate:\x20Fri,\x2025\x20Apr\x202025\x2019:08:14\x20GMT\r\n\r\n<
+SF:!DOCTYPE\x20html>\n<html\x20lang=\"en\">\n\x20\x20<head>\n\x20\x20\x20\
+SF:x20<meta\x20http-equiv=\"Content-Type\"\x20content=\"text/html;\x20char
+SF:set=UTF-8\"\x20/>\n\x20\x20\x20\x20<title>404\x20Not\x20Found</title>\n
+SF:\x20\x20\x20\x20<link\x20rel=\"preconnect\"\x20href=\"https://fonts\.go
+SF:ogleapis\.com\"\x20/>\n\x20\x20\x20\x20<link\x20rel=\"preconnect\"\x20h
+SF:ref=\"https://fonts\.gstatic\.com\"\x20crossorigin\x20/>\n\x20\x20\x20\
+SF:x20<link\n\x20\x20\x20\x20\x20\x20href=\"https://fonts\.googleapis\.com
+SF:/css2\?family=Ubuntu&display=swap\"\n\x20\x20\x20\x20\x20\x20rel=\"styl
+SF:esheet\"\n\x20\x20\x20\x20/>\n\x20\x20\x20\x20<style>\n\x20\x20\x20\x20
+SF:\x20\x20:root\x20{\n\x20\x20\x20\x20\x20\x20\x20\x20--isp-c-interstella
+SF:r:\x20#1a1a1a;\n\x20\x20\x20\x20\x20\x20\x20\x20--isp-c-gandalf-the-gre
+SF:y:\x20#e6e6e6;\n\x20\x20\x20\x20\x20\x20\x20\x20--isp-c-jon-snow:\x20#f
+SF:fffff;\n\x20\x20\x20\x20\x20\x20\x20\x20--isp-c-malewicz:\x20#1f3347;\n
+SF:\x20\x20\x20\x20\x20\x20\x20\x20--isp-c-mood:\x20#4ca7ff;\n\x20\x20\x20
+SF:\x20\x20\x20\x20\x20--isp-c-blue-velvet:\x20#1a81e5;\n\x20\x20\x20\x20\
+SF:x20\x20\x20\x20--isp-c-deep:\x20#1467b8;\n\x20\x20\x20\x20\x20\x20\x20\
+SF:x20--isp-dc-monochrome:\x20var\(--isp-c-jon-snow\);\n\x20\x20\x20\x20\x
+SF:20\x20\x20\x20--isp-dc-highway-star:\x20var\(--isp-c-malewicz\);\n\x20\
+SF:x20\x20\x20\x20\x20\x20\x20--isp-dc-fremen:\x20va");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port8080-TCP:V=7.80%I=7%D=4/25%Time=680BDD19%P=i686-pc-windows-windows%
+SF:r(GetRequest,189C,"HTTP/1\.1\x20200\x20\r\nSet-Cookie:\x20JSESSIONID=29
+SF:F75BBB2550C545BFC747CF2AD47B56;\x20Path=/;\x20HttpOnly\r\nContent-Type:
+SF:\x20text/html;charset=UTF-8\r\nContent-Language:\x20en-US\r\nDate:\x20F
+SF:ri,\x2025\x20Apr\x202025\x2019:06:07\x20GMT\r\nConnection:\x20close\r\n
+SF:\r\n\n\n\n\n<!DOCTYPE\x20html>\n<title>\x20Stamp\x20Duty\x20-\x20stampd
+SF:uty\.gov\.ng</title>\n\n\n\n\n<!DOCTYPE\x20html>\n<html>\n<head>\n\x20\
+SF:x20\x20\x20<meta\x20charset=\"utf-8\">\n\x20\x20\x20\x20<meta\x20http-e
+SF:quiv=\"X-UA-Compatible\"\x20content=\"IE=edge\">\n\x20\x20\x20\x20<meta
+SF:\x20name=\"viewport\"\x20content=\"width=device-width,\x20initial-scale
+SF:=1\">\n\x20\x20\x20\x20<meta\x20name=\"description\"\x20content=\"Stamp
+SF:\x20Duty\x20Made\x20Easy\"/>\n\x20\x20\x20\x20<meta\x20name=\"author\"\
+SF:x20content=\"FIRS\"/>\n\n\x20\x20\x20\x20<meta\x20property=\"og:url\"\x
+SF:20content=\"https://www\.stampduty\.gov\.ng\"/>\n\x20\x20\x20\x20<meta\
+SF:x20property=\"og:type\"\x20content=\"website\"/>\n\x20\x20\x20\x20<meta
+SF:\x20property=\"og:title\"\x20content=\"Stamp\x20Duty\x20Made\x20Easy\"/
+SF:>\n\x20\x20\x20\x20<meta\x20property=\"og:description\"\x20content=\"I\
+SF:x20just\x20paid\x20for\x20my\x20Stamp\x20Duty\x20using\"/>\n\x20\x20\x2
+SF:0\x20<meta\x20property=\"og:image\"\x20content=\"https://www\.stampduty
+SF:\.")%r(HTTPOptions,91,"HTTP/1\.1\x20200\x20\r\nAllow:\x20GET,\x20HEAD,\
+SF:x20POST,\x20PUT,\x20DELETE,\x20OPTIONS,\x20PATCH\r\nContent-Length:\x20
+SF:0\r\nDate:\x20Fri,\x2025\x20Apr\x202025\x2019:06:10\x20GMT\r\nConnectio
+SF:n:\x20close\r\n\r\n")%r(RTSPRequest,76F,"HTTP/1\.1\x20505\x20\r\nConten
+SF:t-Type:\x20text/html;charset=utf-8\r\nContent-Language:\x20en\r\nConten
+SF:t-Length:\x201766\r\nDate:\x20Fri,\x2025\x20Apr\x202025\x2019:06:11\x20
+SF:GMT\r\n\r\n<!doctype\x20html><html\x20lang=\"en\"><head><title>HTTP\x20
+SF:Status\x20505\x20\xe2\x80\x93\x20HTTP\x20Version\x20Not\x20Supported</t
+SF:itle><style\x20type=\"text/css\">body\x20{font-family:Tahoma,Arial,sans
+SF:-serif;}\x20h1,\x20h2,\x20h3,\x20b\x20{color:white;background-color:#52
+SF:5D76;}\x20h1\x20{font-size:22px;}\x20h2\x20{font-size:16px;}\x20h3\x20{
+SF:font-size:14px;}\x20p\x20{font-size:12px;}\x20a\x20{color:black;}\x20\.
+SF:line\x20{height:1px;background-color:#525D76;border:none;}</style></hea
+SF:d><body><h1>HTTP\x20Status\x20505\x20\xe2\x80\x93\x20HTTP\x20Version\x2
+SF:0Not\x20Supported</h1><hr\x20class=\"line\"\x20/><p><b>Type</b>\x20Exce
+SF:ption\x20Report</p><p><b>Message</b>\x20Invalid\x20character\x20found\x
+SF:20in\x20the\x20HTTP\x20protocol</p><p><b>Description</b>\x20The\x20serv
+SF:er\x20does\x20not\x20support,\x20or\x20refuses\x20to\x20support,\x20the
+SF:\x20major\x20version\x20of\x20HTTP\x20that\x20was\x20used\x20in\x20the\
+SF:x20request\x20message\.</p><p><b>Exception</b></p><pre>java\.lang\.Ille
+SF:galArgume");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port9090-TCP:V=7.80%I=7%D=4/25%Time=680BDD1D%P=i686-pc-windows-windows%
+SF:r(GetRequest,1FA,"HTTP/1\.1\x20403\x20Forbidden\r\nContent-Type:\x20app
+SF:lication/json;\x20charset=utf-8\r\nConnection:\x20close\r\nContent-Leng
+SF:th:\x20393\r\n\r\n{\n\"server_info\":\x20{\n\t\"hostname\":\x20\"web1\.
+SF:oasismgt\.net\",\n\t\"primary_ip\":\x20\"68\.169\.48\.235\"\n},\n\"moni
+SF:toring_info\":\x20{\n\t\"message_type\":\x20\"ERROR\",\n\t\"message\":\
+SF:x20\"/\x20is\x20not\x20a\x20valid\x20monitoring\x20endpoint\.\x20See\x2
+SF:0docs\x20at\x20http://stash\.eapps\.com/projects/EMP/repos/eapps-monito
+SF:ring-plugins/browse/README\.md\.\",\n\t\"http_response_code\":\x20\"403
+SF:\",\n\t\"datetime\":\x20\"25\x20April\x202025\x2020:06:06\x20BST\"\n},\
+SF:n\"http_request\":\x20\"GET\x20/\x20HTTP/1\.0\"\n}")%r(FourOhFourReques
+SF:t,240,"HTTP/1\.1\x20403\x20Forbidden\r\nContent-Type:\x20application/js
+SF:on;\x20charset=utf-8\r\nConnection:\x20close\r\nContent-Length:\x20463\
+SF:r\n\r\n{\n\"server_info\":\x20{\n\t\"hostname\":\x20\"web1\.oasismgt\.n
+SF:et\",\n\t\"primary_ip\":\x20\"68\.169\.48\.235\"\n},\n\"monitoring_info
+SF:\":\x20{\n\t\"message_type\":\x20\"ERROR\",\n\t\"message\":\x20\"/nice%
+SF:20ports%2C/Tri%6Eity\.txt%2ebak\x20is\x20not\x20a\x20valid\x20monitorin
+SF:g\x20endpoint\.\x20See\x20docs\x20at\x20http://stash\.eapps\.com/projec
+SF:ts/EMP/repos/eapps-monitoring-plugins/browse/README\.md\.\",\n\t\"http_
+SF:response_code\":\x20\"403\",\n\t\"datetime\":\x20\"25\x20April\x202025\
+SF:x2020:07:53\x20BST\"\n},\n\"http_request\":\x20\"GET\x20/nice%20ports%2
+SF:C/Tri%6Eity\.txt%2ebak\x20HTTP/1\.0\"\n}");
+Aggressive OS guesses: Linux 3.10 - 4.11 (92%), Linux 3.2 - 4.9 (89%), Linux 4.4 (88%), HP P2000 G3 NAS device (87%), Linux 3.13 (87%), Linux 3.13 or 4.2 (87%), Linux 3.16 - 4.6 (87%), Linux 4.1 (87%), Linux 4.10 (87%), Linux 4.2 (87%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 20 hops
+Service Info: Host: web1.oasismgt.net; OSs: Unix, Linux; CPE: cpe:/o:redhat:enterprise_linux:7
+
+Host script results:
+|_clock-skew: 2m11s
+
+TRACEROUTE (using port 111/tcp)
+HOP RTT       ADDRESS
+1   3.00 ms   192.168.43.1
+2   920.00 ms 10.92.255.252
+3   ... 4
+5   759.00 ms 172.24.240.139
+6   752.00 ms 192.168.20.2
+7   821.00 ms 125.18.236.42
+8   883.00 ms 125.18.236.41
+9   884.00 ms 116.119.36.137
+10  890.00 ms 149.14.227.1
+11  668.00 ms 130.117.2.65
+12  673.00 ms 154.54.58.174
+13  673.00 ms 149.6.184.10
+14  659.00 ms 141.101.71.91
+15  659.00 ms 162.158.213.107
+16  659.00 ms 172.71.177.54
+17  661.00 ms 172.71.240.27
+18  ...
+19  781.00 ms 192.168.249.2
+20  797.00 ms 68.169.48.235
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 349.05 seconds

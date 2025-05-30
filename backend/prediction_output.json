@@ -1,0 +1,191 @@
+﻿
+FinGuardAI - Precise Vulnerability Predictor
+================================================================================
+Analysis Date: 2025-05-17 19:34:22
+Using enhanced NVD client for reliable vulnerability data
+NVD API key found - Using higher rate limits
+
+Analyzing target: stampduty.gov.ng
+{
+  "timestamp": "2025-05-17T19:34:22.875117",
+  "results": {
+    "stampduty.gov.ng": {
+      "1_day": [
+        {
+          "technology": "Apache HTTP Server",
+          "current_version": "2.4.51",
+          "recommended_version": "2.4.57",
+          "days_until_required": 0,
+          "vulnerability_types": [
+            "Path Traversal",
+            "Authentication Bypass",
+            "Cross-Site Scripting (XSS)"
+          ],
+          "affected_cves": [
+            "CVE-2007-4723",
+            "CVE-2009-0796",
+            "CVE-2009-2299",
+            "CVE-2011-1176",
+            "CVE-2011-2688"
+          ],
+          "prediction_confidence": 1.0,
+          "detailed_recommendation": "Current Apache HTTP Server version 2.4.51 has reached end-of-life in 0 days. Upgrade to version 2.4.57 immediately to prevent security issues and ensure compliance with financial regulations."
+        },
+        {
+          "technology": "PHP",
+          "current_version": "7.4.21",
+          "recommended_version": "8.2.5",
+          "days_until_required": 0,
+          "vulnerability_types": [
+            "Unknown Vulnerability",
+            "Buffer Overflow",
+            "Denial of Service"
+          ],
+          "affected_cves": [
+            "CVE-2007-3205",
+            "CVE-2013-2220",
+            "CVE-2017-8923",
+            "CVE-2017-9118",
+            "CVE-2017-9120"
+          ],
+          "prediction_confidence": 1.0,
+          "detailed_recommendation": "Current PHP version 7.4.21 has reached end-of-life in 0 days. Upgrade to version 8.2.5 immediately to prevent security issues and ensure compliance with financial regulations."
+        },
+        {
+          "technology": "MySQL Database",
+          "current_version": "5.7.36",
+          "recommended_version": "8.0.33",
+          "days_until_required": 0,
+          "vulnerability_types": [
+            "Memory Corruption",
+            "SQL Injection",
+            "Buffer Overflow"
+          ],
+          "affected_cves": [
+            "CVE-2019-7317",
+            "CVE-2020-15358",
+            "CVE-2020-14814",
+            "CVE-2020-14830",
+            "CVE-2020-14837"
+          ],
+          "prediction_confidence": 1.0,
+          "detailed_recommendation": "Current MySQL Database version 5.7.36 has reached end-of-life in 0 days. Upgrade to version 8.0.33 immediately to prevent security issues and ensure compliance with financial regulations."
+        },
+        {
+          "technology": "OpenSSH",
+          "current_version": "8.2p1",
+          "recommended_version": "8.8p1",
+          "days_until_required": 0,
+          "vulnerability_types": [
+            "Unknown Vulnerability",
+            "Remote Code Execution",
+            "SQL Injection"
+          ],
+          "affected_cves": [
+            "CVE-2007-2768",
+            "CVE-2008-3844",
+            "CVE-2020-14145",
+            "CVE-2020-15778",
+            "CVE-2021-28041"
+          ],
+          "prediction_confidence": 1.0,
+          "detailed_recommendation": "Current OpenSSH version 8.2p1 has reached end-of-life in 0 days. Upgrade to version 8.8p1 immediately to prevent security issues and ensure compliance with financial regulations."
+        }
+      ],
+      "1_week": [],
+      "10_days": [],
+      "tech_specific": [
+        {
+          "technology": "Apache HTTP Server",
+          "current_version": "2.4.51",
+          "recommended_version": "2.4.57",
+          "days_until_required": 0,
+          "vulnerability_types": [
+            "Path Traversal",
+            "Authentication Bypass",
+            "Cross-Site Scripting (XSS)"
+          ],
+          "affected_cves": [
+            "CVE-2007-4723",
+            "CVE-2009-0796",
+            "CVE-2009-2299",
+            "CVE-2011-1176",
+            "CVE-2011-2688"
+          ],
+          "prediction_confidence": 1.0,
+          "detailed_recommendation": "Current Apache HTTP Server version 2.4.51 has reached end-of-life in 0 days. Upgrade to version 2.4.57 immediately to prevent security issues and ensure compliance with financial regulations."
+        },
+        {
+          "technology": "PHP",
+          "current_version": "7.4.21",
+          "recommended_version": "8.2.5",
+          "days_until_required": 0,
+          "vulnerability_types": [
+            "Unknown Vulnerability",
+            "Buffer Overflow",
+            "Denial of Service"
+          ],
+          "affected_cves": [
+            "CVE-2007-3205",
+            "CVE-2013-2220",
+            "CVE-2017-8923",
+            "CVE-2017-9118",
+            "CVE-2017-9120"
+          ],
+          "prediction_confidence": 1.0,
+          "detailed_recommendation": "Current PHP version 7.4.21 has reached end-of-life in 0 days. Upgrade to version 8.2.5 immediately to prevent security issues and ensure compliance with financial regulations."
+        },
+        {
+          "technology": "MySQL Database",
+          "current_version": "5.7.36",
+          "recommended_version": "8.0.33",
+          "days_until_required": 0,
+          "vulnerability_types": [
+            "Memory Corruption",
+            "SQL Injection",
+            "Buffer Overflow"
+          ],
+          "affected_cves": [
+            "CVE-2019-7317",
+            "CVE-2020-15358",
+            "CVE-2020-14814",
+            "CVE-2020-14830",
+            "CVE-2020-14837"
+          ],
+          "prediction_confidence": 1.0,
+          "detailed_recommendation": "Current MySQL Database version 5.7.36 has reached end-of-life in 0 days. Upgrade to version 8.0.33 immediately to prevent security issues and ensure compliance with financial regulations."
+        },
+        {
+          "technology": "OpenSSH",
+          "current_version": "8.2p1",
+          "recommended_version": "8.8p1",
+          "days_until_required": 0,
+          "vulnerability_types": [
+            "Unknown Vulnerability",
+            "Remote Code Execution",
+            "SQL Injection"
+          ],
+          "affected_cves": [
+            "CVE-2007-2768",
+            "CVE-2008-3844",
+            "CVE-2020-14145",
+            "CVE-2020-15778",
+            "CVE-2021-28041"
+          ],
+          "prediction_confidence": 1.0,
+          "detailed_recommendation": "Current OpenSSH version 8.2p1 has reached end-of-life in 0 days. Upgrade to version 8.8p1 immediately to prevent security issues and ensure compliance with financial regulations."
+        }
+      ],
+      "summary": {
+        "1_day_count": 4,
+        "1_week_count": 0,
+        "10_days_count": 0,
+        "total_predictions": 4,
+        "tech_specific_count": 4
+      }
+    }
+  }
+}
+
+Analysis complete. Timeframe predictions with real NVD data generated successfully.
+Full log available at: C:\Users\CYBER\Downloads\finguardai-admin (3)\backend\logs\finguard_predictor.log

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///C:/Program Files (x86)/Nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Sat May 24 22:58:44 2025 as: nmap -oX reports\\localhost_20250524_225843_vulns.xml -p 1521,6379,9443,8843,5432,443,80,8080,1433,8443,9042,3306,27017 -T2 -f -&#45;script-args=safe=1 -&#45;script vuln,auth,default,discovery,version,exploit localhost -->
+<nmaprun scanner="nmap" args="nmap -oX reports\\localhost_20250524_225843_vulns.xml -p 1521,6379,9443,8843,5432,443,80,8080,1433,8443,9042,3306,27017 -T2 -f -&#45;script-args=safe=1 -&#45;script vuln,auth,default,discovery,version,exploit localhost" start="1748123924" startstr="Sat May 24 22:58:44 2025" version="7.80" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="13" services="80,443,1433,1521,3306,5432,6379,8080,8443,8843,9042,9443,27017"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<prescript><script id="targets-asn" output="&#xa;  targets-asn.asn is a mandatory parameter&#xa;"/></prescript><host starttime="1748123953" endtime="1748123970"><status state="up" reason="localhost-response" reason_ttl="0"/>
+<address addr="127.0.0.1" addrtype="ipv4"/>
+<hostnames>
+<hostname name="localhost" type="user"/>
+<hostname name="kubernetes.docker.internal" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="unknown" reason="no-response" reason_ttl="0"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="unknown" reason="no-response" reason_ttl="0"/><service name="https" method="table" conf="3"/></port>
+<port protocol="tcp" portid="1433"><state state="unknown" reason="no-response" reason_ttl="0"/><service name="ms-sql-s" method="table" conf="3"/></port>
+<port protocol="tcp" portid="1521"><state state="unknown" reason="no-response" reason_ttl="0"/><service name="oracle" method="table" conf="3"/></port>
+<port protocol="tcp" portid="3306"><state state="unknown" reason="no-response" reason_ttl="0"/><service name="mysql" method="table" conf="3"/></port>
+<port protocol="tcp" portid="5432"><state state="unknown" reason="no-response" reason_ttl="0"/><service name="postgresql" method="table" conf="3"/></port>
+<port protocol="tcp" portid="6379"><state state="unknown" reason="no-response" reason_ttl="0"/><service name="redis" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8080"><state state="unknown" reason="no-response" reason_ttl="0"/><service name="http-proxy" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8443"><state state="unknown" reason="no-response" reason_ttl="0"/><service name="https-alt" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8843"><state state="unknown" reason="no-response" reason_ttl="0"/><service name="unknown" method="table" conf="3"/></port>
+<port protocol="tcp" portid="9042"><state state="unknown" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="9443"><state state="unknown" reason="no-response" reason_ttl="0"/><service name="tungsten-https" method="table" conf="3"/></port>
+<port protocol="tcp" portid="27017"><state state="unknown" reason="no-response" reason_ttl="0"/><service name="mongod" method="table" conf="3"/></port>
+</ports>
+<hostscript><script id="dns-brute" output="Can&apos;t guess domain of &quot;localhost&quot;; use dns-brute.domain script argument."/><script id="fcrdns" output="PASS (localhost)"><table key="localhost">
+<elem key="status">pass</elem>
+<table key="addresses">
+<elem>127.0.0.1</elem>
+</table>
+</table>
+</script><script id="hostmap-crtsh" output="&#xa;  subdomains: Error: could not GET http://crt.sh/?q=%.localhost&amp;output=json"><elem key="subdomains">Error: could not GET http://crt.sh/?q=%.localhost&amp;output=json</elem>
+</script><script id="resolveall" output="&#xa;  Host &apos;localhost&apos; also resolves to:&#xa;  Use the &apos;newtargets&apos; script-arg to add the results as targets&#xa;  Use the -&#45;resolve-all option to scan all resolved addresses without using this script.&#xa;"><table key="addresses">
+</table>
+<elem key="newtargets">0</elem>
+</script></hostscript></host>
+<runstats><finished time="1748123970" timestr="Sat May 24 22:59:30 2025" elapsed="46.33" summary="Nmap done at Sat May 24 22:59:30 2025; 1 IP address (1 host up) scanned in 46.33 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

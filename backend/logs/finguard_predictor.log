@@ -1,0 +1,15 @@
+2025-05-17 18:12:50,577 - finguardai.predictor - INFO - Analyzing target: stampduty.gov.ng
+2025-05-17 18:12:50,578 - finguardai.predictor - INFO - Analyzing apache 2.4.51
+2025-05-17 18:12:50,584 - finguardai.predictor - INFO - Using cached NVD data for apache 2.4.51
+2025-05-17 18:12:50,585 - finguardai.predictor - INFO - Analyzing php 7.4.21
+2025-05-17 18:12:50,586 - finguardai.predictor - INFO - Using cached NVD data for php 7.4.21
+2025-05-17 18:12:50,586 - finguardai.predictor - INFO - Analyzing mysql 5.7.36
+2025-05-17 18:12:50,587 - finguardai.predictor - INFO - Using cached NVD data for mysql 5.7.36
+2025-05-17 18:12:50,588 - finguardai.predictor - INFO - Analyzing openssh 8.2p1
+2025-05-17 18:12:50,590 - finguardai.predictor - INFO - Using cached NVD data for openssh 8.2p1
+2025-05-17 18:12:52,756 - finguardai.predictor - INFO - Analyzing target: portal.lcu.edu.ng
+2025-05-17 18:12:52,756 - finguardai.predictor - INFO - Analyzing nginx 1.20.1
+2025-05-17 18:12:52,846 - finguardai.predictor - INFO - Using cached NVD data for nginx 1.20.1
+2025-05-17 18:12:52,899 - finguardai.predictor - INFO - Analyzing php 8.0.10
+2025-05-17 18:12:52,900 - finguardai.predictor - INFO - Fetching vulnerabilities from NVD API for php 8.0.10
+2025-05-17 18:12:52,900 - finguardai.predictor - INFO - Using CPE: cpe:2.3:a:php:php:8.0.10:*:*:*:*:*:*:*

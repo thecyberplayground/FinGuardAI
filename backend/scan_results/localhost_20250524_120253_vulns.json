@@ -1,0 +1,39 @@
+{
+    "hostname": "kubernetes.docker.internal",
+    "ip": "127.0.0.1",
+    "services": [],
+    "technologies": [],
+    "vulnerabilities": [],
+    "open_ports": {},
+    "scan_id": "localhost_20250524_120253",
+    "target": "localhost",
+    "scan_time": "2025-05-24T12:03:54.609333",
+    "financial_impact": {
+        "overall_score": 0,
+        "risk_levels": {
+            "data_breach": {
+                "score": 0,
+                "level": "low"
+            },
+            "operational_disruption": {
+                "score": 0,
+                "level": "low"
+            },
+            "regulatory_compliance": {
+                "score": 0,
+                "level": "low"
+            },
+            "reputational_damage": {
+                "score": 0,
+                "level": "low"
+            },
+            "monetary_loss": {
+                "score": 0,
+                "level": "low"
+            }
+        },
+        "affected_regulations": [],
+        "summary": "No vulnerabilities detected - minimal financial impact expected",
+        "recommendations": []
+    }
+}

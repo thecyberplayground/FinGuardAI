@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///C:/Program Files (x86)/Nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Wed May 28 07:08:54 2025 as: nmap -oX &quot;C:\\Users\\CYBER\\Downloads\\finguardai-admin (3)\\reports\\ portal_nysc_org_ng\\ portal_nysc_org_ng_20250528_070852_vulns.xml&quot; -p 25,5432,1433,23,22,8843,9443,27017,9042,8443,6379,8080-8090,1-1000,1521,53,21,3306 -T3 -sV -sC -&#45;script vuln,auth,default,discovery,version,http-headers,http-methods,ssl-cert,mysql-empty-password,ms-sql-info,mongodb-info,redis-info &quot; portal.nysc.org.ng&quot; -->
+<nmaprun scanner="nmap" args="nmap -oX &quot;C:\\Users\\CYBER\\Downloads\\finguardai-admin (3)\\reports\\ portal_nysc_org_ng\\ portal_nysc_org_ng_20250528_070852_vulns.xml&quot; -p 25,5432,1433,23,22,8843,9443,27017,9042,8443,6379,8080-8090,1-1000,1521,53,21,3306 -T3 -sV -sC -&#45;script vuln,auth,default,discovery,version,http-headers,http-methods,ssl-cert,mysql-empty-password,ms-sql-info,mongodb-info,redis-info &quot; portal.nysc.org.ng&quot;" start="1748412534" startstr="Wed May 28 07:08:54 2025" version="7.80" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="1021" services="1-1000,1433,1521,3306,5432,6379,8080-8090,8443,8843,9042,9443,27017"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<prescript><script id="targets-asn" output="&#xa;  targets-asn.asn is a mandatory parameter&#xa;"/></prescript><runstats><finished time="1748412563" timestr="Wed May 28 07:09:23 2025" elapsed="30.68" summary="Nmap done at Wed May 28 07:09:23 2025; 0 IP addresses (0 hosts up) scanned in 30.68 seconds" exit="success"/><hosts up="0" down="0" total="0"/>
+</runstats>
+</nmaprun>

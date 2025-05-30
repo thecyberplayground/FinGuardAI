@@ -1,0 +1,4811 @@
+{
+  "resultsPerPage": 22,
+  "startIndex": 0,
+  "totalResults": 22,
+  "format": "NVD_CVE",
+  "version": "2.0",
+  "timestamp": "2025-05-17T17:52:36.908",
+  "vulnerabilities": [
+    {
+      "cve": {
+        "id": "CVE-2007-3205",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2007-06-13T10:30:00.000",
+        "lastModified": "2025-04-09T00:30:58.490",
+        "vulnStatus": "Deferred",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The parse_str function in (1) PHP, (2) Hardened-PHP, and (3) Suhosin, when called without a second parameter, might allow remote attackers to overwrite arbitrary variables by specifying variable names and values in the string to be parsed.  NOTE: it is not clear whether this is a design limitation of the function or a bug in PHP, although it is likely to be regarded as a bug in Hardened-PHP and Suhosin."
+          },
+          {
+            "lang": "es",
+            "value": "La funci\u00f3n parse_str en (1) PHP, (2) Hardened-PHP y (3) Suhosin, cuando se llama sin un segundo par\u00e1metro, podr\u00eda permitir a los atacantes remotos sobrescribir variables arbitrarias mediante la especificaci\u00f3n de nombres de variables y valores en la cadena que ser\u00e1 analizada. NOTA: no est\u00e1 claro si se trata de una limitaci\u00f3n creada en la funci\u00f3n o un error en PHP, aunque es probable que sea considerada como un error en Hardened-PHP y Suhosin."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:N/C:N/I:P/A:N",
+                "baseScore": 5.0,
+                "accessVector": "NETWORK",
+                "accessComplexity": "LOW",
+                "authentication": "NONE",
+                "confidentialityImpact": "NONE",
+                "integrityImpact": "PARTIAL",
+                "availabilityImpact": "NONE"
+              },
+              "baseSeverity": "MEDIUM",
+              "exploitabilityScore": 10.0,
+              "impactScore": 2.9,
+              "acInsufInfo": false,
+              "obtainAllPrivilege": false,
+              "obtainUserPrivilege": false,
+              "obtainOtherPrivilege": false,
+              "userInteractionRequired": false
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "nvd@nist.gov",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "NVD-CWE-Other"
+              }
+            ]
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:hardened-php_project:hardened-php:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "0527E630-C2D3-44E3-AFD3-1A2CC0AA854C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:hardened-php_project:subhosin:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F7617D0C-23DC-4DEE-AC8E-F2E627C22E5D"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:php:php:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "58A8B39D-57DF-4D71-BBCA-1D5A19E0A1B9"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://osvdb.org/39834",
+            "source": "cve@mitre.org"
+          },
+          {
+            "url": "http://securityreason.com/securityalert/2800",
+            "source": "cve@mitre.org"
+          },
+          {
+            "url": "http://www.acid-root.new.fr/advisories/14070612.txt",
+            "source": "cve@mitre.org"
+          },
+          {
+            "url": "http://www.securityfocus.com/archive/1/471178/100/0/threaded",
+            "source": "cve@mitre.org"
+          },
+          {
+            "url": "http://www.securityfocus.com/archive/1/471204/100/0/threaded",
+            "source": "cve@mitre.org"
+          },
+          {
+            "url": "http://www.securityfocus.com/archive/1/471275/100/0/threaded",
+            "source": "cve@mitre.org"
+          },
+          {
+            "url": "https://exchange.xforce.ibmcloud.com/vulnerabilities/34836",
+            "source": "cve@mitre.org"
+          },
+          {
+            "url": "http://osvdb.org/39834",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://securityreason.com/securityalert/2800",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.acid-root.new.fr/advisories/14070612.txt",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.securityfocus.com/archive/1/471178/100/0/threaded",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.securityfocus.com/archive/1/471204/100/0/threaded",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.securityfocus.com/archive/1/471275/100/0/threaded",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "https://exchange.xforce.ibmcloud.com/vulnerabilities/34836",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          }
+        ],
+        "vendorComments": [
+          {
+            "organization": "Red Hat",
+            "comment": "This is not a security vulnerability: it is the expected behaviour of parse_str when used without a second parameter.",
+            "lastModified": "2007-06-26T00:00:00"
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2013-2220",
+        "sourceIdentifier": "secalert@redhat.com",
+        "published": "2013-07-31T13:20:27.423",
+        "lastModified": "2025-04-11T00:51:21.963",
+        "vulnStatus": "Deferred",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Buffer overflow in the radius_get_vendor_attr function in the Radius extension before 1.2.7 for PHP allows remote attackers to cause a denial of service (crash) and possibly execute arbitrary code via a large Vendor Specific Attributes (VSA) length value."
+          },
+          {
+            "lang": "es",
+            "value": "Desbordamiento de b\u00fafer en la funci\u00f3n radius_get_vendor_attr en la extensi\u00f3n Radius anterior a 1.2.7 para PHP, permite a atacantes remotos provocar una denegaci\u00f3n de servicio (ca\u00edda) y posiblemente la ejecuci\u00f3n de c\u00f3digo arbitraria a trav\u00e9s de un valor alto en Vendor Specific Attributes (VSA)."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+                "baseScore": 7.5,
+                "accessVector": "NETWORK",
+                "accessComplexity": "LOW",
+                "authentication": "NONE",
+                "confidentialityImpact": "PARTIAL",
+                "integrityImpact": "PARTIAL",
+                "availabilityImpact": "PARTIAL"
+              },
+              "baseSeverity": "HIGH",
+              "exploitabilityScore": 10.0,
+              "impactScore": 6.4,
+              "acInsufInfo": false,
+              "obtainAllPrivilege": false,
+              "obtainUserPrivilege": false,
+              "obtainOtherPrivilege": false,
+              "userInteractionRequired": false
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "nvd@nist.gov",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-119"
+              }
+            ]
+          }
+        ],
+        "configurations": [
+          {
+            "operator": "AND",
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:radius_extension_project:radius:*:*:*:*:*:*:*:*",
+                    "versionEndIncluding": "1.2.6",
+                    "matchCriteriaId": "24180799-F1E3-4CED-8E56-8D61A853E613"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:radius_extension_project:radius:1.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "8510CB61-6237-4771-AA4C-1432670100B2"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:radius_extension_project:radius:1.2.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "58E5F87B-D749-4444-A50B-EF757F7D46D9"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:radius_extension_project:radius:1.2.2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "7EF9F81D-6338-4535-A652-CD43A3DE4462"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:radius_extension_project:radius:1.2.3:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D6050AA4-E64C-4885-9192-2C7C556A729D"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:radius_extension_project:radius:1.2.4:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "40531DA1-C74E-464F-A16E-ED903445E527"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:radius_extension_project:radius:1.2.5:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "76D949BF-4709-4810-84DD-FB583284637B"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": false,
+                    "criteria": "cpe:2.3:a:php:php:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "58A8B39D-57DF-4D71-BBCA-1D5A19E0A1B9"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=714362",
+            "source": "secalert@redhat.com"
+          },
+          {
+            "url": "http://pecl.php.net/package/radius/1.2.7",
+            "source": "secalert@redhat.com"
+          },
+          {
+            "url": "http://www.debian.org/security/2013/dsa-2726",
+            "source": "secalert@redhat.com"
+          },
+          {
+            "url": "https://github.com/LawnGnome/php-radius/commit/13c149b051f82b709e8d7cc32111e84b49d57234",
+            "source": "secalert@redhat.com",
+            "tags": [
+              "Exploit",
+              "Patch"
+            ]
+          },
+          {
+            "url": "http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=714362",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://pecl.php.net/package/radius/1.2.7",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.debian.org/security/2013/dsa-2726",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "https://github.com/LawnGnome/php-radius/commit/13c149b051f82b709e8d7cc32111e84b49d57234",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Patch"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2017-8923",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2017-05-12T20:29:00.500",
+        "lastModified": "2025-04-20T01:37:25.860",
+        "vulnStatus": "Deferred",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The zend_string_extend function in Zend/zend_string.h in PHP through 7.1.5 does not prevent changes to string objects that result in a negative length, which allows remote attackers to cause a denial of service (application crash) or possibly have unspecified other impact by leveraging a script's use of .= with a long string."
+          },
+          {
+            "lang": "es",
+            "value": "La funci\u00f3n zend_string_extend en el archivo Zend/zend_string.h en PHP hasta de la versi\u00f3n 7.1.5 no impide cambios en los objetos de cadena que resultan en una longitud negativa, lo que permite a los atacantes remotos causar una denegaci\u00f3n de servicio (bloqueo de aplicaci\u00f3n) o posiblemente tener otro impacto no especificado  explotando el uso de scripts .= con una cadena larga."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "NONE",
+                "userInteraction": "NONE",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "HIGH",
+                "integrityImpact": "HIGH",
+                "availabilityImpact": "HIGH"
+              },
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV2": [
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+                "baseScore": 7.5,
+                "accessVector": "NETWORK",
+                "accessComplexity": "LOW",
+                "authentication": "NONE",
+                "confidentialityImpact": "PARTIAL",
+                "integrityImpact": "PARTIAL",
+                "availabilityImpact": "PARTIAL"
+              },
+              "baseSeverity": "HIGH",
+              "exploitabilityScore": 10.0,
+              "impactScore": 6.4,
+              "acInsufInfo": false,
+              "obtainAllPrivilege": false,
+              "obtainUserPrivilege": false,
+              "obtainOtherPrivilege": false,
+              "userInteractionRequired": false
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "nvd@nist.gov",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-787"
+              }
+            ]
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:php:php:*:*:*:*:*:*:*:*",
+                    "versionEndExcluding": "7.4.24",
+                    "matchCriteriaId": "4491E273-5CD7-4133-89BF-182ED8C3E7D6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:php:php:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "8.0.0",
+                    "versionEndExcluding": "8.0.11",
+                    "matchCriteriaId": "35A8B10D-C9FF-474F-BEC1-196F6DDC4948"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://www.securityfocus.com/bid/98518",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Third Party Advisory",
+              "VDB Entry"
+            ]
+          },
+          {
+            "url": "https://bugs.php.net/bug.php?id=74577",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit",
+              "Issue Tracking",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "http://www.securityfocus.com/bid/98518",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory",
+              "VDB Entry"
+            ]
+          },
+          {
+            "url": "https://bugs.php.net/bug.php?id=74577",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Issue Tracking",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://security.netapp.com/advisory/ntap-20241227-0007/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2017-9118",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2018-08-02T15:29:00.230",
+        "lastModified": "2024-11-21T03:35:21.783",
+        "vulnStatus": "Modified",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "PHP 7.1.5 has an Out of bounds access in php_pcre_replace_impl via a crafted preg_replace call."
+          },
+          {
+            "lang": "es",
+            "value": "PHP 7.1.5 tiene un acceso fuera de l\u00edmites en php_pcre_replace_impl mediante una llamada preg_replace."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                "baseScore": 7.5,
+                "baseSeverity": "HIGH",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "NONE",
+                "userInteraction": "NONE",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "NONE",
+                "integrityImpact": "NONE",
+                "availabilityImpact": "HIGH"
+              },
+              "exploitabilityScore": 3.9,
+              "impactScore": 3.6
+            }
+          ],
+          "cvssMetricV2": [
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+                "baseScore": 5.0,
+                "accessVector": "NETWORK",
+                "accessComplexity": "LOW",
+                "authentication": "NONE",
+                "confidentialityImpact": "NONE",
+                "integrityImpact": "NONE",
+                "availabilityImpact": "PARTIAL"
+              },
+              "baseSeverity": "MEDIUM",
+              "exploitabilityScore": 10.0,
+              "impactScore": 2.9,
+              "acInsufInfo": false,
+              "obtainAllPrivilege": false,
+              "obtainUserPrivilege": false,
+              "obtainOtherPrivilege": false,
+              "userInteractionRequired": false
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "nvd@nist.gov",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-125"
+              }
+            ]
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:php:php:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "7.4.0",
+                    "versionEndExcluding": "7.4.27",
+                    "matchCriteriaId": "61574DFD-0717-429E-8780-274F83B79387"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:php:php:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "8.0.0",
+                    "versionEndExcluding": "8.0.14",
+                    "matchCriteriaId": "50002153-C748-4C8A-8357-FA745EF967C4"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:php:php:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "8.1.0",
+                    "versionEndExcluding": "8.1.1",
+                    "matchCriteriaId": "125AE526-EE12-41E4-B898-408B5404B2A2"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:php:php:7.1.5:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "1C22CE03-DFE5-4CD3-B229-10B219A55434"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:netapp:storage_automation_store:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "7B7A6697-98CC-4E36-93DB-B7160F8399F9"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://access.redhat.com/errata/RHSA-2019:2519",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://bugs.php.net/bug.php?id=74604",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit",
+              "Issue Tracking",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://security.netapp.com/advisory/ntap-20181107-0003/",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://access.redhat.com/errata/RHSA-2019:2519",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://bugs.php.net/bug.php?id=74604",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Issue Tracking",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://security.netapp.com/advisory/ntap-20181107-0003/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2021-21706",
+        "sourceIdentifier": "security@php.net",
+        "published": "2021-10-04T04:15:08.350",
+        "lastModified": "2024-11-21T05:48:52.470",
+        "vulnStatus": "Modified",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "In PHP versions 7.3.x below 7.3.31, 7.4.x below 7.4.24 and 8.0.x below 8.0.11, in Microsoft Windows environment, ZipArchive::extractTo may be tricked into writing a file outside target directory when extracting a ZIP file, thus potentially causing files to be created or overwritten, subject to OS permissions."
+          },
+          {
+            "lang": "es",
+            "value": "En PHP versiones de 7.3.x por debajo de 7.3.31, versiones 7.4.x por debajo de 7.4.24 y 8.0.x por debajo de 8.0.11, en el entorno de Microsoft Windows, la funci\u00f3n ZipArchive::extractTo puede ser enga\u00f1ada para escribir un archivo fuera del directorio de destino cuando es extra\u00eddo un archivo ZIP, causando as\u00ed potencialmente una creaci\u00f3n o sobreescritura de archivos, sujeto a los permisos del Sistema Operativo"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "security@php.net",
+              "type": "Secondary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:N/I:H/A:N",
+                "baseScore": 5.3,
+                "baseSeverity": "MEDIUM",
+                "attackVector": "NETWORK",
+                "attackComplexity": "HIGH",
+                "privilegesRequired": "NONE",
+                "userInteraction": "REQUIRED",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "NONE",
+                "integrityImpact": "HIGH",
+                "availabilityImpact": "NONE"
+              },
+              "exploitabilityScore": 1.6,
+              "impactScore": 3.6
+            },
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:N",
+                "baseScore": 6.5,
+                "baseSeverity": "MEDIUM",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "NONE",
+                "userInteraction": "REQUIRED",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "NONE",
+                "integrityImpact": "HIGH",
+                "availabilityImpact": "NONE"
+              },
+              "exploitabilityScore": 2.8,
+              "impactScore": 3.6
+            }
+          ],
+          "cvssMetricV2": [
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+                "baseScore": 4.3,
+                "accessVector": "NETWORK",
+                "accessComplexity": "MEDIUM",
+                "authentication": "NONE",
+                "confidentialityImpact": "NONE",
+                "integrityImpact": "PARTIAL",
+                "availabilityImpact": "NONE"
+              },
+              "baseSeverity": "MEDIUM",
+              "exploitabilityScore": 8.6,
+              "impactScore": 2.9,
+              "acInsufInfo": false,
+              "obtainAllPrivilege": false,
+              "obtainUserPrivilege": false,
+              "obtainOtherPrivilege": false,
+              "userInteractionRequired": true
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "security@php.net",
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-24"
+              }
+            ]
+          },
+          {
+            "source": "nvd@nist.gov",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-22"
+              }
+            ]
+          }
+        ],
+        "configurations": [
+          {
+            "operator": "AND",
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:php:php:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "7.3.0",
+                    "versionEndExcluding": "7.3.31",
+                    "matchCriteriaId": "FB0C3B54-5557-4013-9453-CCAB94BF6A34"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:php:php:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "7.4.0",
+                    "versionEndExcluding": "7.4.24",
+                    "matchCriteriaId": "C714AE0D-1990-455D-BEA7-B3FF454DFEBF"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:php:php:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "8.0.0",
+                    "versionEndExcluding": "8.0.11",
+                    "matchCriteriaId": "35A8B10D-C9FF-474F-BEC1-196F6DDC4948"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": false,
+                    "criteria": "cpe:2.3:o:microsoft:windows:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A2572D17-1DE6-457B-99CC-64AFD54487EA"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://bugs.php.net/bug.php?id=81420",
+            "source": "security@php.net",
+            "tags": [
+              "Issue Tracking",
+              "Patch",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://security.netapp.com/advisory/ntap-20211029-0007/",
+            "source": "security@php.net",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://bugs.php.net/bug.php?id=81420",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Issue Tracking",
+              "Patch",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://security.netapp.com/advisory/ntap-20211029-0007/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2021-21703",
+        "sourceIdentifier": "security@php.net",
+        "published": "2021-10-25T06:15:06.563",
+        "lastModified": "2024-11-21T05:48:52.000",
+        "vulnStatus": "Modified",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "In PHP versions 7.3.x up to and including 7.3.31, 7.4.x below 7.4.25 and 8.0.x below 8.0.12, when running PHP FPM SAPI with main FPM daemon process running as root and child worker processes running as lower-privileged users, it is possible for the child processes to access memory shared with the main process and write to it, modifying it in a way that would cause the root process to conduct invalid memory reads and writes, which can be used to escalate privileges from local unprivileged user to the root user."
+          },
+          {
+            "lang": "es",
+            "value": "En PHP versiones 7.3.x hasta 7.3.31 incluy\u00e9ndola, versiones 7.4.x  y por debajo de 7.4.25 y versiones 8.0.x por debajo de 8.0. 12, cuando es ejecutado PHP FPM SAPI con el proceso demonio FPM principal ejecutado como root y los procesos worker hijos ejecutados como usuarios menos privilegiados, es posible que los procesos hijos accedan a la memoria compartida con el proceso principal y escriban en ella, modific\u00e1ndola de forma que causar\u00eda que el proceso root realizara lecturas y escrituras de memoria no v\u00e1lidas, que puede ser usado para escalar los privilegios del usuario local sin privilegios al usuario root"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "security@php.net",
+              "type": "Secondary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 7.8,
+                "baseSeverity": "HIGH",
+                "attackVector": "LOCAL",
+                "attackComplexity": "HIGH",
+                "privilegesRequired": "LOW",
+                "userInteraction": "NONE",
+                "scope": "CHANGED",
+                "confidentialityImpact": "HIGH",
+                "integrityImpact": "HIGH",
+                "availabilityImpact": "HIGH"
+              },
+              "exploitabilityScore": 1.1,
+              "impactScore": 6.0
+            },
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 7.0,
+                "baseSeverity": "HIGH",
+                "attackVector": "LOCAL",
+                "attackComplexity": "HIGH",
+                "privilegesRequired": "LOW",
+                "userInteraction": "NONE",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "HIGH",
+                "integrityImpact": "HIGH",
+                "availabilityImpact": "HIGH"
+              },
+              "exploitabilityScore": 1.0,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV2": [
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:L/AC:M/Au:N/C:C/I:C/A:C",
+                "baseScore": 6.9,
+                "accessVector": "LOCAL",
+                "accessComplexity": "MEDIUM",
+                "authentication": "NONE",
+                "confidentialityImpact": "COMPLETE",
+                "integrityImpact": "COMPLETE",
+                "availabilityImpact": "COMPLETE"
+              },
+              "baseSeverity": "MEDIUM",
+              "exploitabilityScore": 3.4,
+              "impactScore": 10.0,
+              "acInsufInfo": false,
+              "obtainAllPrivilege": false,
+              "obtainUserPrivilege": false,
+              "obtainOtherPrivilege": false,
+              "userInteractionRequired": false
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "security@php.net",
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-284"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-787"
+              }
+            ]
+          },
+          {
+            "source": "nvd@nist.gov",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-787"
+              }
+            ]
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:php:php:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "7.3.0",
+                    "versionEndIncluding": "7.3.31",
+                    "matchCriteriaId": "7FFE0A10-A39D-4BFA-A081-AA87CDCB56BB"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:php:php:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "7.4.0",
+                    "versionEndExcluding": "7.4.25",
+                    "matchCriteriaId": "E775E547-4990-4809-BE21-7E9B99059F1C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:php:php:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "8.0.0",
+                    "versionEndExcluding": "8.0.12",
+                    "matchCriteriaId": "5633A8ED-60EF-4F14-A120-82A36BBD55A8"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:debian:debian_linux:9.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "DEECE5FC-CACF-4496-A3E7-164736409252"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:debian:debian_linux:10.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "07B237A9-69A3-4A9C-9DA0-4E06BD37AE73"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:debian:debian_linux:11.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "FA6FEEC2-9F11-4643-8827-749718254FED"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:fedoraproject:fedora:33:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "E460AA51-FCDA-46B9-AE97-E6676AA5E194"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:fedoraproject:fedora:34:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A930E247-0B43-43CB-98FF-6CE7B8189835"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:fedoraproject:fedora:35:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "80E516C0-98A4-4ADE-B69F-66A772E2BAAA"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:netapp:clustered_data_ontap:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "1FE996B1-6951-4F85-AA58-B99A379D2163"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:communications_diameter_signaling_router:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "8.0.0.0",
+                    "versionEndIncluding": "8.5.0.2",
+                    "matchCriteriaId": "590ADE5F-0D0F-4576-8BA6-828758823442"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2021/10/26/7",
+            "source": "security@php.net",
+            "tags": [
+              "Mailing List",
+              "Patch",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://bugs.php.net/bug.php?id=81026",
+            "source": "security@php.net",
+            "tags": [
+              "Exploit",
+              "Issue Tracking",
+              "Patch",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://lists.debian.org/debian-lts-announce/2021/10/msg00021.html",
+            "source": "security@php.net",
+            "tags": [
+              "Mailing List",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/6PZVLICZUJMXOGWOUWSBAEGIVTF6Y6V3/",
+            "source": "security@php.net"
+          },
+          {
+            "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/JO5RA6YOBGGGKLIA6F6BQRZDDECF5L3R/",
+            "source": "security@php.net"
+          },
+          {
+            "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/PBM3KKB3RY2YPOKNMC4HIH7IH3T3WC74/",
+            "source": "security@php.net"
+          },
+          {
+            "url": "https://security.gentoo.org/glsa/202209-20",
+            "source": "security@php.net",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://security.netapp.com/advisory/ntap-20211118-0003/",
+            "source": "security@php.net",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.debian.org/security/2021/dsa-4992",
+            "source": "security@php.net",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.debian.org/security/2021/dsa-4993",
+            "source": "security@php.net",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.oracle.com/security-alerts/cpuapr2022.html",
+            "source": "security@php.net",
+            "tags": [
+              "Patch",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.oracle.com/security-alerts/cpujan2022.html",
+            "source": "security@php.net",
+            "tags": [
+              "Patch",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2021/10/26/7",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List",
+              "Patch",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://bugs.php.net/bug.php?id=81026",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Issue Tracking",
+              "Patch",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://lists.debian.org/debian-lts-announce/2021/10/msg00021.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/6PZVLICZUJMXOGWOUWSBAEGIVTF6Y6V3/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/JO5RA6YOBGGGKLIA6F6BQRZDDECF5L3R/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/PBM3KKB3RY2YPOKNMC4HIH7IH3T3WC74/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "https://security.gentoo.org/glsa/202209-20",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://security.netapp.com/advisory/ntap-20211118-0003/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.debian.org/security/2021/dsa-4992",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.debian.org/security/2021/dsa-4993",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.oracle.com/security-alerts/cpuapr2022.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Patch",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.oracle.com/security-alerts/cpujan2022.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Patch",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2021-21707",
+        "sourceIdentifier": "security@php.net",
+        "published": "2021-11-29T07:15:06.397",
+        "lastModified": "2024-11-21T05:48:52.593",
+        "vulnStatus": "Modified",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "In PHP versions 7.3.x below 7.3.33, 7.4.x below 7.4.26 and 8.0.x below 8.0.13, certain XML parsing functions, like simplexml_load_file(), URL-decode the filename passed to them. If that filename contains URL-encoded NUL character, this may cause the function to interpret this as the end of the filename, thus interpreting the filename differently from what the user intended, which may lead it to reading a different file than intended."
+          },
+          {
+            "lang": "es",
+            "value": "En PHP versiones 7.3.x anteriores a 7.3.33, 7.4.x anteriores a 7.4.26 y 8.0.x anteriores a 8.0.13, determinadas funciones de an\u00e1lisis de XML, como simplexml_load_file(), decodifican el nombre de archivo que les es pasado. Si ese nombre de archivo contiene un car\u00e1cter NUL codificado en la URL, esto puede causar que la funci\u00f3n lo interprete como el final del nombre de archivo, interpretando as\u00ed el nombre de archivo de forma diferente a la que el usuario pretend\u00eda, lo que puede conllevar a una lectura de un archivo diferente al deseado"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "security@php.net",
+              "type": "Secondary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+                "baseScore": 5.3,
+                "baseSeverity": "MEDIUM",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "NONE",
+                "userInteraction": "NONE",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "LOW",
+                "integrityImpact": "NONE",
+                "availabilityImpact": "NONE"
+              },
+              "exploitabilityScore": 3.9,
+              "impactScore": 1.4
+            },
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+                "baseScore": 5.3,
+                "baseSeverity": "MEDIUM",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "NONE",
+                "userInteraction": "NONE",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "LOW",
+                "integrityImpact": "NONE",
+                "availabilityImpact": "NONE"
+              },
+              "exploitabilityScore": 3.9,
+              "impactScore": 1.4
+            }
+          ],
+          "cvssMetricV2": [
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+                "baseScore": 5.0,
+                "accessVector": "NETWORK",
+                "accessComplexity": "LOW",
+                "authentication": "NONE",
+                "confidentialityImpact": "PARTIAL",
+                "integrityImpact": "NONE",
+                "availabilityImpact": "NONE"
+              },
+              "baseSeverity": "MEDIUM",
+              "exploitabilityScore": 10.0,
+              "impactScore": 2.9,
+              "acInsufInfo": false,
+              "obtainAllPrivilege": false,
+              "obtainUserPrivilege": false,
+              "obtainOtherPrivilege": false,
+              "userInteractionRequired": false
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "security@php.net",
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-159"
+              }
+            ]
+          },
+          {
+            "source": "nvd@nist.gov",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "NVD-CWE-Other"
+              }
+            ]
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:php:php:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "7.3.0",
+                    "versionEndExcluding": "7.3.33",
+                    "matchCriteriaId": "C87BA6C9-B0C3-4039-8F77-C310B1879FA5"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:php:php:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "7.4.0",
+                    "versionEndExcluding": "7.4.26",
+                    "matchCriteriaId": "83EEF959-AE5C-43C0-AF21-535B813E5DC6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:php:php:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "8.0.0",
+                    "versionEndExcluding": "8.0.13",
+                    "matchCriteriaId": "60FBEAE8-F094-420B-8282-AFC3C33ABF28"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:netapp:clustered_data_ontap:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "1FE996B1-6951-4F85-AA58-B99A379D2163"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:debian:debian_linux:10.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "07B237A9-69A3-4A9C-9DA0-4E06BD37AE73"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:debian:debian_linux:11.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "FA6FEEC2-9F11-4643-8827-749718254FED"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:tenable:tenable.sc:*:*:*:*:*:*:*:*",
+                    "versionEndExcluding": "5.21.0",
+                    "matchCriteriaId": "CAB9A41F-91F1-40DF-BF12-6ADA7229A84C"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://bugs.php.net/bug.php?id=79971",
+            "source": "security@php.net",
+            "tags": [
+              "Exploit",
+              "Issue Tracking",
+              "Patch",
+              "Release Notes",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://lists.debian.org/debian-lts-announce/2022/12/msg00030.html",
+            "source": "security@php.net",
+            "tags": [
+              "Issue Tracking",
+              "Mailing List"
+            ]
+          },
+          {
+            "url": "https://security.netapp.com/advisory/ntap-20211223-0005/",
+            "source": "security@php.net",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.debian.org/security/2022/dsa-5082",
+            "source": "security@php.net",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.tenable.com/security/tns-2022-09",
+            "source": "security@php.net",
+            "tags": [
+              "Patch",
+              "Release Notes",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://bugs.php.net/bug.php?id=79971",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Issue Tracking",
+              "Patch",
+              "Release Notes",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://lists.debian.org/debian-lts-announce/2022/12/msg00030.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Issue Tracking",
+              "Mailing List"
+            ]
+          },
+          {
+            "url": "https://security.netapp.com/advisory/ntap-20211223-0005/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.debian.org/security/2022/dsa-5082",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.tenable.com/security/tns-2022-09",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Patch",
+              "Release Notes",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2021-21708",
+        "sourceIdentifier": "security@php.net",
+        "published": "2022-02-27T08:15:06.817",
+        "lastModified": "2024-11-21T05:48:52.737",
+        "vulnStatus": "Modified",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "In PHP versions 7.4.x below 7.4.28, 8.0.x below 8.0.16, and 8.1.x below 8.1.3, when using filter functions with FILTER_VALIDATE_FLOAT filter and min/max limits, if the filter fails, there is a possibility to trigger use of allocated memory after free, which can result it crashes, and potentially in overwrite of other memory chunks and RCE. This issue affects: code that uses FILTER_VALIDATE_FLOAT with min/max limits."
+          },
+          {
+            "lang": "es",
+            "value": "En PHP versiones 7.4.x anteriores a 7.4.28, versiones 8.0.x anteriores a 8.0.16 y versiones 8.1.x anteriores a 8.1.3, cuando son usados funciones de filtrado con el filtro FILTER_VALIDATE_FLOAT y los l\u00edmites m\u00ednimo/m\u00e1ximo, si el filtro falla, se presenta la posibilidad de que sea activado el uso de la memoria asignada despu\u00e9s de liberarla, lo que puede resultar en un bloqueo, y potencialmente la sobreescritura de otros trozos de memoria y RCE. Este problema afecta a: el c\u00f3digo que usa FILTER_VALIDATE_FLOAT con l\u00edmites m\u00edn/m\u00e1x."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "security@php.net",
+              "type": "Secondary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:L",
+                "baseScore": 8.2,
+                "baseSeverity": "HIGH",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "NONE",
+                "userInteraction": "NONE",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "NONE",
+                "integrityImpact": "HIGH",
+                "availabilityImpact": "LOW"
+              },
+              "exploitabilityScore": 3.9,
+              "impactScore": 4.2
+            },
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "NONE",
+                "userInteraction": "NONE",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "HIGH",
+                "integrityImpact": "HIGH",
+                "availabilityImpact": "HIGH"
+              },
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV2": [
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+                "baseScore": 6.8,
+                "accessVector": "NETWORK",
+                "accessComplexity": "MEDIUM",
+                "authentication": "NONE",
+                "confidentialityImpact": "PARTIAL",
+                "integrityImpact": "PARTIAL",
+                "availabilityImpact": "PARTIAL"
+              },
+              "baseSeverity": "MEDIUM",
+              "exploitabilityScore": 8.6,
+              "impactScore": 6.4,
+              "acInsufInfo": false,
+              "obtainAllPrivilege": false,
+              "obtainUserPrivilege": false,
+              "obtainOtherPrivilege": false,
+              "userInteractionRequired": false
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "security@php.net",
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-416"
+              }
+            ]
+          },
+          {
+            "source": "nvd@nist.gov",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-416"
+              }
+            ]
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:php:php:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "7.4.0",
+                    "versionEndExcluding": "7.4.28",
+                    "matchCriteriaId": "07B88F14-3867-49F4-8BE6-64E1D98927AB"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:php:php:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "8.0.0",
+                    "versionEndExcluding": "8.0.16",
+                    "matchCriteriaId": "AC80C1D0-09AC-43B1-A653-7ECFB37DC42E"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:php:php:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "8.1.0",
+                    "versionEndExcluding": "8.1.3",
+                    "matchCriteriaId": "B7E795BC-F012-4904-B445-D76E358EC66D"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://bugs.php.net/bug.php?id=81708",
+            "source": "security@php.net",
+            "tags": [
+              "Exploit",
+              "Issue Tracking",
+              "Patch",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://security.gentoo.org/glsa/202209-20",
+            "source": "security@php.net",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://security.netapp.com/advisory/ntap-20220325-0004/",
+            "source": "security@php.net",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://bugs.php.net/bug.php?id=81708",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Issue Tracking",
+              "Patch",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://security.gentoo.org/glsa/202209-20",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://security.netapp.com/advisory/ntap-20220325-0004/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2022-31625",
+        "sourceIdentifier": "security@php.net",
+        "published": "2022-06-16T06:15:08.623",
+        "lastModified": "2024-11-21T07:04:52.873",
+        "vulnStatus": "Modified",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "In PHP versions 7.4.x below 7.4.30, 8.0.x below 8.0.20, and 8.1.x below 8.1.7, when using Postgres database extension, supplying invalid parameters to the parametrized query may lead to PHP attempting to free memory using uninitialized data as pointers. This could lead to RCE vulnerability or denial of service."
+          },
+          {
+            "lang": "es",
+            "value": "En PHP versiones 7.4.x anteriores a 7.4.30, 8.0.x anteriores a 8.0.20 y 8.1.x anteriores a 8.1.7, cuando es usada la extensi\u00f3n de la base de datos Postgres, el suministro de par\u00e1metros no v\u00e1lidos a la consulta parametrizada puede conllevar que PHP intente liberar memoria usando datos no inicializados como punteros. Esto podr\u00eda conllevar a una vulnerabilidad RCE o una denegaci\u00f3n de servicio"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "security@php.net",
+              "type": "Secondary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 8.1,
+                "baseSeverity": "HIGH",
+                "attackVector": "NETWORK",
+                "attackComplexity": "HIGH",
+                "privilegesRequired": "NONE",
+                "userInteraction": "NONE",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "HIGH",
+                "integrityImpact": "HIGH",
+                "availabilityImpact": "HIGH"
+              },
+              "exploitabilityScore": 2.2,
+              "impactScore": 5.9
+            },
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 8.1,
+                "baseSeverity": "HIGH",
+                "attackVector": "NETWORK",
+                "attackComplexity": "HIGH",
+                "privilegesRequired": "NONE",
+                "userInteraction": "NONE",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "HIGH",
+                "integrityImpact": "HIGH",
+                "availabilityImpact": "HIGH"
+              },
+              "exploitabilityScore": 2.2,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV2": [
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+                "baseScore": 6.8,
+                "accessVector": "NETWORK",
+                "accessComplexity": "MEDIUM",
+                "authentication": "NONE",
+                "confidentialityImpact": "PARTIAL",
+                "integrityImpact": "PARTIAL",
+                "availabilityImpact": "PARTIAL"
+              },
+              "baseSeverity": "MEDIUM",
+              "exploitabilityScore": 8.6,
+              "impactScore": 6.4,
+              "acInsufInfo": false,
+              "obtainAllPrivilege": false,
+              "obtainUserPrivilege": false,
+              "obtainOtherPrivilege": false,
+              "userInteractionRequired": false
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "security@php.net",
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-590"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-824"
+              }
+            ]
+          },
+          {
+            "source": "nvd@nist.gov",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-763"
+              }
+            ]
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:php:php:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "7.4.0",
+                    "versionEndExcluding": "7.4.30",
+                    "matchCriteriaId": "978FBB35-7734-45B2-9400-25DF82F5D207"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:php:php:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "8.0.0",
+                    "versionEndExcluding": "8.0.20",
+                    "matchCriteriaId": "5107CDF9-45B3-4553-B560-146921D77F9C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:php:php:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "8.1.0",
+                    "versionEndExcluding": "8.1.7",
+                    "matchCriteriaId": "1B060E29-B7F6-4C52-B958-F77218669AFF"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:debian:debian_linux:10.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "07B237A9-69A3-4A9C-9DA0-4E06BD37AE73"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:debian:debian_linux:11.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "FA6FEEC2-9F11-4643-8827-749718254FED"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://bugs.php.net/bug.php?id=81720",
+            "source": "security@php.net",
+            "tags": [
+              "Exploit",
+              "Issue Tracking",
+              "Mailing List",
+              "Patch",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://lists.debian.org/debian-lts-announce/2022/12/msg00030.html",
+            "source": "security@php.net",
+            "tags": [
+              "Mailing List",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/3T4MMEEZYYAEHPQMZDFN44PHORJWJFZQ/",
+            "source": "security@php.net"
+          },
+          {
+            "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/ZZTZQKRGEYJT5UB4FGG3MOE72SQUHSL4/",
+            "source": "security@php.net"
+          },
+          {
+            "url": "https://security.gentoo.org/glsa/202209-20",
+            "source": "security@php.net",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://security.netapp.com/advisory/ntap-20220722-0005/",
+            "source": "security@php.net",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.debian.org/security/2022/dsa-5179",
+            "source": "security@php.net",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://bugs.php.net/bug.php?id=81720",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Issue Tracking",
+              "Mailing List",
+              "Patch",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://lists.debian.org/debian-lts-announce/2022/12/msg00030.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/3T4MMEEZYYAEHPQMZDFN44PHORJWJFZQ/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/ZZTZQKRGEYJT5UB4FGG3MOE72SQUHSL4/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "https://security.gentoo.org/glsa/202209-20",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://security.netapp.com/advisory/ntap-20220722-0005/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.debian.org/security/2022/dsa-5179",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2022-31626",
+        "sourceIdentifier": "security@php.net",
+        "published": "2022-06-16T06:15:08.807",
+        "lastModified": "2024-11-21T07:04:53.017",
+        "vulnStatus": "Modified",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "In PHP versions 7.4.x below 7.4.30, 8.0.x below 8.0.20, and 8.1.x below 8.1.7, when pdo_mysql extension with mysqlnd driver, if the third party is allowed to supply host to connect to and the password for the connection, password of excessive length can trigger a buffer overflow in PHP, which can lead to a remote code execution vulnerability."
+          },
+          {
+            "lang": "es",
+            "value": "En PHP versiones 7.4.x anteriores a 7.4.30, 8.0.x anteriores a 8.0.20 y 8.1.x anteriores a 8.1.7, cuando la extensi\u00f3n pdo_mysql con el controlador mysqlnd, si es permitido que el tercero suministre el host al que conectarse y la contrase\u00f1a para la conexi\u00f3n, la contrase\u00f1a de longitud excesiva puede desencadenar un desbordamiento de b\u00fafer en PHP, lo que puede conllevar a una vulnerabilidad de ejecuci\u00f3n de c\u00f3digo remota"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "security@php.net",
+              "type": "Secondary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 7.5,
+                "baseSeverity": "HIGH",
+                "attackVector": "NETWORK",
+                "attackComplexity": "HIGH",
+                "privilegesRequired": "LOW",
+                "userInteraction": "NONE",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "HIGH",
+                "integrityImpact": "HIGH",
+                "availabilityImpact": "HIGH"
+              },
+              "exploitabilityScore": 1.6,
+              "impactScore": 5.9
+            },
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "LOW",
+                "userInteraction": "NONE",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "HIGH",
+                "integrityImpact": "HIGH",
+                "availabilityImpact": "HIGH"
+              },
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV2": [
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:M/Au:S/C:P/I:P/A:P",
+                "baseScore": 6.0,
+                "accessVector": "NETWORK",
+                "accessComplexity": "MEDIUM",
+                "authentication": "SINGLE",
+                "confidentialityImpact": "PARTIAL",
+                "integrityImpact": "PARTIAL",
+                "availabilityImpact": "PARTIAL"
+              },
+              "baseSeverity": "MEDIUM",
+              "exploitabilityScore": 6.8,
+              "impactScore": 6.4,
+              "acInsufInfo": false,
+              "obtainAllPrivilege": false,
+              "obtainUserPrivilege": false,
+              "obtainOtherPrivilege": false,
+              "userInteractionRequired": false
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "security@php.net",
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-120"
+              }
+            ]
+          },
+          {
+            "source": "nvd@nist.gov",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-120"
+              }
+            ]
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:php:php:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "7.4.0",
+                    "versionEndExcluding": "7.4.30",
+                    "matchCriteriaId": "978FBB35-7734-45B2-9400-25DF82F5D207"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:php:php:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "8.0.0",
+                    "versionEndExcluding": "8.0.20",
+                    "matchCriteriaId": "5107CDF9-45B3-4553-B560-146921D77F9C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:php:php:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "8.1.0",
+                    "versionEndExcluding": "8.1.7",
+                    "matchCriteriaId": "1B060E29-B7F6-4C52-B958-F77218669AFF"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:debian:debian_linux:10.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "07B237A9-69A3-4A9C-9DA0-4E06BD37AE73"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:debian:debian_linux:11.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "FA6FEEC2-9F11-4643-8827-749718254FED"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://bugs.php.net/bug.php?id=81719",
+            "source": "security@php.net",
+            "tags": [
+              "Exploit",
+              "Issue Tracking",
+              "Mailing List",
+              "Patch",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://lists.debian.org/debian-lts-announce/2022/12/msg00030.html",
+            "source": "security@php.net",
+            "tags": [
+              "Mailing List",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/3T4MMEEZYYAEHPQMZDFN44PHORJWJFZQ/",
+            "source": "security@php.net"
+          },
+          {
+            "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/ZZTZQKRGEYJT5UB4FGG3MOE72SQUHSL4/",
+            "source": "security@php.net"
+          },
+          {
+            "url": "https://security.gentoo.org/glsa/202209-20",
+            "source": "security@php.net",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://security.netapp.com/advisory/ntap-20220722-0005/",
+            "source": "security@php.net",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.debian.org/security/2022/dsa-5179",
+            "source": "security@php.net",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://bugs.php.net/bug.php?id=81719",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Issue Tracking",
+              "Mailing List",
+              "Patch",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://lists.debian.org/debian-lts-announce/2022/12/msg00030.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/3T4MMEEZYYAEHPQMZDFN44PHORJWJFZQ/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/ZZTZQKRGEYJT5UB4FGG3MOE72SQUHSL4/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "https://security.gentoo.org/glsa/202209-20",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://security.netapp.com/advisory/ntap-20220722-0005/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.debian.org/security/2022/dsa-5179",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2022-31628",
+        "sourceIdentifier": "security@php.net",
+        "published": "2022-09-28T23:15:09.497",
+        "lastModified": "2024-11-21T07:04:53.293",
+        "vulnStatus": "Modified",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "In PHP versions before 7.4.31, 8.0.24 and 8.1.11, the phar uncompressor code would recursively uncompress \"quines\" gzip files, resulting in an infinite loop."
+          },
+          {
+            "lang": "es",
+            "value": "En PHP versiones anteriores a 7.4.31, 8.0.24 y 8.1.11, el c\u00f3digo del descompresor phar descomprim\u00eda recursivamente archivos gzip \"quines\", resultando en un bucle infinito"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "security@php.net",
+              "type": "Secondary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:L",
+                "baseScore": 2.3,
+                "baseSeverity": "LOW",
+                "attackVector": "LOCAL",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "HIGH",
+                "userInteraction": "NONE",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "NONE",
+                "integrityImpact": "NONE",
+                "availabilityImpact": "LOW"
+              },
+              "exploitabilityScore": 0.8,
+              "impactScore": 1.4
+            },
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+                "baseScore": 5.5,
+                "baseSeverity": "MEDIUM",
+                "attackVector": "LOCAL",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "LOW",
+                "userInteraction": "NONE",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "NONE",
+                "integrityImpact": "NONE",
+                "availabilityImpact": "HIGH"
+              },
+              "exploitabilityScore": 1.8,
+              "impactScore": 3.6
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "security@php.net",
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-674"
+              }
+            ]
+          },
+          {
+            "source": "nvd@nist.gov",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-835"
+              }
+            ]
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:php:php:*:*:*:*:*:*:*:*",
+                    "versionEndExcluding": "7.4.31",
+                    "matchCriteriaId": "CE52893E-2C1E-4E15-87AA-F61CD2F49783"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:php:php:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "8.0.0",
+                    "versionEndExcluding": "8.0.24",
+                    "matchCriteriaId": "E9E90EE8-1091-4D52-A070-E378CCE5A344"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:php:php:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "8.1.0",
+                    "versionEndExcluding": "8.1.11",
+                    "matchCriteriaId": "3A9D0A59-77E8-4003-90BF-6E062540B8AD"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:fedoraproject:fedora:35:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "80E516C0-98A4-4ADE-B69F-66A772E2BAAA"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:fedoraproject:fedora:36:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "5C675112-476C-4D7C-BCB9-A2FB2D0BC9FD"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:fedoraproject:fedora:37:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "E30D0E6F-4AE8-4284-8716-991DFA48CC5D"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:debian:debian_linux:10.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "07B237A9-69A3-4A9C-9DA0-4E06BD37AE73"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:debian:debian_linux:11.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "FA6FEEC2-9F11-4643-8827-749718254FED"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://bugs.php.net/bug.php?id=81726",
+            "source": "security@php.net",
+            "tags": [
+              "Permissions Required",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://lists.debian.org/debian-lts-announce/2022/12/msg00030.html",
+            "source": "security@php.net",
+            "tags": [
+              "Mailing List",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/2L5SUVYGAKSWODUQPZFBUB3AL6E6CSEV/",
+            "source": "security@php.net"
+          },
+          {
+            "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/VI3E6A3ZTH2RP7OMLJHSVFIEQBIFM6RF/",
+            "source": "security@php.net"
+          },
+          {
+            "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/XNIEABBH5XCXLFWWZYIDE457SPEDZTXV/",
+            "source": "security@php.net"
+          },
+          {
+            "url": "https://security.gentoo.org/glsa/202211-03",
+            "source": "security@php.net",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://security.netapp.com/advisory/ntap-20221209-0001/",
+            "source": "security@php.net",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.debian.org/security/2022/dsa-5277",
+            "source": "security@php.net",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://bugs.php.net/bug.php?id=81726",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Permissions Required",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://lists.debian.org/debian-lts-announce/2022/12/msg00030.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/2L5SUVYGAKSWODUQPZFBUB3AL6E6CSEV/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/VI3E6A3ZTH2RP7OMLJHSVFIEQBIFM6RF/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/XNIEABBH5XCXLFWWZYIDE457SPEDZTXV/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "https://security.gentoo.org/glsa/202211-03",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://security.netapp.com/advisory/ntap-20221209-0001/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.debian.org/security/2022/dsa-5277",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2022-31629",
+        "sourceIdentifier": "security@php.net",
+        "published": "2022-09-28T23:15:10.540",
+        "lastModified": "2024-11-21T07:04:53.460",
+        "vulnStatus": "Modified",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "In PHP versions before 7.4.31, 8.0.24 and 8.1.11, the vulnerability enables network and same-site attackers to set a standard insecure cookie in the victim's browser which is treated as a `__Host-` or `__Secure-` cookie by PHP applications."
+          },
+          {
+            "lang": "es",
+            "value": "En PHP versiones anteriores a 7.4.31, 8.0.24 y 8.1.11, la vulnerabilidad permite a atacantes de la red y del mismo sitio establecer una cookie no segura est\u00e1ndar en el navegador de la v\u00edctima que es tratada como una cookie \"__Host-\" o \"__Secure-\" por las aplicaciones PHP"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:N",
+                "baseScore": 6.5,
+                "baseSeverity": "MEDIUM",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "NONE",
+                "userInteraction": "REQUIRED",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "NONE",
+                "integrityImpact": "HIGH",
+                "availabilityImpact": "NONE"
+              },
+              "exploitabilityScore": 2.8,
+              "impactScore": 3.6
+            },
+            {
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:N",
+                "baseScore": 6.5,
+                "baseSeverity": "MEDIUM",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "NONE",
+                "userInteraction": "REQUIRED",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "NONE",
+                "integrityImpact": "HIGH",
+                "availabilityImpact": "NONE"
+              },
+              "exploitabilityScore": 2.8,
+              "impactScore": 3.6
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "security@php.net",
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-20"
+              }
+            ]
+          },
+          {
+            "source": "nvd@nist.gov",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "NVD-CWE-noinfo"
+              }
+            ]
+          },
+          {
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-1284"
+              }
+            ]
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:php:php:*:*:*:*:*:*:*:*",
+                    "versionEndExcluding": "7.4.31",
+                    "matchCriteriaId": "CE52893E-2C1E-4E15-87AA-F61CD2F49783"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:php:php:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "8.0.0",
+                    "versionEndExcluding": "8.0.24",
+                    "matchCriteriaId": "E9E90EE8-1091-4D52-A070-E378CCE5A344"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:php:php:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "8.1.0",
+                    "versionEndExcluding": "8.1.11",
+                    "matchCriteriaId": "3A9D0A59-77E8-4003-90BF-6E062540B8AD"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:fedoraproject:fedora:35:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "80E516C0-98A4-4ADE-B69F-66A772E2BAAA"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:fedoraproject:fedora:36:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "5C675112-476C-4D7C-BCB9-A2FB2D0BC9FD"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:fedoraproject:fedora:37:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "E30D0E6F-4AE8-4284-8716-991DFA48CC5D"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:debian:debian_linux:10.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "07B237A9-69A3-4A9C-9DA0-4E06BD37AE73"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:debian:debian_linux:11.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "FA6FEEC2-9F11-4643-8827-749718254FED"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2024/04/12/11",
+            "source": "security@php.net"
+          },
+          {
+            "url": "https://bugs.php.net/bug.php?id=81727",
+            "source": "security@php.net",
+            "tags": [
+              "Exploit",
+              "Permissions Required",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://lists.debian.org/debian-lts-announce/2022/12/msg00030.html",
+            "source": "security@php.net",
+            "tags": [
+              "Mailing List",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/2L5SUVYGAKSWODUQPZFBUB3AL6E6CSEV/",
+            "source": "security@php.net"
+          },
+          {
+            "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/KJZK3X6B7FBE32FETDSMRLJXTFTHKWSY/",
+            "source": "security@php.net"
+          },
+          {
+            "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/LSJVPJTX7T3J5V7XHR4MFNHZGP44R5XE/",
+            "source": "security@php.net"
+          },
+          {
+            "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/VI3E6A3ZTH2RP7OMLJHSVFIEQBIFM6RF/",
+            "source": "security@php.net"
+          },
+          {
+            "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/XNIEABBH5XCXLFWWZYIDE457SPEDZTXV/",
+            "source": "security@php.net"
+          },
+          {
+            "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/ZGWIK3HMBACERGB4TSBB2JUOMPYY2VKY/",
+            "source": "security@php.net"
+          },
+          {
+            "url": "https://security.gentoo.org/glsa/202211-03",
+            "source": "security@php.net",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://security.netapp.com/advisory/ntap-20221209-0001/",
+            "source": "security@php.net",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.debian.org/security/2022/dsa-5277",
+            "source": "security@php.net",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2024/04/12/11",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "https://bugs.php.net/bug.php?id=81727",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Permissions Required",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://lists.debian.org/debian-lts-announce/2022/12/msg00030.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/2L5SUVYGAKSWODUQPZFBUB3AL6E6CSEV/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/KJZK3X6B7FBE32FETDSMRLJXTFTHKWSY/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/LSJVPJTX7T3J5V7XHR4MFNHZGP44R5XE/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/VI3E6A3ZTH2RP7OMLJHSVFIEQBIFM6RF/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/XNIEABBH5XCXLFWWZYIDE457SPEDZTXV/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/ZGWIK3HMBACERGB4TSBB2JUOMPYY2VKY/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "https://security.gentoo.org/glsa/202211-03",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://security.netapp.com/advisory/ntap-20221209-0001/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.debian.org/security/2022/dsa-5277",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2022-37454",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2022-10-21T06:15:09.333",
+        "lastModified": "2025-05-08T15:15:47.043",
+        "vulnStatus": "Modified",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The Keccak XKCP SHA-3 reference implementation before fdc6fef has an integer overflow and resultant buffer overflow that allows attackers to execute arbitrary code or eliminate expected cryptographic properties. This occurs in the sponge function interface."
+          },
+          {
+            "lang": "es",
+            "value": "La implementaci\u00f3n de referencia de Keccak XKCP SHA-3 versiones anteriores a fdc6fef, presenta un desbordamiento de enteros y un desbordamiento de b\u00fafer resultante que permite a atacantes ejecutar c\u00f3digo arbitrario o eliminar las propiedades criptogr\u00e1ficas esperadas. Esto ocurre en la interfaz de la funci\u00f3n sponge"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "NONE",
+                "userInteraction": "NONE",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "HIGH",
+                "integrityImpact": "HIGH",
+                "availabilityImpact": "HIGH"
+              },
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            },
+            {
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "NONE",
+                "userInteraction": "NONE",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "HIGH",
+                "integrityImpact": "HIGH",
+                "availabilityImpact": "HIGH"
+              },
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "nvd@nist.gov",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-190"
+              }
+            ]
+          },
+          {
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-190"
+              }
+            ]
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:extended_keccak_code_package_project:extended_keccak_code_package:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F959FD3C-9C59-4DD6-AA90-E254F0DD815E"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:debian:debian_linux:10.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "07B237A9-69A3-4A9C-9DA0-4E06BD37AE73"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:debian:debian_linux:11.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "FA6FEEC2-9F11-4643-8827-749718254FED"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:fedoraproject:fedora:35:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "80E516C0-98A4-4ADE-B69F-66A772E2BAAA"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:fedoraproject:fedora:36:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "5C675112-476C-4D7C-BCB9-A2FB2D0BC9FD"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:php:php:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "7.2.0",
+                    "versionEndExcluding": "7.4.33",
+                    "matchCriteriaId": "76798416-0F70-4C9C-BFA2-AD2DC4DE54FA"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:php:php:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "8.0.0",
+                    "versionEndExcluding": "8.0.25",
+                    "matchCriteriaId": "795EC7FC-4A42-4D2B-A900-02CA7770E515"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:php:php:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "8.1.0",
+                    "versionEndExcluding": "8.1.12",
+                    "matchCriteriaId": "0BFF2544-41D1-41F6-A116-F7069789A585"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:python:python:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "3.6.0",
+                    "versionEndExcluding": "3.7.16",
+                    "matchCriteriaId": "6C960DA8-C330-43DB-8F1C-5C00A9E7537B"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:python:python:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "3.8.0",
+                    "versionEndExcluding": "3.8.16",
+                    "matchCriteriaId": "70B04BCE-14CC-48FD-9545-E645776C2378"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:python:python:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "3.9.0",
+                    "versionEndExcluding": "3.9.16",
+                    "matchCriteriaId": "E28B140D-129A-4B9F-AC2B-F121E7EAD70C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:python:python:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "3.10.0",
+                    "versionEndExcluding": "3.10.9",
+                    "matchCriteriaId": "95E57263-9F7E-489E-9578-D89B584095B2"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:sha3_project:sha3:*:*:*:*:*:ruby:*:*",
+                    "versionEndExcluding": "1.0.5",
+                    "matchCriteriaId": "61BEF41F-FCF7-48C9-A6D9-2B8FD7D5D9B1"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:pysha3_project:pysha3:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C6682145-B3AF-4CAE-9C1D-1A83C79D7BC2"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:pypy:pypy:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "7.0.0",
+                    "matchCriteriaId": "2AF535F7-D275-4DA1-8450-07ED0A9BF2EB"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://csrc.nist.gov/projects/hash-functions/sha-3-project",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Third Party Advisory",
+              "US Government Resource"
+            ]
+          },
+          {
+            "url": "https://eprint.iacr.org/2023/331",
+            "source": "cve@mitre.org"
+          },
+          {
+            "url": "https://github.com/XKCP/XKCP/security/advisories/GHSA-6w4m-2xhg-2658",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Patch",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://lists.debian.org/debian-lts-announce/2022/10/msg00041.html",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Mailing List",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://lists.debian.org/debian-lts-announce/2022/11/msg00000.html",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Mailing List",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/3ALQ6BDDPX5HU5YBQOBMDVAA2TSGDKIJ/",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Mailing List",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/CMIEXLMTW5GO36HTFFWIPB3OHZXCT3G4/",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Mailing List",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://mouha.be/sha-3-buffer-overflow/",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://news.ycombinator.com/item?id=33281106",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Issue Tracking",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://news.ycombinator.com/item?id=35050307",
+            "source": "cve@mitre.org"
+          },
+          {
+            "url": "https://security.gentoo.org/glsa/202305-02",
+            "source": "cve@mitre.org"
+          },
+          {
+            "url": "https://www.debian.org/security/2022/dsa-5267",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.debian.org/security/2022/dsa-5269",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://csrc.nist.gov/projects/hash-functions/sha-3-project",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory",
+              "US Government Resource"
+            ]
+          },
+          {
+            "url": "https://eprint.iacr.org/2023/331",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "https://github.com/XKCP/XKCP/security/advisories/GHSA-6w4m-2xhg-2658",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Patch",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://lists.debian.org/debian-lts-announce/2022/10/msg00041.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://lists.debian.org/debian-lts-announce/2022/11/msg00000.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/3ALQ6BDDPX5HU5YBQOBMDVAA2TSGDKIJ/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/CMIEXLMTW5GO36HTFFWIPB3OHZXCT3G4/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://mouha.be/sha-3-buffer-overflow/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://news.ycombinator.com/item?id=33281106",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Issue Tracking",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://news.ycombinator.com/item?id=35050307",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "https://security.gentoo.org/glsa/202305-02",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "https://security.netapp.com/advisory/ntap-20230203-0001/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "https://www.debian.org/security/2022/dsa-5267",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.debian.org/security/2022/dsa-5269",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2022-31630",
+        "sourceIdentifier": "security@php.net",
+        "published": "2022-11-14T07:15:09.467",
+        "lastModified": "2024-11-21T07:04:53.693",
+        "vulnStatus": "Modified",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "In PHP versions prior to 7.4.33, 8.0.25 and 8.1.12, when using imageloadfont() function in gd extension, it is possible to supply a specially crafted font file, such as if the loaded font is used with imagechar() function, the read outside allocated buffer will be used. This can lead to crashes or disclosure of confidential information.\u00a0"
+          },
+          {
+            "lang": "es",
+            "value": "En versiones de PHP anteriores a 7.4.33, 8.0.25 y 8.2.12, cuando se usa la funci\u00f3n imageloadfont() en la extensi\u00f3n gd, es posible proporcionar un archivo de fuente especialmente manipulado, como si la fuente cargada se usa con imagechar() funci\u00f3n, se utilizar\u00e1 la lectura fuera del b\u00fafer asignado. Esto puede provocar fallos o divulgaci\u00f3n de informaci\u00f3n confidencial."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "security@php.net",
+              "type": "Secondary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:L",
+                "baseScore": 6.5,
+                "baseSeverity": "MEDIUM",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "NONE",
+                "userInteraction": "NONE",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "LOW",
+                "integrityImpact": "NONE",
+                "availabilityImpact": "LOW"
+              },
+              "exploitabilityScore": 3.9,
+              "impactScore": 2.5
+            },
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:H",
+                "baseScore": 7.1,
+                "baseSeverity": "HIGH",
+                "attackVector": "LOCAL",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "NONE",
+                "userInteraction": "REQUIRED",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "HIGH",
+                "integrityImpact": "NONE",
+                "availabilityImpact": "HIGH"
+              },
+              "exploitabilityScore": 1.8,
+              "impactScore": 5.2
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "security@php.net",
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-131"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-190"
+              }
+            ]
+          },
+          {
+            "source": "nvd@nist.gov",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-125"
+              }
+            ]
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:php:php:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "7.4.0",
+                    "versionEndExcluding": "7.4.33",
+                    "matchCriteriaId": "53B99259-5C66-4AEF-B500-1F775B6CCA06"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:php:php:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "8.0.0",
+                    "versionEndExcluding": "8.0.25",
+                    "matchCriteriaId": "795EC7FC-4A42-4D2B-A900-02CA7770E515"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:php:php:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "8.1.0",
+                    "versionEndExcluding": "8.1.12",
+                    "matchCriteriaId": "0BFF2544-41D1-41F6-A116-F7069789A585"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://bugs.php.net/bug.php?id=81739",
+            "source": "security@php.net",
+            "tags": [
+              "Exploit",
+              "Issue Tracking",
+              "Patch",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://bugs.php.net/bug.php?id=81739",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Issue Tracking",
+              "Patch",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2023-0568",
+        "sourceIdentifier": "security@php.net",
+        "published": "2023-02-16T07:15:10.327",
+        "lastModified": "2025-02-13T17:15:55.913",
+        "vulnStatus": "Modified",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "In PHP 8.0.X before 8.0.28, 8.1.X before 8.1.16 and 8.2.X before 8.2.3, core path resolution function allocate buffer one byte too small. When resolving paths with lengths close to system MAXPATHLEN setting, this may lead to the byte after the allocated buffer being overwritten with NUL value, which might lead to unauthorized data access or modification."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "security@php.net",
+              "type": "Secondary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                "baseScore": 7.5,
+                "baseSeverity": "HIGH",
+                "attackVector": "NETWORK",
+                "attackComplexity": "HIGH",
+                "privilegesRequired": "NONE",
+                "userInteraction": "REQUIRED",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "HIGH",
+                "integrityImpact": "HIGH",
+                "availabilityImpact": "HIGH"
+              },
+              "exploitabilityScore": 1.6,
+              "impactScore": 5.9
+            },
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 8.1,
+                "baseSeverity": "HIGH",
+                "attackVector": "NETWORK",
+                "attackComplexity": "HIGH",
+                "privilegesRequired": "NONE",
+                "userInteraction": "NONE",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "HIGH",
+                "integrityImpact": "HIGH",
+                "availabilityImpact": "HIGH"
+              },
+              "exploitabilityScore": 2.2,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "security@php.net",
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-131"
+              }
+            ]
+          },
+          {
+            "source": "nvd@nist.gov",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-770"
+              }
+            ]
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:php:php:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "8.0.0",
+                    "versionEndExcluding": "8.0.28",
+                    "matchCriteriaId": "BBCCD85D-5679-42EE-B6C6-A9A309E2B4BC"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:php:php:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "8.1.0",
+                    "versionEndExcluding": "8.1.16",
+                    "matchCriteriaId": "EDC7B443-3E3C-4888-AC9B-7415D2C5C059"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:php:php:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "8.2.0",
+                    "versionEndExcluding": "8.2.3",
+                    "matchCriteriaId": "7C14298C-48A4-4FD8-BFA0-808CF935490B"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://bugs.php.net/bug.php?id=81746",
+            "source": "security@php.net",
+            "tags": [
+              "Exploit",
+              "Issue Tracking",
+              "Patch",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://security.netapp.com/advisory/ntap-20230517-0001/",
+            "source": "security@php.net"
+          },
+          {
+            "url": "https://bugs.php.net/bug.php?id=81746",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Issue Tracking",
+              "Patch",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://security.netapp.com/advisory/ntap-20230517-0001/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2023-0662",
+        "sourceIdentifier": "security@php.net",
+        "published": "2023-02-16T07:15:10.577",
+        "lastModified": "2025-02-13T17:15:56.090",
+        "vulnStatus": "Modified",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "In PHP 8.0.X before 8.0.28, 8.1.X before 8.1.16 and 8.2.X before 8.2.3, excessive number of parts in HTTP form upload can cause high resource consumption and excessive number of log entries. This can cause denial of service on the affected server by exhausting CPU resources or disk space."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "security@php.net",
+              "type": "Secondary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                "baseScore": 7.5,
+                "baseSeverity": "HIGH",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "NONE",
+                "userInteraction": "NONE",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "NONE",
+                "integrityImpact": "NONE",
+                "availabilityImpact": "HIGH"
+              },
+              "exploitabilityScore": 3.9,
+              "impactScore": 3.6
+            },
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                "baseScore": 7.5,
+                "baseSeverity": "HIGH",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "NONE",
+                "userInteraction": "NONE",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "NONE",
+                "integrityImpact": "NONE",
+                "availabilityImpact": "HIGH"
+              },
+              "exploitabilityScore": 3.9,
+              "impactScore": 3.6
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "security@php.net",
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-400"
+              }
+            ]
+          },
+          {
+            "source": "nvd@nist.gov",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-400"
+              }
+            ]
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:php:php:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "8.0.0",
+                    "versionEndExcluding": "8.0.28",
+                    "matchCriteriaId": "BBCCD85D-5679-42EE-B6C6-A9A309E2B4BC"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:php:php:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "8.1.0",
+                    "versionEndExcluding": "8.1.16",
+                    "matchCriteriaId": "EDC7B443-3E3C-4888-AC9B-7415D2C5C059"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:php:php:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "8.2.0",
+                    "versionEndExcluding": "8.2.3",
+                    "matchCriteriaId": "7C14298C-48A4-4FD8-BFA0-808CF935490B"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/php/php-src/security/advisories/GHSA-54hq-v5wp-fqgv",
+            "source": "security@php.net",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://security.netapp.com/advisory/ntap-20230517-0001/",
+            "source": "security@php.net"
+          },
+          {
+            "url": "https://github.com/php/php-src/security/advisories/GHSA-54hq-v5wp-fqgv",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://security.netapp.com/advisory/ntap-20230517-0001/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2023-0567",
+        "sourceIdentifier": "security@php.net",
+        "published": "2023-03-01T08:15:11.530",
+        "lastModified": "2024-11-21T07:37:24.913",
+        "vulnStatus": "Modified",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "In PHP 8.0.X before 8.0.28, 8.1.X before 8.1.16 and 8.2.X before 8.2.3, password_verify() function may accept some invalid Blowfish hashes as valid. If such invalid hash ever ends up in the password database, it may lead to an application allowing any password for this entry as valid.\u00a0\n\n"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "security@php.net",
+              "type": "Secondary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+                "baseScore": 7.7,
+                "baseSeverity": "HIGH",
+                "attackVector": "LOCAL",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "NONE",
+                "userInteraction": "NONE",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "HIGH",
+                "integrityImpact": "HIGH",
+                "availabilityImpact": "NONE"
+              },
+              "exploitabilityScore": 2.5,
+              "impactScore": 5.2
+            },
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+                "baseScore": 6.2,
+                "baseSeverity": "MEDIUM",
+                "attackVector": "LOCAL",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "NONE",
+                "userInteraction": "NONE",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "NONE",
+                "integrityImpact": "HIGH",
+                "availabilityImpact": "NONE"
+              },
+              "exploitabilityScore": 2.5,
+              "impactScore": 3.6
+            },
+            {
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+                "baseScore": 8.1,
+                "baseSeverity": "HIGH",
+                "attackVector": "ADJACENT_NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "NONE",
+                "userInteraction": "NONE",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "HIGH",
+                "integrityImpact": "HIGH",
+                "availabilityImpact": "NONE"
+              },
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.2
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "nvd@nist.gov",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-916"
+              }
+            ]
+          },
+          {
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-916"
+              }
+            ]
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:php:php:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "8.0.0",
+                    "versionEndExcluding": "8.0.28",
+                    "matchCriteriaId": "BBCCD85D-5679-42EE-B6C6-A9A309E2B4BC"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:php:php:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "8.1.0",
+                    "versionEndExcluding": "8.1.16",
+                    "matchCriteriaId": "EDC7B443-3E3C-4888-AC9B-7415D2C5C059"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:php:php:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "8.2.0",
+                    "versionEndExcluding": "8.2.3",
+                    "matchCriteriaId": "7C14298C-48A4-4FD8-BFA0-808CF935490B"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://bugs.php.net/bug.php?id=81744",
+            "source": "security@php.net",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/php/php-src/security/advisories/GHSA-7fj2-8x79-rjf4",
+            "source": "security@php.net",
+            "tags": [
+              "Exploit",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://bugs.php.net/bug.php?id=81744",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/php/php-src/security/advisories/GHSA-7fj2-8x79-rjf4",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://security.netapp.com/advisory/ntap-20230331-0008/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2023-3247",
+        "sourceIdentifier": "security@php.net",
+        "published": "2023-07-22T05:15:37.460",
+        "lastModified": "2024-11-21T08:16:47.640",
+        "vulnStatus": "Modified",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "In PHP versions 8.0.* before 8.0.29, 8.1.* before 8.1.20, 8.2.* before 8.2.7 when using SOAP HTTP Digest Authentication, random value generator was not checked for failure, and was using narrower range of values than it should have. In case of random generator failure, it could lead to a disclosure of 31 bits of uninitialized memory from the client to the server, and it also made easier to a malicious server to guess the client's nonce.\u00a0\n\n"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "security@php.net",
+              "type": "Secondary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:L/I:N/A:N",
+                "baseScore": 2.6,
+                "baseSeverity": "LOW",
+                "attackVector": "NETWORK",
+                "attackComplexity": "HIGH",
+                "privilegesRequired": "LOW",
+                "userInteraction": "REQUIRED",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "LOW",
+                "integrityImpact": "NONE",
+                "availabilityImpact": "NONE"
+              },
+              "exploitabilityScore": 1.2,
+              "impactScore": 1.4
+            },
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N",
+                "baseScore": 4.3,
+                "baseSeverity": "MEDIUM",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "LOW",
+                "userInteraction": "NONE",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "LOW",
+                "integrityImpact": "NONE",
+                "availabilityImpact": "NONE"
+              },
+              "exploitabilityScore": 2.8,
+              "impactScore": 1.4
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "security@php.net",
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-252"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-330"
+              }
+            ]
+          },
+          {
+            "source": "nvd@nist.gov",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-330"
+              }
+            ]
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:php:php:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "8.0.0",
+                    "versionEndExcluding": "8.0.29",
+                    "matchCriteriaId": "74F672AC-6864-41C5-9832-490C33F39D12"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:php:php:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "8.1.0",
+                    "versionEndExcluding": "8.1.20",
+                    "matchCriteriaId": "30B3A139-7917-46D1-8747-FAEBED4B5EF0"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:php:php:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "8.2.0",
+                    "versionEndExcluding": "8.2.7",
+                    "matchCriteriaId": "C1A67DFA-5A0F-4E08-B7C7-DB21C1675A1A"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/php/php-src/security/advisories/GHSA-76gg-c692-v2mw",
+            "source": "security@php.net",
+            "tags": [
+              "Patch",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/php/php-src/security/advisories/GHSA-76gg-c692-v2mw",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Patch",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2023-3823",
+        "sourceIdentifier": "security@php.net",
+        "published": "2023-08-11T06:15:09.283",
+        "lastModified": "2025-02-13T17:16:59.300",
+        "vulnStatus": "Modified",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "In PHP versions 8.0.* before 8.0.30, 8.1.* before 8.1.22, and 8.2.* before 8.2.8 various XML functions rely on libxml global state to track configuration variables, like whether external entities are loaded. This state is assumed to be unchanged unless the user explicitly changes it by calling appropriate function. However, since the state is process-global, other modules - such as\u00a0ImageMagick - may also use this library within the same process, and change that global state for their internal purposes, and leave it in a state where external entities loading is enabled. This can lead to the situation where external XML is parsed with external entities loaded, which can lead to disclosure of any local files accessible to PHP. This vulnerable state may persist in the same process across many requests, until the process is shut down."
+          },
+          {
+            "lang": "es",
+            "value": "En las versiones de PHP 8.0.* antes de la 8.0.30, 8.1.* antes de la 8.1.22, y 8.2.* antes de la 8.2.8 varias funciones XML se basan en el estado global de libxml para rastrear variables de configuraci\u00f3n, como si las entidades externas est\u00e1n cargadas. Se asume que este estado no cambia a menos que el usuario lo cambie expl\u00edcitamente llamando a la funci\u00f3n apropiada. Sin embargo, dado que el estado es global del proceso, otros m\u00f3dulos - como ImageMagick - pueden tambi\u00e9n usar esta librer\u00eda dentro del mismo proceso, y cambiar ese estado global para sus prop\u00f3sitos internos, y dejarlo en un estado en el que la carga de entidades externas est\u00e9 habilitada. Esto puede llevar a la situaci\u00f3n donde XML externo es analizado con entidades externas cargadas, lo que puede llevar a la divulgaci\u00f3n de cualquier archivo local accesible a PHP. Este estado vulnerable puede persistir en el mismo proceso a trav\u00e9s de muchas peticiones, hasta que el proceso sea cerrado."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "security@php.net",
+              "type": "Secondary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:L",
+                "baseScore": 8.6,
+                "baseSeverity": "HIGH",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "NONE",
+                "userInteraction": "NONE",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "HIGH",
+                "integrityImpact": "LOW",
+                "availabilityImpact": "LOW"
+              },
+              "exploitabilityScore": 3.9,
+              "impactScore": 4.7
+            },
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+                "baseScore": 7.5,
+                "baseSeverity": "HIGH",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "NONE",
+                "userInteraction": "NONE",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "HIGH",
+                "integrityImpact": "NONE",
+                "availabilityImpact": "NONE"
+              },
+              "exploitabilityScore": 3.9,
+              "impactScore": 3.6
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "nvd@nist.gov",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-611"
+              }
+            ]
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:php:php:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "8.0.0",
+                    "versionEndExcluding": "8.0.30",
+                    "matchCriteriaId": "C516377E-EAA8-4534-B0B8-4BF7A664DDFD"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:php:php:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "8.1.0",
+                    "versionEndExcluding": "8.1.22",
+                    "matchCriteriaId": "3DA6AD3E-CB35-4AF2-86E9-3BC831728058"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:php:php:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "8.2.0",
+                    "versionEndExcluding": "8.2.9",
+                    "matchCriteriaId": "75AD1BDB-02D7-4727-8F08-8E1F794DB842"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:fedoraproject:fedora:38:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "CC559B26-5DFC-4B7A-A27C-B77DE755DFF9"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:debian:debian_linux:10.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "07B237A9-69A3-4A9C-9DA0-4E06BD37AE73"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/php/php-src/security/advisories/GHSA-3qrf-m4j2-pcrr",
+            "source": "security@php.net",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://lists.debian.org/debian-lts-announce/2023/09/msg00002.html",
+            "source": "security@php.net",
+            "tags": [
+              "Mailing List"
+            ]
+          },
+          {
+            "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/7NBF77WN6DTVTY2RE73IGPYD6M4PIAWA/",
+            "source": "security@php.net",
+            "tags": [
+              "Mailing List"
+            ]
+          },
+          {
+            "url": "https://security.netapp.com/advisory/ntap-20230825-0001/",
+            "source": "security@php.net",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/php/php-src/security/advisories/GHSA-3qrf-m4j2-pcrr",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://lists.debian.org/debian-lts-announce/2023/09/msg00002.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List"
+            ]
+          },
+          {
+            "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/7NBF77WN6DTVTY2RE73IGPYD6M4PIAWA/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List"
+            ]
+          },
+          {
+            "url": "https://security.netapp.com/advisory/ntap-20230825-0001/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2023-3824",
+        "sourceIdentifier": "security@php.net",
+        "published": "2023-08-11T06:15:10.560",
+        "lastModified": "2025-02-13T17:16:59.457",
+        "vulnStatus": "Modified",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "In PHP version 8.0.* before 8.0.30,\u00a0 8.1.* before 8.1.22, and 8.2.* before 8.2.8, when loading phar file, while reading PHAR directory entries, insufficient length checking may lead to a stack buffer overflow, leading potentially to memory corruption or RCE."
+          },
+          {
+            "lang": "es",
+            "value": "En PHP versi\u00f3n 8.0.* antes de 8.0.30, 8.1.* antes de 8.1.22, y 8.2.* antes de 8.2.8, al cargar el archivo phar, mientras se leen las entradas del directorio PHAR, una comprobaci\u00f3n de longitud insuficiente puede conducir a un desbordamiento del b\u00fafer de pila, llevando potencialmente a corrupci\u00f3n de memoria o RCE."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "security@php.net",
+              "type": "Secondary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:L",
+                "baseScore": 9.4,
+                "baseSeverity": "CRITICAL",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "NONE",
+                "userInteraction": "NONE",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "HIGH",
+                "integrityImpact": "HIGH",
+                "availabilityImpact": "LOW"
+              },
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.5
+            },
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "NONE",
+                "userInteraction": "NONE",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "HIGH",
+                "integrityImpact": "HIGH",
+                "availabilityImpact": "HIGH"
+              },
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "security@php.net",
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-119"
+              }
+            ]
+          },
+          {
+            "source": "nvd@nist.gov",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-119"
+              }
+            ]
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:php:php:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "8.0.0",
+                    "versionEndExcluding": "8.0.30",
+                    "matchCriteriaId": "C516377E-EAA8-4534-B0B8-4BF7A664DDFD"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:php:php:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "8.1.0",
+                    "versionEndExcluding": "8.1.22",
+                    "matchCriteriaId": "3DA6AD3E-CB35-4AF2-86E9-3BC831728058"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:php:php:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "8.2.0",
+                    "versionEndExcluding": "8.2.9",
+                    "matchCriteriaId": "75AD1BDB-02D7-4727-8F08-8E1F794DB842"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:fedoraproject:fedora:38:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "CC559B26-5DFC-4B7A-A27C-B77DE755DFF9"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:debian:debian_linux:10.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "07B237A9-69A3-4A9C-9DA0-4E06BD37AE73"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/php/php-src/security/advisories/GHSA-jqcx-ccgc-xwhv",
+            "source": "security@php.net",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://lists.debian.org/debian-lts-announce/2023/09/msg00002.html",
+            "source": "security@php.net",
+            "tags": [
+              "Mailing List"
+            ]
+          },
+          {
+            "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/7NBF77WN6DTVTY2RE73IGPYD6M4PIAWA/",
+            "source": "security@php.net",
+            "tags": [
+              "Mailing List"
+            ]
+          },
+          {
+            "url": "https://security.netapp.com/advisory/ntap-20230825-0001/",
+            "source": "security@php.net",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/php/php-src/security/advisories/GHSA-jqcx-ccgc-xwhv",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://lists.debian.org/debian-lts-announce/2023/09/msg00002.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List"
+            ]
+          },
+          {
+            "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/7NBF77WN6DTVTY2RE73IGPYD6M4PIAWA/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List"
+            ]
+          },
+          {
+            "url": "https://security.netapp.com/advisory/ntap-20230825-0001/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2022-4900",
+        "sourceIdentifier": "secalert@redhat.com",
+        "published": "2023-11-02T16:15:08.700",
+        "lastModified": "2025-03-20T17:01:07.010",
+        "vulnStatus": "Analyzed",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A vulnerability was found in PHP where setting the environment variable PHP_CLI_SERVER_WORKERS to a large value leads to a heap buffer overflow."
+          },
+          {
+            "lang": "es",
+            "value": "Se encontr\u00f3 una vulnerabilidad en PHP donde establecer la variable de entorno PHP_CLI_SERVER_WORKERS en un valor grande provoca un desbordamiento del b\u00fafer del heap."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "secalert@redhat.com",
+              "type": "Secondary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                "baseScore": 6.2,
+                "baseSeverity": "MEDIUM",
+                "attackVector": "LOCAL",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "NONE",
+                "userInteraction": "NONE",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "NONE",
+                "integrityImpact": "NONE",
+                "availabilityImpact": "HIGH"
+              },
+              "exploitabilityScore": 2.5,
+              "impactScore": 3.6
+            },
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+                "baseScore": 5.5,
+                "baseSeverity": "MEDIUM",
+                "attackVector": "LOCAL",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "LOW",
+                "userInteraction": "NONE",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "NONE",
+                "integrityImpact": "NONE",
+                "availabilityImpact": "HIGH"
+              },
+              "exploitabilityScore": 1.8,
+              "impactScore": 3.6
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "secalert@redhat.com",
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-119"
+              }
+            ]
+          },
+          {
+            "source": "nvd@nist.gov",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-787"
+              }
+            ]
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:php:php:*:*:*:*:*:*:*:*",
+                    "versionEndExcluding": "8.0.22",
+                    "matchCriteriaId": "D7897613-672B-40B3-8703-855F44666019"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:redhat:software_collections:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "749804DA-4B27-492A-9ABA-6BB562A6B3AC"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:redhat:enterprise_linux:6.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "2F6AB192-9D7D-4A9A-8995-E53A9DE9EAFC"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:redhat:enterprise_linux:7.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "142AD0DD-4CF3-4D74-9442-459CE3347E3A"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:redhat:enterprise_linux:8.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F4CFF558-3C47-480D-A2F0-BABF26042943"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:redhat:enterprise_linux:9.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "7F6FB57C-2BC7-487C-96DD-132683AEB35D"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://access.redhat.com/security/cve/CVE-2022-4900",
+            "source": "secalert@redhat.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2179880",
+            "source": "secalert@redhat.com",
+            "tags": [
+              "Issue Tracking"
+            ]
+          },
+          {
+            "url": "https://security.netapp.com/advisory/ntap-20231130-0008/",
+            "source": "secalert@redhat.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://access.redhat.com/security/cve/CVE-2022-4900",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2179880",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Issue Tracking"
+            ]
+          },
+          {
+            "url": "https://security.netapp.com/advisory/ntap-20231130-0008/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2024-5458",
+        "sourceIdentifier": "security@php.net",
+        "published": "2024-06-09T19:15:52.397",
+        "lastModified": "2025-03-14T15:15:44.633",
+        "vulnStatus": "Modified",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "In PHP versions\u00a08.1.* before 8.1.29, 8.2.* before 8.2.20, 8.3.* before 8.3.8, due to a code logic error, filtering functions such as filter_var when validating URLs\u00a0(FILTER_VALIDATE_URL) for certain types of URLs the function will result in invalid user information (username + password part of URLs) being treated as valid user information. This may lead to the downstream code accepting invalid URLs as valid and parsing them incorrectly."
+          },
+          {
+            "lang": "es",
+            "value": "En las versiones de PHP 8.1.* anteriores a 8.1.29, 8.2.* anteriores a 8.2.20, 8.3.* anteriores a 8.3.8, debido a un error de l\u00f3gica de c\u00f3digo, funciones de filtrado como filter_var al validar URL (FILTER_VALIDATE_URL) para ciertos tipos de URL la funci\u00f3n dar\u00e1 como resultado que la informaci\u00f3n de usuario no v\u00e1lida (nombre de usuario + contrase\u00f1a parte de las URL) se trate como informaci\u00f3n de usuario v\u00e1lida. Esto puede hacer que el c\u00f3digo posterior acepte URL no v\u00e1lidas como v\u00e1lidas y las analice incorrectamente."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "security@php.net",
+              "type": "Secondary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+                "baseScore": 5.3,
+                "baseSeverity": "MEDIUM",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "NONE",
+                "userInteraction": "NONE",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "NONE",
+                "integrityImpact": "LOW",
+                "availabilityImpact": "NONE"
+              },
+              "exploitabilityScore": 3.9,
+              "impactScore": 1.4
+            },
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+                "baseScore": 5.3,
+                "baseSeverity": "MEDIUM",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "NONE",
+                "userInteraction": "NONE",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "NONE",
+                "integrityImpact": "LOW",
+                "availabilityImpact": "NONE"
+              },
+              "exploitabilityScore": 3.9,
+              "impactScore": 1.4
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "nvd@nist.gov",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-345"
+              }
+            ]
+          },
+          {
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-345"
+              }
+            ]
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:php:php:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "7.3.27",
+                    "versionEndIncluding": "7.3.33",
+                    "matchCriteriaId": "8703A80A-44D8-4615-A849-61526B187D73"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:php:php:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "7.4.15",
+                    "versionEndIncluding": "7.4.33",
+                    "matchCriteriaId": "C937E1A7-44CC-4CA3-815C-0E8709EB393E"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:php:php:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "8.0.2",
+                    "versionEndIncluding": "8.0.30",
+                    "matchCriteriaId": "E0FA45C5-498B-4160-9CA3-F0A6533ECDFA"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:php:php:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "8.1.0",
+                    "versionEndExcluding": "8.1.29",
+                    "matchCriteriaId": "7DC2EEF8-834B-42A1-8DA3-0C2CF22A7070"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:php:php:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "8.2.0",
+                    "versionEndExcluding": "8.2.20",
+                    "matchCriteriaId": "A39988FF-D854-4277-9D66-6911AF371DD3"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:php:php:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "8.3.0",
+                    "versionEndExcluding": "8.3.8",
+                    "matchCriteriaId": "F579FFC1-4F81-4755-B14B-3AA73AC9FF7A"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:fedoraproject:fedora:40:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "CA277A6C-83EC-4536-9125-97B84C4FAF59"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2024/06/07/1",
+            "source": "security@php.net",
+            "tags": [
+              "Mailing List",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/php/php-src/security/advisories/GHSA-w8qr-v226-r27w",
+            "source": "security@php.net",
+            "tags": [
+              "Exploit",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://lists.debian.org/debian-lts-announce/2024/06/msg00009.html",
+            "source": "security@php.net"
+          },
+          {
+            "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/PKGTQUOA2NTZ3RXN22CSAUJPIRUYRB4B/",
+            "source": "security@php.net",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/W45DBOH56NQDRTOM2DN2LNA2FZIMC3PK/",
+            "source": "security@php.net"
+          },
+          {
+            "url": "https://security.netapp.com/advisory/ntap-20240726-0001/",
+            "source": "security@php.net"
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2024/06/07/1",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/php/php-src/security/advisories/GHSA-w8qr-v226-r27w",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://lists.debian.org/debian-lts-announce/2024/06/msg00009.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/PKGTQUOA2NTZ3RXN22CSAUJPIRUYRB4B/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/W45DBOH56NQDRTOM2DN2LNA2FZIMC3PK/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "https://security.netapp.com/advisory/ntap-20240726-0001/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "ports": "1-1000,3306,5432,8080-8090",
+  "intensity": "normal",
+  "format": "html",
+  "report_settings": {
+    "include_debug_info": false,
+    "detailed_recommendations": true,
+    "risk_scoring_method": "detailed",
+    "company_name": "FinGuardAI Testing"
+  },
+  "scanner_settings": {
+    "timeout": 600,
+    "retries": 3,
+    "concurrent_scans": 4,
+    "follow_redirects": true
+  },
+  "logging": {
+    "level": "INFO",
+    "file": "logs/test_scanner.log",
+    "console": true
+  }
+}

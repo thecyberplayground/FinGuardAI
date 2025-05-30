@@ -1,0 +1,22 @@
+{
+  "ports": "80,443,8080,3306,5432",
+  "intensity": "stealthy",
+  "format": "text",
+  "report_settings": {
+    "include_debug_info": true,
+    "detailed_recommendations": false,
+    "risk_scoring_method": "simple",
+    "company_name": "FinGuardAI Development"
+  },
+  "scanner_settings": {
+    "timeout": 300,
+    "retries": 2,
+    "concurrent_scans": 2,
+    "follow_redirects": true
+  },
+  "logging": {
+    "level": "DEBUG",
+    "file": "logs/dev_scanner.log",
+    "console": true
+  }
+}

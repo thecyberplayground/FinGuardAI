@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Server for Vulnerability Scanning</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mb-4">Test Server for Vulnerability Scanning</h1>
+        <p class="lead">This is a simple test server to demonstrate the FinGuardAI vulnerability scanner.</p>
+        
+        <h2 class="mt-4">Sample Technologies</h2>
+        <ul class="list-group mb-4">
+            <li class="list-group-item">jQuery 3.5.1</li>
+            <li class="list-group-item">Bootstrap 4.5.2</li>
+            <li class="list-group-item">Python HTTP Server</li>
+        </ul>
+        
+        <h2 class="mt-4">Sample Form (Not functional)</h2>
+        <form id="test-form" class="mb-4">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" class="form-control" id="username" placeholder="Enter username">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" placeholder="Password">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        
+        <!-- Simulated server info (for scanner to detect) -->
+        <div id="server-info" style="display: none;">
+            <span id="server-version">Apache/2.4.41</span>
+            <span id="php-version">PHP/7.4.3</span>
+            <span id="mysql-version">MySQL/5.7.31</span>
+        </div>
+    </div>
+    
+    <script>
+        // Intentionally simple code for scanner detection
+        $(document).ready(function() {
+            console.log("Page loaded");
+            
+            // Simulated AJAX request with potential issues
+            $("#test-form").on("submit", function(e) {
+                e.preventDefault();
+                const username = $("#username").val();
+                const password = $("#password").val();
+                
+                // Simulated validation - insecure for demonstration
+                if(username && password) {
+                    // Simulate an AJAX call
+                    console.log("Form submitted with: " + username);
+                    alert("Form submitted successfully!");
+                }
+            });
+        });
+    </script>
+</body>
+</html>

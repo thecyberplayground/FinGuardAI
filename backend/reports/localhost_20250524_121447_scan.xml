@@ -1,0 +1,64 @@
+{
+  "target": "localhost",
+  "scan_time": "2025-05-24T12:14:47.368374",
+  "open_ports": {
+    "80": {
+      "name": "http",
+      "product": "Apache httpd",
+      "version": "2.4.41",
+      "state": "open"
+    },
+    "443": {
+      "name": "https",
+      "product": "nginx",
+      "version": "1.18.0",
+      "state": "open"
+    },
+    "8080": {
+      "name": "http-proxy",
+      "product": "Tomcat",
+      "version": "9.0.34",
+      "state": "open"
+    }
+  },
+  "vulnerabilities": [
+    {
+      "name": "Apache httpd 2.4.41 Remote Code Execution",
+      "severity": "critical",
+      "description": "A remote code execution vulnerability exists in Apache httpd 2.4.41 that could allow attackers to execute arbitrary code.",
+      "recommendation": "Upgrade to Apache httpd 2.4.46 or later, which includes security fixes for this vulnerability."
+    },
+    {
+      "name": "TLS Certificate Validation",
+      "severity": "high",
+      "description": "The TLS certificate used by the server is self-signed and not trusted by standard certificate authorities.",
+      "recommendation": "Replace self-signed certificate with a trusted certificate from a recognized certificate authority."
+    },
+    {
+      "name": "Cross-Site Scripting (XSS)",
+      "severity": "medium",
+      "description": "The web application might be vulnerable to cross-site scripting attacks, allowing attackers to inject malicious scripts.",
+      "recommendation": "Implement proper input validation and output encoding to prevent XSS attacks."
+    },
+    {
+      "name": "Information Disclosure",
+      "severity": "low",
+      "description": "The server reveals version information which could help attackers identify vulnerabilities.",
+      "recommendation": "Configure the server to hide version information in HTTP headers and error pages."
+    }
+  ],
+  "technologies": [
+    {
+      "name": "Apache",
+      "version": "2.4.41"
+    },
+    {
+      "name": "nginx",
+      "version": "1.18.0"
+    },
+    {
+      "name": "Tomcat",
+      "version": "9.0.34"
+    }
+  ]
+}

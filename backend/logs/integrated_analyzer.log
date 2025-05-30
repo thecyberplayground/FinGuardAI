@@ -1,0 +1,780 @@
+2025-05-17 20:31:29,652 - finguardai.remediation - INFO - Financial sector specific recommendations loaded successfully
+2025-05-17 20:31:29,815 - finguardai.integrated - INFO - Starting integrated analysis of portal.lcu.edu.ng
+2025-05-17 20:31:29,824 - finguardai.integrated - ERROR - Error during analysis: NVDClient.__init__() got an unexpected keyword argument 'cache_ttl'
+2025-05-17 20:32:13,541 - finguardai.remediation - INFO - Financial sector specific recommendations loaded successfully
+2025-05-17 20:32:13,549 - finguardai.integrated - INFO - Starting integrated analysis of portal.lcu.edu.ng
+2025-05-17 20:32:13,554 - finguardai.integrated_analyzer - INFO - Starting integrated analysis of portal.lcu.edu.ng
+2025-05-17 20:32:13,554 - finguardai.integrated_analyzer - INFO - Step 1: Performing active scanning
+2025-05-17 20:32:13,555 - finguardai.active_scanner - INFO - Starting active scan of portal.lcu.edu.ng
+2025-05-17 20:32:13,556 - finguardai.active_scanner - INFO - Completed active scan of portal.lcu.edu.ng, found 3 technologies
+2025-05-17 20:32:13,557 - finguardai.integrated_analyzer - INFO - Step 2: Performing passive monitoring
+2025-05-17 20:32:13,557 - finguardai.passive_monitor - INFO - Starting passive monitoring of portal.lcu.edu.ng
+2025-05-17 20:32:13,560 - finguardai.passive_monitor - INFO - Completed passive monitoring of portal.lcu.edu.ng, found 7 technologies
+2025-05-17 20:32:13,561 - finguardai.integrated_analyzer - INFO - Combined 4 active and 9 passive technologies into 10 unique technologies
+2025-05-17 20:32:13,561 - finguardai.integrated_analyzer - INFO - Step 4: Analyzing vulnerabilities by timeframe
+2025-05-17 20:32:13,561 - finguardai.nvd_integration - INFO - Getting vulnerabilities by timeframe for 10 technologies
+2025-05-17 20:32:13,562 - finguardai.nvd_integration - INFO - Fetching vulnerabilities for apache 2.4.51
+2025-05-17 20:32:13,563 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'apache 2.4.51', 'pubStartDate': '2025-05-16T00:00:00.000', 'resultsPerPage': 50}
+2025-05-17 20:32:14,643 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?keywordSearch=apache+2.4.51&pubStartDate=2025-05-16T00%3A00%3A00.000&resultsPerPage=50
+2025-05-17 20:32:14,645 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-17 20:32:14,645 - finguardai.nvd_integration - ERROR - Error fetching vulnerabilities for apache 2.4.51: 'str' object does not support item assignment
+2025-05-17 20:32:14,646 - finguardai.nvd_integration - INFO - Fetching vulnerabilities for php 8.0.10
+2025-05-17 20:32:14,647 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'php 8.0.10', 'pubStartDate': '2025-05-16T00:00:00.000', 'resultsPerPage': 50}
+2025-05-17 20:32:15,790 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?keywordSearch=php+8.0.10&pubStartDate=2025-05-16T00%3A00%3A00.000&resultsPerPage=50
+2025-05-17 20:32:15,791 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-17 20:32:15,792 - finguardai.nvd_integration - ERROR - Error fetching vulnerabilities for php 8.0.10: 'str' object does not support item assignment
+2025-05-17 20:32:15,792 - finguardai.nvd_integration - INFO - Fetching vulnerabilities for openssh 8.2p1
+2025-05-17 20:32:15,793 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'openssh 8.2p1', 'pubStartDate': '2025-05-16T00:00:00.000', 'resultsPerPage': 50}
+2025-05-17 20:32:16,814 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?keywordSearch=openssh+8.2p1&pubStartDate=2025-05-16T00%3A00%3A00.000&resultsPerPage=50
+2025-05-17 20:32:16,817 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-17 20:32:16,827 - finguardai.nvd_integration - ERROR - Error fetching vulnerabilities for openssh 8.2p1: 'str' object does not support item assignment
+2025-05-17 20:32:16,829 - finguardai.nvd_integration - INFO - Fetching vulnerabilities for ubuntu 20.04
+2025-05-17 20:32:16,831 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'ubuntu 20.04', 'pubStartDate': '2025-05-16T00:00:00.000', 'resultsPerPage': 50}
+2025-05-17 20:32:17,800 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?keywordSearch=ubuntu+20.04&pubStartDate=2025-05-16T00%3A00%3A00.000&resultsPerPage=50
+2025-05-17 20:32:17,802 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-17 20:32:17,803 - finguardai.nvd_integration - ERROR - Error fetching vulnerabilities for ubuntu 20.04: 'str' object does not support item assignment
+2025-05-17 20:32:17,805 - finguardai.nvd_integration - INFO - Fetching vulnerabilities for wordpress 5.8.2
+2025-05-17 20:32:17,806 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'wordpress 5.8.2', 'pubStartDate': '2025-05-16T00:00:00.000', 'resultsPerPage': 50}
+2025-05-17 20:32:18,736 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?keywordSearch=wordpress+5.8.2&pubStartDate=2025-05-16T00%3A00%3A00.000&resultsPerPage=50
+2025-05-17 20:32:18,746 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-17 20:32:18,747 - finguardai.nvd_integration - ERROR - Error fetching vulnerabilities for wordpress 5.8.2: 'str' object does not support item assignment
+2025-05-17 20:32:18,749 - finguardai.nvd_integration - INFO - Fetching vulnerabilities for nginx 1.20.1
+2025-05-17 20:32:18,752 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'nginx 1.20.1', 'pubStartDate': '2025-05-16T00:00:00.000', 'resultsPerPage': 50}
+2025-05-17 20:32:19,730 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?keywordSearch=nginx+1.20.1&pubStartDate=2025-05-16T00%3A00%3A00.000&resultsPerPage=50
+2025-05-17 20:32:19,730 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-17 20:32:19,731 - finguardai.nvd_integration - ERROR - Error fetching vulnerabilities for nginx 1.20.1: 'str' object does not support item assignment
+2025-05-17 20:32:19,731 - finguardai.nvd_integration - INFO - Fetching vulnerabilities for mysql 8.0.26
+2025-05-17 20:32:19,732 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'mysql 8.0.26', 'pubStartDate': '2025-05-16T00:00:00.000', 'resultsPerPage': 50}
+2025-05-17 20:32:20,691 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?keywordSearch=mysql+8.0.26&pubStartDate=2025-05-16T00%3A00%3A00.000&resultsPerPage=50
+2025-05-17 20:32:20,695 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-17 20:32:20,696 - finguardai.nvd_integration - ERROR - Error fetching vulnerabilities for mysql 8.0.26: 'str' object does not support item assignment
+2025-05-17 20:32:20,698 - finguardai.nvd_integration - INFO - Fetching vulnerabilities for centos 8.4
+2025-05-17 20:32:20,700 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'centos 8.4', 'pubStartDate': '2025-05-16T00:00:00.000', 'resultsPerPage': 50}
+2025-05-17 20:32:21,695 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?keywordSearch=centos+8.4&pubStartDate=2025-05-16T00%3A00%3A00.000&resultsPerPage=50
+2025-05-17 20:32:21,699 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-17 20:32:21,701 - finguardai.nvd_integration - ERROR - Error fetching vulnerabilities for centos 8.4: 'str' object does not support item assignment
+2025-05-17 20:32:21,703 - finguardai.nvd_integration - INFO - Fetching vulnerabilities for jquery 3.5.1
+2025-05-17 20:32:21,709 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'jquery 3.5.1', 'pubStartDate': '2025-05-16T00:00:00.000', 'resultsPerPage': 50}
+2025-05-17 20:32:22,802 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?keywordSearch=jquery+3.5.1&pubStartDate=2025-05-16T00%3A00%3A00.000&resultsPerPage=50
+2025-05-17 20:32:22,806 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-17 20:32:22,808 - finguardai.nvd_integration - ERROR - Error fetching vulnerabilities for jquery 3.5.1: 'str' object does not support item assignment
+2025-05-17 20:32:22,810 - finguardai.nvd_integration - INFO - Fetching vulnerabilities for bootstrap 4.6.0
+2025-05-17 20:32:22,812 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'bootstrap 4.6.0', 'pubStartDate': '2025-05-16T00:00:00.000', 'resultsPerPage': 50}
+2025-05-17 20:32:23,792 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?keywordSearch=bootstrap+4.6.0&pubStartDate=2025-05-16T00%3A00%3A00.000&resultsPerPage=50
+2025-05-17 20:32:23,796 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-17 20:32:23,797 - finguardai.nvd_integration - ERROR - Error fetching vulnerabilities for bootstrap 4.6.0: 'str' object does not support item assignment
+2025-05-17 20:32:23,799 - finguardai.nvd_integration - INFO - Fetching vulnerabilities for apache 2.4.51
+2025-05-17 20:32:23,802 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'apache 2.4.51', 'pubStartDate': '2025-05-10T00:00:00.000', 'resultsPerPage': 50}
+2025-05-17 20:32:24,772 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?keywordSearch=apache+2.4.51&pubStartDate=2025-05-10T00%3A00%3A00.000&resultsPerPage=50
+2025-05-17 20:32:24,777 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-17 20:32:24,778 - finguardai.nvd_integration - ERROR - Error fetching vulnerabilities for apache 2.4.51: 'str' object does not support item assignment
+2025-05-17 20:32:24,779 - finguardai.nvd_integration - INFO - Fetching vulnerabilities for php 8.0.10
+2025-05-17 20:32:24,781 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'php 8.0.10', 'pubStartDate': '2025-05-10T00:00:00.000', 'resultsPerPage': 50}
+2025-05-17 20:32:25,738 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?keywordSearch=php+8.0.10&pubStartDate=2025-05-10T00%3A00%3A00.000&resultsPerPage=50
+2025-05-17 20:32:25,742 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-17 20:32:25,743 - finguardai.nvd_integration - ERROR - Error fetching vulnerabilities for php 8.0.10: 'str' object does not support item assignment
+2025-05-17 20:32:25,744 - finguardai.nvd_integration - INFO - Fetching vulnerabilities for openssh 8.2p1
+2025-05-17 20:32:25,745 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'openssh 8.2p1', 'pubStartDate': '2025-05-10T00:00:00.000', 'resultsPerPage': 50}
+2025-05-17 20:32:26,697 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?keywordSearch=openssh+8.2p1&pubStartDate=2025-05-10T00%3A00%3A00.000&resultsPerPage=50
+2025-05-17 20:32:26,698 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-17 20:32:26,699 - finguardai.nvd_integration - ERROR - Error fetching vulnerabilities for openssh 8.2p1: 'str' object does not support item assignment
+2025-05-17 20:32:26,699 - finguardai.nvd_integration - INFO - Fetching vulnerabilities for ubuntu 20.04
+2025-05-17 20:32:26,700 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'ubuntu 20.04', 'pubStartDate': '2025-05-10T00:00:00.000', 'resultsPerPage': 50}
+2025-05-17 20:32:27,625 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?keywordSearch=ubuntu+20.04&pubStartDate=2025-05-10T00%3A00%3A00.000&resultsPerPage=50
+2025-05-17 20:32:27,628 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-17 20:32:27,629 - finguardai.nvd_integration - ERROR - Error fetching vulnerabilities for ubuntu 20.04: 'str' object does not support item assignment
+2025-05-17 20:32:27,629 - finguardai.nvd_integration - INFO - Fetching vulnerabilities for wordpress 5.8.2
+2025-05-17 20:32:27,630 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'wordpress 5.8.2', 'pubStartDate': '2025-05-10T00:00:00.000', 'resultsPerPage': 50}
+2025-05-17 20:32:28,617 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?keywordSearch=wordpress+5.8.2&pubStartDate=2025-05-10T00%3A00%3A00.000&resultsPerPage=50
+2025-05-17 20:32:28,624 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-17 20:32:28,626 - finguardai.nvd_integration - ERROR - Error fetching vulnerabilities for wordpress 5.8.2: 'str' object does not support item assignment
+2025-05-17 20:32:28,628 - finguardai.nvd_integration - INFO - Fetching vulnerabilities for nginx 1.20.1
+2025-05-17 20:32:28,630 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'nginx 1.20.1', 'pubStartDate': '2025-05-10T00:00:00.000', 'resultsPerPage': 50}
+2025-05-17 20:32:29,581 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?keywordSearch=nginx+1.20.1&pubStartDate=2025-05-10T00%3A00%3A00.000&resultsPerPage=50
+2025-05-17 20:32:29,583 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-17 20:32:29,584 - finguardai.nvd_integration - ERROR - Error fetching vulnerabilities for nginx 1.20.1: 'str' object does not support item assignment
+2025-05-17 20:32:29,584 - finguardai.nvd_integration - INFO - Fetching vulnerabilities for mysql 8.0.26
+2025-05-17 20:32:29,585 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'mysql 8.0.26', 'pubStartDate': '2025-05-10T00:00:00.000', 'resultsPerPage': 50}
+2025-05-17 20:32:30,513 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?keywordSearch=mysql+8.0.26&pubStartDate=2025-05-10T00%3A00%3A00.000&resultsPerPage=50
+2025-05-17 20:32:30,514 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-17 20:32:30,515 - finguardai.nvd_integration - ERROR - Error fetching vulnerabilities for mysql 8.0.26: 'str' object does not support item assignment
+2025-05-17 20:32:30,516 - finguardai.nvd_integration - INFO - Fetching vulnerabilities for centos 8.4
+2025-05-17 20:32:30,517 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'centos 8.4', 'pubStartDate': '2025-05-10T00:00:00.000', 'resultsPerPage': 50}
+2025-05-17 20:32:31,421 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?keywordSearch=centos+8.4&pubStartDate=2025-05-10T00%3A00%3A00.000&resultsPerPage=50
+2025-05-17 20:32:31,423 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-17 20:32:31,424 - finguardai.nvd_integration - ERROR - Error fetching vulnerabilities for centos 8.4: 'str' object does not support item assignment
+2025-05-17 20:32:31,424 - finguardai.nvd_integration - INFO - Fetching vulnerabilities for jquery 3.5.1
+2025-05-17 20:32:31,425 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'jquery 3.5.1', 'pubStartDate': '2025-05-10T00:00:00.000', 'resultsPerPage': 50}
+2025-05-17 20:32:32,294 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?keywordSearch=jquery+3.5.1&pubStartDate=2025-05-10T00%3A00%3A00.000&resultsPerPage=50
+2025-05-17 20:32:32,296 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-17 20:32:32,296 - finguardai.nvd_integration - ERROR - Error fetching vulnerabilities for jquery 3.5.1: 'str' object does not support item assignment
+2025-05-17 20:32:32,297 - finguardai.nvd_integration - INFO - Fetching vulnerabilities for bootstrap 4.6.0
+2025-05-17 20:32:32,297 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'bootstrap 4.6.0', 'pubStartDate': '2025-05-10T00:00:00.000', 'resultsPerPage': 50}
+2025-05-17 20:32:33,218 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?keywordSearch=bootstrap+4.6.0&pubStartDate=2025-05-10T00%3A00%3A00.000&resultsPerPage=50
+2025-05-17 20:32:33,221 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-17 20:32:33,223 - finguardai.nvd_integration - ERROR - Error fetching vulnerabilities for bootstrap 4.6.0: 'str' object does not support item assignment
+2025-05-17 20:32:33,230 - finguardai.nvd_integration - INFO - Found 0 total vulnerabilities across all timeframes
+2025-05-17 20:32:33,233 - finguardai.integrated_analyzer - INFO - Step 5: Generating remediation recommendations
+2025-05-17 20:32:33,234 - finguardai.nvd_integration - INFO - Getting remediation recommendations for apache 2.4.51
+2025-05-17 20:32:33,235 - finguardai.nvd_integration - INFO - Fetching vulnerabilities for apache 2.4.51
+2025-05-17 20:32:33,240 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'apache 2.4.51', 'pubStartDate': '2024-05-17T00:00:00.000', 'resultsPerPage': 50}
+2025-05-17 20:32:34,163 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?keywordSearch=apache+2.4.51&pubStartDate=2024-05-17T00%3A00%3A00.000&resultsPerPage=50
+2025-05-17 20:32:34,166 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-17 20:32:34,167 - finguardai.nvd_integration - ERROR - Error fetching vulnerabilities for apache 2.4.51: 'str' object does not support item assignment
+2025-05-17 20:32:34,169 - finguardai.nvd_integration - INFO - Getting remediation recommendations for php 8.0.10
+2025-05-17 20:32:34,170 - finguardai.nvd_integration - INFO - Fetching vulnerabilities for php 8.0.10
+2025-05-17 20:32:34,171 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'php 8.0.10', 'pubStartDate': '2024-05-17T00:00:00.000', 'resultsPerPage': 50}
+2025-05-17 20:32:35,146 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?keywordSearch=php+8.0.10&pubStartDate=2024-05-17T00%3A00%3A00.000&resultsPerPage=50
+2025-05-17 20:32:35,149 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-17 20:32:35,150 - finguardai.nvd_integration - ERROR - Error fetching vulnerabilities for php 8.0.10: 'str' object does not support item assignment
+2025-05-17 20:32:35,152 - finguardai.nvd_integration - INFO - Getting remediation recommendations for openssh 8.2p1
+2025-05-17 20:32:35,154 - finguardai.nvd_integration - INFO - Fetching vulnerabilities for openssh 8.2p1
+2025-05-17 20:32:35,163 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'openssh 8.2p1', 'pubStartDate': '2024-05-17T00:00:00.000', 'resultsPerPage': 50}
+2025-05-17 20:32:36,111 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?keywordSearch=openssh+8.2p1&pubStartDate=2024-05-17T00%3A00%3A00.000&resultsPerPage=50
+2025-05-17 20:32:36,112 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-17 20:32:36,113 - finguardai.nvd_integration - ERROR - Error fetching vulnerabilities for openssh 8.2p1: 'str' object does not support item assignment
+2025-05-17 20:32:36,113 - finguardai.nvd_integration - INFO - Getting remediation recommendations for ubuntu 20.04
+2025-05-17 20:32:36,114 - finguardai.nvd_integration - INFO - Fetching vulnerabilities for ubuntu 20.04
+2025-05-17 20:32:36,114 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'ubuntu 20.04', 'pubStartDate': '2024-05-17T00:00:00.000', 'resultsPerPage': 50}
+2025-05-17 20:32:37,013 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?keywordSearch=ubuntu+20.04&pubStartDate=2024-05-17T00%3A00%3A00.000&resultsPerPage=50
+2025-05-17 20:32:37,014 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-17 20:32:37,015 - finguardai.nvd_integration - ERROR - Error fetching vulnerabilities for ubuntu 20.04: 'str' object does not support item assignment
+2025-05-17 20:32:37,015 - finguardai.nvd_integration - INFO - Getting remediation recommendations for wordpress 5.8.2
+2025-05-17 20:32:37,016 - finguardai.nvd_integration - INFO - Fetching vulnerabilities for wordpress 5.8.2
+2025-05-17 20:32:37,017 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'wordpress 5.8.2', 'pubStartDate': '2024-05-17T00:00:00.000', 'resultsPerPage': 50}
+2025-05-17 20:32:37,978 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?keywordSearch=wordpress+5.8.2&pubStartDate=2024-05-17T00%3A00%3A00.000&resultsPerPage=50
+2025-05-17 20:32:37,980 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-17 20:32:37,981 - finguardai.nvd_integration - ERROR - Error fetching vulnerabilities for wordpress 5.8.2: 'str' object does not support item assignment
+2025-05-17 20:32:37,982 - finguardai.nvd_integration - INFO - Getting remediation recommendations for nginx 1.20.1
+2025-05-17 20:32:37,983 - finguardai.nvd_integration - INFO - Fetching vulnerabilities for nginx 1.20.1
+2025-05-17 20:32:37,984 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'nginx 1.20.1', 'pubStartDate': '2024-05-17T00:00:00.000', 'resultsPerPage': 50}
+2025-05-17 20:32:38,981 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?keywordSearch=nginx+1.20.1&pubStartDate=2024-05-17T00%3A00%3A00.000&resultsPerPage=50
+2025-05-17 20:32:38,985 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-17 20:32:38,987 - finguardai.nvd_integration - ERROR - Error fetching vulnerabilities for nginx 1.20.1: 'str' object does not support item assignment
+2025-05-17 20:32:38,989 - finguardai.nvd_integration - INFO - Getting remediation recommendations for mysql 8.0.26
+2025-05-17 20:32:38,991 - finguardai.nvd_integration - INFO - Fetching vulnerabilities for mysql 8.0.26
+2025-05-17 20:32:38,996 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'mysql 8.0.26', 'pubStartDate': '2024-05-17T00:00:00.000', 'resultsPerPage': 50}
+2025-05-17 20:32:40,036 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?keywordSearch=mysql+8.0.26&pubStartDate=2024-05-17T00%3A00%3A00.000&resultsPerPage=50
+2025-05-17 20:32:40,037 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-17 20:32:40,038 - finguardai.nvd_integration - ERROR - Error fetching vulnerabilities for mysql 8.0.26: 'str' object does not support item assignment
+2025-05-17 20:32:40,038 - finguardai.nvd_integration - INFO - Getting remediation recommendations for centos 8.4
+2025-05-17 20:32:40,038 - finguardai.nvd_integration - INFO - Fetching vulnerabilities for centos 8.4
+2025-05-17 20:32:40,039 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'centos 8.4', 'pubStartDate': '2024-05-17T00:00:00.000', 'resultsPerPage': 50}
+2025-05-17 20:32:41,107 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?keywordSearch=centos+8.4&pubStartDate=2024-05-17T00%3A00%3A00.000&resultsPerPage=50
+2025-05-17 20:32:41,115 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-17 20:32:41,117 - finguardai.nvd_integration - ERROR - Error fetching vulnerabilities for centos 8.4: 'str' object does not support item assignment
+2025-05-17 20:32:41,118 - finguardai.nvd_integration - INFO - Getting remediation recommendations for jquery 3.5.1
+2025-05-17 20:32:41,121 - finguardai.nvd_integration - INFO - Fetching vulnerabilities for jquery 3.5.1
+2025-05-17 20:32:41,126 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'jquery 3.5.1', 'pubStartDate': '2024-05-17T00:00:00.000', 'resultsPerPage': 50}
+2025-05-17 20:32:42,088 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?keywordSearch=jquery+3.5.1&pubStartDate=2024-05-17T00%3A00%3A00.000&resultsPerPage=50
+2025-05-17 20:32:42,089 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-17 20:32:42,090 - finguardai.nvd_integration - ERROR - Error fetching vulnerabilities for jquery 3.5.1: 'str' object does not support item assignment
+2025-05-17 20:32:42,091 - finguardai.nvd_integration - INFO - Getting remediation recommendations for bootstrap 4.6.0
+2025-05-17 20:32:42,091 - finguardai.nvd_integration - INFO - Fetching vulnerabilities for bootstrap 4.6.0
+2025-05-17 20:32:42,092 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'bootstrap 4.6.0', 'pubStartDate': '2024-05-17T00:00:00.000', 'resultsPerPage': 50}
+2025-05-17 20:32:43,012 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?keywordSearch=bootstrap+4.6.0&pubStartDate=2024-05-17T00%3A00%3A00.000&resultsPerPage=50
+2025-05-17 20:32:43,014 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-17 20:32:43,015 - finguardai.nvd_integration - ERROR - Error fetching vulnerabilities for bootstrap 4.6.0: 'str' object does not support item assignment
+2025-05-17 20:32:43,016 - finguardai.integrated_analyzer - INFO - Step 6: Checking for exploitable vulnerabilities
+2025-05-17 20:32:43,017 - finguardai.nvd_advanced - INFO - Searching for vulnerabilities with known exploits
+2025-05-17 20:32:43,019 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'hasExploit': True, 'resultsPerPage': 100, 'keywordSearch': 'apache'}
+2025-05-17 20:32:44,004 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?hasExploit=True&resultsPerPage=100&keywordSearch=apache
+2025-05-17 20:32:44,008 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-17 20:32:44,011 - finguardai.nvd_advanced - ERROR - Error searching for exploited vulnerabilities: 'str' object does not support item assignment
+2025-05-17 20:32:44,014 - finguardai.nvd_advanced - INFO - Searching for vulnerabilities with known exploits
+2025-05-17 20:32:44,018 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'hasExploit': True, 'resultsPerPage': 100, 'keywordSearch': 'php'}
+2025-05-17 20:32:45,050 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?hasExploit=True&resultsPerPage=100&keywordSearch=php
+2025-05-17 20:32:45,054 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-17 20:32:45,055 - finguardai.nvd_advanced - ERROR - Error searching for exploited vulnerabilities: 'str' object does not support item assignment
+2025-05-17 20:32:45,056 - finguardai.nvd_advanced - INFO - Searching for vulnerabilities with known exploits
+2025-05-17 20:32:45,058 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'hasExploit': True, 'resultsPerPage': 100, 'keywordSearch': 'openssh'}
+2025-05-17 20:32:46,055 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?hasExploit=True&resultsPerPage=100&keywordSearch=openssh
+2025-05-17 20:32:46,056 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-17 20:32:46,057 - finguardai.nvd_advanced - ERROR - Error searching for exploited vulnerabilities: 'str' object does not support item assignment
+2025-05-17 20:32:46,057 - finguardai.nvd_advanced - INFO - Searching for vulnerabilities with known exploits
+2025-05-17 20:32:46,058 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'hasExploit': True, 'resultsPerPage': 100, 'keywordSearch': 'ubuntu'}
+2025-05-17 20:32:47,073 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?hasExploit=True&resultsPerPage=100&keywordSearch=ubuntu
+2025-05-17 20:32:47,074 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-17 20:32:47,074 - finguardai.nvd_advanced - ERROR - Error searching for exploited vulnerabilities: 'str' object does not support item assignment
+2025-05-17 20:32:47,074 - finguardai.nvd_advanced - INFO - Searching for vulnerabilities with known exploits
+2025-05-17 20:32:47,075 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'hasExploit': True, 'resultsPerPage': 100, 'keywordSearch': 'wordpress'}
+2025-05-17 20:32:48,048 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?hasExploit=True&resultsPerPage=100&keywordSearch=wordpress
+2025-05-17 20:32:48,049 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-17 20:32:48,050 - finguardai.nvd_advanced - ERROR - Error searching for exploited vulnerabilities: 'str' object does not support item assignment
+2025-05-17 20:32:48,052 - finguardai.nvd_advanced - INFO - Searching for vulnerabilities with known exploits
+2025-05-17 20:32:48,052 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'hasExploit': True, 'resultsPerPage': 100, 'keywordSearch': 'nginx'}
+2025-05-17 20:32:48,947 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?hasExploit=True&resultsPerPage=100&keywordSearch=nginx
+2025-05-17 20:32:48,948 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-17 20:32:48,948 - finguardai.nvd_advanced - ERROR - Error searching for exploited vulnerabilities: 'str' object does not support item assignment
+2025-05-17 20:32:48,948 - finguardai.nvd_advanced - INFO - Searching for vulnerabilities with known exploits
+2025-05-17 20:32:48,949 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'hasExploit': True, 'resultsPerPage': 100, 'keywordSearch': 'mysql'}
+2025-05-17 20:32:49,874 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?hasExploit=True&resultsPerPage=100&keywordSearch=mysql
+2025-05-17 20:32:49,875 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-17 20:32:49,876 - finguardai.nvd_advanced - ERROR - Error searching for exploited vulnerabilities: 'str' object does not support item assignment
+2025-05-17 20:32:49,876 - finguardai.nvd_advanced - INFO - Searching for vulnerabilities with known exploits
+2025-05-17 20:32:49,877 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'hasExploit': True, 'resultsPerPage': 100, 'keywordSearch': 'centos'}
+2025-05-17 20:32:50,929 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?hasExploit=True&resultsPerPage=100&keywordSearch=centos
+2025-05-17 20:32:50,930 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-17 20:32:50,931 - finguardai.nvd_advanced - ERROR - Error searching for exploited vulnerabilities: 'str' object does not support item assignment
+2025-05-17 20:32:50,931 - finguardai.nvd_advanced - INFO - Searching for vulnerabilities with known exploits
+2025-05-17 20:32:50,932 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'hasExploit': True, 'resultsPerPage': 100, 'keywordSearch': 'jquery'}
+2025-05-17 20:32:51,836 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?hasExploit=True&resultsPerPage=100&keywordSearch=jquery
+2025-05-17 20:32:51,837 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-17 20:32:51,838 - finguardai.nvd_advanced - ERROR - Error searching for exploited vulnerabilities: 'str' object does not support item assignment
+2025-05-17 20:32:51,838 - finguardai.nvd_advanced - INFO - Searching for vulnerabilities with known exploits
+2025-05-17 20:32:51,839 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'hasExploit': True, 'resultsPerPage': 100, 'keywordSearch': 'bootstrap'}
+2025-05-17 20:32:52,766 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?hasExploit=True&resultsPerPage=100&keywordSearch=bootstrap
+2025-05-17 20:32:52,769 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-17 20:32:52,770 - finguardai.nvd_advanced - ERROR - Error searching for exploited vulnerabilities: 'str' object does not support item assignment
+2025-05-17 20:32:52,772 - finguardai.integrated_analyzer - INFO - Step 7: Analyzing vulnerability trends
+2025-05-17 20:32:52,774 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'apache', 'pubStartDate': '2025-04-17T00:00:00.000', 'pubEndDate': '2025-05-17T23:59:59.999', 'resultsPerPage': 50}
+2025-05-17 20:32:54,221 - finguardai.nvd_client - INFO - Saved NVD data to cache file C:\Users\CYBER\Downloads\finguardai-admin (3)\backend\cache\nvd_search_-1377414910015405617.json
+2025-05-17 20:32:54,223 - finguardai.nvd_advanced - ERROR - Error analyzing vulnerability trends: 'str' object has no attribute 'get'
+2025-05-17 20:32:54,224 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'php', 'pubStartDate': '2025-04-17T00:00:00.000', 'pubEndDate': '2025-05-17T23:59:59.999', 'resultsPerPage': 50}
+2025-05-17 20:32:56,219 - finguardai.nvd_client - INFO - Saved NVD data to cache file C:\Users\CYBER\Downloads\finguardai-admin (3)\backend\cache\nvd_search_-7997657194056032780.json
+2025-05-17 20:32:56,220 - finguardai.nvd_advanced - ERROR - Error analyzing vulnerability trends: 'str' object has no attribute 'get'
+2025-05-17 20:32:56,222 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'openssh', 'pubStartDate': '2025-04-17T00:00:00.000', 'pubEndDate': '2025-05-17T23:59:59.999', 'resultsPerPage': 50}
+2025-05-17 20:32:57,581 - finguardai.nvd_client - INFO - Saved NVD data to cache file C:\Users\CYBER\Downloads\finguardai-admin (3)\backend\cache\nvd_search_-1381564893425588882.json
+2025-05-17 20:32:57,583 - finguardai.nvd_advanced - ERROR - Error analyzing vulnerability trends: 'str' object has no attribute 'get'
+2025-05-17 20:32:57,583 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'ubuntu', 'pubStartDate': '2025-04-17T00:00:00.000', 'pubEndDate': '2025-05-17T23:59:59.999', 'resultsPerPage': 50}
+2025-05-17 20:32:58,576 - finguardai.nvd_client - INFO - Saved NVD data to cache file C:\Users\CYBER\Downloads\finguardai-admin (3)\backend\cache\nvd_search_1871434823389016984.json
+2025-05-17 20:32:58,577 - finguardai.nvd_advanced - ERROR - Error analyzing vulnerability trends: 'str' object has no attribute 'get'
+2025-05-17 20:32:58,577 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'wordpress', 'pubStartDate': '2025-04-17T00:00:00.000', 'pubEndDate': '2025-05-17T23:59:59.999', 'resultsPerPage': 50}
+2025-05-17 20:33:00,382 - finguardai.nvd_client - INFO - Saved NVD data to cache file C:\Users\CYBER\Downloads\finguardai-admin (3)\backend\cache\nvd_search_2303793440699430474.json
+2025-05-17 20:33:00,383 - finguardai.nvd_advanced - ERROR - Error analyzing vulnerability trends: 'str' object has no attribute 'get'
+2025-05-17 20:33:00,385 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'nginx', 'pubStartDate': '2025-04-17T00:00:00.000', 'pubEndDate': '2025-05-17T23:59:59.999', 'resultsPerPage': 50}
+2025-05-17 20:33:01,456 - finguardai.nvd_client - INFO - Saved NVD data to cache file C:\Users\CYBER\Downloads\finguardai-admin (3)\backend\cache\nvd_search_-3439238311409342643.json
+2025-05-17 20:33:01,458 - finguardai.nvd_advanced - ERROR - Error analyzing vulnerability trends: 'str' object has no attribute 'get'
+2025-05-17 20:33:01,458 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'mysql', 'pubStartDate': '2025-04-17T00:00:00.000', 'pubEndDate': '2025-05-17T23:59:59.999', 'resultsPerPage': 50}
+2025-05-17 20:33:02,546 - finguardai.nvd_client - INFO - Saved NVD data to cache file C:\Users\CYBER\Downloads\finguardai-admin (3)\backend\cache\nvd_search_-750605118307743961.json
+2025-05-17 20:33:02,558 - finguardai.nvd_advanced - ERROR - Error analyzing vulnerability trends: 'str' object has no attribute 'get'
+2025-05-17 20:33:02,568 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'centos', 'pubStartDate': '2025-04-17T00:00:00.000', 'pubEndDate': '2025-05-17T23:59:59.999', 'resultsPerPage': 50}
+2025-05-17 20:33:03,515 - finguardai.nvd_client - INFO - Saved NVD data to cache file C:\Users\CYBER\Downloads\finguardai-admin (3)\backend\cache\nvd_search_3886608909416348295.json
+2025-05-17 20:33:03,519 - finguardai.nvd_advanced - ERROR - Error analyzing vulnerability trends: 'str' object has no attribute 'get'
+2025-05-17 20:33:03,520 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'jquery', 'pubStartDate': '2025-04-17T00:00:00.000', 'pubEndDate': '2025-05-17T23:59:59.999', 'resultsPerPage': 50}
+2025-05-17 20:33:04,592 - finguardai.nvd_client - INFO - Saved NVD data to cache file C:\Users\CYBER\Downloads\finguardai-admin (3)\backend\cache\nvd_search_-4339167219123213355.json
+2025-05-17 20:33:04,599 - finguardai.nvd_advanced - ERROR - Error analyzing vulnerability trends: 'str' object has no attribute 'get'
+2025-05-17 20:33:04,607 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'bootstrap', 'pubStartDate': '2025-04-17T00:00:00.000', 'pubEndDate': '2025-05-17T23:59:59.999', 'resultsPerPage': 50}
+2025-05-17 20:33:05,726 - finguardai.nvd_client - INFO - Saved NVD data to cache file C:\Users\CYBER\Downloads\finguardai-admin (3)\backend\cache\nvd_search_282277830274260747.json
+2025-05-17 20:33:05,727 - finguardai.nvd_advanced - ERROR - Error analyzing vulnerability trends: 'str' object has no attribute 'get'
+2025-05-17 20:33:05,733 - finguardai.integrated_analyzer - INFO - Completed integrated analysis of portal.lcu.edu.ng, results saved to C:\Users\CYBER\Downloads\finguardai-admin (3)\backend\reports\portal_lcu_edu_ng_analysis.json
+2025-05-17 20:33:05,758 - finguardai.integrated - INFO - Analysis completed in 52.19 seconds
+2025-05-17 20:57:50,397 - finguardai.remediation - INFO - Financial sector specific recommendations loaded successfully
+2025-05-17 20:57:50,435 - finguardai.integrated - INFO - Starting integrated analysis of portal.lcu.edu.ng
+2025-05-17 20:57:50,438 - finguardai.integrated_analyzer - INFO - Starting integrated analysis of portal.lcu.edu.ng
+2025-05-17 20:57:50,439 - finguardai.integrated_analyzer - INFO - Step 1: Performing active scanning
+2025-05-17 20:57:50,439 - finguardai.active_scanner - INFO - Starting active scan of portal.lcu.edu.ng
+2025-05-17 20:57:50,442 - finguardai.active_scanner - INFO - Completed active scan of portal.lcu.edu.ng, found 3 technologies
+2025-05-17 20:57:50,443 - finguardai.integrated_analyzer - INFO - Step 2: Performing passive monitoring
+2025-05-17 20:57:50,444 - finguardai.passive_monitor - INFO - Starting passive monitoring of portal.lcu.edu.ng
+2025-05-17 20:57:50,448 - finguardai.passive_monitor - INFO - Completed passive monitoring of portal.lcu.edu.ng, found 7 technologies
+2025-05-17 20:57:50,450 - finguardai.integrated_analyzer - INFO - Step 3: Performing comprehensive vulnerability scanning
+2025-05-17 20:57:50,454 - finguardai.vulnerability_scanner - INFO - Starting vulnerability scan of portal.lcu.edu.ng (intensity: normal)
+2025-05-17 20:57:50,459 - finguardai.vulnerability_scanner - INFO - Running nmap with args: nmap -oX C:\Users\CYBER\Downloads\finguardai-admin (3)\backend\scan_results\portal_lcu_edu_ng_20250517_205750_vulns.xml -p 80,443,8080 -T3 -sV -sC --script vuln,auth,default,discovery,version portal.lcu.edu.ng
+2025-05-17 21:04:40,765 - finguardai.vulnerability_scanner - INFO - Vulnerability scan completed for portal.lcu.edu.ng. Found 49 vulnerabilities
+2025-05-17 21:04:40,778 - finguardai.integrated_analyzer - INFO - Combined 4 active, 9 passive, and 0 vuln scan technologies into 10 unique technologies
+2025-05-17 21:04:40,780 - finguardai.integrated_analyzer - INFO - Step 5: Analyzing vulnerabilities by timeframe
+2025-05-17 21:04:40,780 - finguardai.nvd_integration - INFO - Getting vulnerabilities by timeframe for 10 technologies
+2025-05-17 21:04:40,781 - finguardai.nvd_integration - INFO - Fetching vulnerabilities for apache 2.4.51
+2025-05-17 21:04:40,783 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'apache 2.4.51', 'pubStartDate': '2025-05-16T00:00:00.000', 'resultsPerPage': 50}
+2025-05-17 21:04:42,154 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?keywordSearch=apache+2.4.51&pubStartDate=2025-05-16T00%3A00%3A00.000&resultsPerPage=50
+2025-05-17 21:04:42,159 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-17 21:04:42,160 - finguardai.nvd_integration - ERROR - Error fetching vulnerabilities for apache 2.4.51: 'str' object does not support item assignment
+2025-05-17 21:04:42,161 - finguardai.nvd_integration - INFO - Fetching vulnerabilities for php 8.0.10
+2025-05-17 21:04:42,163 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'php 8.0.10', 'pubStartDate': '2025-05-16T00:00:00.000', 'resultsPerPage': 50}
+2025-05-17 21:04:43,787 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?keywordSearch=php+8.0.10&pubStartDate=2025-05-16T00%3A00%3A00.000&resultsPerPage=50
+2025-05-17 21:04:43,791 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-17 21:04:43,793 - finguardai.nvd_integration - ERROR - Error fetching vulnerabilities for php 8.0.10: 'str' object does not support item assignment
+2025-05-17 21:04:43,794 - finguardai.nvd_integration - INFO - Fetching vulnerabilities for openssh 8.2p1
+2025-05-17 21:04:43,796 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'openssh 8.2p1', 'pubStartDate': '2025-05-16T00:00:00.000', 'resultsPerPage': 50}
+2025-05-17 21:04:45,411 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?keywordSearch=openssh+8.2p1&pubStartDate=2025-05-16T00%3A00%3A00.000&resultsPerPage=50
+2025-05-17 21:04:45,415 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-17 21:04:45,417 - finguardai.nvd_integration - ERROR - Error fetching vulnerabilities for openssh 8.2p1: 'str' object does not support item assignment
+2025-05-17 21:04:45,419 - finguardai.nvd_integration - INFO - Fetching vulnerabilities for ubuntu 20.04
+2025-05-17 21:04:45,424 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'ubuntu 20.04', 'pubStartDate': '2025-05-16T00:00:00.000', 'resultsPerPage': 50}
+2025-05-17 21:04:46,404 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?keywordSearch=ubuntu+20.04&pubStartDate=2025-05-16T00%3A00%3A00.000&resultsPerPage=50
+2025-05-17 21:04:46,409 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-17 21:04:46,410 - finguardai.nvd_integration - ERROR - Error fetching vulnerabilities for ubuntu 20.04: 'str' object does not support item assignment
+2025-05-17 21:04:46,412 - finguardai.nvd_integration - INFO - Fetching vulnerabilities for wordpress 5.8.2
+2025-05-17 21:04:46,415 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'wordpress 5.8.2', 'pubStartDate': '2025-05-16T00:00:00.000', 'resultsPerPage': 50}
+2025-05-17 21:04:47,351 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?keywordSearch=wordpress+5.8.2&pubStartDate=2025-05-16T00%3A00%3A00.000&resultsPerPage=50
+2025-05-17 21:04:47,353 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-17 21:04:47,353 - finguardai.nvd_integration - ERROR - Error fetching vulnerabilities for wordpress 5.8.2: 'str' object does not support item assignment
+2025-05-17 21:04:47,354 - finguardai.nvd_integration - INFO - Fetching vulnerabilities for nginx 1.20.1
+2025-05-17 21:04:47,355 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'nginx 1.20.1', 'pubStartDate': '2025-05-16T00:00:00.000', 'resultsPerPage': 50}
+2025-05-17 21:04:48,339 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?keywordSearch=nginx+1.20.1&pubStartDate=2025-05-16T00%3A00%3A00.000&resultsPerPage=50
+2025-05-17 21:04:48,342 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-17 21:04:48,343 - finguardai.nvd_integration - ERROR - Error fetching vulnerabilities for nginx 1.20.1: 'str' object does not support item assignment
+2025-05-17 21:04:48,344 - finguardai.nvd_integration - INFO - Fetching vulnerabilities for mysql 8.0.26
+2025-05-17 21:04:48,345 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'mysql 8.0.26', 'pubStartDate': '2025-05-16T00:00:00.000', 'resultsPerPage': 50}
+2025-05-17 21:04:49,256 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?keywordSearch=mysql+8.0.26&pubStartDate=2025-05-16T00%3A00%3A00.000&resultsPerPage=50
+2025-05-17 21:04:49,260 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-17 21:04:49,261 - finguardai.nvd_integration - ERROR - Error fetching vulnerabilities for mysql 8.0.26: 'str' object does not support item assignment
+2025-05-17 21:04:49,263 - finguardai.nvd_integration - INFO - Fetching vulnerabilities for centos 8.4
+2025-05-17 21:04:49,265 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'centos 8.4', 'pubStartDate': '2025-05-16T00:00:00.000', 'resultsPerPage': 50}
+2025-05-17 21:04:50,445 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?keywordSearch=centos+8.4&pubStartDate=2025-05-16T00%3A00%3A00.000&resultsPerPage=50
+2025-05-17 21:04:50,449 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-17 21:04:50,451 - finguardai.nvd_integration - ERROR - Error fetching vulnerabilities for centos 8.4: 'str' object does not support item assignment
+2025-05-17 21:04:50,453 - finguardai.nvd_integration - INFO - Fetching vulnerabilities for jquery 3.5.1
+2025-05-17 21:04:50,456 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'jquery 3.5.1', 'pubStartDate': '2025-05-16T00:00:00.000', 'resultsPerPage': 50}
+2025-05-17 21:04:51,597 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?keywordSearch=jquery+3.5.1&pubStartDate=2025-05-16T00%3A00%3A00.000&resultsPerPage=50
+2025-05-17 21:04:51,601 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-17 21:04:51,603 - finguardai.nvd_integration - ERROR - Error fetching vulnerabilities for jquery 3.5.1: 'str' object does not support item assignment
+2025-05-17 21:04:51,605 - finguardai.nvd_integration - INFO - Fetching vulnerabilities for bootstrap 4.6.0
+2025-05-17 21:04:51,607 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'bootstrap 4.6.0', 'pubStartDate': '2025-05-16T00:00:00.000', 'resultsPerPage': 50}
+2025-05-17 21:04:52,697 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?keywordSearch=bootstrap+4.6.0&pubStartDate=2025-05-16T00%3A00%3A00.000&resultsPerPage=50
+2025-05-17 21:04:52,699 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-17 21:04:52,700 - finguardai.nvd_integration - ERROR - Error fetching vulnerabilities for bootstrap 4.6.0: 'str' object does not support item assignment
+2025-05-17 21:04:52,701 - finguardai.nvd_integration - INFO - Fetching vulnerabilities for apache 2.4.51
+2025-05-17 21:04:52,703 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'apache 2.4.51', 'pubStartDate': '2025-05-10T00:00:00.000', 'resultsPerPage': 50}
+2025-05-17 21:04:53,631 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?keywordSearch=apache+2.4.51&pubStartDate=2025-05-10T00%3A00%3A00.000&resultsPerPage=50
+2025-05-17 21:04:53,634 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-17 21:04:53,636 - finguardai.nvd_integration - ERROR - Error fetching vulnerabilities for apache 2.4.51: 'str' object does not support item assignment
+2025-05-17 21:04:53,638 - finguardai.nvd_integration - INFO - Fetching vulnerabilities for php 8.0.10
+2025-05-17 21:04:53,643 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'php 8.0.10', 'pubStartDate': '2025-05-10T00:00:00.000', 'resultsPerPage': 50}
+2025-05-17 21:04:54,608 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?keywordSearch=php+8.0.10&pubStartDate=2025-05-10T00%3A00%3A00.000&resultsPerPage=50
+2025-05-17 21:04:54,615 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-17 21:04:54,617 - finguardai.nvd_integration - ERROR - Error fetching vulnerabilities for php 8.0.10: 'str' object does not support item assignment
+2025-05-17 21:04:54,619 - finguardai.nvd_integration - INFO - Fetching vulnerabilities for openssh 8.2p1
+2025-05-17 21:04:54,622 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'openssh 8.2p1', 'pubStartDate': '2025-05-10T00:00:00.000', 'resultsPerPage': 50}
+2025-05-17 21:04:55,606 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?keywordSearch=openssh+8.2p1&pubStartDate=2025-05-10T00%3A00%3A00.000&resultsPerPage=50
+2025-05-17 21:04:55,612 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-17 21:04:55,615 - finguardai.nvd_integration - ERROR - Error fetching vulnerabilities for openssh 8.2p1: 'str' object does not support item assignment
+2025-05-17 21:04:55,617 - finguardai.nvd_integration - INFO - Fetching vulnerabilities for ubuntu 20.04
+2025-05-17 21:04:55,619 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'ubuntu 20.04', 'pubStartDate': '2025-05-10T00:00:00.000', 'resultsPerPage': 50}
+2025-05-17 21:04:56,999 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?keywordSearch=ubuntu+20.04&pubStartDate=2025-05-10T00%3A00%3A00.000&resultsPerPage=50
+2025-05-17 21:04:57,004 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-17 21:04:57,006 - finguardai.nvd_integration - ERROR - Error fetching vulnerabilities for ubuntu 20.04: 'str' object does not support item assignment
+2025-05-17 21:04:57,012 - finguardai.nvd_integration - INFO - Fetching vulnerabilities for wordpress 5.8.2
+2025-05-17 21:04:57,017 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'wordpress 5.8.2', 'pubStartDate': '2025-05-10T00:00:00.000', 'resultsPerPage': 50}
+2025-05-17 21:04:58,944 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?keywordSearch=wordpress+5.8.2&pubStartDate=2025-05-10T00%3A00%3A00.000&resultsPerPage=50
+2025-05-17 21:04:58,948 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-17 21:04:58,949 - finguardai.nvd_integration - ERROR - Error fetching vulnerabilities for wordpress 5.8.2: 'str' object does not support item assignment
+2025-05-17 21:04:58,951 - finguardai.nvd_integration - INFO - Fetching vulnerabilities for nginx 1.20.1
+2025-05-17 21:04:58,954 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'nginx 1.20.1', 'pubStartDate': '2025-05-10T00:00:00.000', 'resultsPerPage': 50}
+2025-05-17 21:05:00,172 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?keywordSearch=nginx+1.20.1&pubStartDate=2025-05-10T00%3A00%3A00.000&resultsPerPage=50
+2025-05-17 21:05:00,178 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-17 21:05:00,189 - finguardai.nvd_integration - ERROR - Error fetching vulnerabilities for nginx 1.20.1: 'str' object does not support item assignment
+2025-05-17 21:05:00,191 - finguardai.nvd_integration - INFO - Fetching vulnerabilities for mysql 8.0.26
+2025-05-17 21:05:00,194 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'mysql 8.0.26', 'pubStartDate': '2025-05-10T00:00:00.000', 'resultsPerPage': 50}
+2025-05-17 21:05:01,267 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?keywordSearch=mysql+8.0.26&pubStartDate=2025-05-10T00%3A00%3A00.000&resultsPerPage=50
+2025-05-17 21:05:01,271 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-17 21:05:01,273 - finguardai.nvd_integration - ERROR - Error fetching vulnerabilities for mysql 8.0.26: 'str' object does not support item assignment
+2025-05-17 21:05:01,274 - finguardai.nvd_integration - INFO - Fetching vulnerabilities for centos 8.4
+2025-05-17 21:05:01,288 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'centos 8.4', 'pubStartDate': '2025-05-10T00:00:00.000', 'resultsPerPage': 50}
+2025-05-17 21:05:02,426 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?keywordSearch=centos+8.4&pubStartDate=2025-05-10T00%3A00%3A00.000&resultsPerPage=50
+2025-05-17 21:05:02,430 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-17 21:05:02,432 - finguardai.nvd_integration - ERROR - Error fetching vulnerabilities for centos 8.4: 'str' object does not support item assignment
+2025-05-17 21:05:02,434 - finguardai.nvd_integration - INFO - Fetching vulnerabilities for jquery 3.5.1
+2025-05-17 21:05:02,437 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'jquery 3.5.1', 'pubStartDate': '2025-05-10T00:00:00.000', 'resultsPerPage': 50}
+2025-05-17 21:05:03,691 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?keywordSearch=jquery+3.5.1&pubStartDate=2025-05-10T00%3A00%3A00.000&resultsPerPage=50
+2025-05-17 21:05:03,695 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-17 21:05:03,698 - finguardai.nvd_integration - ERROR - Error fetching vulnerabilities for jquery 3.5.1: 'str' object does not support item assignment
+2025-05-17 21:05:03,700 - finguardai.nvd_integration - INFO - Fetching vulnerabilities for bootstrap 4.6.0
+2025-05-17 21:05:03,703 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'bootstrap 4.6.0', 'pubStartDate': '2025-05-10T00:00:00.000', 'resultsPerPage': 50}
+2025-05-17 21:05:05,191 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?keywordSearch=bootstrap+4.6.0&pubStartDate=2025-05-10T00%3A00%3A00.000&resultsPerPage=50
+2025-05-17 21:05:05,194 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-17 21:05:05,196 - finguardai.nvd_integration - ERROR - Error fetching vulnerabilities for bootstrap 4.6.0: 'str' object does not support item assignment
+2025-05-17 21:05:05,200 - finguardai.nvd_integration - INFO - Found 0 total vulnerabilities across all timeframes
+2025-05-17 21:05:05,203 - finguardai.integrated_analyzer - INFO - Step 5: Generating remediation recommendations
+2025-05-17 21:05:05,205 - finguardai.nvd_integration - INFO - Getting remediation recommendations for apache 2.4.51
+2025-05-17 21:05:05,206 - finguardai.nvd_integration - INFO - Fetching vulnerabilities for apache 2.4.51
+2025-05-17 21:05:05,209 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'apache 2.4.51', 'pubStartDate': '2024-05-17T00:00:00.000', 'resultsPerPage': 50}
+2025-05-17 21:05:06,652 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?keywordSearch=apache+2.4.51&pubStartDate=2024-05-17T00%3A00%3A00.000&resultsPerPage=50
+2025-05-17 21:05:06,656 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-17 21:05:06,657 - finguardai.nvd_integration - ERROR - Error fetching vulnerabilities for apache 2.4.51: 'str' object does not support item assignment
+2025-05-17 21:05:06,659 - finguardai.nvd_integration - INFO - Getting remediation recommendations for php 8.0.10
+2025-05-17 21:05:06,661 - finguardai.nvd_integration - INFO - Fetching vulnerabilities for php 8.0.10
+2025-05-17 21:05:06,669 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'php 8.0.10', 'pubStartDate': '2024-05-17T00:00:00.000', 'resultsPerPage': 50}
+2025-05-17 21:05:07,753 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?keywordSearch=php+8.0.10&pubStartDate=2024-05-17T00%3A00%3A00.000&resultsPerPage=50
+2025-05-17 21:05:07,757 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-17 21:05:07,759 - finguardai.nvd_integration - ERROR - Error fetching vulnerabilities for php 8.0.10: 'str' object does not support item assignment
+2025-05-17 21:05:07,760 - finguardai.nvd_integration - INFO - Getting remediation recommendations for openssh 8.2p1
+2025-05-17 21:05:07,762 - finguardai.nvd_integration - INFO - Fetching vulnerabilities for openssh 8.2p1
+2025-05-17 21:05:07,765 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'openssh 8.2p1', 'pubStartDate': '2024-05-17T00:00:00.000', 'resultsPerPage': 50}
+2025-05-17 21:05:09,008 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?keywordSearch=openssh+8.2p1&pubStartDate=2024-05-17T00%3A00%3A00.000&resultsPerPage=50
+2025-05-17 21:05:09,012 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-17 21:05:09,013 - finguardai.nvd_integration - ERROR - Error fetching vulnerabilities for openssh 8.2p1: 'str' object does not support item assignment
+2025-05-17 21:05:09,015 - finguardai.nvd_integration - INFO - Getting remediation recommendations for ubuntu 20.04
+2025-05-17 21:05:09,019 - finguardai.nvd_integration - INFO - Fetching vulnerabilities for ubuntu 20.04
+2025-05-17 21:05:09,022 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'ubuntu 20.04', 'pubStartDate': '2024-05-17T00:00:00.000', 'resultsPerPage': 50}
+2025-05-17 21:05:10,079 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?keywordSearch=ubuntu+20.04&pubStartDate=2024-05-17T00%3A00%3A00.000&resultsPerPage=50
+2025-05-17 21:05:10,093 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-17 21:05:10,095 - finguardai.nvd_integration - ERROR - Error fetching vulnerabilities for ubuntu 20.04: 'str' object does not support item assignment
+2025-05-17 21:05:10,120 - finguardai.nvd_integration - INFO - Getting remediation recommendations for wordpress 5.8.2
+2025-05-17 21:05:10,122 - finguardai.nvd_integration - INFO - Fetching vulnerabilities for wordpress 5.8.2
+2025-05-17 21:05:10,125 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'wordpress 5.8.2', 'pubStartDate': '2024-05-17T00:00:00.000', 'resultsPerPage': 50}
+2025-05-17 21:05:11,260 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?keywordSearch=wordpress+5.8.2&pubStartDate=2024-05-17T00%3A00%3A00.000&resultsPerPage=50
+2025-05-17 21:05:11,262 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-17 21:05:11,263 - finguardai.nvd_integration - ERROR - Error fetching vulnerabilities for wordpress 5.8.2: 'str' object does not support item assignment
+2025-05-17 21:05:11,265 - finguardai.nvd_integration - INFO - Getting remediation recommendations for nginx 1.20.1
+2025-05-17 21:05:11,265 - finguardai.nvd_integration - INFO - Fetching vulnerabilities for nginx 1.20.1
+2025-05-17 21:05:11,267 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'nginx 1.20.1', 'pubStartDate': '2024-05-17T00:00:00.000', 'resultsPerPage': 50}
+2025-05-17 21:05:12,652 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?keywordSearch=nginx+1.20.1&pubStartDate=2024-05-17T00%3A00%3A00.000&resultsPerPage=50
+2025-05-17 21:05:12,656 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-17 21:05:12,657 - finguardai.nvd_integration - ERROR - Error fetching vulnerabilities for nginx 1.20.1: 'str' object does not support item assignment
+2025-05-17 21:05:12,659 - finguardai.nvd_integration - INFO - Getting remediation recommendations for mysql 8.0.26
+2025-05-17 21:05:12,662 - finguardai.nvd_integration - INFO - Fetching vulnerabilities for mysql 8.0.26
+2025-05-17 21:05:12,670 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'mysql 8.0.26', 'pubStartDate': '2024-05-17T00:00:00.000', 'resultsPerPage': 50}
+2025-05-17 21:05:14,305 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?keywordSearch=mysql+8.0.26&pubStartDate=2024-05-17T00%3A00%3A00.000&resultsPerPage=50
+2025-05-17 21:05:14,309 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-17 21:05:14,311 - finguardai.nvd_integration - ERROR - Error fetching vulnerabilities for mysql 8.0.26: 'str' object does not support item assignment
+2025-05-17 21:05:14,313 - finguardai.nvd_integration - INFO - Getting remediation recommendations for centos 8.4
+2025-05-17 21:05:14,315 - finguardai.nvd_integration - INFO - Fetching vulnerabilities for centos 8.4
+2025-05-17 21:05:14,318 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'centos 8.4', 'pubStartDate': '2024-05-17T00:00:00.000', 'resultsPerPage': 50}
+2025-05-17 21:05:16,659 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?keywordSearch=centos+8.4&pubStartDate=2024-05-17T00%3A00%3A00.000&resultsPerPage=50
+2025-05-17 21:05:16,661 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-17 21:05:16,661 - finguardai.nvd_integration - ERROR - Error fetching vulnerabilities for centos 8.4: 'str' object does not support item assignment
+2025-05-17 21:05:16,662 - finguardai.nvd_integration - INFO - Getting remediation recommendations for jquery 3.5.1
+2025-05-17 21:05:16,663 - finguardai.nvd_integration - INFO - Fetching vulnerabilities for jquery 3.5.1
+2025-05-17 21:05:16,664 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'jquery 3.5.1', 'pubStartDate': '2024-05-17T00:00:00.000', 'resultsPerPage': 50}
+2025-05-17 21:05:18,422 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?keywordSearch=jquery+3.5.1&pubStartDate=2024-05-17T00%3A00%3A00.000&resultsPerPage=50
+2025-05-17 21:05:18,424 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-17 21:05:18,425 - finguardai.nvd_integration - ERROR - Error fetching vulnerabilities for jquery 3.5.1: 'str' object does not support item assignment
+2025-05-17 21:05:18,427 - finguardai.nvd_integration - INFO - Getting remediation recommendations for bootstrap 4.6.0
+2025-05-17 21:05:18,428 - finguardai.nvd_integration - INFO - Fetching vulnerabilities for bootstrap 4.6.0
+2025-05-17 21:05:18,431 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'bootstrap 4.6.0', 'pubStartDate': '2024-05-17T00:00:00.000', 'resultsPerPage': 50}
+2025-05-17 21:05:19,630 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?keywordSearch=bootstrap+4.6.0&pubStartDate=2024-05-17T00%3A00%3A00.000&resultsPerPage=50
+2025-05-17 21:05:19,633 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-17 21:05:19,635 - finguardai.nvd_integration - ERROR - Error fetching vulnerabilities for bootstrap 4.6.0: 'str' object does not support item assignment
+2025-05-17 21:05:19,637 - finguardai.integrated_analyzer - INFO - Step 6: Checking for exploitable vulnerabilities
+2025-05-17 21:05:19,639 - finguardai.nvd_advanced - INFO - Searching for vulnerabilities with known exploits
+2025-05-17 21:05:19,640 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'hasExploit': True, 'resultsPerPage': 100, 'keywordSearch': 'apache'}
+2025-05-17 21:05:20,995 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?hasExploit=True&resultsPerPage=100&keywordSearch=apache
+2025-05-17 21:05:20,999 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-17 21:05:21,000 - finguardai.nvd_advanced - ERROR - Error searching for exploited vulnerabilities: 'str' object does not support item assignment
+2025-05-17 21:05:21,002 - finguardai.nvd_advanced - INFO - Searching for vulnerabilities with known exploits
+2025-05-17 21:05:21,006 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'hasExploit': True, 'resultsPerPage': 100, 'keywordSearch': 'php'}
+2025-05-17 21:05:22,149 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?hasExploit=True&resultsPerPage=100&keywordSearch=php
+2025-05-17 21:05:22,154 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-17 21:05:22,156 - finguardai.nvd_advanced - ERROR - Error searching for exploited vulnerabilities: 'str' object does not support item assignment
+2025-05-17 21:05:22,158 - finguardai.nvd_advanced - INFO - Searching for vulnerabilities with known exploits
+2025-05-17 21:05:22,161 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'hasExploit': True, 'resultsPerPage': 100, 'keywordSearch': 'openssh'}
+2025-05-17 21:05:23,421 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?hasExploit=True&resultsPerPage=100&keywordSearch=openssh
+2025-05-17 21:05:23,425 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-17 21:05:23,427 - finguardai.nvd_advanced - ERROR - Error searching for exploited vulnerabilities: 'str' object does not support item assignment
+2025-05-17 21:05:23,428 - finguardai.nvd_advanced - INFO - Searching for vulnerabilities with known exploits
+2025-05-17 21:05:23,430 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'hasExploit': True, 'resultsPerPage': 100, 'keywordSearch': 'ubuntu'}
+2025-05-17 21:05:24,459 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?hasExploit=True&resultsPerPage=100&keywordSearch=ubuntu
+2025-05-17 21:05:24,462 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-17 21:05:24,464 - finguardai.nvd_advanced - ERROR - Error searching for exploited vulnerabilities: 'str' object does not support item assignment
+2025-05-17 21:05:24,465 - finguardai.nvd_advanced - INFO - Searching for vulnerabilities with known exploits
+2025-05-17 21:05:24,467 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'hasExploit': True, 'resultsPerPage': 100, 'keywordSearch': 'wordpress'}
+2025-05-17 21:05:25,775 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?hasExploit=True&resultsPerPage=100&keywordSearch=wordpress
+2025-05-17 21:05:25,779 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-17 21:05:25,781 - finguardai.nvd_advanced - ERROR - Error searching for exploited vulnerabilities: 'str' object does not support item assignment
+2025-05-17 21:05:25,783 - finguardai.nvd_advanced - INFO - Searching for vulnerabilities with known exploits
+2025-05-17 21:05:25,785 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'hasExploit': True, 'resultsPerPage': 100, 'keywordSearch': 'nginx'}
+2025-05-17 21:05:27,004 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?hasExploit=True&resultsPerPage=100&keywordSearch=nginx
+2025-05-17 21:05:27,007 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-17 21:05:27,008 - finguardai.nvd_advanced - ERROR - Error searching for exploited vulnerabilities: 'str' object does not support item assignment
+2025-05-17 21:05:27,011 - finguardai.nvd_advanced - INFO - Searching for vulnerabilities with known exploits
+2025-05-17 21:05:27,013 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'hasExploit': True, 'resultsPerPage': 100, 'keywordSearch': 'mysql'}
+2025-05-17 21:05:28,277 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?hasExploit=True&resultsPerPage=100&keywordSearch=mysql
+2025-05-17 21:05:28,280 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-17 21:05:28,282 - finguardai.nvd_advanced - ERROR - Error searching for exploited vulnerabilities: 'str' object does not support item assignment
+2025-05-17 21:05:28,284 - finguardai.nvd_advanced - INFO - Searching for vulnerabilities with known exploits
+2025-05-17 21:05:28,286 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'hasExploit': True, 'resultsPerPage': 100, 'keywordSearch': 'centos'}
+2025-05-17 21:05:29,304 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?hasExploit=True&resultsPerPage=100&keywordSearch=centos
+2025-05-17 21:05:29,308 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-17 21:05:29,310 - finguardai.nvd_advanced - ERROR - Error searching for exploited vulnerabilities: 'str' object does not support item assignment
+2025-05-17 21:05:29,312 - finguardai.nvd_advanced - INFO - Searching for vulnerabilities with known exploits
+2025-05-17 21:05:29,315 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'hasExploit': True, 'resultsPerPage': 100, 'keywordSearch': 'jquery'}
+2025-05-17 21:05:30,237 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?hasExploit=True&resultsPerPage=100&keywordSearch=jquery
+2025-05-17 21:05:30,240 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-17 21:05:30,241 - finguardai.nvd_advanced - ERROR - Error searching for exploited vulnerabilities: 'str' object does not support item assignment
+2025-05-17 21:05:30,241 - finguardai.nvd_advanced - INFO - Searching for vulnerabilities with known exploits
+2025-05-17 21:05:30,242 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'hasExploit': True, 'resultsPerPage': 100, 'keywordSearch': 'bootstrap'}
+2025-05-17 21:05:31,332 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?hasExploit=True&resultsPerPage=100&keywordSearch=bootstrap
+2025-05-17 21:05:31,334 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-17 21:05:31,334 - finguardai.nvd_advanced - ERROR - Error searching for exploited vulnerabilities: 'str' object does not support item assignment
+2025-05-17 21:05:31,335 - finguardai.integrated_analyzer - INFO - Step 7: Analyzing vulnerability trends
+2025-05-17 21:05:31,336 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'apache', 'pubStartDate': '2025-04-17T00:00:00.000', 'pubEndDate': '2025-05-17T23:59:59.999', 'resultsPerPage': 50}
+2025-05-17 21:05:33,658 - finguardai.nvd_client - INFO - Saved NVD data to cache file C:\Users\CYBER\Downloads\finguardai-admin (3)\backend\cache\nvd_search_1687835928284376713.json
+2025-05-17 21:05:33,709 - finguardai.nvd_advanced - ERROR - Error analyzing vulnerability trends: 'str' object has no attribute 'get'
+2025-05-17 21:05:33,726 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'php', 'pubStartDate': '2025-04-17T00:00:00.000', 'pubEndDate': '2025-05-17T23:59:59.999', 'resultsPerPage': 50}
+2025-05-17 21:05:36,859 - finguardai.nvd_client - INFO - Saved NVD data to cache file C:\Users\CYBER\Downloads\finguardai-admin (3)\backend\cache\nvd_search_6847067761270327161.json
+2025-05-17 21:05:36,872 - finguardai.nvd_advanced - ERROR - Error analyzing vulnerability trends: 'str' object has no attribute 'get'
+2025-05-17 21:05:36,901 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'openssh', 'pubStartDate': '2025-04-17T00:00:00.000', 'pubEndDate': '2025-05-17T23:59:59.999', 'resultsPerPage': 50}
+2025-05-17 21:05:37,973 - finguardai.nvd_client - INFO - Saved NVD data to cache file C:\Users\CYBER\Downloads\finguardai-admin (3)\backend\cache\nvd_search_8050721790100892260.json
+2025-05-17 21:05:38,010 - finguardai.nvd_advanced - ERROR - Error analyzing vulnerability trends: 'str' object has no attribute 'get'
+2025-05-17 21:05:38,056 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'ubuntu', 'pubStartDate': '2025-04-17T00:00:00.000', 'pubEndDate': '2025-05-17T23:59:59.999', 'resultsPerPage': 50}
+2025-05-17 21:05:39,089 - finguardai.nvd_client - INFO - Saved NVD data to cache file C:\Users\CYBER\Downloads\finguardai-admin (3)\backend\cache\nvd_search_7569869471885104448.json
+2025-05-17 21:05:39,094 - finguardai.nvd_advanced - ERROR - Error analyzing vulnerability trends: 'str' object has no attribute 'get'
+2025-05-17 21:05:39,096 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'wordpress', 'pubStartDate': '2025-04-17T00:00:00.000', 'pubEndDate': '2025-05-17T23:59:59.999', 'resultsPerPage': 50}
+2025-05-17 21:05:40,952 - finguardai.nvd_client - INFO - Saved NVD data to cache file C:\Users\CYBER\Downloads\finguardai-admin (3)\backend\cache\nvd_search_6263257527324063390.json
+2025-05-17 21:05:40,954 - finguardai.nvd_advanced - ERROR - Error analyzing vulnerability trends: 'str' object has no attribute 'get'
+2025-05-17 21:05:40,955 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'nginx', 'pubStartDate': '2025-04-17T00:00:00.000', 'pubEndDate': '2025-05-17T23:59:59.999', 'resultsPerPage': 50}
+2025-05-17 21:05:42,168 - finguardai.nvd_client - INFO - Saved NVD data to cache file C:\Users\CYBER\Downloads\finguardai-admin (3)\backend\cache\nvd_search_4606940833489360558.json
+2025-05-17 21:05:42,170 - finguardai.nvd_advanced - ERROR - Error analyzing vulnerability trends: 'str' object has no attribute 'get'
+2025-05-17 21:05:42,171 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'mysql', 'pubStartDate': '2025-04-17T00:00:00.000', 'pubEndDate': '2025-05-17T23:59:59.999', 'resultsPerPage': 50}
+2025-05-17 21:05:43,539 - finguardai.nvd_client - INFO - Saved NVD data to cache file C:\Users\CYBER\Downloads\finguardai-admin (3)\backend\cache\nvd_search_-184935085789812506.json
+2025-05-17 21:05:43,542 - finguardai.nvd_advanced - ERROR - Error analyzing vulnerability trends: 'str' object has no attribute 'get'
+2025-05-17 21:05:43,545 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'centos', 'pubStartDate': '2025-04-17T00:00:00.000', 'pubEndDate': '2025-05-17T23:59:59.999', 'resultsPerPage': 50}
+2025-05-17 21:05:44,514 - finguardai.nvd_client - INFO - Saved NVD data to cache file C:\Users\CYBER\Downloads\finguardai-admin (3)\backend\cache\nvd_search_5252070912624916854.json
+2025-05-17 21:05:44,515 - finguardai.nvd_advanced - ERROR - Error analyzing vulnerability trends: 'str' object has no attribute 'get'
+2025-05-17 21:05:44,516 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'jquery', 'pubStartDate': '2025-04-17T00:00:00.000', 'pubEndDate': '2025-05-17T23:59:59.999', 'resultsPerPage': 50}
+2025-05-17 21:05:45,854 - finguardai.nvd_client - INFO - Saved NVD data to cache file C:\Users\CYBER\Downloads\finguardai-admin (3)\backend\cache\nvd_search_1380496635922713158.json
+2025-05-17 21:05:45,856 - finguardai.nvd_advanced - ERROR - Error analyzing vulnerability trends: 'str' object has no attribute 'get'
+2025-05-17 21:05:45,857 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'bootstrap', 'pubStartDate': '2025-04-17T00:00:00.000', 'pubEndDate': '2025-05-17T23:59:59.999', 'resultsPerPage': 50}
+2025-05-17 21:05:47,995 - finguardai.nvd_client - INFO - Saved NVD data to cache file C:\Users\CYBER\Downloads\finguardai-admin (3)\backend\cache\nvd_search_6524265885785030072.json
+2025-05-17 21:05:47,996 - finguardai.nvd_advanced - ERROR - Error analyzing vulnerability trends: 'str' object has no attribute 'get'
+2025-05-17 21:05:48,011 - finguardai.integrated_analyzer - INFO - Completed integrated analysis of portal.lcu.edu.ng, results saved to C:\Users\CYBER\Downloads\finguardai-admin (3)\backend\reports\portal_lcu_edu_ng_analysis.json
+2025-05-17 21:05:48,024 - finguardai.integrated - INFO - Analysis completed in 477.57 seconds
+2025-05-24 12:02:53,597 - finguardai.remediation - INFO - Financial sector specific recommendations loaded successfully
+2025-05-24 12:02:53,763 - finguardai.scan_runner - INFO - Starting vulnerability scan on localhost
+2025-05-24 12:02:53,765 - finguardai.integrated_analyzer - INFO - Starting integrated analysis of localhost
+2025-05-24 12:02:53,769 - finguardai.integrated_analyzer - INFO - Step 1: Performing active scanning
+2025-05-24 12:02:53,772 - finguardai.active_scanner - INFO - Starting active scan of localhost
+2025-05-24 12:02:53,776 - finguardai.active_scanner - INFO - Completed active scan of localhost, found 3 technologies
+2025-05-24 12:02:53,784 - finguardai.integrated_analyzer - INFO - Step 2: Performing passive monitoring
+2025-05-24 12:02:53,789 - finguardai.passive_monitor - INFO - Starting passive monitoring of localhost
+2025-05-24 12:02:53,794 - finguardai.passive_monitor - INFO - Completed passive monitoring of localhost, found 7 technologies
+2025-05-24 12:02:53,798 - finguardai.integrated_analyzer - INFO - Step 3: Performing comprehensive vulnerability scanning
+2025-05-24 12:02:53,804 - finguardai.vulnerability_scanner - INFO - Starting vulnerability scan of localhost (intensity: normal)
+2025-05-24 12:02:53,806 - finguardai.vulnerability_scanner - INFO - Running nmap with args: nmap -oX C:\Users\CYBER\Downloads\finguardai-admin (3)\backend\scan_results\localhost_20250524_120253_vulns.xml -p 443,27017,9443,5432,1521,6379,80,1433,8443,8080,8843,9042,3306 -T3 -sV -sC --script vuln,auth,default,discovery,version,http-headers,http-methods,ssl-cert,mysql-empty-password,ms-sql-info,mongodb-info,redis-info localhost
+2025-05-24 12:03:54,611 - finguardai.vulnerability_scanner - INFO - Vulnerability scan completed for localhost. Found 0 vulnerabilities
+2025-05-24 12:03:54,613 - finguardai.integrated_analyzer - INFO - Combined 4 active, 9 passive, and 0 vuln scan technologies into 10 unique technologies
+2025-05-24 12:03:54,614 - finguardai.integrated_analyzer - INFO - Step 5: Analyzing vulnerabilities by timeframe
+2025-05-24 12:03:54,616 - finguardai.nvd_integration - INFO - Getting vulnerabilities by timeframe for 10 technologies
+2025-05-24 12:03:54,617 - finguardai.nvd_integration - INFO - Fetching vulnerabilities for apache 2.4.51
+2025-05-24 12:03:54,648 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'apache 2.4.51', 'pubStartDate': '2025-04-24T00:00:00.000', 'resultsPerPage': 50}
+2025-05-24 12:03:56,250 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?keywordSearch=apache+2.4.51&pubStartDate=2025-04-24T00%3A00%3A00.000&resultsPerPage=50
+2025-05-24 12:03:56,254 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-24 12:03:56,255 - finguardai.nvd_integration - ERROR - Error fetching vulnerabilities for apache 2.4.51: 'str' object does not support item assignment
+2025-05-24 12:03:56,257 - finguardai.nvd_integration - INFO - Fetching vulnerabilities for php 8.0.10
+2025-05-24 12:03:56,258 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'php 8.0.10', 'pubStartDate': '2025-04-24T00:00:00.000', 'resultsPerPage': 50}
+2025-05-24 12:03:57,450 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?keywordSearch=php+8.0.10&pubStartDate=2025-04-24T00%3A00%3A00.000&resultsPerPage=50
+2025-05-24 12:03:57,451 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-24 12:03:57,452 - finguardai.nvd_integration - ERROR - Error fetching vulnerabilities for php 8.0.10: 'str' object does not support item assignment
+2025-05-24 12:03:57,452 - finguardai.nvd_integration - INFO - Fetching vulnerabilities for openssh 8.2p1
+2025-05-24 12:03:57,453 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'openssh 8.2p1', 'pubStartDate': '2025-04-24T00:00:00.000', 'resultsPerPage': 50}
+2025-05-24 12:03:58,740 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?keywordSearch=openssh+8.2p1&pubStartDate=2025-04-24T00%3A00%3A00.000&resultsPerPage=50
+2025-05-24 12:03:58,741 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-24 12:03:58,742 - finguardai.nvd_integration - ERROR - Error fetching vulnerabilities for openssh 8.2p1: 'str' object does not support item assignment
+2025-05-24 12:03:58,743 - finguardai.nvd_integration - INFO - Fetching vulnerabilities for ubuntu 20.04
+2025-05-24 12:03:58,744 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'ubuntu 20.04', 'pubStartDate': '2025-04-24T00:00:00.000', 'resultsPerPage': 50}
+2025-05-24 12:04:03,909 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?keywordSearch=ubuntu+20.04&pubStartDate=2025-04-24T00%3A00%3A00.000&resultsPerPage=50
+2025-05-24 12:04:03,911 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-24 12:04:03,912 - finguardai.nvd_integration - ERROR - Error fetching vulnerabilities for ubuntu 20.04: 'str' object does not support item assignment
+2025-05-24 12:04:03,912 - finguardai.nvd_integration - INFO - Fetching vulnerabilities for wordpress 5.8.2
+2025-05-24 12:04:03,913 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'wordpress 5.8.2', 'pubStartDate': '2025-04-24T00:00:00.000', 'resultsPerPage': 50}
+2025-05-24 12:04:05,518 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?keywordSearch=wordpress+5.8.2&pubStartDate=2025-04-24T00%3A00%3A00.000&resultsPerPage=50
+2025-05-24 12:04:05,519 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-24 12:04:05,519 - finguardai.nvd_integration - ERROR - Error fetching vulnerabilities for wordpress 5.8.2: 'str' object does not support item assignment
+2025-05-24 12:04:05,520 - finguardai.nvd_integration - INFO - Fetching vulnerabilities for nginx 1.20.1
+2025-05-24 12:04:05,521 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'nginx 1.20.1', 'pubStartDate': '2025-04-24T00:00:00.000', 'resultsPerPage': 50}
+2025-05-24 12:04:08,793 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?keywordSearch=nginx+1.20.1&pubStartDate=2025-04-24T00%3A00%3A00.000&resultsPerPage=50
+2025-05-24 12:04:08,795 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-24 12:04:08,795 - finguardai.nvd_integration - ERROR - Error fetching vulnerabilities for nginx 1.20.1: 'str' object does not support item assignment
+2025-05-24 12:04:08,796 - finguardai.nvd_integration - INFO - Fetching vulnerabilities for mysql 8.0.26
+2025-05-24 12:04:08,796 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'mysql 8.0.26', 'pubStartDate': '2025-04-24T00:00:00.000', 'resultsPerPage': 50}
+2025-05-24 12:04:09,969 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?keywordSearch=mysql+8.0.26&pubStartDate=2025-04-24T00%3A00%3A00.000&resultsPerPage=50
+2025-05-24 12:04:09,970 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-24 12:04:09,971 - finguardai.nvd_integration - ERROR - Error fetching vulnerabilities for mysql 8.0.26: 'str' object does not support item assignment
+2025-05-24 12:04:09,972 - finguardai.nvd_integration - INFO - Fetching vulnerabilities for centos 8.4
+2025-05-24 12:04:09,973 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'centos 8.4', 'pubStartDate': '2025-04-24T00:00:00.000', 'resultsPerPage': 50}
+2025-05-24 12:04:11,110 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?keywordSearch=centos+8.4&pubStartDate=2025-04-24T00%3A00%3A00.000&resultsPerPage=50
+2025-05-24 12:04:11,111 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-24 12:04:11,112 - finguardai.nvd_integration - ERROR - Error fetching vulnerabilities for centos 8.4: 'str' object does not support item assignment
+2025-05-24 12:04:11,112 - finguardai.nvd_integration - INFO - Fetching vulnerabilities for jquery 3.5.1
+2025-05-24 12:04:11,113 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'jquery 3.5.1', 'pubStartDate': '2025-04-24T00:00:00.000', 'resultsPerPage': 50}
+2025-05-24 12:04:12,183 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?keywordSearch=jquery+3.5.1&pubStartDate=2025-04-24T00%3A00%3A00.000&resultsPerPage=50
+2025-05-24 12:04:12,185 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-24 12:04:12,185 - finguardai.nvd_integration - ERROR - Error fetching vulnerabilities for jquery 3.5.1: 'str' object does not support item assignment
+2025-05-24 12:04:12,186 - finguardai.nvd_integration - INFO - Fetching vulnerabilities for bootstrap 4.6.0
+2025-05-24 12:04:12,186 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'bootstrap 4.6.0', 'pubStartDate': '2025-04-24T00:00:00.000', 'resultsPerPage': 50}
+2025-05-24 12:04:14,476 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?keywordSearch=bootstrap+4.6.0&pubStartDate=2025-04-24T00%3A00%3A00.000&resultsPerPage=50
+2025-05-24 12:04:14,477 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-24 12:04:14,478 - finguardai.nvd_integration - ERROR - Error fetching vulnerabilities for bootstrap 4.6.0: 'str' object does not support item assignment
+2025-05-24 12:04:14,478 - finguardai.nvd_integration - INFO - Fetching vulnerabilities for apache 2.4.51
+2025-05-24 12:04:14,479 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'apache 2.4.51', 'pubStartDate': '2025-02-23T00:00:00.000', 'resultsPerPage': 50}
+2025-05-24 12:04:15,473 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?keywordSearch=apache+2.4.51&pubStartDate=2025-02-23T00%3A00%3A00.000&resultsPerPage=50
+2025-05-24 12:04:15,474 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-24 12:04:15,474 - finguardai.nvd_integration - ERROR - Error fetching vulnerabilities for apache 2.4.51: 'str' object does not support item assignment
+2025-05-24 12:04:15,475 - finguardai.nvd_integration - INFO - Fetching vulnerabilities for php 8.0.10
+2025-05-24 12:04:15,475 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'php 8.0.10', 'pubStartDate': '2025-02-23T00:00:00.000', 'resultsPerPage': 50}
+2025-05-24 12:04:16,536 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?keywordSearch=php+8.0.10&pubStartDate=2025-02-23T00%3A00%3A00.000&resultsPerPage=50
+2025-05-24 12:04:16,538 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-24 12:04:16,538 - finguardai.nvd_integration - ERROR - Error fetching vulnerabilities for php 8.0.10: 'str' object does not support item assignment
+2025-05-24 12:04:16,539 - finguardai.nvd_integration - INFO - Fetching vulnerabilities for openssh 8.2p1
+2025-05-24 12:04:16,540 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'openssh 8.2p1', 'pubStartDate': '2025-02-23T00:00:00.000', 'resultsPerPage': 50}
+2025-05-24 12:04:17,579 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?keywordSearch=openssh+8.2p1&pubStartDate=2025-02-23T00%3A00%3A00.000&resultsPerPage=50
+2025-05-24 12:04:17,580 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-24 12:04:17,580 - finguardai.nvd_integration - ERROR - Error fetching vulnerabilities for openssh 8.2p1: 'str' object does not support item assignment
+2025-05-24 12:04:17,581 - finguardai.nvd_integration - INFO - Fetching vulnerabilities for ubuntu 20.04
+2025-05-24 12:04:17,581 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'ubuntu 20.04', 'pubStartDate': '2025-02-23T00:00:00.000', 'resultsPerPage': 50}
+2025-05-24 12:04:18,999 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?keywordSearch=ubuntu+20.04&pubStartDate=2025-02-23T00%3A00%3A00.000&resultsPerPage=50
+2025-05-24 12:04:19,001 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-24 12:04:19,001 - finguardai.nvd_integration - ERROR - Error fetching vulnerabilities for ubuntu 20.04: 'str' object does not support item assignment
+2025-05-24 12:04:19,002 - finguardai.nvd_integration - INFO - Fetching vulnerabilities for wordpress 5.8.2
+2025-05-24 12:04:19,003 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'wordpress 5.8.2', 'pubStartDate': '2025-02-23T00:00:00.000', 'resultsPerPage': 50}
+2025-05-24 12:04:20,042 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?keywordSearch=wordpress+5.8.2&pubStartDate=2025-02-23T00%3A00%3A00.000&resultsPerPage=50
+2025-05-24 12:04:20,043 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-24 12:04:20,044 - finguardai.nvd_integration - ERROR - Error fetching vulnerabilities for wordpress 5.8.2: 'str' object does not support item assignment
+2025-05-24 12:04:20,044 - finguardai.nvd_integration - INFO - Fetching vulnerabilities for nginx 1.20.1
+2025-05-24 12:04:20,045 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'nginx 1.20.1', 'pubStartDate': '2025-02-23T00:00:00.000', 'resultsPerPage': 50}
+2025-05-24 12:04:21,180 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?keywordSearch=nginx+1.20.1&pubStartDate=2025-02-23T00%3A00%3A00.000&resultsPerPage=50
+2025-05-24 12:04:21,182 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-24 12:04:21,183 - finguardai.nvd_integration - ERROR - Error fetching vulnerabilities for nginx 1.20.1: 'str' object does not support item assignment
+2025-05-24 12:04:21,183 - finguardai.nvd_integration - INFO - Fetching vulnerabilities for mysql 8.0.26
+2025-05-24 12:04:21,184 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'mysql 8.0.26', 'pubStartDate': '2025-02-23T00:00:00.000', 'resultsPerPage': 50}
+2025-05-24 12:04:22,431 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?keywordSearch=mysql+8.0.26&pubStartDate=2025-02-23T00%3A00%3A00.000&resultsPerPage=50
+2025-05-24 12:04:22,432 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-24 12:04:22,433 - finguardai.nvd_integration - ERROR - Error fetching vulnerabilities for mysql 8.0.26: 'str' object does not support item assignment
+2025-05-24 12:04:22,433 - finguardai.nvd_integration - INFO - Fetching vulnerabilities for centos 8.4
+2025-05-24 12:04:22,434 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'centos 8.4', 'pubStartDate': '2025-02-23T00:00:00.000', 'resultsPerPage': 50}
+2025-05-24 12:04:23,608 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?keywordSearch=centos+8.4&pubStartDate=2025-02-23T00%3A00%3A00.000&resultsPerPage=50
+2025-05-24 12:04:23,610 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-24 12:04:23,610 - finguardai.nvd_integration - ERROR - Error fetching vulnerabilities for centos 8.4: 'str' object does not support item assignment
+2025-05-24 12:04:23,611 - finguardai.nvd_integration - INFO - Fetching vulnerabilities for jquery 3.5.1
+2025-05-24 12:04:23,611 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'jquery 3.5.1', 'pubStartDate': '2025-02-23T00:00:00.000', 'resultsPerPage': 50}
+2025-05-24 12:04:25,779 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?keywordSearch=jquery+3.5.1&pubStartDate=2025-02-23T00%3A00%3A00.000&resultsPerPage=50
+2025-05-24 12:04:25,781 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-24 12:04:25,782 - finguardai.nvd_integration - ERROR - Error fetching vulnerabilities for jquery 3.5.1: 'str' object does not support item assignment
+2025-05-24 12:04:25,782 - finguardai.nvd_integration - INFO - Fetching vulnerabilities for bootstrap 4.6.0
+2025-05-24 12:04:25,782 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'bootstrap 4.6.0', 'pubStartDate': '2025-02-23T00:00:00.000', 'resultsPerPage': 50}
+2025-05-24 12:04:26,807 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?keywordSearch=bootstrap+4.6.0&pubStartDate=2025-02-23T00%3A00%3A00.000&resultsPerPage=50
+2025-05-24 12:04:26,808 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-24 12:04:26,810 - finguardai.nvd_integration - ERROR - Error fetching vulnerabilities for bootstrap 4.6.0: 'str' object does not support item assignment
+2025-05-24 12:04:26,810 - finguardai.nvd_integration - INFO - Found 0 total vulnerabilities across all timeframes
+2025-05-24 12:04:26,810 - finguardai.integrated_analyzer - INFO - Step 5: Generating remediation recommendations
+2025-05-24 12:04:26,811 - finguardai.nvd_integration - INFO - Getting remediation recommendations for apache 2.4.51
+2025-05-24 12:04:26,811 - finguardai.nvd_integration - INFO - Fetching vulnerabilities for apache 2.4.51
+2025-05-24 12:04:26,812 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'apache 2.4.51', 'pubStartDate': '2024-05-24T00:00:00.000', 'resultsPerPage': 50}
+2025-05-24 12:04:28,027 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?keywordSearch=apache+2.4.51&pubStartDate=2024-05-24T00%3A00%3A00.000&resultsPerPage=50
+2025-05-24 12:04:28,028 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-24 12:04:28,030 - finguardai.nvd_integration - ERROR - Error fetching vulnerabilities for apache 2.4.51: 'str' object does not support item assignment
+2025-05-24 12:04:28,030 - finguardai.nvd_integration - INFO - Getting remediation recommendations for php 8.0.10
+2025-05-24 12:04:28,032 - finguardai.nvd_integration - INFO - Fetching vulnerabilities for php 8.0.10
+2025-05-24 12:04:28,032 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'php 8.0.10', 'pubStartDate': '2024-05-24T00:00:00.000', 'resultsPerPage': 50}
+2025-05-24 12:04:30,495 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?keywordSearch=php+8.0.10&pubStartDate=2024-05-24T00%3A00%3A00.000&resultsPerPage=50
+2025-05-24 12:04:30,497 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-24 12:04:30,497 - finguardai.nvd_integration - ERROR - Error fetching vulnerabilities for php 8.0.10: 'str' object does not support item assignment
+2025-05-24 12:04:30,498 - finguardai.nvd_integration - INFO - Getting remediation recommendations for openssh 8.2p1
+2025-05-24 12:04:30,498 - finguardai.nvd_integration - INFO - Fetching vulnerabilities for openssh 8.2p1
+2025-05-24 12:04:30,499 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'openssh 8.2p1', 'pubStartDate': '2024-05-24T00:00:00.000', 'resultsPerPage': 50}
+2025-05-24 12:04:31,600 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?keywordSearch=openssh+8.2p1&pubStartDate=2024-05-24T00%3A00%3A00.000&resultsPerPage=50
+2025-05-24 12:04:31,601 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-24 12:04:31,601 - finguardai.nvd_integration - ERROR - Error fetching vulnerabilities for openssh 8.2p1: 'str' object does not support item assignment
+2025-05-24 12:04:31,602 - finguardai.nvd_integration - INFO - Getting remediation recommendations for ubuntu 20.04
+2025-05-24 12:04:31,602 - finguardai.nvd_integration - INFO - Fetching vulnerabilities for ubuntu 20.04
+2025-05-24 12:04:31,603 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'ubuntu 20.04', 'pubStartDate': '2024-05-24T00:00:00.000', 'resultsPerPage': 50}
+2025-05-24 12:04:32,836 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?keywordSearch=ubuntu+20.04&pubStartDate=2024-05-24T00%3A00%3A00.000&resultsPerPage=50
+2025-05-24 12:04:32,839 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-24 12:04:32,840 - finguardai.nvd_integration - ERROR - Error fetching vulnerabilities for ubuntu 20.04: 'str' object does not support item assignment
+2025-05-24 12:04:32,846 - finguardai.nvd_integration - INFO - Getting remediation recommendations for wordpress 5.8.2
+2025-05-24 12:04:32,852 - finguardai.nvd_integration - INFO - Fetching vulnerabilities for wordpress 5.8.2
+2025-05-24 12:04:32,852 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'wordpress 5.8.2', 'pubStartDate': '2024-05-24T00:00:00.000', 'resultsPerPage': 50}
+2025-05-24 12:04:34,994 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?keywordSearch=wordpress+5.8.2&pubStartDate=2024-05-24T00%3A00%3A00.000&resultsPerPage=50
+2025-05-24 12:04:34,996 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-24 12:04:34,997 - finguardai.nvd_integration - ERROR - Error fetching vulnerabilities for wordpress 5.8.2: 'str' object does not support item assignment
+2025-05-24 12:04:34,998 - finguardai.nvd_integration - INFO - Getting remediation recommendations for nginx 1.20.1
+2025-05-24 12:04:34,999 - finguardai.nvd_integration - INFO - Fetching vulnerabilities for nginx 1.20.1
+2025-05-24 12:04:35,001 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'nginx 1.20.1', 'pubStartDate': '2024-05-24T00:00:00.000', 'resultsPerPage': 50}
+2025-05-24 12:04:36,158 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?keywordSearch=nginx+1.20.1&pubStartDate=2024-05-24T00%3A00%3A00.000&resultsPerPage=50
+2025-05-24 12:04:36,162 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-24 12:04:36,162 - finguardai.nvd_integration - ERROR - Error fetching vulnerabilities for nginx 1.20.1: 'str' object does not support item assignment
+2025-05-24 12:04:36,163 - finguardai.nvd_integration - INFO - Getting remediation recommendations for mysql 8.0.26
+2025-05-24 12:04:36,164 - finguardai.nvd_integration - INFO - Fetching vulnerabilities for mysql 8.0.26
+2025-05-24 12:04:36,165 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'mysql 8.0.26', 'pubStartDate': '2024-05-24T00:00:00.000', 'resultsPerPage': 50}
+2025-05-24 12:04:37,490 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?keywordSearch=mysql+8.0.26&pubStartDate=2024-05-24T00%3A00%3A00.000&resultsPerPage=50
+2025-05-24 12:04:37,492 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-24 12:04:37,493 - finguardai.nvd_integration - ERROR - Error fetching vulnerabilities for mysql 8.0.26: 'str' object does not support item assignment
+2025-05-24 12:04:37,493 - finguardai.nvd_integration - INFO - Getting remediation recommendations for centos 8.4
+2025-05-24 12:04:37,494 - finguardai.nvd_integration - INFO - Fetching vulnerabilities for centos 8.4
+2025-05-24 12:04:37,494 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'centos 8.4', 'pubStartDate': '2024-05-24T00:00:00.000', 'resultsPerPage': 50}
+2025-05-24 12:04:39,892 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?keywordSearch=centos+8.4&pubStartDate=2024-05-24T00%3A00%3A00.000&resultsPerPage=50
+2025-05-24 12:04:39,894 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-24 12:04:39,894 - finguardai.nvd_integration - ERROR - Error fetching vulnerabilities for centos 8.4: 'str' object does not support item assignment
+2025-05-24 12:04:39,895 - finguardai.nvd_integration - INFO - Getting remediation recommendations for jquery 3.5.1
+2025-05-24 12:04:39,895 - finguardai.nvd_integration - INFO - Fetching vulnerabilities for jquery 3.5.1
+2025-05-24 12:04:39,896 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'jquery 3.5.1', 'pubStartDate': '2024-05-24T00:00:00.000', 'resultsPerPage': 50}
+2025-05-24 12:04:43,133 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?keywordSearch=jquery+3.5.1&pubStartDate=2024-05-24T00%3A00%3A00.000&resultsPerPage=50
+2025-05-24 12:04:43,140 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-24 12:04:43,141 - finguardai.nvd_integration - ERROR - Error fetching vulnerabilities for jquery 3.5.1: 'str' object does not support item assignment
+2025-05-24 12:04:43,142 - finguardai.nvd_integration - INFO - Getting remediation recommendations for bootstrap 4.6.0
+2025-05-24 12:04:43,143 - finguardai.nvd_integration - INFO - Fetching vulnerabilities for bootstrap 4.6.0
+2025-05-24 12:04:43,148 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'keywordSearch': 'bootstrap 4.6.0', 'pubStartDate': '2024-05-24T00:00:00.000', 'resultsPerPage': 50}
+2025-05-24 12:04:48,963 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+2025-05-24 12:04:48,965 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-24 12:04:48,966 - finguardai.nvd_integration - ERROR - Error fetching vulnerabilities for bootstrap 4.6.0: 'str' object does not support item assignment
+2025-05-24 12:04:48,967 - finguardai.integrated_analyzer - INFO - Step 6: Checking for exploitable vulnerabilities
+2025-05-24 12:04:48,969 - finguardai.nvd_advanced - INFO - Searching for vulnerabilities with known exploits
+2025-05-24 12:04:48,970 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'hasExploit': True, 'resultsPerPage': 100, 'keywordSearch': 'apache'}
+2025-05-24 12:04:50,101 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?hasExploit=True&resultsPerPage=100&keywordSearch=apache
+2025-05-24 12:04:50,102 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-24 12:04:50,102 - finguardai.nvd_advanced - ERROR - Error searching for exploited vulnerabilities: 'str' object does not support item assignment
+2025-05-24 12:04:50,103 - finguardai.nvd_advanced - INFO - Searching for vulnerabilities with known exploits
+2025-05-24 12:04:50,103 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'hasExploit': True, 'resultsPerPage': 100, 'keywordSearch': 'php'}
+2025-05-24 12:04:51,348 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?hasExploit=True&resultsPerPage=100&keywordSearch=php
+2025-05-24 12:04:51,350 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-24 12:04:51,350 - finguardai.nvd_advanced - ERROR - Error searching for exploited vulnerabilities: 'str' object does not support item assignment
+2025-05-24 12:04:51,351 - finguardai.nvd_advanced - INFO - Searching for vulnerabilities with known exploits
+2025-05-24 12:04:51,353 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'hasExploit': True, 'resultsPerPage': 100, 'keywordSearch': 'openssh'}
+2025-05-24 12:04:53,873 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?hasExploit=True&resultsPerPage=100&keywordSearch=openssh
+2025-05-24 12:04:53,879 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-24 12:04:53,885 - finguardai.nvd_advanced - ERROR - Error searching for exploited vulnerabilities: 'str' object does not support item assignment
+2025-05-24 12:04:53,886 - finguardai.nvd_advanced - INFO - Searching for vulnerabilities with known exploits
+2025-05-24 12:04:53,887 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'hasExploit': True, 'resultsPerPage': 100, 'keywordSearch': 'ubuntu'}
+2025-05-24 12:04:56,429 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?hasExploit=True&resultsPerPage=100&keywordSearch=ubuntu
+2025-05-24 12:04:56,431 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-24 12:04:56,431 - finguardai.nvd_advanced - ERROR - Error searching for exploited vulnerabilities: 'str' object does not support item assignment
+2025-05-24 12:04:56,432 - finguardai.nvd_advanced - INFO - Searching for vulnerabilities with known exploits
+2025-05-24 12:04:56,433 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'hasExploit': True, 'resultsPerPage': 100, 'keywordSearch': 'wordpress'}
+2025-05-24 12:05:00,341 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?hasExploit=True&resultsPerPage=100&keywordSearch=wordpress
+2025-05-24 12:05:00,342 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-24 12:05:00,343 - finguardai.nvd_advanced - ERROR - Error searching for exploited vulnerabilities: 'str' object does not support item assignment
+2025-05-24 12:05:00,343 - finguardai.nvd_advanced - INFO - Searching for vulnerabilities with known exploits
+2025-05-24 12:05:00,344 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'hasExploit': True, 'resultsPerPage': 100, 'keywordSearch': 'nginx'}
+2025-05-24 12:05:01,632 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?hasExploit=True&resultsPerPage=100&keywordSearch=nginx
+2025-05-24 12:05:01,633 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-24 12:05:01,634 - finguardai.nvd_advanced - ERROR - Error searching for exploited vulnerabilities: 'str' object does not support item assignment
+2025-05-24 12:05:01,635 - finguardai.nvd_advanced - INFO - Searching for vulnerabilities with known exploits
+2025-05-24 12:05:01,635 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'hasExploit': True, 'resultsPerPage': 100, 'keywordSearch': 'mysql'}
+2025-05-24 12:05:02,777 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?hasExploit=True&resultsPerPage=100&keywordSearch=mysql
+2025-05-24 12:05:02,829 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-24 12:05:02,910 - finguardai.nvd_advanced - ERROR - Error searching for exploited vulnerabilities: 'str' object does not support item assignment
+2025-05-24 12:05:02,926 - finguardai.nvd_advanced - INFO - Searching for vulnerabilities with known exploits
+2025-05-24 12:05:02,933 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'hasExploit': True, 'resultsPerPage': 100, 'keywordSearch': 'centos'}
+2025-05-24 12:05:04,165 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?hasExploit=True&resultsPerPage=100&keywordSearch=centos
+2025-05-24 12:05:04,167 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-24 12:05:04,168 - finguardai.nvd_advanced - ERROR - Error searching for exploited vulnerabilities: 'str' object does not support item assignment
+2025-05-24 12:05:04,169 - finguardai.nvd_advanced - INFO - Searching for vulnerabilities with known exploits
+2025-05-24 12:05:04,171 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'hasExploit': True, 'resultsPerPage': 100, 'keywordSearch': 'jquery'}
+2025-05-24 12:05:08,459 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?hasExploit=True&resultsPerPage=100&keywordSearch=jquery
+2025-05-24 12:05:08,461 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-24 12:05:08,462 - finguardai.nvd_advanced - ERROR - Error searching for exploited vulnerabilities: 'str' object does not support item assignment
+2025-05-24 12:05:08,463 - finguardai.nvd_advanced - INFO - Searching for vulnerabilities with known exploits
+2025-05-24 12:05:08,465 - finguardai.nvd_client - INFO - Fetching vulnerabilities from NVD API with params: {'hasExploit': True, 'resultsPerPage': 100, 'keywordSearch': 'bootstrap'}
+2025-05-24 12:05:09,825 - finguardai.nvd_client - ERROR - Error fetching vulnerabilities from NVD API: 404 Client Error:  for url: https://services.nvd.nist.gov/rest/json/cves/2.0?hasExploit=True&resultsPerPage=100&keywordSearch=bootstrap
+2025-05-24 12:05:09,827 - finguardai.cvss_analyzer - ERROR - Error extracting CVSS data: 'str' object has no attribute 'get'
+2025-05-24 12:05:09,827 - finguardai.nvd_advanced - ERROR - Error searching for exploited vulnerabilities: 'str' object does not support item assignment
+2025-05-24 12:38:10,633 - finguardai.scan - INFO - Starting vulnerability scan on localhost
+2025-05-24 12:38:10,634 - finguardai.vulnerability_scanner - INFO - Starting vulnerability scan of localhost (intensity: normal)
+2025-05-24 12:38:10,635 - finguardai.vulnerability_scanner - INFO - Running nmap with args: nmap -oX reports\localhost_20250524_123810_vulns.xml -p 9042,1521,3306,27017,8080,8843,80,8443,5432,9443,443,1433,6379,22 -T3 -sV -sC --script vuln,auth,default,discovery,version,http-headers,http-methods,ssl-cert,mysql-empty-password,ms-sql-info,mongodb-info,redis-info localhost
+2025-05-24 12:39:05,697 - finguardai.vulnerability_scanner - INFO - Vulnerability scan completed for localhost. Found 0 vulnerabilities
+2025-05-24 12:39:05,715 - finguardai.scan - INFO - Scan completed in 55.08 seconds
+2025-05-24 12:39:06,435 - finguardai.enhanced_report - INFO - Text report generated: reports\report_20250524123905.txt
+2025-05-24 12:39:06,482 - finguardai.scan - INFO - Report generated: reports\report_20250524123905.txt
+2025-05-24 12:51:48,666 - finguardai.scan - INFO - Starting vulnerability scan on scanme.nmap.org
+2025-05-24 12:51:48,667 - finguardai.vulnerability_scanner - INFO - Starting vulnerability scan of scanme.nmap.org (intensity: normal)
+2025-05-24 12:51:48,667 - finguardai.vulnerability_scanner - INFO - Running nmap with args: nmap -oX reports\scanme_nmap_org_20250524_125148_vulns.xml -p 9929,31337,5432,443,3306,9042,8443,27017,8080,6379,8843,22,1433,9443,80,1521 -T3 -sV -sC --script vuln,auth,default,discovery,version,http-headers,http-methods,ssl-cert,mysql-empty-password,ms-sql-info,mongodb-info,redis-info scanme.nmap.org
+2025-05-24 12:55:47,519 - finguardai.vulnerability_scanner - ERROR - Error in vulnerability scan: 'unknown_issues'
+2025-05-24 12:55:47,525 - finguardai.scan - INFO - Scan completed in 238.86 seconds
+2025-05-24 12:55:47,530 - finguardai.enhanced_report - INFO - Text report generated: reports\report_20250524125547.txt
+2025-05-24 12:55:47,531 - finguardai.scan - INFO - Report generated: reports\report_20250524125547.txt
+2025-05-24 13:03:55,241 - finguardai.scan - INFO - Starting vulnerability scan on localhost:8080
+2025-05-24 13:03:55,242 - finguardai.vulnerability_scanner - INFO - Starting vulnerability scan of localhost:8080 (intensity: normal)
+2025-05-24 13:03:55,244 - finguardai.vulnerability_scanner - INFO - Running nmap with args: nmap -oX reports\localhost:8080_20250524_130355_vulns.xml -p 27017,8080,1433,3306,8843,6379,80,9443,443,5432,1521,8443,9042 -T3 -sV -sC --script vuln,auth,default,discovery,version,http-headers,http-methods,ssl-cert,mysql-empty-password,ms-sql-info,mongodb-info,redis-info localhost:8080
+2025-05-24 13:04:10,455 - finguardai.vulnerability_scanner - INFO - Vulnerability scan completed for localhost:8080. Found 0 vulnerabilities
+2025-05-24 13:04:10,462 - finguardai.scan - INFO - Scan completed in 15.22 seconds
+2025-05-24 13:04:10,467 - finguardai.enhanced_report - INFO - Text report generated: reports\report_20250524130410.txt
+2025-05-24 13:04:10,469 - finguardai.scan - INFO - Report generated: reports\report_20250524130410.txt
+2025-05-24 22:58:43,831 - finguardai.scan - INFO - Starting vulnerability scan on localhost
+2025-05-24 22:58:43,831 - finguardai.vulnerability_scanner - INFO - Starting vulnerability scan of localhost (intensity: stealthy)
+2025-05-24 22:58:43,832 - finguardai.vulnerability_scanner - INFO - Running nmap with args: nmap -oX reports\localhost_20250524_225843_vulns.xml -p 1521,6379,9443,8843,5432,443,80,8080,1433,8443,9042,3306,27017 -T2 -f --script-args=safe=1 --script vuln,auth,default,discovery,version,exploit localhost
+2025-05-24 22:59:30,403 - finguardai.vulnerability_scanner - INFO - Vulnerability scan completed for localhost. Found 0 vulnerabilities
+2025-05-24 22:59:30,404 - finguardai.scan - INFO - Scan completed in 46.57 seconds
+2025-05-24 22:59:30,407 - finguardai.enhanced_report - INFO - Text report generated: reports\report_20250524225930.txt
+2025-05-24 22:59:30,410 - finguardai.scan - INFO - Report generated: reports\report_20250524225930.txt

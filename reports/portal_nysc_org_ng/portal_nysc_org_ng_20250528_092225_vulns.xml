@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///C:/Program Files (x86)/Nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Wed May 28 09:22:25 2025 as: nmap -oX &quot;C:\\Users\\CYBER\\Downloads\\finguardai-admin (3)\\reports\\portal_nysc_org_ng\\portal_nysc_org_ng_20250528_092225_vulns.xml&quot; -p 25,1433,1521,5432,9042,9443,8443,8080-8090,22,21,1-1000,6379,27017,3306,23,53,8843 -T3 -sV -sC -&#45;script vuln,auth,default,discovery,version,http-headers,http-methods,ssl-cert,mysql-empty-password,ms-sql-info,mongodb-info,redis-info portal.nysc.org.ng -->
+<nmaprun scanner="nmap" args="nmap -oX &quot;C:\\Users\\CYBER\\Downloads\\finguardai-admin (3)\\reports\\portal_nysc_org_ng\\portal_nysc_org_ng_20250528_092225_vulns.xml&quot; -p 25,1433,1521,5432,9042,9443,8443,8080-8090,22,21,1-1000,6379,27017,3306,23,53,8843 -T3 -sV -sC -&#45;script vuln,auth,default,discovery,version,http-headers,http-methods,ssl-cert,mysql-empty-password,ms-sql-info,mongodb-info,redis-info portal.nysc.org.ng" start="1748420545" startstr="Wed May 28 09:22:25 2025" version="7.80" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="1021" services="1-1000,1433,1521,3306,5432,6379,8080-8090,8443,8843,9042,9443,27017"/>

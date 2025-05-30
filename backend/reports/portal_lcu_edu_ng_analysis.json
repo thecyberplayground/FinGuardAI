@@ -1,0 +1,2008 @@
+{
+    "target": "portal.lcu.edu.ng",
+    "analysis_time": "2025-05-17T21:05:47.997251",
+    "technologies": [
+        {
+            "name": "apache",
+            "version": "2.4.51",
+            "sources": [
+                "active"
+            ],
+            "confidence": 100
+        },
+        {
+            "name": "php",
+            "version": "8.0.10",
+            "sources": [
+                "active",
+                "passive",
+                "passive"
+            ],
+            "confidence": 100
+        },
+        {
+            "name": "openssh",
+            "version": "8.2p1",
+            "sources": [
+                "active"
+            ],
+            "confidence": 100
+        },
+        {
+            "name": "ubuntu",
+            "version": "20.04",
+            "sources": [
+                "active"
+            ],
+            "confidence": 100
+        },
+        {
+            "name": "wordpress",
+            "version": "5.8.2",
+            "sources": [
+                "passive"
+            ],
+            "confidence": 85
+        },
+        {
+            "name": "nginx",
+            "version": "1.20.1",
+            "sources": [
+                "passive",
+                "passive"
+            ],
+            "confidence": 80
+        },
+        {
+            "name": "mysql",
+            "version": "8.0.26",
+            "sources": [
+                "passive"
+            ],
+            "confidence": 70
+        },
+        {
+            "name": "centos",
+            "version": "8.4",
+            "sources": [
+                "passive"
+            ],
+            "confidence": 60
+        },
+        {
+            "name": "jquery",
+            "version": "3.5.1",
+            "sources": [
+                "passive"
+            ],
+            "confidence": 95
+        },
+        {
+            "name": "bootstrap",
+            "version": "4.6.0",
+            "sources": [
+                "passive"
+            ],
+            "confidence": 90
+        }
+    ],
+    "vulnerability_predictions": {
+        "technologies": [
+            {
+                "name": "apache",
+                "version": "2.4.51",
+                "sources": [
+                    "active"
+                ],
+                "confidence": 100
+            },
+            {
+                "name": "php",
+                "version": "8.0.10",
+                "sources": [
+                    "active",
+                    "passive",
+                    "passive"
+                ],
+                "confidence": 100
+            },
+            {
+                "name": "openssh",
+                "version": "8.2p1",
+                "sources": [
+                    "active"
+                ],
+                "confidence": 100
+            },
+            {
+                "name": "ubuntu",
+                "version": "20.04",
+                "sources": [
+                    "active"
+                ],
+                "confidence": 100
+            },
+            {
+                "name": "wordpress",
+                "version": "5.8.2",
+                "sources": [
+                    "passive"
+                ],
+                "confidence": 85
+            },
+            {
+                "name": "nginx",
+                "version": "1.20.1",
+                "sources": [
+                    "passive",
+                    "passive"
+                ],
+                "confidence": 80
+            },
+            {
+                "name": "mysql",
+                "version": "8.0.26",
+                "sources": [
+                    "passive"
+                ],
+                "confidence": 70
+            },
+            {
+                "name": "centos",
+                "version": "8.4",
+                "sources": [
+                    "passive"
+                ],
+                "confidence": 60
+            },
+            {
+                "name": "jquery",
+                "version": "3.5.1",
+                "sources": [
+                    "passive"
+                ],
+                "confidence": 95
+            },
+            {
+                "name": "bootstrap",
+                "version": "4.6.0",
+                "sources": [
+                    "passive"
+                ],
+                "confidence": 90
+            }
+        ],
+        "timeframes": {
+            "1_day": {
+                "days": 1,
+                "vulnerabilities_by_technology": {},
+                "total_count": 0,
+                "critical_count": 0,
+                "high_count": 0
+            },
+            "1_week": {
+                "days": 7,
+                "vulnerabilities_by_technology": {},
+                "total_count": 0,
+                "critical_count": 0,
+                "high_count": 0
+            }
+        },
+        "summary": {
+            "total_vulnerabilities": 0,
+            "critical_vulnerabilities": 0,
+            "high_vulnerabilities": 0,
+            "technologies_count": 10,
+            "timeframes_count": 2
+        }
+    },
+    "remediation_recommendations": {
+        "apache 2.4.51": {
+            "technology": "apache",
+            "version": "2.4.51",
+            "status": "No vulnerabilities found",
+            "recommendations": [
+                "Keep the system updated with the latest patches"
+            ]
+        },
+        "php 8.0.10": {
+            "technology": "php",
+            "version": "8.0.10",
+            "status": "No vulnerabilities found",
+            "recommendations": [
+                "Keep the system updated with the latest patches"
+            ]
+        },
+        "openssh 8.2p1": {
+            "technology": "openssh",
+            "version": "8.2p1",
+            "status": "No vulnerabilities found",
+            "recommendations": [
+                "Keep the system updated with the latest patches"
+            ]
+        },
+        "ubuntu 20.04": {
+            "technology": "ubuntu",
+            "version": "20.04",
+            "status": "No vulnerabilities found",
+            "recommendations": [
+                "Keep the system updated with the latest patches"
+            ]
+        },
+        "wordpress 5.8.2": {
+            "technology": "wordpress",
+            "version": "5.8.2",
+            "status": "No vulnerabilities found",
+            "recommendations": [
+                "Keep the system updated with the latest patches"
+            ]
+        },
+        "nginx 1.20.1": {
+            "technology": "nginx",
+            "version": "1.20.1",
+            "status": "No vulnerabilities found",
+            "recommendations": [
+                "Keep the system updated with the latest patches"
+            ]
+        },
+        "mysql 8.0.26": {
+            "technology": "mysql",
+            "version": "8.0.26",
+            "status": "No vulnerabilities found",
+            "recommendations": [
+                "Keep the system updated with the latest patches"
+            ]
+        },
+        "centos 8.4": {
+            "technology": "centos",
+            "version": "8.4",
+            "status": "No vulnerabilities found",
+            "recommendations": [
+                "Keep the system updated with the latest patches"
+            ]
+        },
+        "jquery 3.5.1": {
+            "technology": "jquery",
+            "version": "3.5.1",
+            "status": "No vulnerabilities found",
+            "recommendations": [
+                "Keep the system updated with the latest patches"
+            ]
+        },
+        "bootstrap 4.6.0": {
+            "technology": "bootstrap",
+            "version": "4.6.0",
+            "status": "No vulnerabilities found",
+            "recommendations": [
+                "Keep the system updated with the latest patches"
+            ]
+        }
+    },
+    "vulnerability_scan": {
+        "detected_vulnerabilities": [
+            {
+                "id": "",
+                "name": "XSS Vulnerability",
+                "description": "Couldn't find any DOM based XSS.",
+                "severity": "high",
+                "type": "web",
+                "script_id": "http-dombased-xss",
+                "port": "80",
+                "references": [],
+                "service": "http"
+            },
+            {
+                "id": "",
+                "name": "XSS Vulnerability",
+                "description": "Couldn't find any stored XSS vulnerabilities.",
+                "severity": "high",
+                "type": "web",
+                "script_id": "http-stored-xss",
+                "port": "80",
+                "references": [],
+                "service": "http"
+            },
+            {
+                "id": "",
+                "name": "XSS Vulnerability",
+                "description": "No previously reported XSS vuln.",
+                "severity": "high",
+                "type": "web",
+                "script_id": "http-xssed",
+                "port": "80",
+                "references": [],
+                "service": "http"
+            },
+            {
+                "id": "",
+                "name": "XSS Vulnerability",
+                "description": "Couldn't find any DOM based XSS.",
+                "severity": "high",
+                "type": "web",
+                "script_id": "http-dombased-xss",
+                "port": "443",
+                "references": [],
+                "service": "http"
+            },
+            {
+                "id": "",
+                "name": "XSS Vulnerability",
+                "description": "Couldn't find any stored XSS vulnerabilities.",
+                "severity": "high",
+                "type": "web",
+                "script_id": "http-stored-xss",
+                "port": "443",
+                "references": [],
+                "service": "http"
+            },
+            {
+                "id": "",
+                "name": "XSS Vulnerability",
+                "description": "No previously reported XSS vuln.",
+                "severity": "high",
+                "type": "web",
+                "script_id": "http-xssed",
+                "port": "443",
+                "references": [],
+                "service": "http"
+            },
+            {
+                "id": "CVE-2007-6750",
+                "name": "Vulnerability detected by http-slowloris-check",
+                "description": "VULNERABLE:\n  Slowloris DOS attack\n    State: LIKELY VULNERABLE\n    IDs:  CVE:CVE-2007-6750\n      Slowloris tries to keep many connections to the target web server open and hold\n      them open as long as possible.  It accomplishes this by opening connections to\n      the target web server and sending a partial request. By doing so, it starves\n      the http server's resources causing Denial Of Service.\n      \n    Disclosure date: 2009-09-17\n    References:\n      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-6750\n      http://ha.ckers.org/slowloris/",
+                "severity": "low",
+                "type": "web",
+                "script_id": "http-slowloris-check",
+                "port": "80",
+                "references": [
+                    "CVE-2007-6750",
+                    "CVE-2007-6750"
+                ],
+                "service": "http"
+            },
+            {
+                "id": "",
+                "name": "Vulnerability detected by http-title",
+                "description": "Did not follow redirect to https://portal.lcu.edu.ng/",
+                "severity": "low",
+                "type": "web",
+                "script_id": "http-title",
+                "port": "80",
+                "references": [],
+                "service": "http"
+            },
+            {
+                "id": "",
+                "name": "Vulnerability detected by http-useragent-tester",
+                "description": "Status for browser useragent: 200\n  Redirected To: https://portal.lcu.edu.ng/\n  Allowed User Agents: \n    Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)\n    libwww\n    lwp-trivial\n    libcurl-agent/1.0\n    PHP/\n    Python-urllib/2.5\n    GT::WWW\n    Snoopy\n    MFC_Tear_Sample\n    HTTP::Lite\n    PHPCrawl\n    URI::Fetch\n    Zend_Http_Client\n    http client\n    PECL::HTTP\n    Wget/1.13.4 (linux-gnu)\n    WWW-Mechanize/1.34",
+                "severity": "low",
+                "type": "web",
+                "script_id": "http-useragent-tester",
+                "port": "80",
+                "references": [],
+                "service": "http"
+            },
+            {
+                "id": "",
+                "name": "CSRF Vulnerability",
+                "description": "Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=portal.lcu.edu.ng\n  Found the following possible CSRF vulnerabilities: \n    \n    Path: https://portal.lcu.edu.ng:443/\n    Form id: \n    Form action: /index.php\n    \n    Path: https://portal.lcu.edu.ng:443/index.php\n    Form id: \n    Form action: /index.php\n    \n    Path: https://portal.lcu.edu.ng:443/forgot-password\n    Form id: emailerror\n    Form action: /forgot-password.php\n    \n    Path: https://portal.lcu.edu.ng:443/forgot-password.php\n    Form id: emailerror\n    Form action: /forgot-password.php\n    \n    Path: https://portal.lcu.edu.ng:443/login\n    Form id: \n    Form action: /index.php\n    \n    Path: https://portal.lcu.edu.ng:443/assets/js/jquery-3.5.1.min.js.js\n    Form id: \n    Form action: /index.php\n    \n    Path: https://portal.lcu.edu.ng:443/assets/js/forgot-password\n    Form id: \n    Form action: /index.php",
+                "severity": "low",
+                "type": "web",
+                "script_id": "http-csrf",
+                "port": "443",
+                "references": [],
+                "service": "http"
+            },
+            {
+                "id": "CVE-2005-3299",
+                "name": "Vulnerability detected by http-phpmyadmin-dir-traversal",
+                "description": "VULNERABLE:\n  phpMyAdmin grab_globals.lib.php subform Parameter Traversal Local File Inclusion\n    State: UNKNOWN (unable to test)\n    IDs:  CVE:CVE-2005-3299\n      PHP file inclusion vulnerability in grab_globals.lib.php in phpMyAdmin 2.6.4 and 2.6.4-pl1 allows remote attackers to include local files via the $__redirect parameter, possibly involving the subform array.\n      \n    Disclosure date: 2005-10-nil\n    Extra information:\n      ../../../../../etc/passwd :\n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  <div id='header' class='heda'>\n   <img src='assets/images/logo.png' alt='Our Logo' /> <h1 style='text-shadow:3px 2px #000000;'>Lead City University, Ibadan</h1>\n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n      <footer class='hidden-print'>\n  <br>\n  \n  <div id='sm'>\n  <a href='https://web.facebook.com/pages/category/College---University/leadcity_university' target='_blank'><i class='fa fa-facebook-square' style='font-size:24px'></i></a> &nbsp\n  <a href='' target='_blank'><i class='fa fa-twitter-square' style='font-size:24px'></i></a> &nbsp\n  <a href='https://www.instagram.com/leadcity_university/' target='_blank'><i class='fa fa-instagram' style='font-size:24px'></i></a> &nbsp\n  \n  </div>\n  <div id='cr'>\n  <a href='https://www.lcu.edu.ng'>Visit University Website</a><br><p>&#169;2025 - DICT</p></div>\n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  </html>\n    References:\n      http://www.exploit-db.com/exploits/1244/\n      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-3299",
+                "severity": "low",
+                "type": "web",
+                "script_id": "http-phpmyadmin-dir-traversal",
+                "port": "443",
+                "references": [
+                    "CVE-2005-3299",
+                    "CVE-2005-3299"
+                ],
+                "service": "http"
+            },
+            {
+                "id": "CVE-2007-6750",
+                "name": "Vulnerability detected by http-slowloris-check",
+                "description": "VULNERABLE:\n  Slowloris DOS attack\n    State: LIKELY VULNERABLE\n    IDs:  CVE:CVE-2007-6750\n      Slowloris tries to keep many connections to the target web server open and hold\n      them open as long as possible.  It accomplishes this by opening connections to\n      the target web server and sending a partial request. By doing so, it starves\n      the http server's resources causing Denial Of Service.\n      \n    Disclosure date: 2009-09-17\n    References:\n      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-6750\n      http://ha.ckers.org/slowloris/",
+                "severity": "low",
+                "type": "web",
+                "script_id": "http-slowloris-check",
+                "port": "443",
+                "references": [
+                    "CVE-2007-6750",
+                    "CVE-2007-6750"
+                ],
+                "service": "http"
+            },
+            {
+                "id": "",
+                "name": "Vulnerability detected by http-useragent-tester",
+                "description": "Status for browser useragent: 400\n  Allowed User Agents: \n    libwww\n    libcurl-agent/1.0\n  Change in Status Code: \n    WWW-Mechanize/1.34: 200\n    GT::WWW: 200\n    HTTP::Lite: 200\n    http client: 200\n    PHPCrawl: 200\n    Wget/1.13.4 (linux-gnu): 200\n    PECL::HTTP: 200\n    Zend_Http_Client: 200\n    Snoopy: 200\n    Python-urllib/2.5: 200\n    PHP/: 200\n    MFC_Tear_Sample: 200\n    Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html): 200\n    URI::Fetch: 200",
+                "severity": "low",
+                "type": "web",
+                "script_id": "http-useragent-tester",
+                "port": "443",
+                "references": [],
+                "service": "http"
+            },
+            {
+                "id": "",
+                "name": "Vulnerability detected by http-chrono",
+                "description": "Request times for /; avg: 837.40ms; min: 561.00ms; max: 1571.00ms",
+                "severity": "unknown",
+                "type": "web",
+                "script_id": "http-chrono",
+                "port": "80",
+                "references": [],
+                "service": "http"
+            },
+            {
+                "id": "",
+                "name": "Vulnerability detected by http-comments-displayer",
+                "description": "Couldn't find any comments.",
+                "severity": "unknown",
+                "type": "web",
+                "script_id": "http-comments-displayer",
+                "port": "80",
+                "references": [],
+                "service": "http"
+            },
+            {
+                "id": "",
+                "name": "CSRF Vulnerability",
+                "description": "Couldn't find any CSRF vulnerabilities.",
+                "severity": "unknown",
+                "type": "web",
+                "script_id": "http-csrf",
+                "port": "80",
+                "references": [],
+                "service": "http"
+            },
+            {
+                "id": "",
+                "name": "Vulnerability detected by http-date",
+                "description": "Sat, 17 May 2025 19:58:41 GMT; -1s from local time.",
+                "severity": "unknown",
+                "type": "web",
+                "script_id": "http-date",
+                "port": "80",
+                "references": [],
+                "service": "http"
+            },
+            {
+                "id": "",
+                "name": "Vulnerability detected by http-devframework",
+                "description": "Couldn't determine the underlying framework or CMS. Try increasing 'httpspider.maxpagecount' value to spider more pages.",
+                "severity": "unknown",
+                "type": "web",
+                "script_id": "http-devframework",
+                "port": "80",
+                "references": [],
+                "service": "http"
+            },
+            {
+                "id": "",
+                "name": "Vulnerability detected by http-errors",
+                "description": "Couldn't find any error pages.",
+                "severity": "unknown",
+                "type": "web",
+                "script_id": "http-errors",
+                "port": "80",
+                "references": [],
+                "service": "http"
+            },
+            {
+                "id": "",
+                "name": "Vulnerability detected by http-feed",
+                "description": "Couldn't find any feeds.",
+                "severity": "unknown",
+                "type": "web",
+                "script_id": "http-feed",
+                "port": "80",
+                "references": [],
+                "service": "http"
+            },
+            {
+                "id": "",
+                "name": "Vulnerability detected by http-headers",
+                "description": "Date: Sat, 17 May 2025 19:59:18 GMT\n  Server: Apache\n  Location: https://portal.lcu.edu.ng/\n  Content-Length: 234\n  Connection: close\n  Content-Type: text/html; charset=iso-8859-1\n  \n  (Request type: GET)",
+                "severity": "unknown",
+                "type": "web",
+                "script_id": "http-headers",
+                "port": "80",
+                "references": [],
+                "service": "http"
+            },
+            {
+                "id": "",
+                "name": "Vulnerability detected by http-mobileversion-checker",
+                "description": "No mobile version detected.",
+                "severity": "unknown",
+                "type": "web",
+                "script_id": "http-mobileversion-checker",
+                "port": "80",
+                "references": [],
+                "service": "http"
+            },
+            {
+                "id": "",
+                "name": "Vulnerability detected by http-passwd",
+                "description": "ERROR: Script execution failed (use -d to debug)",
+                "severity": "unknown",
+                "type": "web",
+                "script_id": "http-passwd",
+                "port": "80",
+                "references": [],
+                "service": "http"
+            },
+            {
+                "id": "",
+                "name": "Vulnerability detected by http-referer-checker",
+                "description": "Couldn't find any cross-domain scripts.",
+                "severity": "unknown",
+                "type": "web",
+                "script_id": "http-referer-checker",
+                "port": "80",
+                "references": [],
+                "service": "http"
+            },
+            {
+                "id": "",
+                "name": "Vulnerability detected by http-security-headers",
+                "description": "Cache_Control: \n    Header: Cache-Control: no-store, no-cache, must-revalidate\n  Pragma: \n    Header: Pragma: no-cache\n  Expires: \n    Header: Expires: Thu, 19 Nov 1981 08:52:00 GMT",
+                "severity": "unknown",
+                "type": "web",
+                "script_id": "http-security-headers",
+                "port": "80",
+                "references": [],
+                "service": "http"
+            },
+            {
+                "id": "",
+                "name": "Vulnerability detected by http-server-header",
+                "description": "Apache",
+                "severity": "unknown",
+                "type": "web",
+                "script_id": "http-server-header",
+                "port": "80",
+                "references": [],
+                "service": "http"
+            },
+            {
+                "id": "",
+                "name": "Vulnerability detected by http-sitemap-generator",
+                "description": "Directory structure:\n  Longest directory structure:\n    Depth: 0\n    Dir: /\n  Total files found (by extension):",
+                "severity": "unknown",
+                "type": "web",
+                "script_id": "http-sitemap-generator",
+                "port": "80",
+                "references": [],
+                "service": "http"
+            },
+            {
+                "id": "",
+                "name": "Vulnerability detected by http-vhosts",
+                "description": "mail.lcu.edu.ng : 301 -> https://mail.lcu.edu.ng/\nwww.lcu.edu.ng : 301 -> https://www.lcu.edu.ng/\n125 names had status 200",
+                "severity": "unknown",
+                "type": "web",
+                "script_id": "http-vhosts",
+                "port": "80",
+                "references": [],
+                "service": "http"
+            },
+            {
+                "id": "",
+                "name": "Vulnerability detected by http-auth-finder",
+                "description": "Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=portal.lcu.edu.ng\n  url                                                             method\n  https://portal.lcu.edu.ng:443/                                  FORM\n  https://portal.lcu.edu.ng:443/index.php                         FORM\n  https://portal.lcu.edu.ng:443/login                             FORM\n  https://portal.lcu.edu.ng:443/assets/js/jquery-3.5.1.min.js.js  FORM\n  https://portal.lcu.edu.ng:443/assets/js/forgot-password         FORM",
+                "severity": "unknown",
+                "type": "web",
+                "script_id": "http-auth-finder",
+                "port": "443",
+                "references": [],
+                "service": "http"
+            },
+            {
+                "id": "",
+                "name": "Vulnerability detected by http-chrono",
+                "description": "Request times for /; avg: 1919.40ms; min: 1477.00ms; max: 3120.00ms",
+                "severity": "unknown",
+                "type": "web",
+                "script_id": "http-chrono",
+                "port": "443",
+                "references": [],
+                "service": "http"
+            },
+            {
+                "id": "",
+                "name": "Vulnerability detected by http-comments-displayer",
+                "description": "Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=portal.lcu.edu.ng\n    \n    Path: https://portal.lcu.edu.ng:443/assets/js/forgot-password\n    Line number: 117\n    Comment: \n        \n        \n    \n    Path: https://portal.lcu.edu.ng:443/assets/css/style.css\n    Line number: 6934\n    Comment: \n        /*background-color: #ead9e2;*/\n    \n    Path: https://portal.lcu.edu.ng:443/assets/css/style.css\n    Line number: 6903\n    Comment: \n        /*background-color: #2980B9;*/\n    \n    Path: https://portal.lcu.edu.ng:443/assets/css/style.css\n    Line number: 6939\n    Comment: \n        /*display: inline-block;*/\n    \n    Path: https://portal.lcu.edu.ng:443/assets/js/forgot-password\n    Line number: 5\n    Comment: \n        <!-- Global site tag (gtag.js) - Google Analytics -->\n    \n    Path: https://portal.lcu.edu.ng:443/assets/css/style.css\n    Line number: 7174\n    Comment: \n        /*.page-title, .page-panel {display:block;}*/\n    \n    Path: https://portal.lcu.edu.ng:443/assets/js/forgot-password\n    Line number: 120\n    Comment: \n        \n        \n    \n    Path: https://portal.lcu.edu.ng:443/assets/js/forgot-password\n    Line number: 133\n    Comment: \n        \n        \n    \n    Path: https://portal.lcu.edu.ng:443/assets/css/style.css\n    Line number: 6767\n    Comment: \n        /*# my definitions */\n    \n    Path: https://portal.lcu.edu.ng:443/assets/css/style.css\n    Line number: 193\n    Comment: \n        /*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */\n    \n    Path: https://portal.lcu.edu.ng:443/assets/css/style.css\n    Line number: 6894\n    Comment: \n        /*background-color: #3498DB;*/\n    \n    Path: https://portal.lcu.edu.ng:443/assets/css/style.css\n    Line number: 2555\n    Comment: \n        /*width: 100%;*/\n    \n    Path: https://portal.lcu.edu.ng:443/assets/js/forgot-password\n    Line number: 96\n    Comment: \n        <!-- Modal content -->\n    \n    Path: https://portal.lcu.edu.ng:443/assets/css/style.css\n    Line number: 6814\n    Comment: \n        /* Green */\n    \n    Path: https://portal.lcu.edu.ng:443/assets/css/style.css\n    Line number: 7070\n    Comment: \n        /* Unicode character for \"plus\" sign (+) */\n    \n    Path: https://portal.lcu.edu.ng:443/assets/css/style.css\n    Line number: 6765\n    Comment: \n        /*# sourceMappingURL=bootstrap.css.map */\n    \n    Path: https://portal.lcu.edu.ng:443/assets/css/style.css\n    Line number: 6949\n    Comment: \n        /*top: -10px;*/\n    \n    Path: https://portal.lcu.edu.ng:443/assets/css/style.css\n    Line number: 6771\n    Comment: \n        \n        \n        \n        \n        \n        \n        \n        \n        \n        \n        \n        \n        }*/\n    \n    Path: https://portal.lcu.edu.ng:443/assets/css/style.css\n    Line number: 6892\n    Comment: \n        /*---------notification-------------*/\n    \n    Path: https://portal.lcu.edu.ng:443/assets/css/style.css\n    Line number: 3029\n    Comment: \n        /*border: 1px solid transparent;*/\n    \n    Path: https://portal.lcu.edu.ng:443/assets/js/forgot-password\n    Line number: 128\n    Comment: \n        \n        \n    \n    Path: https://portal.lcu.edu.ng:443/assets/css/style.css\n    Line number: 6944\n    Comment: \n        /*background: #ff7;*/\n    \n    Path: https://portal.lcu.edu.ng:443/assets/js/forgot-password\n    Line number: 130\n    Comment: \n        \n    \n    Path: https://portal.lcu.edu.ng:443/assets/css/style.css\n    Line number: 7175\n    Comment: \n        /*border-bottom: 1px solid black;*/\n    \n    Path: https://portal.lcu.edu.ng:443/assets/css/style.css\n    Line number: 7132\n    Comment: \n        /* Rounded sliders */\n    \n    Path: https://portal.lcu.edu.ng:443/assets/css/style.css\n    Line number: 6823\n    Comment: \n        /* Safari */\n    \n    Path: https://portal.lcu.edu.ng:443/assets/css/style.css\n    Line number: 1417\n    Comment: \n        /*border-bottom: 1px solid #eee;*/\n    \n    Path: https://portal.lcu.edu.ng:443/assets/css/style.css\n    Line number: 7078\n    Comment: \n        /* Unicode character for \"minus\" sign (-) */\n    \n    Path: https://portal.lcu.edu.ng:443/assets/js/forgot-password\n    Line number: 114\n    Comment: \n        \n        \n    \n    Path: https://portal.lcu.edu.ng:443/assets/js/forgot-password\n    Line number: 138\n    Comment: \n        \n        \n    \n    Path: https://portal.lcu.edu.ng:443/assets/js/forgot-password\n    Line number: 93\n    Comment: \n        <!-- The Modal -->\n    \n    Path: https://portal.lcu.edu.ng:443/assets/js/forgot-password\n    Line number: 143\n    Comment:",
+                "severity": "unknown",
+                "type": "web",
+                "script_id": "http-comments-displayer",
+                "port": "443",
+                "references": [],
+                "service": "http"
+            },
+            {
+                "id": "",
+                "name": "Vulnerability detected by http-cookie-flags",
+                "description": "/: \n    PHPSESSID: \n      httponly flag not set",
+                "severity": "unknown",
+                "type": "web",
+                "script_id": "http-cookie-flags",
+                "port": "443",
+                "references": [],
+                "service": "http"
+            },
+            {
+                "id": "",
+                "name": "Vulnerability detected by http-date",
+                "description": "Sat, 17 May 2025 19:58:49 GMT; -4s from local time.",
+                "severity": "unknown",
+                "type": "web",
+                "script_id": "http-date",
+                "port": "443",
+                "references": [],
+                "service": "http"
+            },
+            {
+                "id": "",
+                "name": "Vulnerability detected by http-devframework",
+                "description": "Couldn't determine the underlying framework or CMS. Try increasing 'httpspider.maxpagecount' value to spider more pages.",
+                "severity": "unknown",
+                "type": "web",
+                "script_id": "http-devframework",
+                "port": "443",
+                "references": [],
+                "service": "http"
+            },
+            {
+                "id": "",
+                "name": "Vulnerability detected by http-errors",
+                "description": "Couldn't find any error pages.",
+                "severity": "unknown",
+                "type": "web",
+                "script_id": "http-errors",
+                "port": "443",
+                "references": [],
+                "service": "http"
+            },
+            {
+                "id": "",
+                "name": "Vulnerability detected by http-feed",
+                "description": "Couldn't find any feeds.",
+                "severity": "unknown",
+                "type": "web",
+                "script_id": "http-feed",
+                "port": "443",
+                "references": [],
+                "service": "http"
+            },
+            {
+                "id": "",
+                "name": "Vulnerability detected by http-headers",
+                "description": "Date: Sat, 17 May 2025 19:58:43 GMT\n  Server: Apache\n  Expires: Thu, 19 Nov 1981 08:52:00 GMT\n  Cache-Control: no-store, no-cache, must-revalidate\n  Pragma: no-cache\n  Set-Cookie: PHPSESSID=6c5fd92fa84a62103b1961a193600f58; path=/\n  Connection: close\n  Content-Type: text/html; charset=UTF-8\n  \n  (Request type: HEAD)",
+                "severity": "unknown",
+                "type": "web",
+                "script_id": "http-headers",
+                "port": "443",
+                "references": [],
+                "service": "http"
+            },
+            {
+                "id": "",
+                "name": "Vulnerability detected by http-majordomo2-dir-traversal",
+                "description": "ERROR: Script execution failed (use -d to debug)",
+                "severity": "unknown",
+                "type": "web",
+                "script_id": "http-majordomo2-dir-traversal",
+                "port": "443",
+                "references": [],
+                "service": "http"
+            },
+            {
+                "id": "",
+                "name": "Vulnerability detected by http-mobileversion-checker",
+                "description": "No mobile version detected.",
+                "severity": "unknown",
+                "type": "web",
+                "script_id": "http-mobileversion-checker",
+                "port": "443",
+                "references": [],
+                "service": "http"
+            },
+            {
+                "id": "",
+                "name": "Vulnerability detected by http-referer-checker",
+                "description": "Spidering limited to: maxpagecount=30\n  https://kit.fontawesome.com:443/e33241849e.js\n  https://kit.fontawesome.com:443/5938b8fb56.js\n  https://www.googletagmanager.com:443/gtag/js?id=G-4851K6XJPK",
+                "severity": "unknown",
+                "type": "web",
+                "script_id": "http-referer-checker",
+                "port": "443",
+                "references": [],
+                "service": "http"
+            },
+            {
+                "id": "",
+                "name": "Vulnerability detected by http-security-headers",
+                "description": "Strict_Transport_Security: \n    HSTS not configured in HTTPS Server\n  Cache_Control: \n    Header: Cache-Control: no-store, no-cache, must-revalidate\n  Pragma: \n    Header: Pragma: no-cache\n  Expires: \n    Header: Expires: Thu, 19 Nov 1981 08:52:00 GMT",
+                "severity": "unknown",
+                "type": "web",
+                "script_id": "http-security-headers",
+                "port": "443",
+                "references": [],
+                "service": "http"
+            },
+            {
+                "id": "",
+                "name": "Vulnerability detected by http-server-header",
+                "description": "Apache",
+                "severity": "unknown",
+                "type": "web",
+                "script_id": "http-server-header",
+                "port": "443",
+                "references": [],
+                "service": "http"
+            },
+            {
+                "id": "",
+                "name": "Vulnerability detected by http-sitemap-generator",
+                "description": "Directory structure:\n    /\n      Other: 3; php: 2\n    /assets/css/\n      css: 1\n    /assets/images/\n      png: 1\n    /assets/js/\n      Other: 2; js: 1\n  Longest directory structure:\n    Depth: 2\n    Dir: /assets/images/\n  Total files found (by extension):\n    Other: 5; css: 1; js: 1; php: 2; png: 1",
+                "severity": "unknown",
+                "type": "web",
+                "script_id": "http-sitemap-generator",
+                "port": "443",
+                "references": [],
+                "service": "http"
+            },
+            {
+                "id": "",
+                "name": "Vulnerability detected by http-title",
+                "description": "Login - Lead City Univeristy",
+                "severity": "unknown",
+                "type": "web",
+                "script_id": "http-title",
+                "port": "443",
+                "references": [],
+                "service": "http"
+            },
+            {
+                "id": "",
+                "name": "Vulnerability detected by http-vhosts",
+                "description": "oracle.lcu.edu.ng : 400\nowa.lcu.edu.ng : 400\nmirror.lcu.edu.ng : 400\nmail3.lcu.edu.ng : 400\nvm.lcu.edu.ng : 400\n122 names had status 421",
+                "severity": "unknown",
+                "type": "web",
+                "script_id": "http-vhosts",
+                "port": "443",
+                "references": [],
+                "service": "http"
+            },
+            {
+                "id": "",
+                "name": "Vulnerability detected by http-vuln-cve2017-1001000",
+                "description": "ERROR: Script execution failed (use -d to debug)",
+                "severity": "unknown",
+                "type": "web",
+                "script_id": "http-vuln-cve2017-1001000",
+                "port": "443",
+                "references": [],
+                "service": "http"
+            },
+            {
+                "id": "",
+                "name": "Vulnerability detected by http-waf-detect",
+                "description": "IDS/IPS/WAF detected:\nportal.lcu.edu.ng:443/?p4yl04d3=<script>alert(document.cookie)</script>",
+                "severity": "unknown",
+                "type": "web",
+                "script_id": "http-waf-detect",
+                "port": "443",
+                "references": [],
+                "service": "http"
+            },
+            {
+                "id": "",
+                "name": "SSL Certificate Issue",
+                "description": "Subject: commonName=www.portal.lcu.edu.ng\nSubject Alternative Name: DNS:*.lcu.edu.ng, DNS:lcu.edu.ng, DNS:www.admissions.lcu.edu.ng, DNS:www.elearning.lcu.edu.ng, DNS:www.events.lcu.edu.ng, DNS:www.facaec.lcu.edu.ng, DNS:www.fascon.lcu.edu.ng, DNS:www.hostel.lcu.edu.ng, DNS:www.icaict.lcu.edu.ng, DNS:www.ilearn.lcu.edu.ng, DNS:www.journals.lcu.edu.ng, DNS:www.opac.lcu.edu.ng, DNS:www.ouralumni.lcu.edu.ng, DNS:www.pgc.lcu.edu.ng, DNS:www.pgportal.lcu.edu.ng, DNS:www.portal.lcu.edu.ng, DNS:www.registration.lcu.edu.ng, DNS:www.repository.lcu.edu.ng, DNS:www.staffclient.lcu.edu.ng\nNot valid before: 2025-04-23T08:13:20\nNot valid after:  2025-07-22T08:13:19",
+                "severity": "unknown",
+                "type": "ssl",
+                "script_id": "ssl-cert",
+                "port": "443",
+                "references": [],
+                "service": "http"
+            },
+            {
+                "id": "",
+                "name": "Vulnerability detected by ssl-enum-ciphers",
+                "description": "TLSv1.2: \n    ciphers: \n      TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 2048) - A\n      TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 2048) - A\n      TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A\n      TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A\n      TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256 (secp256r1) - A\n    compressors: \n      NULL\n    cipher preference: client\n  least strength: A",
+                "severity": "unknown",
+                "type": "ssl",
+                "script_id": "ssl-enum-ciphers",
+                "port": "443",
+                "references": [],
+                "service": "http"
+            }
+        ],
+        "vulnerability_summary": {
+            "critical": [],
+            "high": [
+                {
+                    "id": "",
+                    "name": "XSS Vulnerability",
+                    "description": "Couldn't find any DOM based XSS.",
+                    "severity": "high",
+                    "type": "web",
+                    "script_id": "http-dombased-xss",
+                    "port": "80",
+                    "references": [],
+                    "service": "http"
+                },
+                {
+                    "id": "",
+                    "name": "XSS Vulnerability",
+                    "description": "Couldn't find any stored XSS vulnerabilities.",
+                    "severity": "high",
+                    "type": "web",
+                    "script_id": "http-stored-xss",
+                    "port": "80",
+                    "references": [],
+                    "service": "http"
+                },
+                {
+                    "id": "",
+                    "name": "XSS Vulnerability",
+                    "description": "No previously reported XSS vuln.",
+                    "severity": "high",
+                    "type": "web",
+                    "script_id": "http-xssed",
+                    "port": "80",
+                    "references": [],
+                    "service": "http"
+                },
+                {
+                    "id": "",
+                    "name": "XSS Vulnerability",
+                    "description": "Couldn't find any DOM based XSS.",
+                    "severity": "high",
+                    "type": "web",
+                    "script_id": "http-dombased-xss",
+                    "port": "443",
+                    "references": [],
+                    "service": "http"
+                },
+                {
+                    "id": "",
+                    "name": "XSS Vulnerability",
+                    "description": "Couldn't find any stored XSS vulnerabilities.",
+                    "severity": "high",
+                    "type": "web",
+                    "script_id": "http-stored-xss",
+                    "port": "443",
+                    "references": [],
+                    "service": "http"
+                },
+                {
+                    "id": "",
+                    "name": "XSS Vulnerability",
+                    "description": "No previously reported XSS vuln.",
+                    "severity": "high",
+                    "type": "web",
+                    "script_id": "http-xssed",
+                    "port": "443",
+                    "references": [],
+                    "service": "http"
+                }
+            ],
+            "medium": [],
+            "low": [
+                {
+                    "id": "CVE-2007-6750",
+                    "name": "Vulnerability detected by http-slowloris-check",
+                    "description": "VULNERABLE:\n  Slowloris DOS attack\n    State: LIKELY VULNERABLE\n    IDs:  CVE:CVE-2007-6750\n      Slowloris tries to keep many connections to the target web server open and hold\n      them open as long as possible.  It accomplishes this by opening connections to\n      the target web server and sending a partial request. By doing so, it starves\n      the http server's resources causing Denial Of Service.\n      \n    Disclosure date: 2009-09-17\n    References:\n      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-6750\n      http://ha.ckers.org/slowloris/",
+                    "severity": "low",
+                    "type": "web",
+                    "script_id": "http-slowloris-check",
+                    "port": "80",
+                    "references": [
+                        "CVE-2007-6750",
+                        "CVE-2007-6750"
+                    ],
+                    "service": "http"
+                },
+                {
+                    "id": "",
+                    "name": "Vulnerability detected by http-title",
+                    "description": "Did not follow redirect to https://portal.lcu.edu.ng/",
+                    "severity": "low",
+                    "type": "web",
+                    "script_id": "http-title",
+                    "port": "80",
+                    "references": [],
+                    "service": "http"
+                },
+                {
+                    "id": "",
+                    "name": "Vulnerability detected by http-useragent-tester",
+                    "description": "Status for browser useragent: 200\n  Redirected To: https://portal.lcu.edu.ng/\n  Allowed User Agents: \n    Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)\n    libwww\n    lwp-trivial\n    libcurl-agent/1.0\n    PHP/\n    Python-urllib/2.5\n    GT::WWW\n    Snoopy\n    MFC_Tear_Sample\n    HTTP::Lite\n    PHPCrawl\n    URI::Fetch\n    Zend_Http_Client\n    http client\n    PECL::HTTP\n    Wget/1.13.4 (linux-gnu)\n    WWW-Mechanize/1.34",
+                    "severity": "low",
+                    "type": "web",
+                    "script_id": "http-useragent-tester",
+                    "port": "80",
+                    "references": [],
+                    "service": "http"
+                },
+                {
+                    "id": "",
+                    "name": "CSRF Vulnerability",
+                    "description": "Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=portal.lcu.edu.ng\n  Found the following possible CSRF vulnerabilities: \n    \n    Path: https://portal.lcu.edu.ng:443/\n    Form id: \n    Form action: /index.php\n    \n    Path: https://portal.lcu.edu.ng:443/index.php\n    Form id: \n    Form action: /index.php\n    \n    Path: https://portal.lcu.edu.ng:443/forgot-password\n    Form id: emailerror\n    Form action: /forgot-password.php\n    \n    Path: https://portal.lcu.edu.ng:443/forgot-password.php\n    Form id: emailerror\n    Form action: /forgot-password.php\n    \n    Path: https://portal.lcu.edu.ng:443/login\n    Form id: \n    Form action: /index.php\n    \n    Path: https://portal.lcu.edu.ng:443/assets/js/jquery-3.5.1.min.js.js\n    Form id: \n    Form action: /index.php\n    \n    Path: https://portal.lcu.edu.ng:443/assets/js/forgot-password\n    Form id: \n    Form action: /index.php",
+                    "severity": "low",
+                    "type": "web",
+                    "script_id": "http-csrf",
+                    "port": "443",
+                    "references": [],
+                    "service": "http"
+                },
+                {
+                    "id": "CVE-2005-3299",
+                    "name": "Vulnerability detected by http-phpmyadmin-dir-traversal",
+                    "description": "VULNERABLE:\n  phpMyAdmin grab_globals.lib.php subform Parameter Traversal Local File Inclusion\n    State: UNKNOWN (unable to test)\n    IDs:  CVE:CVE-2005-3299\n      PHP file inclusion vulnerability in grab_globals.lib.php in phpMyAdmin 2.6.4 and 2.6.4-pl1 allows remote attackers to include local files via the $__redirect parameter, possibly involving the subform array.\n      \n    Disclosure date: 2005-10-nil\n    Extra information:\n      ../../../../../etc/passwd :\n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  <div id='header' class='heda'>\n   <img src='assets/images/logo.png' alt='Our Logo' /> <h1 style='text-shadow:3px 2px #000000;'>Lead City University, Ibadan</h1>\n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n      <footer class='hidden-print'>\n  <br>\n  \n  <div id='sm'>\n  <a href='https://web.facebook.com/pages/category/College---University/leadcity_university' target='_blank'><i class='fa fa-facebook-square' style='font-size:24px'></i></a> &nbsp\n  <a href='' target='_blank'><i class='fa fa-twitter-square' style='font-size:24px'></i></a> &nbsp\n  <a href='https://www.instagram.com/leadcity_university/' target='_blank'><i class='fa fa-instagram' style='font-size:24px'></i></a> &nbsp\n  \n  </div>\n  <div id='cr'>\n  <a href='https://www.lcu.edu.ng'>Visit University Website</a><br><p>&#169;2025 - DICT</p></div>\n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  </html>\n    References:\n      http://www.exploit-db.com/exploits/1244/\n      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-3299",
+                    "severity": "low",
+                    "type": "web",
+                    "script_id": "http-phpmyadmin-dir-traversal",
+                    "port": "443",
+                    "references": [
+                        "CVE-2005-3299",
+                        "CVE-2005-3299"
+                    ],
+                    "service": "http"
+                },
+                {
+                    "id": "CVE-2007-6750",
+                    "name": "Vulnerability detected by http-slowloris-check",
+                    "description": "VULNERABLE:\n  Slowloris DOS attack\n    State: LIKELY VULNERABLE\n    IDs:  CVE:CVE-2007-6750\n      Slowloris tries to keep many connections to the target web server open and hold\n      them open as long as possible.  It accomplishes this by opening connections to\n      the target web server and sending a partial request. By doing so, it starves\n      the http server's resources causing Denial Of Service.\n      \n    Disclosure date: 2009-09-17\n    References:\n      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-6750\n      http://ha.ckers.org/slowloris/",
+                    "severity": "low",
+                    "type": "web",
+                    "script_id": "http-slowloris-check",
+                    "port": "443",
+                    "references": [
+                        "CVE-2007-6750",
+                        "CVE-2007-6750"
+                    ],
+                    "service": "http"
+                },
+                {
+                    "id": "",
+                    "name": "Vulnerability detected by http-useragent-tester",
+                    "description": "Status for browser useragent: 400\n  Allowed User Agents: \n    libwww\n    libcurl-agent/1.0\n  Change in Status Code: \n    WWW-Mechanize/1.34: 200\n    GT::WWW: 200\n    HTTP::Lite: 200\n    http client: 200\n    PHPCrawl: 200\n    Wget/1.13.4 (linux-gnu): 200\n    PECL::HTTP: 200\n    Zend_Http_Client: 200\n    Snoopy: 200\n    Python-urllib/2.5: 200\n    PHP/: 200\n    MFC_Tear_Sample: 200\n    Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html): 200\n    URI::Fetch: 200",
+                    "severity": "low",
+                    "type": "web",
+                    "script_id": "http-useragent-tester",
+                    "port": "443",
+                    "references": [],
+                    "service": "http"
+                }
+            ],
+            "unknown": [
+                {
+                    "id": "",
+                    "name": "Vulnerability detected by http-chrono",
+                    "description": "Request times for /; avg: 837.40ms; min: 561.00ms; max: 1571.00ms",
+                    "severity": "unknown",
+                    "type": "web",
+                    "script_id": "http-chrono",
+                    "port": "80",
+                    "references": [],
+                    "service": "http"
+                },
+                {
+                    "id": "",
+                    "name": "Vulnerability detected by http-comments-displayer",
+                    "description": "Couldn't find any comments.",
+                    "severity": "unknown",
+                    "type": "web",
+                    "script_id": "http-comments-displayer",
+                    "port": "80",
+                    "references": [],
+                    "service": "http"
+                },
+                {
+                    "id": "",
+                    "name": "CSRF Vulnerability",
+                    "description": "Couldn't find any CSRF vulnerabilities.",
+                    "severity": "unknown",
+                    "type": "web",
+                    "script_id": "http-csrf",
+                    "port": "80",
+                    "references": [],
+                    "service": "http"
+                },
+                {
+                    "id": "",
+                    "name": "Vulnerability detected by http-date",
+                    "description": "Sat, 17 May 2025 19:58:41 GMT; -1s from local time.",
+                    "severity": "unknown",
+                    "type": "web",
+                    "script_id": "http-date",
+                    "port": "80",
+                    "references": [],
+                    "service": "http"
+                },
+                {
+                    "id": "",
+                    "name": "Vulnerability detected by http-devframework",
+                    "description": "Couldn't determine the underlying framework or CMS. Try increasing 'httpspider.maxpagecount' value to spider more pages.",
+                    "severity": "unknown",
+                    "type": "web",
+                    "script_id": "http-devframework",
+                    "port": "80",
+                    "references": [],
+                    "service": "http"
+                },
+                {
+                    "id": "",
+                    "name": "Vulnerability detected by http-errors",
+                    "description": "Couldn't find any error pages.",
+                    "severity": "unknown",
+                    "type": "web",
+                    "script_id": "http-errors",
+                    "port": "80",
+                    "references": [],
+                    "service": "http"
+                },
+                {
+                    "id": "",
+                    "name": "Vulnerability detected by http-feed",
+                    "description": "Couldn't find any feeds.",
+                    "severity": "unknown",
+                    "type": "web",
+                    "script_id": "http-feed",
+                    "port": "80",
+                    "references": [],
+                    "service": "http"
+                },
+                {
+                    "id": "",
+                    "name": "Vulnerability detected by http-headers",
+                    "description": "Date: Sat, 17 May 2025 19:59:18 GMT\n  Server: Apache\n  Location: https://portal.lcu.edu.ng/\n  Content-Length: 234\n  Connection: close\n  Content-Type: text/html; charset=iso-8859-1\n  \n  (Request type: GET)",
+                    "severity": "unknown",
+                    "type": "web",
+                    "script_id": "http-headers",
+                    "port": "80",
+                    "references": [],
+                    "service": "http"
+                },
+                {
+                    "id": "",
+                    "name": "Vulnerability detected by http-mobileversion-checker",
+                    "description": "No mobile version detected.",
+                    "severity": "unknown",
+                    "type": "web",
+                    "script_id": "http-mobileversion-checker",
+                    "port": "80",
+                    "references": [],
+                    "service": "http"
+                },
+                {
+                    "id": "",
+                    "name": "Vulnerability detected by http-passwd",
+                    "description": "ERROR: Script execution failed (use -d to debug)",
+                    "severity": "unknown",
+                    "type": "web",
+                    "script_id": "http-passwd",
+                    "port": "80",
+                    "references": [],
+                    "service": "http"
+                },
+                {
+                    "id": "",
+                    "name": "Vulnerability detected by http-referer-checker",
+                    "description": "Couldn't find any cross-domain scripts.",
+                    "severity": "unknown",
+                    "type": "web",
+                    "script_id": "http-referer-checker",
+                    "port": "80",
+                    "references": [],
+                    "service": "http"
+                },
+                {
+                    "id": "",
+                    "name": "Vulnerability detected by http-security-headers",
+                    "description": "Cache_Control: \n    Header: Cache-Control: no-store, no-cache, must-revalidate\n  Pragma: \n    Header: Pragma: no-cache\n  Expires: \n    Header: Expires: Thu, 19 Nov 1981 08:52:00 GMT",
+                    "severity": "unknown",
+                    "type": "web",
+                    "script_id": "http-security-headers",
+                    "port": "80",
+                    "references": [],
+                    "service": "http"
+                },
+                {
+                    "id": "",
+                    "name": "Vulnerability detected by http-server-header",
+                    "description": "Apache",
+                    "severity": "unknown",
+                    "type": "web",
+                    "script_id": "http-server-header",
+                    "port": "80",
+                    "references": [],
+                    "service": "http"
+                },
+                {
+                    "id": "",
+                    "name": "Vulnerability detected by http-sitemap-generator",
+                    "description": "Directory structure:\n  Longest directory structure:\n    Depth: 0\n    Dir: /\n  Total files found (by extension):",
+                    "severity": "unknown",
+                    "type": "web",
+                    "script_id": "http-sitemap-generator",
+                    "port": "80",
+                    "references": [],
+                    "service": "http"
+                },
+                {
+                    "id": "",
+                    "name": "Vulnerability detected by http-vhosts",
+                    "description": "mail.lcu.edu.ng : 301 -> https://mail.lcu.edu.ng/\nwww.lcu.edu.ng : 301 -> https://www.lcu.edu.ng/\n125 names had status 200",
+                    "severity": "unknown",
+                    "type": "web",
+                    "script_id": "http-vhosts",
+                    "port": "80",
+                    "references": [],
+                    "service": "http"
+                },
+                {
+                    "id": "",
+                    "name": "Vulnerability detected by http-auth-finder",
+                    "description": "Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=portal.lcu.edu.ng\n  url                                                             method\n  https://portal.lcu.edu.ng:443/                                  FORM\n  https://portal.lcu.edu.ng:443/index.php                         FORM\n  https://portal.lcu.edu.ng:443/login                             FORM\n  https://portal.lcu.edu.ng:443/assets/js/jquery-3.5.1.min.js.js  FORM\n  https://portal.lcu.edu.ng:443/assets/js/forgot-password         FORM",
+                    "severity": "unknown",
+                    "type": "web",
+                    "script_id": "http-auth-finder",
+                    "port": "443",
+                    "references": [],
+                    "service": "http"
+                },
+                {
+                    "id": "",
+                    "name": "Vulnerability detected by http-chrono",
+                    "description": "Request times for /; avg: 1919.40ms; min: 1477.00ms; max: 3120.00ms",
+                    "severity": "unknown",
+                    "type": "web",
+                    "script_id": "http-chrono",
+                    "port": "443",
+                    "references": [],
+                    "service": "http"
+                },
+                {
+                    "id": "",
+                    "name": "Vulnerability detected by http-comments-displayer",
+                    "description": "Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=portal.lcu.edu.ng\n    \n    Path: https://portal.lcu.edu.ng:443/assets/js/forgot-password\n    Line number: 117\n    Comment: \n        \n        \n    \n    Path: https://portal.lcu.edu.ng:443/assets/css/style.css\n    Line number: 6934\n    Comment: \n        /*background-color: #ead9e2;*/\n    \n    Path: https://portal.lcu.edu.ng:443/assets/css/style.css\n    Line number: 6903\n    Comment: \n        /*background-color: #2980B9;*/\n    \n    Path: https://portal.lcu.edu.ng:443/assets/css/style.css\n    Line number: 6939\n    Comment: \n        /*display: inline-block;*/\n    \n    Path: https://portal.lcu.edu.ng:443/assets/js/forgot-password\n    Line number: 5\n    Comment: \n        <!-- Global site tag (gtag.js) - Google Analytics -->\n    \n    Path: https://portal.lcu.edu.ng:443/assets/css/style.css\n    Line number: 7174\n    Comment: \n        /*.page-title, .page-panel {display:block;}*/\n    \n    Path: https://portal.lcu.edu.ng:443/assets/js/forgot-password\n    Line number: 120\n    Comment: \n        \n        \n    \n    Path: https://portal.lcu.edu.ng:443/assets/js/forgot-password\n    Line number: 133\n    Comment: \n        \n        \n    \n    Path: https://portal.lcu.edu.ng:443/assets/css/style.css\n    Line number: 6767\n    Comment: \n        /*# my definitions */\n    \n    Path: https://portal.lcu.edu.ng:443/assets/css/style.css\n    Line number: 193\n    Comment: \n        /*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */\n    \n    Path: https://portal.lcu.edu.ng:443/assets/css/style.css\n    Line number: 6894\n    Comment: \n        /*background-color: #3498DB;*/\n    \n    Path: https://portal.lcu.edu.ng:443/assets/css/style.css\n    Line number: 2555\n    Comment: \n        /*width: 100%;*/\n    \n    Path: https://portal.lcu.edu.ng:443/assets/js/forgot-password\n    Line number: 96\n    Comment: \n        <!-- Modal content -->\n    \n    Path: https://portal.lcu.edu.ng:443/assets/css/style.css\n    Line number: 6814\n    Comment: \n        /* Green */\n    \n    Path: https://portal.lcu.edu.ng:443/assets/css/style.css\n    Line number: 7070\n    Comment: \n        /* Unicode character for \"plus\" sign (+) */\n    \n    Path: https://portal.lcu.edu.ng:443/assets/css/style.css\n    Line number: 6765\n    Comment: \n        /*# sourceMappingURL=bootstrap.css.map */\n    \n    Path: https://portal.lcu.edu.ng:443/assets/css/style.css\n    Line number: 6949\n    Comment: \n        /*top: -10px;*/\n    \n    Path: https://portal.lcu.edu.ng:443/assets/css/style.css\n    Line number: 6771\n    Comment: \n        \n        \n        \n        \n        \n        \n        \n        \n        \n        \n        \n        \n        }*/\n    \n    Path: https://portal.lcu.edu.ng:443/assets/css/style.css\n    Line number: 6892\n    Comment: \n        /*---------notification-------------*/\n    \n    Path: https://portal.lcu.edu.ng:443/assets/css/style.css\n    Line number: 3029\n    Comment: \n        /*border: 1px solid transparent;*/\n    \n    Path: https://portal.lcu.edu.ng:443/assets/js/forgot-password\n    Line number: 128\n    Comment: \n        \n        \n    \n    Path: https://portal.lcu.edu.ng:443/assets/css/style.css\n    Line number: 6944\n    Comment: \n        /*background: #ff7;*/\n    \n    Path: https://portal.lcu.edu.ng:443/assets/js/forgot-password\n    Line number: 130\n    Comment: \n        \n    \n    Path: https://portal.lcu.edu.ng:443/assets/css/style.css\n    Line number: 7175\n    Comment: \n        /*border-bottom: 1px solid black;*/\n    \n    Path: https://portal.lcu.edu.ng:443/assets/css/style.css\n    Line number: 7132\n    Comment: \n        /* Rounded sliders */\n    \n    Path: https://portal.lcu.edu.ng:443/assets/css/style.css\n    Line number: 6823\n    Comment: \n        /* Safari */\n    \n    Path: https://portal.lcu.edu.ng:443/assets/css/style.css\n    Line number: 1417\n    Comment: \n        /*border-bottom: 1px solid #eee;*/\n    \n    Path: https://portal.lcu.edu.ng:443/assets/css/style.css\n    Line number: 7078\n    Comment: \n        /* Unicode character for \"minus\" sign (-) */\n    \n    Path: https://portal.lcu.edu.ng:443/assets/js/forgot-password\n    Line number: 114\n    Comment: \n        \n        \n    \n    Path: https://portal.lcu.edu.ng:443/assets/js/forgot-password\n    Line number: 138\n    Comment: \n        \n        \n    \n    Path: https://portal.lcu.edu.ng:443/assets/js/forgot-password\n    Line number: 93\n    Comment: \n        <!-- The Modal -->\n    \n    Path: https://portal.lcu.edu.ng:443/assets/js/forgot-password\n    Line number: 143\n    Comment:",
+                    "severity": "unknown",
+                    "type": "web",
+                    "script_id": "http-comments-displayer",
+                    "port": "443",
+                    "references": [],
+                    "service": "http"
+                },
+                {
+                    "id": "",
+                    "name": "Vulnerability detected by http-cookie-flags",
+                    "description": "/: \n    PHPSESSID: \n      httponly flag not set",
+                    "severity": "unknown",
+                    "type": "web",
+                    "script_id": "http-cookie-flags",
+                    "port": "443",
+                    "references": [],
+                    "service": "http"
+                },
+                {
+                    "id": "",
+                    "name": "Vulnerability detected by http-date",
+                    "description": "Sat, 17 May 2025 19:58:49 GMT; -4s from local time.",
+                    "severity": "unknown",
+                    "type": "web",
+                    "script_id": "http-date",
+                    "port": "443",
+                    "references": [],
+                    "service": "http"
+                },
+                {
+                    "id": "",
+                    "name": "Vulnerability detected by http-devframework",
+                    "description": "Couldn't determine the underlying framework or CMS. Try increasing 'httpspider.maxpagecount' value to spider more pages.",
+                    "severity": "unknown",
+                    "type": "web",
+                    "script_id": "http-devframework",
+                    "port": "443",
+                    "references": [],
+                    "service": "http"
+                },
+                {
+                    "id": "",
+                    "name": "Vulnerability detected by http-errors",
+                    "description": "Couldn't find any error pages.",
+                    "severity": "unknown",
+                    "type": "web",
+                    "script_id": "http-errors",
+                    "port": "443",
+                    "references": [],
+                    "service": "http"
+                },
+                {
+                    "id": "",
+                    "name": "Vulnerability detected by http-feed",
+                    "description": "Couldn't find any feeds.",
+                    "severity": "unknown",
+                    "type": "web",
+                    "script_id": "http-feed",
+                    "port": "443",
+                    "references": [],
+                    "service": "http"
+                },
+                {
+                    "id": "",
+                    "name": "Vulnerability detected by http-headers",
+                    "description": "Date: Sat, 17 May 2025 19:58:43 GMT\n  Server: Apache\n  Expires: Thu, 19 Nov 1981 08:52:00 GMT\n  Cache-Control: no-store, no-cache, must-revalidate\n  Pragma: no-cache\n  Set-Cookie: PHPSESSID=6c5fd92fa84a62103b1961a193600f58; path=/\n  Connection: close\n  Content-Type: text/html; charset=UTF-8\n  \n  (Request type: HEAD)",
+                    "severity": "unknown",
+                    "type": "web",
+                    "script_id": "http-headers",
+                    "port": "443",
+                    "references": [],
+                    "service": "http"
+                },
+                {
+                    "id": "",
+                    "name": "Vulnerability detected by http-majordomo2-dir-traversal",
+                    "description": "ERROR: Script execution failed (use -d to debug)",
+                    "severity": "unknown",
+                    "type": "web",
+                    "script_id": "http-majordomo2-dir-traversal",
+                    "port": "443",
+                    "references": [],
+                    "service": "http"
+                },
+                {
+                    "id": "",
+                    "name": "Vulnerability detected by http-mobileversion-checker",
+                    "description": "No mobile version detected.",
+                    "severity": "unknown",
+                    "type": "web",
+                    "script_id": "http-mobileversion-checker",
+                    "port": "443",
+                    "references": [],
+                    "service": "http"
+                },
+                {
+                    "id": "",
+                    "name": "Vulnerability detected by http-referer-checker",
+                    "description": "Spidering limited to: maxpagecount=30\n  https://kit.fontawesome.com:443/e33241849e.js\n  https://kit.fontawesome.com:443/5938b8fb56.js\n  https://www.googletagmanager.com:443/gtag/js?id=G-4851K6XJPK",
+                    "severity": "unknown",
+                    "type": "web",
+                    "script_id": "http-referer-checker",
+                    "port": "443",
+                    "references": [],
+                    "service": "http"
+                },
+                {
+                    "id": "",
+                    "name": "Vulnerability detected by http-security-headers",
+                    "description": "Strict_Transport_Security: \n    HSTS not configured in HTTPS Server\n  Cache_Control: \n    Header: Cache-Control: no-store, no-cache, must-revalidate\n  Pragma: \n    Header: Pragma: no-cache\n  Expires: \n    Header: Expires: Thu, 19 Nov 1981 08:52:00 GMT",
+                    "severity": "unknown",
+                    "type": "web",
+                    "script_id": "http-security-headers",
+                    "port": "443",
+                    "references": [],
+                    "service": "http"
+                },
+                {
+                    "id": "",
+                    "name": "Vulnerability detected by http-server-header",
+                    "description": "Apache",
+                    "severity": "unknown",
+                    "type": "web",
+                    "script_id": "http-server-header",
+                    "port": "443",
+                    "references": [],
+                    "service": "http"
+                },
+                {
+                    "id": "",
+                    "name": "Vulnerability detected by http-sitemap-generator",
+                    "description": "Directory structure:\n    /\n      Other: 3; php: 2\n    /assets/css/\n      css: 1\n    /assets/images/\n      png: 1\n    /assets/js/\n      Other: 2; js: 1\n  Longest directory structure:\n    Depth: 2\n    Dir: /assets/images/\n  Total files found (by extension):\n    Other: 5; css: 1; js: 1; php: 2; png: 1",
+                    "severity": "unknown",
+                    "type": "web",
+                    "script_id": "http-sitemap-generator",
+                    "port": "443",
+                    "references": [],
+                    "service": "http"
+                },
+                {
+                    "id": "",
+                    "name": "Vulnerability detected by http-title",
+                    "description": "Login - Lead City Univeristy",
+                    "severity": "unknown",
+                    "type": "web",
+                    "script_id": "http-title",
+                    "port": "443",
+                    "references": [],
+                    "service": "http"
+                },
+                {
+                    "id": "",
+                    "name": "Vulnerability detected by http-vhosts",
+                    "description": "oracle.lcu.edu.ng : 400\nowa.lcu.edu.ng : 400\nmirror.lcu.edu.ng : 400\nmail3.lcu.edu.ng : 400\nvm.lcu.edu.ng : 400\n122 names had status 421",
+                    "severity": "unknown",
+                    "type": "web",
+                    "script_id": "http-vhosts",
+                    "port": "443",
+                    "references": [],
+                    "service": "http"
+                },
+                {
+                    "id": "",
+                    "name": "Vulnerability detected by http-vuln-cve2017-1001000",
+                    "description": "ERROR: Script execution failed (use -d to debug)",
+                    "severity": "unknown",
+                    "type": "web",
+                    "script_id": "http-vuln-cve2017-1001000",
+                    "port": "443",
+                    "references": [],
+                    "service": "http"
+                },
+                {
+                    "id": "",
+                    "name": "Vulnerability detected by http-waf-detect",
+                    "description": "IDS/IPS/WAF detected:\nportal.lcu.edu.ng:443/?p4yl04d3=<script>alert(document.cookie)</script>",
+                    "severity": "unknown",
+                    "type": "web",
+                    "script_id": "http-waf-detect",
+                    "port": "443",
+                    "references": [],
+                    "service": "http"
+                },
+                {
+                    "id": "",
+                    "name": "SSL Certificate Issue",
+                    "description": "Subject: commonName=www.portal.lcu.edu.ng\nSubject Alternative Name: DNS:*.lcu.edu.ng, DNS:lcu.edu.ng, DNS:www.admissions.lcu.edu.ng, DNS:www.elearning.lcu.edu.ng, DNS:www.events.lcu.edu.ng, DNS:www.facaec.lcu.edu.ng, DNS:www.fascon.lcu.edu.ng, DNS:www.hostel.lcu.edu.ng, DNS:www.icaict.lcu.edu.ng, DNS:www.ilearn.lcu.edu.ng, DNS:www.journals.lcu.edu.ng, DNS:www.opac.lcu.edu.ng, DNS:www.ouralumni.lcu.edu.ng, DNS:www.pgc.lcu.edu.ng, DNS:www.pgportal.lcu.edu.ng, DNS:www.portal.lcu.edu.ng, DNS:www.registration.lcu.edu.ng, DNS:www.repository.lcu.edu.ng, DNS:www.staffclient.lcu.edu.ng\nNot valid before: 2025-04-23T08:13:20\nNot valid after:  2025-07-22T08:13:19",
+                    "severity": "unknown",
+                    "type": "ssl",
+                    "script_id": "ssl-cert",
+                    "port": "443",
+                    "references": [],
+                    "service": "http"
+                },
+                {
+                    "id": "",
+                    "name": "Vulnerability detected by ssl-enum-ciphers",
+                    "description": "TLSv1.2: \n    ciphers: \n      TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 2048) - A\n      TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 2048) - A\n      TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A\n      TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A\n      TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256 (secp256r1) - A\n    compressors: \n      NULL\n    cipher preference: client\n  least strength: A",
+                    "severity": "unknown",
+                    "type": "ssl",
+                    "script_id": "ssl-enum-ciphers",
+                    "port": "443",
+                    "references": [],
+                    "service": "http"
+                }
+            ]
+        },
+        "vulnerability_types": {
+            "web": [
+                {
+                    "id": "",
+                    "name": "XSS Vulnerability",
+                    "description": "Couldn't find any DOM based XSS.",
+                    "severity": "high",
+                    "type": "web",
+                    "script_id": "http-dombased-xss",
+                    "port": "80",
+                    "references": [],
+                    "service": "http"
+                },
+                {
+                    "id": "",
+                    "name": "XSS Vulnerability",
+                    "description": "Couldn't find any stored XSS vulnerabilities.",
+                    "severity": "high",
+                    "type": "web",
+                    "script_id": "http-stored-xss",
+                    "port": "80",
+                    "references": [],
+                    "service": "http"
+                },
+                {
+                    "id": "",
+                    "name": "XSS Vulnerability",
+                    "description": "No previously reported XSS vuln.",
+                    "severity": "high",
+                    "type": "web",
+                    "script_id": "http-xssed",
+                    "port": "80",
+                    "references": [],
+                    "service": "http"
+                },
+                {
+                    "id": "",
+                    "name": "XSS Vulnerability",
+                    "description": "Couldn't find any DOM based XSS.",
+                    "severity": "high",
+                    "type": "web",
+                    "script_id": "http-dombased-xss",
+                    "port": "443",
+                    "references": [],
+                    "service": "http"
+                },
+                {
+                    "id": "",
+                    "name": "XSS Vulnerability",
+                    "description": "Couldn't find any stored XSS vulnerabilities.",
+                    "severity": "high",
+                    "type": "web",
+                    "script_id": "http-stored-xss",
+                    "port": "443",
+                    "references": [],
+                    "service": "http"
+                },
+                {
+                    "id": "",
+                    "name": "XSS Vulnerability",
+                    "description": "No previously reported XSS vuln.",
+                    "severity": "high",
+                    "type": "web",
+                    "script_id": "http-xssed",
+                    "port": "443",
+                    "references": [],
+                    "service": "http"
+                },
+                {
+                    "id": "CVE-2007-6750",
+                    "name": "Vulnerability detected by http-slowloris-check",
+                    "description": "VULNERABLE:\n  Slowloris DOS attack\n    State: LIKELY VULNERABLE\n    IDs:  CVE:CVE-2007-6750\n      Slowloris tries to keep many connections to the target web server open and hold\n      them open as long as possible.  It accomplishes this by opening connections to\n      the target web server and sending a partial request. By doing so, it starves\n      the http server's resources causing Denial Of Service.\n      \n    Disclosure date: 2009-09-17\n    References:\n      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-6750\n      http://ha.ckers.org/slowloris/",
+                    "severity": "low",
+                    "type": "web",
+                    "script_id": "http-slowloris-check",
+                    "port": "80",
+                    "references": [
+                        "CVE-2007-6750",
+                        "CVE-2007-6750"
+                    ],
+                    "service": "http"
+                },
+                {
+                    "id": "",
+                    "name": "Vulnerability detected by http-title",
+                    "description": "Did not follow redirect to https://portal.lcu.edu.ng/",
+                    "severity": "low",
+                    "type": "web",
+                    "script_id": "http-title",
+                    "port": "80",
+                    "references": [],
+                    "service": "http"
+                },
+                {
+                    "id": "",
+                    "name": "Vulnerability detected by http-useragent-tester",
+                    "description": "Status for browser useragent: 200\n  Redirected To: https://portal.lcu.edu.ng/\n  Allowed User Agents: \n    Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)\n    libwww\n    lwp-trivial\n    libcurl-agent/1.0\n    PHP/\n    Python-urllib/2.5\n    GT::WWW\n    Snoopy\n    MFC_Tear_Sample\n    HTTP::Lite\n    PHPCrawl\n    URI::Fetch\n    Zend_Http_Client\n    http client\n    PECL::HTTP\n    Wget/1.13.4 (linux-gnu)\n    WWW-Mechanize/1.34",
+                    "severity": "low",
+                    "type": "web",
+                    "script_id": "http-useragent-tester",
+                    "port": "80",
+                    "references": [],
+                    "service": "http"
+                },
+                {
+                    "id": "",
+                    "name": "CSRF Vulnerability",
+                    "description": "Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=portal.lcu.edu.ng\n  Found the following possible CSRF vulnerabilities: \n    \n    Path: https://portal.lcu.edu.ng:443/\n    Form id: \n    Form action: /index.php\n    \n    Path: https://portal.lcu.edu.ng:443/index.php\n    Form id: \n    Form action: /index.php\n    \n    Path: https://portal.lcu.edu.ng:443/forgot-password\n    Form id: emailerror\n    Form action: /forgot-password.php\n    \n    Path: https://portal.lcu.edu.ng:443/forgot-password.php\n    Form id: emailerror\n    Form action: /forgot-password.php\n    \n    Path: https://portal.lcu.edu.ng:443/login\n    Form id: \n    Form action: /index.php\n    \n    Path: https://portal.lcu.edu.ng:443/assets/js/jquery-3.5.1.min.js.js\n    Form id: \n    Form action: /index.php\n    \n    Path: https://portal.lcu.edu.ng:443/assets/js/forgot-password\n    Form id: \n    Form action: /index.php",
+                    "severity": "low",
+                    "type": "web",
+                    "script_id": "http-csrf",
+                    "port": "443",
+                    "references": [],
+                    "service": "http"
+                },
+                {
+                    "id": "CVE-2005-3299",
+                    "name": "Vulnerability detected by http-phpmyadmin-dir-traversal",
+                    "description": "VULNERABLE:\n  phpMyAdmin grab_globals.lib.php subform Parameter Traversal Local File Inclusion\n    State: UNKNOWN (unable to test)\n    IDs:  CVE:CVE-2005-3299\n      PHP file inclusion vulnerability in grab_globals.lib.php in phpMyAdmin 2.6.4 and 2.6.4-pl1 allows remote attackers to include local files via the $__redirect parameter, possibly involving the subform array.\n      \n    Disclosure date: 2005-10-nil\n    Extra information:\n      ../../../../../etc/passwd :\n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  <div id='header' class='heda'>\n   <img src='assets/images/logo.png' alt='Our Logo' /> <h1 style='text-shadow:3px 2px #000000;'>Lead City University, Ibadan</h1>\n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n      <footer class='hidden-print'>\n  <br>\n  \n  <div id='sm'>\n  <a href='https://web.facebook.com/pages/category/College---University/leadcity_university' target='_blank'><i class='fa fa-facebook-square' style='font-size:24px'></i></a> &nbsp\n  <a href='' target='_blank'><i class='fa fa-twitter-square' style='font-size:24px'></i></a> &nbsp\n  <a href='https://www.instagram.com/leadcity_university/' target='_blank'><i class='fa fa-instagram' style='font-size:24px'></i></a> &nbsp\n  \n  </div>\n  <div id='cr'>\n  <a href='https://www.lcu.edu.ng'>Visit University Website</a><br><p>&#169;2025 - DICT</p></div>\n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  </html>\n    References:\n      http://www.exploit-db.com/exploits/1244/\n      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-3299",
+                    "severity": "low",
+                    "type": "web",
+                    "script_id": "http-phpmyadmin-dir-traversal",
+                    "port": "443",
+                    "references": [
+                        "CVE-2005-3299",
+                        "CVE-2005-3299"
+                    ],
+                    "service": "http"
+                },
+                {
+                    "id": "CVE-2007-6750",
+                    "name": "Vulnerability detected by http-slowloris-check",
+                    "description": "VULNERABLE:\n  Slowloris DOS attack\n    State: LIKELY VULNERABLE\n    IDs:  CVE:CVE-2007-6750\n      Slowloris tries to keep many connections to the target web server open and hold\n      them open as long as possible.  It accomplishes this by opening connections to\n      the target web server and sending a partial request. By doing so, it starves\n      the http server's resources causing Denial Of Service.\n      \n    Disclosure date: 2009-09-17\n    References:\n      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-6750\n      http://ha.ckers.org/slowloris/",
+                    "severity": "low",
+                    "type": "web",
+                    "script_id": "http-slowloris-check",
+                    "port": "443",
+                    "references": [
+                        "CVE-2007-6750",
+                        "CVE-2007-6750"
+                    ],
+                    "service": "http"
+                },
+                {
+                    "id": "",
+                    "name": "Vulnerability detected by http-useragent-tester",
+                    "description": "Status for browser useragent: 400\n  Allowed User Agents: \n    libwww\n    libcurl-agent/1.0\n  Change in Status Code: \n    WWW-Mechanize/1.34: 200\n    GT::WWW: 200\n    HTTP::Lite: 200\n    http client: 200\n    PHPCrawl: 200\n    Wget/1.13.4 (linux-gnu): 200\n    PECL::HTTP: 200\n    Zend_Http_Client: 200\n    Snoopy: 200\n    Python-urllib/2.5: 200\n    PHP/: 200\n    MFC_Tear_Sample: 200\n    Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html): 200\n    URI::Fetch: 200",
+                    "severity": "low",
+                    "type": "web",
+                    "script_id": "http-useragent-tester",
+                    "port": "443",
+                    "references": [],
+                    "service": "http"
+                },
+                {
+                    "id": "",
+                    "name": "Vulnerability detected by http-chrono",
+                    "description": "Request times for /; avg: 837.40ms; min: 561.00ms; max: 1571.00ms",
+                    "severity": "unknown",
+                    "type": "web",
+                    "script_id": "http-chrono",
+                    "port": "80",
+                    "references": [],
+                    "service": "http"
+                },
+                {
+                    "id": "",
+                    "name": "Vulnerability detected by http-comments-displayer",
+                    "description": "Couldn't find any comments.",
+                    "severity": "unknown",
+                    "type": "web",
+                    "script_id": "http-comments-displayer",
+                    "port": "80",
+                    "references": [],
+                    "service": "http"
+                },
+                {
+                    "id": "",
+                    "name": "CSRF Vulnerability",
+                    "description": "Couldn't find any CSRF vulnerabilities.",
+                    "severity": "unknown",
+                    "type": "web",
+                    "script_id": "http-csrf",
+                    "port": "80",
+                    "references": [],
+                    "service": "http"
+                },
+                {
+                    "id": "",
+                    "name": "Vulnerability detected by http-date",
+                    "description": "Sat, 17 May 2025 19:58:41 GMT; -1s from local time.",
+                    "severity": "unknown",
+                    "type": "web",
+                    "script_id": "http-date",
+                    "port": "80",
+                    "references": [],
+                    "service": "http"
+                },
+                {
+                    "id": "",
+                    "name": "Vulnerability detected by http-devframework",
+                    "description": "Couldn't determine the underlying framework or CMS. Try increasing 'httpspider.maxpagecount' value to spider more pages.",
+                    "severity": "unknown",
+                    "type": "web",
+                    "script_id": "http-devframework",
+                    "port": "80",
+                    "references": [],
+                    "service": "http"
+                },
+                {
+                    "id": "",
+                    "name": "Vulnerability detected by http-errors",
+                    "description": "Couldn't find any error pages.",
+                    "severity": "unknown",
+                    "type": "web",
+                    "script_id": "http-errors",
+                    "port": "80",
+                    "references": [],
+                    "service": "http"
+                },
+                {
+                    "id": "",
+                    "name": "Vulnerability detected by http-feed",
+                    "description": "Couldn't find any feeds.",
+                    "severity": "unknown",
+                    "type": "web",
+                    "script_id": "http-feed",
+                    "port": "80",
+                    "references": [],
+                    "service": "http"
+                },
+                {
+                    "id": "",
+                    "name": "Vulnerability detected by http-headers",
+                    "description": "Date: Sat, 17 May 2025 19:59:18 GMT\n  Server: Apache\n  Location: https://portal.lcu.edu.ng/\n  Content-Length: 234\n  Connection: close\n  Content-Type: text/html; charset=iso-8859-1\n  \n  (Request type: GET)",
+                    "severity": "unknown",
+                    "type": "web",
+                    "script_id": "http-headers",
+                    "port": "80",
+                    "references": [],
+                    "service": "http"
+                },
+                {
+                    "id": "",
+                    "name": "Vulnerability detected by http-mobileversion-checker",
+                    "description": "No mobile version detected.",
+                    "severity": "unknown",
+                    "type": "web",
+                    "script_id": "http-mobileversion-checker",
+                    "port": "80",
+                    "references": [],
+                    "service": "http"
+                },
+                {
+                    "id": "",
+                    "name": "Vulnerability detected by http-passwd",
+                    "description": "ERROR: Script execution failed (use -d to debug)",
+                    "severity": "unknown",
+                    "type": "web",
+                    "script_id": "http-passwd",
+                    "port": "80",
+                    "references": [],
+                    "service": "http"
+                },
+                {
+                    "id": "",
+                    "name": "Vulnerability detected by http-referer-checker",
+                    "description": "Couldn't find any cross-domain scripts.",
+                    "severity": "unknown",
+                    "type": "web",
+                    "script_id": "http-referer-checker",
+                    "port": "80",
+                    "references": [],
+                    "service": "http"
+                },
+                {
+                    "id": "",
+                    "name": "Vulnerability detected by http-security-headers",
+                    "description": "Cache_Control: \n    Header: Cache-Control: no-store, no-cache, must-revalidate\n  Pragma: \n    Header: Pragma: no-cache\n  Expires: \n    Header: Expires: Thu, 19 Nov 1981 08:52:00 GMT",
+                    "severity": "unknown",
+                    "type": "web",
+                    "script_id": "http-security-headers",
+                    "port": "80",
+                    "references": [],
+                    "service": "http"
+                },
+                {
+                    "id": "",
+                    "name": "Vulnerability detected by http-server-header",
+                    "description": "Apache",
+                    "severity": "unknown",
+                    "type": "web",
+                    "script_id": "http-server-header",
+                    "port": "80",
+                    "references": [],
+                    "service": "http"
+                },
+                {
+                    "id": "",
+                    "name": "Vulnerability detected by http-sitemap-generator",
+                    "description": "Directory structure:\n  Longest directory structure:\n    Depth: 0\n    Dir: /\n  Total files found (by extension):",
+                    "severity": "unknown",
+                    "type": "web",
+                    "script_id": "http-sitemap-generator",
+                    "port": "80",
+                    "references": [],
+                    "service": "http"
+                },
+                {
+                    "id": "",
+                    "name": "Vulnerability detected by http-vhosts",
+                    "description": "mail.lcu.edu.ng : 301 -> https://mail.lcu.edu.ng/\nwww.lcu.edu.ng : 301 -> https://www.lcu.edu.ng/\n125 names had status 200",
+                    "severity": "unknown",
+                    "type": "web",
+                    "script_id": "http-vhosts",
+                    "port": "80",
+                    "references": [],
+                    "service": "http"
+                },
+                {
+                    "id": "",
+                    "name": "Vulnerability detected by http-auth-finder",
+                    "description": "Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=portal.lcu.edu.ng\n  url                                                             method\n  https://portal.lcu.edu.ng:443/                                  FORM\n  https://portal.lcu.edu.ng:443/index.php                         FORM\n  https://portal.lcu.edu.ng:443/login                             FORM\n  https://portal.lcu.edu.ng:443/assets/js/jquery-3.5.1.min.js.js  FORM\n  https://portal.lcu.edu.ng:443/assets/js/forgot-password         FORM",
+                    "severity": "unknown",
+                    "type": "web",
+                    "script_id": "http-auth-finder",
+                    "port": "443",
+                    "references": [],
+                    "service": "http"
+                },
+                {
+                    "id": "",
+                    "name": "Vulnerability detected by http-chrono",
+                    "description": "Request times for /; avg: 1919.40ms; min: 1477.00ms; max: 3120.00ms",
+                    "severity": "unknown",
+                    "type": "web",
+                    "script_id": "http-chrono",
+                    "port": "443",
+                    "references": [],
+                    "service": "http"
+                },
+                {
+                    "id": "",
+                    "name": "Vulnerability detected by http-comments-displayer",
+                    "description": "Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=portal.lcu.edu.ng\n    \n    Path: https://portal.lcu.edu.ng:443/assets/js/forgot-password\n    Line number: 117\n    Comment: \n        \n        \n    \n    Path: https://portal.lcu.edu.ng:443/assets/css/style.css\n    Line number: 6934\n    Comment: \n        /*background-color: #ead9e2;*/\n    \n    Path: https://portal.lcu.edu.ng:443/assets/css/style.css\n    Line number: 6903\n    Comment: \n        /*background-color: #2980B9;*/\n    \n    Path: https://portal.lcu.edu.ng:443/assets/css/style.css\n    Line number: 6939\n    Comment: \n        /*display: inline-block;*/\n    \n    Path: https://portal.lcu.edu.ng:443/assets/js/forgot-password\n    Line number: 5\n    Comment: \n        <!-- Global site tag (gtag.js) - Google Analytics -->\n    \n    Path: https://portal.lcu.edu.ng:443/assets/css/style.css\n    Line number: 7174\n    Comment: \n        /*.page-title, .page-panel {display:block;}*/\n    \n    Path: https://portal.lcu.edu.ng:443/assets/js/forgot-password\n    Line number: 120\n    Comment: \n        \n        \n    \n    Path: https://portal.lcu.edu.ng:443/assets/js/forgot-password\n    Line number: 133\n    Comment: \n        \n        \n    \n    Path: https://portal.lcu.edu.ng:443/assets/css/style.css\n    Line number: 6767\n    Comment: \n        /*# my definitions */\n    \n    Path: https://portal.lcu.edu.ng:443/assets/css/style.css\n    Line number: 193\n    Comment: \n        /*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */\n    \n    Path: https://portal.lcu.edu.ng:443/assets/css/style.css\n    Line number: 6894\n    Comment: \n        /*background-color: #3498DB;*/\n    \n    Path: https://portal.lcu.edu.ng:443/assets/css/style.css\n    Line number: 2555\n    Comment: \n        /*width: 100%;*/\n    \n    Path: https://portal.lcu.edu.ng:443/assets/js/forgot-password\n    Line number: 96\n    Comment: \n        <!-- Modal content -->\n    \n    Path: https://portal.lcu.edu.ng:443/assets/css/style.css\n    Line number: 6814\n    Comment: \n        /* Green */\n    \n    Path: https://portal.lcu.edu.ng:443/assets/css/style.css\n    Line number: 7070\n    Comment: \n        /* Unicode character for \"plus\" sign (+) */\n    \n    Path: https://portal.lcu.edu.ng:443/assets/css/style.css\n    Line number: 6765\n    Comment: \n        /*# sourceMappingURL=bootstrap.css.map */\n    \n    Path: https://portal.lcu.edu.ng:443/assets/css/style.css\n    Line number: 6949\n    Comment: \n        /*top: -10px;*/\n    \n    Path: https://portal.lcu.edu.ng:443/assets/css/style.css\n    Line number: 6771\n    Comment: \n        \n        \n        \n        \n        \n        \n        \n        \n        \n        \n        \n        \n        }*/\n    \n    Path: https://portal.lcu.edu.ng:443/assets/css/style.css\n    Line number: 6892\n    Comment: \n        /*---------notification-------------*/\n    \n    Path: https://portal.lcu.edu.ng:443/assets/css/style.css\n    Line number: 3029\n    Comment: \n        /*border: 1px solid transparent;*/\n    \n    Path: https://portal.lcu.edu.ng:443/assets/js/forgot-password\n    Line number: 128\n    Comment: \n        \n        \n    \n    Path: https://portal.lcu.edu.ng:443/assets/css/style.css\n    Line number: 6944\n    Comment: \n        /*background: #ff7;*/\n    \n    Path: https://portal.lcu.edu.ng:443/assets/js/forgot-password\n    Line number: 130\n    Comment: \n        \n    \n    Path: https://portal.lcu.edu.ng:443/assets/css/style.css\n    Line number: 7175\n    Comment: \n        /*border-bottom: 1px solid black;*/\n    \n    Path: https://portal.lcu.edu.ng:443/assets/css/style.css\n    Line number: 7132\n    Comment: \n        /* Rounded sliders */\n    \n    Path: https://portal.lcu.edu.ng:443/assets/css/style.css\n    Line number: 6823\n    Comment: \n        /* Safari */\n    \n    Path: https://portal.lcu.edu.ng:443/assets/css/style.css\n    Line number: 1417\n    Comment: \n        /*border-bottom: 1px solid #eee;*/\n    \n    Path: https://portal.lcu.edu.ng:443/assets/css/style.css\n    Line number: 7078\n    Comment: \n        /* Unicode character for \"minus\" sign (-) */\n    \n    Path: https://portal.lcu.edu.ng:443/assets/js/forgot-password\n    Line number: 114\n    Comment: \n        \n        \n    \n    Path: https://portal.lcu.edu.ng:443/assets/js/forgot-password\n    Line number: 138\n    Comment: \n        \n        \n    \n    Path: https://portal.lcu.edu.ng:443/assets/js/forgot-password\n    Line number: 93\n    Comment: \n        <!-- The Modal -->\n    \n    Path: https://portal.lcu.edu.ng:443/assets/js/forgot-password\n    Line number: 143\n    Comment:",
+                    "severity": "unknown",
+                    "type": "web",
+                    "script_id": "http-comments-displayer",
+                    "port": "443",
+                    "references": [],
+                    "service": "http"
+                },
+                {
+                    "id": "",
+                    "name": "Vulnerability detected by http-cookie-flags",
+                    "description": "/: \n    PHPSESSID: \n      httponly flag not set",
+                    "severity": "unknown",
+                    "type": "web",
+                    "script_id": "http-cookie-flags",
+                    "port": "443",
+                    "references": [],
+                    "service": "http"
+                },
+                {
+                    "id": "",
+                    "name": "Vulnerability detected by http-date",
+                    "description": "Sat, 17 May 2025 19:58:49 GMT; -4s from local time.",
+                    "severity": "unknown",
+                    "type": "web",
+                    "script_id": "http-date",
+                    "port": "443",
+                    "references": [],
+                    "service": "http"
+                },
+                {
+                    "id": "",
+                    "name": "Vulnerability detected by http-devframework",
+                    "description": "Couldn't determine the underlying framework or CMS. Try increasing 'httpspider.maxpagecount' value to spider more pages.",
+                    "severity": "unknown",
+                    "type": "web",
+                    "script_id": "http-devframework",
+                    "port": "443",
+                    "references": [],
+                    "service": "http"
+                },
+                {
+                    "id": "",
+                    "name": "Vulnerability detected by http-errors",
+                    "description": "Couldn't find any error pages.",
+                    "severity": "unknown",
+                    "type": "web",
+                    "script_id": "http-errors",
+                    "port": "443",
+                    "references": [],
+                    "service": "http"
+                },
+                {
+                    "id": "",
+                    "name": "Vulnerability detected by http-feed",
+                    "description": "Couldn't find any feeds.",
+                    "severity": "unknown",
+                    "type": "web",
+                    "script_id": "http-feed",
+                    "port": "443",
+                    "references": [],
+                    "service": "http"
+                },
+                {
+                    "id": "",
+                    "name": "Vulnerability detected by http-headers",
+                    "description": "Date: Sat, 17 May 2025 19:58:43 GMT\n  Server: Apache\n  Expires: Thu, 19 Nov 1981 08:52:00 GMT\n  Cache-Control: no-store, no-cache, must-revalidate\n  Pragma: no-cache\n  Set-Cookie: PHPSESSID=6c5fd92fa84a62103b1961a193600f58; path=/\n  Connection: close\n  Content-Type: text/html; charset=UTF-8\n  \n  (Request type: HEAD)",
+                    "severity": "unknown",
+                    "type": "web",
+                    "script_id": "http-headers",
+                    "port": "443",
+                    "references": [],
+                    "service": "http"
+                },
+                {
+                    "id": "",
+                    "name": "Vulnerability detected by http-majordomo2-dir-traversal",
+                    "description": "ERROR: Script execution failed (use -d to debug)",
+                    "severity": "unknown",
+                    "type": "web",
+                    "script_id": "http-majordomo2-dir-traversal",
+                    "port": "443",
+                    "references": [],
+                    "service": "http"
+                },
+                {
+                    "id": "",
+                    "name": "Vulnerability detected by http-mobileversion-checker",
+                    "description": "No mobile version detected.",
+                    "severity": "unknown",
+                    "type": "web",
+                    "script_id": "http-mobileversion-checker",
+                    "port": "443",
+                    "references": [],
+                    "service": "http"
+                },
+                {
+                    "id": "",
+                    "name": "Vulnerability detected by http-referer-checker",
+                    "description": "Spidering limited to: maxpagecount=30\n  https://kit.fontawesome.com:443/e33241849e.js\n  https://kit.fontawesome.com:443/5938b8fb56.js\n  https://www.googletagmanager.com:443/gtag/js?id=G-4851K6XJPK",
+                    "severity": "unknown",
+                    "type": "web",
+                    "script_id": "http-referer-checker",
+                    "port": "443",
+                    "references": [],
+                    "service": "http"
+                },
+                {
+                    "id": "",
+                    "name": "Vulnerability detected by http-security-headers",
+                    "description": "Strict_Transport_Security: \n    HSTS not configured in HTTPS Server\n  Cache_Control: \n    Header: Cache-Control: no-store, no-cache, must-revalidate\n  Pragma: \n    Header: Pragma: no-cache\n  Expires: \n    Header: Expires: Thu, 19 Nov 1981 08:52:00 GMT",
+                    "severity": "unknown",
+                    "type": "web",
+                    "script_id": "http-security-headers",
+                    "port": "443",
+                    "references": [],
+                    "service": "http"
+                },
+                {
+                    "id": "",
+                    "name": "Vulnerability detected by http-server-header",
+                    "description": "Apache",
+                    "severity": "unknown",
+                    "type": "web",
+                    "script_id": "http-server-header",
+                    "port": "443",
+                    "references": [],
+                    "service": "http"
+                },
+                {
+                    "id": "",
+                    "name": "Vulnerability detected by http-sitemap-generator",
+                    "description": "Directory structure:\n    /\n      Other: 3; php: 2\n    /assets/css/\n      css: 1\n    /assets/images/\n      png: 1\n    /assets/js/\n      Other: 2; js: 1\n  Longest directory structure:\n    Depth: 2\n    Dir: /assets/images/\n  Total files found (by extension):\n    Other: 5; css: 1; js: 1; php: 2; png: 1",
+                    "severity": "unknown",
+                    "type": "web",
+                    "script_id": "http-sitemap-generator",
+                    "port": "443",
+                    "references": [],
+                    "service": "http"
+                },
+                {
+                    "id": "",
+                    "name": "Vulnerability detected by http-title",
+                    "description": "Login - Lead City Univeristy",
+                    "severity": "unknown",
+                    "type": "web",
+                    "script_id": "http-title",
+                    "port": "443",
+                    "references": [],
+                    "service": "http"
+                },
+                {
+                    "id": "",
+                    "name": "Vulnerability detected by http-vhosts",
+                    "description": "oracle.lcu.edu.ng : 400\nowa.lcu.edu.ng : 400\nmirror.lcu.edu.ng : 400\nmail3.lcu.edu.ng : 400\nvm.lcu.edu.ng : 400\n122 names had status 421",
+                    "severity": "unknown",
+                    "type": "web",
+                    "script_id": "http-vhosts",
+                    "port": "443",
+                    "references": [],
+                    "service": "http"
+                },
+                {
+                    "id": "",
+                    "name": "Vulnerability detected by http-vuln-cve2017-1001000",
+                    "description": "ERROR: Script execution failed (use -d to debug)",
+                    "severity": "unknown",
+                    "type": "web",
+                    "script_id": "http-vuln-cve2017-1001000",
+                    "port": "443",
+                    "references": [],
+                    "service": "http"
+                },
+                {
+                    "id": "",
+                    "name": "Vulnerability detected by http-waf-detect",
+                    "description": "IDS/IPS/WAF detected:\nportal.lcu.edu.ng:443/?p4yl04d3=<script>alert(document.cookie)</script>",
+                    "severity": "unknown",
+                    "type": "web",
+                    "script_id": "http-waf-detect",
+                    "port": "443",
+                    "references": [],
+                    "service": "http"
+                }
+            ],
+            "ssl": [
+                {
+                    "id": "",
+                    "name": "SSL Certificate Issue",
+                    "description": "Subject: commonName=www.portal.lcu.edu.ng\nSubject Alternative Name: DNS:*.lcu.edu.ng, DNS:lcu.edu.ng, DNS:www.admissions.lcu.edu.ng, DNS:www.elearning.lcu.edu.ng, DNS:www.events.lcu.edu.ng, DNS:www.facaec.lcu.edu.ng, DNS:www.fascon.lcu.edu.ng, DNS:www.hostel.lcu.edu.ng, DNS:www.icaict.lcu.edu.ng, DNS:www.ilearn.lcu.edu.ng, DNS:www.journals.lcu.edu.ng, DNS:www.opac.lcu.edu.ng, DNS:www.ouralumni.lcu.edu.ng, DNS:www.pgc.lcu.edu.ng, DNS:www.pgportal.lcu.edu.ng, DNS:www.portal.lcu.edu.ng, DNS:www.registration.lcu.edu.ng, DNS:www.repository.lcu.edu.ng, DNS:www.staffclient.lcu.edu.ng\nNot valid before: 2025-04-23T08:13:20\nNot valid after:  2025-07-22T08:13:19",
+                    "severity": "unknown",
+                    "type": "ssl",
+                    "script_id": "ssl-cert",
+                    "port": "443",
+                    "references": [],
+                    "service": "http"
+                },
+                {
+                    "id": "",
+                    "name": "Vulnerability detected by ssl-enum-ciphers",
+                    "description": "TLSv1.2: \n    ciphers: \n      TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 2048) - A\n      TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 2048) - A\n      TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A\n      TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A\n      TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256 (secp256r1) - A\n    compressors: \n      NULL\n    cipher preference: client\n  least strength: A",
+                    "severity": "unknown",
+                    "type": "ssl",
+                    "script_id": "ssl-enum-ciphers",
+                    "port": "443",
+                    "references": [],
+                    "service": "http"
+                }
+            ]
+        },
+        "open_ports": {
+            "80": {
+                "name": "http",
+                "product": "Apache httpd",
+                "version": "",
+                "extra_info": ""
+            },
+            "443": {
+                "name": "http",
+                "product": "Apache httpd",
+                "version": "",
+                "extra_info": ""
+            }
+        },
+        "ssl_details": {
+            "issuer": "",
+            "subject": "commonName=www.portal.lcu.edu.ng",
+            "valid_from": "2025-04-23T08:13:20",
+            "valid_to": "2025-07-22T08:13:19",
+            "self_signed": false
+        }
+    },
+    "trends_analysis": {
+        "apache": {
+            "error": "'str' object has no attribute 'get'",
+            "technology": "apache"
+        },
+        "php": {
+            "error": "'str' object has no attribute 'get'",
+            "technology": "php"
+        },
+        "openssh": {
+            "error": "'str' object has no attribute 'get'",
+            "technology": "openssh"
+        },
+        "ubuntu": {
+            "error": "'str' object has no attribute 'get'",
+            "technology": "ubuntu"
+        },
+        "wordpress": {
+            "error": "'str' object has no attribute 'get'",
+            "technology": "wordpress"
+        },
+        "nginx": {
+            "error": "'str' object has no attribute 'get'",
+            "technology": "nginx"
+        },
+        "mysql": {
+            "error": "'str' object has no attribute 'get'",
+            "technology": "mysql"
+        },
+        "centos": {
+            "error": "'str' object has no attribute 'get'",
+            "technology": "centos"
+        },
+        "jquery": {
+            "error": "'str' object has no attribute 'get'",
+            "technology": "jquery"
+        },
+        "bootstrap": {
+            "error": "'str' object has no attribute 'get'",
+            "technology": "bootstrap"
+        }
+    }
+}

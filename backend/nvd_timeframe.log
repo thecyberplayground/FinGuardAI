@@ -1,0 +1,14 @@
+2025-05-17 19:02:33,605 - finguardai.remediation - INFO - Financial sector specific recommendations loaded successfully
+2025-05-17 19:02:35,988 - finguardai.nvd_predictor - INFO - Using technology mapping for stampduty.gov.ng
+2025-05-17 19:02:35,988 - finguardai.nvd_predictor - INFO - Generating vulnerability predictions
+2025-05-17 19:02:35,989 - finguardai.vuln_predictor - INFO - Extracting technologies from scan results
+2025-05-17 19:02:35,989 - finguardai.vuln_predictor - INFO - Analyzing stampduty.gov.ng
+2025-05-17 19:02:35,989 - finguardai.vuln_predictor - INFO - Detected technologies: {'apache': '2.4.51', 'php': '7.4.21', 'mysql': '5.7.36', 'openssh': '8.2p1'}
+2025-05-17 19:02:35,990 - finguardai.vuln_predictor - INFO - Analyzing apache 2.4.51
+2025-05-17 19:02:36,002 - finguardai.nvd_client - INFO - Using cached NVD data for cpe_cpe_2.3_a_apache_http_server_2.4.51_*_*_*_*_*_*_*
+2025-05-17 19:02:36,042 - finguardai.vuln_predictor - INFO - Analyzing php 7.4.21
+2025-05-17 19:02:36,043 - finguardai.nvd_client - INFO - Using cached NVD data for cpe_cpe_2.3_a_php_php_7.4.21_*_*_*_*_*_*_*
+2025-05-17 19:02:36,051 - finguardai.vuln_predictor - INFO - Analyzing mysql 5.7.36
+2025-05-17 19:02:36,052 - finguardai.nvd_client - INFO - Using cached NVD data for cpe_cpe_2.3_a_oracle_mysql_5.7.36_*_*_*_*_*_*_*
+2025-05-17 19:02:36,067 - finguardai.vuln_predictor - INFO - Analyzing openssh 8.2p1
+2025-05-17 19:02:36,068 - finguardai.nvd_client - INFO - Using cached NVD data for cpe_cpe_2.3_a_openbsd_openssh_8.2p1_*_*_*_*_*_*_*

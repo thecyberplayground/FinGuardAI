@@ -1,0 +1,22 @@
+{
+  "ports": "1-1000,3306,5432,8080-8090,27017,21,22,23,25,53",
+  "intensity": "normal",
+  "format": "html",
+  "report_settings": {
+    "include_debug_info": false,
+    "detailed_recommendations": true,
+    "risk_scoring_method": "comprehensive",
+    "company_name": "FinGuardAI"
+  },
+  "scanner_settings": {
+    "timeout": 900,
+    "retries": 3,
+    "concurrent_scans": 8,
+    "follow_redirects": true
+  },
+  "logging": {
+    "level": "WARNING",
+    "file": "logs/prod_scanner.log",
+    "console": false
+  }
+}

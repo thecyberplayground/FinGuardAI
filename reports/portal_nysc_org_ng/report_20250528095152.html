@@ -1,0 +1,315 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinGuardAI Vulnerability Report - portal.nysc.org.ng</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background: linear-gradient(135deg, #1a237e, #283593);
+            color: white;
+            padding: 20px;
+            border-radius: 5px 5px 0 0;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .report-meta {
+            background-color: #f5f5f5;
+            padding: 10px 20px;
+            border-left: 4px solid #1a237e;
+            margin: 20px 0;
+        }
+        .section {
+            background-color: white;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .section h2 {
+            margin-top: 0;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            color: #1a237e;
+        }
+        .severity-critical {
+            background-color: #ffebee;
+            border-left: 4px solid #d50000;
+        }
+        .severity-high {
+            background-color: #fff8e1;
+            border-left: 4px solid #ff8f00;
+        }
+        .severity-medium {
+            background-color: #e3f2fd;
+            border-left: 4px solid #1976d2;
+        }
+        .severity-low {
+            background-color: #e8f5e9;
+            border-left: 4px solid #388e3c;
+        }
+        .vuln-item {
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+        }
+        .vuln-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .badge {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 3px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-right: 5px;
+            color: white;
+        }
+        .badge-critical {
+            background-color: #d50000;
+        }
+        .badge-high {
+            background-color: #ff8f00;
+        }
+        .badge-medium {
+            background-color: #1976d2;
+        }
+        .badge-low {
+            background-color: #388e3c;
+        }
+        .recommendations {
+            background-color: #e8f5e9;
+            padding: 15px;
+            border-radius: 4px;
+        }
+        .recommendations ul {
+            margin-bottom: 0;
+        }
+        .impact-score {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .tech-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        .tech-list li {
+            padding: 5px 10px;
+            margin-bottom: 5px;
+            background-color: #e8eaf6;
+            border-radius: 4px;
+        }
+        .port-list {
+            list-style: none;
+            padding-left: 0;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .port-item {
+            background-color: #e3f2fd;
+            padding: 5px 10px;
+            margin: 0 5px 5px 0;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+        th {
+            background-color: #f5f5f5;
+        }
+        .summary-box {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        .summary-item {
+            flex: 1 0 150px;
+            padding: 15px;
+            margin: 5px;
+            border-radius: 4px;
+            text-align: center;
+            color: white;
+        }
+        .summary-item h3 {
+            margin-top: 0;
+            font-size: 14px;
+            font-weight: normal;
+        }
+        .summary-item .count {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .critical-box {
+            background-color: #d50000;
+        }
+        .high-box {
+            background-color: #ff8f00;
+        }
+        .medium-box {
+            background-color: #1976d2;
+        }
+        .low-box {
+            background-color: #388e3c;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+            font-size: 12px;
+            color: #757575;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>FinGuardAI Vulnerability Assessment Report</h1>
+        </header>
+        
+        <div class="report-meta">
+            <p><strong>Target:</strong> portal.nysc.org.ng</p>
+            <p><strong>Scan Date:</strong> 2025-05-28 09:51:52</p>
+            <p><strong>Report ID:</strong> report_20250528095152</p>
+        </div>
+        
+        <div class="section">
+            <h2>Executive Summary</h2>
+            <p>
+This vulnerability assessment of portal.nysc.org.ng identified 0 vulnerabilities (0 critical, 0 high, 0 medium, 0 low).
+The overall financial risk score is N/A/100, indicating a UNKNOWN risk level. 
+
+</p>
+            
+            <div class="summary-box">
+                <div class="summary-item critical-box">
+                    <h3>CRITICAL</h3>
+                    <div class="count">0</div>
+                </div>
+                <div class="summary-item high-box">
+                    <h3>HIGH</h3>
+                    <div class="count">0</div>
+                </div>
+                <div class="summary-item medium-box">
+                    <h3>MEDIUM</h3>
+                    <div class="count">0</div>
+                </div>
+                <div class="summary-item low-box">
+                    <h3>LOW</h3>
+                    <div class="count">0</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Financial Impact Section -->
+        <div class="section">
+            <h2>Financial Impact Assessment</h2>
+            <div class="impact-score">Overall Financial Risk Score: N/A/100</div>
+            <p></p>
+            
+            <h3>Risk Breakdown</h3>
+            <table>
+                <tr>
+                    <th>Risk Area</th>
+                    <th>Risk Level</th>
+                    <th>Score</th>
+                </tr>
+                
+            </table>
+            
+            
+            
+            <div class="recommendations">
+                <h3>Financial Risk Recommendations</h3>
+                <ul>
+                    
+                </ul>
+            </div>
+        </div>
+
+        <!-- Critical Vulnerabilities Section -->
+        <div class="section">
+            <h2>Critical Vulnerabilities</h2>
+            <p>No vulnerabilities found in this category.</p>
+        </div>
+        
+        <!-- High Vulnerabilities Section -->
+        <div class="section">
+            <h2>High Vulnerabilities</h2>
+            <p>No vulnerabilities found in this category.</p>
+        </div>
+        
+        <!-- Systems Summary Section -->
+        <div class="section">
+            <h2>Systems and Technologies</h2>
+            
+            <h3>Detected Technologies</h3>
+            <ul class="tech-list">
+                
+            </ul>
+            
+            <h3>Open Ports</h3>
+            <div class="port-list">
+                
+            </div>
+        </div>
+        
+        <!-- Database Security Section -->
+        
+        
+        <!-- Web Security Section -->
+        
+        
+        <!-- Remediation Plan Section -->
+        <div class="section">
+            <h2>Prioritized Remediation Plan</h2>
+            <p>The following remediation steps are organized by priority:</p>
+            
+            <h3>Critical Priority (Address within 24 hours)</h3>
+            <ol>
+                
+            </ol>
+            
+            <h3>High Priority (Address within 1 week)</h3>
+            <ol>
+                
+            </ol>
+            
+            <h3>Medium Priority (Address within 1 month)</h3>
+            <ol>
+                
+            </ol>
+        </div>
+        
+        <div class="footer">
+            <p>Generated by FinGuardAI Integrated Vulnerability Assessment System</p>
+            <p>Report generation time: 2025-05-28 09:51:52</p>
+        </div>
+    </div>
+</body>
+</html>

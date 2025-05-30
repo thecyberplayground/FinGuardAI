@@ -1,0 +1,254 @@
+{
+  "resultsPerPage": 3,
+  "startIndex": 0,
+  "totalResults": 3,
+  "format": "NVD_CVE",
+  "version": "2.0",
+  "timestamp": "2025-05-17T19:33:01.598",
+  "vulnerabilities": [
+    {
+      "cve": {
+        "id": "CVE-2025-46728",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2025-05-06T01:15:50.790",
+        "lastModified": "2025-05-07T14:13:35.980",
+        "vulnStatus": "Awaiting Analysis",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "cpp-httplib is a C++ header-only HTTP/HTTPS server and client library. Prior to version 0.20.1, the library fails to enforce configured size limits on incoming request bodies when `Transfer-Encoding: chunked` is used or when no `Content-Length` header is provided. A remote attacker can send a chunked request without the terminating zero-length chunk, causing uncontrolled memory allocation on the server. This leads to potential exhaustion of system memory and results in a server crash or unresponsiveness. Version 0.20.1 fixes the issue by enforcing limits during parsing. If the limit is exceeded at any point during reading, the connection is terminated immediately. A short-term workaround through a Reverse Proxy is available. If updating the library immediately is not feasible, deploy a reverse proxy (e.g., Nginx, HAProxy) in front of the `cpp-httplib` application. Configure the proxy to enforce maximum request body size limits, thereby stopping excessively large requests before they reach the vulnerable library code."
+          },
+          {
+            "lang": "es",
+            "value": "cpp-httplib es una librer\u00eda de cliente y servidor HTTP/HTTPS de solo encabezado de C++. Antes de la versi\u00f3n 0.20.1, la librer\u00eda no aplicaba los l\u00edmites de tama\u00f1o configurados en los cuerpos de las solicitudes entrantes cuando se usaba `Transfer-Encoding: chunked` o cuando no se proporcionaba el encabezado `Content-Length`. Un atacante remoto podr\u00eda enviar una solicitud fragmentada sin el fragmento de longitud cero de terminaci\u00f3n, lo que causaba una asignaci\u00f3n de memoria incontrolada en el servidor. Esto podr\u00eda agotar la memoria del sistema y provocar un bloqueo o falta de respuesta del servidor. La versi\u00f3n 0.20.1 soluciona el problema aplicando l\u00edmites durante el an\u00e1lisis. Si se supera el l\u00edmite en cualquier momento durante la lectura, la conexi\u00f3n se termina inmediatamente. Existe una soluci\u00f3n temporal a trav\u00e9s de un proxy inverso. Si no es posible actualizar la librer\u00eda inmediatamente, implemente un proxy inverso (p. ej., Nginx, HAProxy) delante de la aplicaci\u00f3n `cpp-httplib`. Configure el proxy para aplicar l\u00edmites de tama\u00f1o m\u00e1ximo en el cuerpo de la solicitud, deteniendo as\u00ed las solicitudes excesivamente grandes antes de que lleguen al c\u00f3digo de la librer\u00eda vulnerable."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                "baseScore": 7.5,
+                "baseSeverity": "HIGH",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "NONE",
+                "userInteraction": "NONE",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "NONE",
+                "integrityImpact": "NONE",
+                "availabilityImpact": "HIGH"
+              },
+              "exploitabilityScore": 3.9,
+              "impactScore": 3.6
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "security-advisories@github.com",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-400"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/yhirose/cpp-httplib/commit/7b752106ac42bd5b907793950d9125a0972c8e8e",
+            "source": "security-advisories@github.com"
+          },
+          {
+            "url": "https://github.com/yhirose/cpp-httplib/security/advisories/GHSA-px83-72rx-v57c",
+            "source": "security-advisories@github.com"
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2025-46727",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2025-05-07T23:15:54.267",
+        "lastModified": "2025-05-08T14:39:09.683",
+        "vulnStatus": "Undergoing Analysis",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Rack is a modular Ruby web server interface. Prior to versions 2.2.14, 3.0.16, and 3.1.14, `Rack::QueryParser` parses query strings and `application/x-www-form-urlencoded` bodies into Ruby data structures without imposing any limit on the number of parameters, allowing attackers to send requests with extremely large numbers of parameters. The vulnerability arises because `Rack::QueryParser` iterates over each `&`-separated key-value pair and adds it to a Hash without enforcing an upper bound on the total number of parameters. This allows an attacker to send a single request containing hundreds of thousands (or more) of parameters, which consumes excessive memory and CPU during parsing. An attacker can trigger denial of service by sending specifically crafted HTTP requests, which can cause memory exhaustion or pin CPU resources, stalling or crashing the Rack server. This results in full service disruption until the affected worker is restarted. Versions 2.2.14, 3.0.16, and 3.1.14 fix the issue. Some other mitigations are available. One may use middleware to enforce a maximum query string size or parameter count, or employ a reverse proxy (such as Nginx) to limit request sizes and reject oversized query strings or bodies. Limiting request body sizes and query string lengths at the web server or CDN level is an effective mitigation."
+          },
+          {
+            "lang": "es",
+            "value": "Rack es una interfaz modular de servidor web Ruby. En versiones anteriores a la 2.2.14, la 3.0.16 y la 3.1.14, `Rack::QueryParser` analiza cadenas de consulta y cuerpos `application/x-www-form-urlencoded` en estructuras de datos Ruby sin imponer ning\u00fan l\u00edmite en el n\u00famero de par\u00e1metros, lo que permite a los atacantes enviar solicitudes con una cantidad extremadamente grande de par\u00e1metros. La vulnerabilidad surge porque `Rack::QueryParser` itera sobre cada par clave-valor separado por `&amp;` y lo a\u00f1ade a un hash sin imponer un l\u00edmite superior en el n\u00famero total de par\u00e1metros. Esto permite a un atacante enviar una sola solicitud con cientos de miles (o m\u00e1s) de par\u00e1metros, lo que consume demasiada memoria y CPU durante el an\u00e1lisis. Un atacante puede provocar una denegaci\u00f3n de servicio enviando solicitudes HTTP manipuladas espec\u00edficamente, lo que puede causar el agotamiento de la memoria o la sobrecarga de recursos de la CPU, bloqueando o bloqueando el servidor Rack. Esto provoca una interrupci\u00f3n total del servicio hasta que se reinicia el trabajador afectado. Las versiones 2.2.14, 3.0.16 y 3.1.14 solucionan el problema. Existen otras mitigaciones. Se puede usar middleware para imponer un tama\u00f1o m\u00e1ximo de cadena de consulta o un n\u00famero m\u00e1ximo de par\u00e1metros, o emplear un proxy inverso (como Nginx) para limitar el tama\u00f1o de las solicitudes y rechazar cadenas o cuerpos de consulta demasiado grandes. Limitar el tama\u00f1o del cuerpo de la solicitud y la longitud de las cadenas de consulta a nivel de servidor web o CDN es una mitigaci\u00f3n eficaz."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                "baseScore": 7.5,
+                "baseSeverity": "HIGH",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "NONE",
+                "userInteraction": "NONE",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "NONE",
+                "integrityImpact": "NONE",
+                "availabilityImpact": "HIGH"
+              },
+              "exploitabilityScore": 3.9,
+              "impactScore": 3.6
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "security-advisories@github.com",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-400"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-770"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/rack/rack/commit/2bb5263b464b65ba4b648996a579dbd180d2b712",
+            "source": "security-advisories@github.com"
+          },
+          {
+            "url": "https://github.com/rack/rack/commit/3f5a4249118d09d199fe480466c8c6717e43b6e3",
+            "source": "security-advisories@github.com"
+          },
+          {
+            "url": "https://github.com/rack/rack/commit/cd6b70a1f2a1016b73dc906f924869f4902c2d74",
+            "source": "security-advisories@github.com"
+          },
+          {
+            "url": "https://github.com/rack/rack/security/advisories/GHSA-gjh7-p2fx-99vx",
+            "source": "security-advisories@github.com"
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2025-30207",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2025-05-13T16:15:29.360",
+        "lastModified": "2025-05-13T19:35:18.080",
+        "vulnStatus": "Awaiting Analysis",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Kirby is an open-source content management system. A vulnerability in versions prior to 3.9.8.3, 3.10.1.2, and 4.7.1 affects all Kirby setups that use PHP's built-in server. Such setups are commonly only used during local development. Sites that use other server software (such as Apache, nginx or Caddy) are not affected. A missing path traversal check allowed attackers to navigate all files on the server that were accessible to the PHP process, including files outside of the Kirby installation. The vulnerable implementation delegated all existing files to PHP, including existing files outside of the document root. This leads to a different response that allows attackers to determine whether the requested file exists. Because Kirby's router only delegates such requests to PHP and does not load or execute them, contents of the files were not exposed as PHP treats requests to files outside of the document root as invalid. The problem has been patched in Kirby 3.9.8.3, Kirby 3.10.1.2, and Kirby 4.7.1. In all of the mentioned releases, the maintainers of Kirby have updated the router to check if existing static files are within the document root. Requests to files outside the document root are treated as page requests of the error page and will no longer allow to determine whether the file exists or not."
+          },
+          {
+            "lang": "es",
+            "value": "Kirby es un sistema de gesti\u00f3n de contenido de c\u00f3digo abierto. Una vulnerabilidad en versiones anteriores a 3.9.8.3, 3.10.1.2 y 4.7.1 afecta a todas las configuraciones de Kirby que utilizan el servidor integrado de PHP. Estas configuraciones suelen utilizarse solo durante el desarrollo local. Los sitios que utilizan otro software de servidor (como Apache, nginx o Caddy) no se ven afectados. La falta de una comprobaci\u00f3n de path traversal permiti\u00f3 a los atacantes navegar por todos los archivos del servidor accesibles para el proceso PHP, incluidos los archivos fuera de la instalaci\u00f3n de Kirby. La implementaci\u00f3n vulnerable deleg\u00f3 todos los archivos existentes a PHP, incluidos los existentes fuera del root del documento. Esto genera una respuesta diferente que permite a los atacantes determinar si el archivo solicitado existe. Dado que el enrutador de Kirby solo delega dichas solicitudes a PHP y no las carga ni las ejecuta, el contenido de los archivos no se expuso, ya que PHP trata las solicitudes a archivos fuera del root del documento como no v\u00e1lidas. El problema se ha corregido en Kirby 3.9.8.3, Kirby 3.10.1.2 y Kirby 4.7.1. En todas las versiones mencionadas, los mantenedores de Kirby han actualizado el enrutador para comprobar si los archivos est\u00e1ticos existentes se encuentran en el root del documento. Las solicitudes a archivos fuera del root del documento se tratan como solicitudes de p\u00e1gina de la p\u00e1gina de error y ya no permiten determinar si el archivo existe o no."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV40": [
+            {
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:A/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:N/SC:L/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 2.3,
+                "baseSeverity": "LOW",
+                "attackVector": "ADJACENT",
+                "attackComplexity": "LOW",
+                "attackRequirements": "PRESENT",
+                "privilegesRequired": "NONE",
+                "userInteraction": "NONE",
+                "vulnConfidentialityImpact": "NONE",
+                "vulnIntegrityImpact": "NONE",
+                "vulnAvailabilityImpact": "NONE",
+                "subConfidentialityImpact": "LOW",
+                "subIntegrityImpact": "NONE",
+                "subAvailabilityImpact": "NONE",
+                "exploitMaturity": "NOT_DEFINED",
+                "confidentialityRequirement": "NOT_DEFINED",
+                "integrityRequirement": "NOT_DEFINED",
+                "availabilityRequirement": "NOT_DEFINED",
+                "modifiedAttackVector": "NOT_DEFINED",
+                "modifiedAttackComplexity": "NOT_DEFINED",
+                "modifiedAttackRequirements": "NOT_DEFINED",
+                "modifiedPrivilegesRequired": "NOT_DEFINED",
+                "modifiedUserInteraction": "NOT_DEFINED",
+                "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
+                "modifiedVulnIntegrityImpact": "NOT_DEFINED",
+                "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
+                "modifiedSubConfidentialityImpact": "NOT_DEFINED",
+                "modifiedSubIntegrityImpact": "NOT_DEFINED",
+                "modifiedSubAvailabilityImpact": "NOT_DEFINED",
+                "Safety": "NOT_DEFINED",
+                "Automatable": "NOT_DEFINED",
+                "Recovery": "NOT_DEFINED",
+                "valueDensity": "NOT_DEFINED",
+                "vulnerabilityResponseEffort": "NOT_DEFINED",
+                "providerUrgency": "NOT_DEFINED"
+              }
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "security-advisories@github.com",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-22"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-23"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/getkirby/kirby/releases/tag/3.10.1.2",
+            "source": "security-advisories@github.com"
+          },
+          {
+            "url": "https://github.com/getkirby/kirby/releases/tag/3.9.8.3",
+            "source": "security-advisories@github.com"
+          },
+          {
+            "url": "https://github.com/getkirby/kirby/releases/tag/4.7.1",
+            "source": "security-advisories@github.com"
+          },
+          {
+            "url": "https://github.com/getkirby/kirby/security/advisories/GHSA-9p3p-w5jf-8xxg",
+            "source": "security-advisories@github.com"
+          }
+        ]
+      }
+    }
+  ]
+}

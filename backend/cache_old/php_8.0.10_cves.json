@@ -1,0 +1,112 @@
+[
+  {
+    "id": "CVE-2007-3205",
+    "description": "The parse_str function in (1) PHP, (2) Hardened-PHP, and (3) Suhosin, when called without a second parameter, might allow remote attackers to overwrite arbitrary variables by specifying variable names and values in the string to be parsed.  NOTE: it is not clear whether this is a design limitation of the function or a bug in PHP, although it is likely to be regarded as a bug in Hardened-PHP and Suhosin.",
+    "severity": "Unknown"
+  },
+  {
+    "id": "CVE-2013-2220",
+    "description": "Buffer overflow in the radius_get_vendor_attr function in the Radius extension before 1.2.7 for PHP allows remote attackers to cause a denial of service (crash) and possibly execute arbitrary code via a large Vendor Specific Attributes (VSA) length value.",
+    "severity": "Unknown"
+  },
+  {
+    "id": "CVE-2017-8923",
+    "description": "The zend_string_extend function in Zend/zend_string.h in PHP through 7.1.5 does not prevent changes to string objects that result in a negative length, which allows remote attackers to cause a denial of service (application crash) or possibly have unspecified other impact by leveraging a script's use of .= with a long string.",
+    "severity": "Unknown"
+  },
+  {
+    "id": "CVE-2017-9118",
+    "description": "PHP 7.1.5 has an Out of bounds access in php_pcre_replace_impl via a crafted preg_replace call.",
+    "severity": "Unknown"
+  },
+  {
+    "id": "CVE-2021-21706",
+    "description": "In PHP versions 7.3.x below 7.3.31, 7.4.x below 7.4.24 and 8.0.x below 8.0.11, in Microsoft Windows environment, ZipArchive::extractTo may be tricked into writing a file outside target directory when extracting a ZIP file, thus potentially causing files to be created or overwritten, subject to OS permissions.",
+    "severity": "Unknown"
+  },
+  {
+    "id": "CVE-2021-21703",
+    "description": "In PHP versions 7.3.x up to and including 7.3.31, 7.4.x below 7.4.25 and 8.0.x below 8.0.12, when running PHP FPM SAPI with main FPM daemon process running as root and child worker processes running as lower-privileged users, it is possible for the child processes to access memory shared with the main process and write to it, modifying it in a way that would cause the root process to conduct invalid memory reads and writes, which can be used to escalate privileges from local unprivileged user to the root user.",
+    "severity": "Unknown"
+  },
+  {
+    "id": "CVE-2021-21707",
+    "description": "In PHP versions 7.3.x below 7.3.33, 7.4.x below 7.4.26 and 8.0.x below 8.0.13, certain XML parsing functions, like simplexml_load_file(), URL-decode the filename passed to them. If that filename contains URL-encoded NUL character, this may cause the function to interpret this as the end of the filename, thus interpreting the filename differently from what the user intended, which may lead it to reading a different file than intended.",
+    "severity": "Unknown"
+  },
+  {
+    "id": "CVE-2021-21708",
+    "description": "In PHP versions 7.4.x below 7.4.28, 8.0.x below 8.0.16, and 8.1.x below 8.1.3, when using filter functions with FILTER_VALIDATE_FLOAT filter and min/max limits, if the filter fails, there is a possibility to trigger use of allocated memory after free, which can result it crashes, and potentially in overwrite of other memory chunks and RCE. This issue affects: code that uses FILTER_VALIDATE_FLOAT with min/max limits.",
+    "severity": "Unknown"
+  },
+  {
+    "id": "CVE-2022-31625",
+    "description": "In PHP versions 7.4.x below 7.4.30, 8.0.x below 8.0.20, and 8.1.x below 8.1.7, when using Postgres database extension, supplying invalid parameters to the parametrized query may lead to PHP attempting to free memory using uninitialized data as pointers. This could lead to RCE vulnerability or denial of service.",
+    "severity": "Unknown"
+  },
+  {
+    "id": "CVE-2022-31626",
+    "description": "In PHP versions 7.4.x below 7.4.30, 8.0.x below 8.0.20, and 8.1.x below 8.1.7, when pdo_mysql extension with mysqlnd driver, if the third party is allowed to supply host to connect to and the password for the connection, password of excessive length can trigger a buffer overflow in PHP, which can lead to a remote code execution vulnerability.",
+    "severity": "Unknown"
+  },
+  {
+    "id": "CVE-2022-31628",
+    "description": "In PHP versions before 7.4.31, 8.0.24 and 8.1.11, the phar uncompressor code would recursively uncompress \"quines\" gzip files, resulting in an infinite loop.",
+    "severity": "Unknown"
+  },
+  {
+    "id": "CVE-2022-31629",
+    "description": "In PHP versions before 7.4.31, 8.0.24 and 8.1.11, the vulnerability enables network and same-site attackers to set a standard insecure cookie in the victim's browser which is treated as a `__Host-` or `__Secure-` cookie by PHP applications.",
+    "severity": "Unknown"
+  },
+  {
+    "id": "CVE-2022-37454",
+    "description": "The Keccak XKCP SHA-3 reference implementation before fdc6fef has an integer overflow and resultant buffer overflow that allows attackers to execute arbitrary code or eliminate expected cryptographic properties. This occurs in the sponge function interface.",
+    "severity": "Unknown"
+  },
+  {
+    "id": "CVE-2022-31630",
+    "description": "In PHP versions prior to 7.4.33, 8.0.25 and 8.1.12, when using imageloadfont() function in gd extension, it is possible to supply a specially crafted font file, such as if the loaded font is used with imagechar() function, the read outside allocated buffer will be used. This can lead to crashes or disclosure of confidential information.\u00a0",
+    "severity": "Unknown"
+  },
+  {
+    "id": "CVE-2023-0568",
+    "description": "In PHP 8.0.X before 8.0.28, 8.1.X before 8.1.16 and 8.2.X before 8.2.3, core path resolution function allocate buffer one byte too small. When resolving paths with lengths close to system MAXPATHLEN setting, this may lead to the byte after the allocated buffer being overwritten with NUL value, which might lead to unauthorized data access or modification.",
+    "severity": "Unknown"
+  },
+  {
+    "id": "CVE-2023-0662",
+    "description": "In PHP 8.0.X before 8.0.28, 8.1.X before 8.1.16 and 8.2.X before 8.2.3, excessive number of parts in HTTP form upload can cause high resource consumption and excessive number of log entries. This can cause denial of service on the affected server by exhausting CPU resources or disk space.",
+    "severity": "Unknown"
+  },
+  {
+    "id": "CVE-2023-0567",
+    "description": "In PHP 8.0.X before 8.0.28, 8.1.X before 8.1.16 and 8.2.X before 8.2.3, password_verify() function may accept some invalid Blowfish hashes as valid. If such invalid hash ever ends up in the password database, it may lead to an application allowing any password for this entry as valid.\u00a0\n\n",
+    "severity": "Unknown"
+  },
+  {
+    "id": "CVE-2023-3247",
+    "description": "In PHP versions 8.0.* before 8.0.29, 8.1.* before 8.1.20, 8.2.* before 8.2.7 when using SOAP HTTP Digest Authentication, random value generator was not checked for failure, and was using narrower range of values than it should have. In case of random generator failure, it could lead to a disclosure of 31 bits of uninitialized memory from the client to the server, and it also made easier to a malicious server to guess the client's nonce.\u00a0\n\n",
+    "severity": "Unknown"
+  },
+  {
+    "id": "CVE-2023-3823",
+    "description": "In PHP versions 8.0.* before 8.0.30, 8.1.* before 8.1.22, and 8.2.* before 8.2.8 various XML functions rely on libxml global state to track configuration variables, like whether external entities are loaded. This state is assumed to be unchanged unless the user explicitly changes it by calling appropriate function. However, since the state is process-global, other modules - such as\u00a0ImageMagick - may also use this library within the same process, and change that global state for their internal purposes, and leave it in a state where external entities loading is enabled. This can lead to the situation where external XML is parsed with external entities loaded, which can lead to disclosure of any local files accessible to PHP. This vulnerable state may persist in the same process across many requests, until the process is shut down.",
+    "severity": "Unknown"
+  },
+  {
+    "id": "CVE-2023-3824",
+    "description": "In PHP version 8.0.* before 8.0.30,\u00a0 8.1.* before 8.1.22, and 8.2.* before 8.2.8, when loading phar file, while reading PHAR directory entries, insufficient length checking may lead to a stack buffer overflow, leading potentially to memory corruption or RCE.",
+    "severity": "Unknown"
+  },
+  {
+    "id": "CVE-2022-4900",
+    "description": "A vulnerability was found in PHP where setting the environment variable PHP_CLI_SERVER_WORKERS to a large value leads to a heap buffer overflow.",
+    "severity": "Unknown"
+  },
+  {
+    "id": "CVE-2024-5458",
+    "description": "In PHP versions\u00a08.1.* before 8.1.29, 8.2.* before 8.2.20, 8.3.* before 8.3.8, due to a code logic error, filtering functions such as filter_var when validating URLs\u00a0(FILTER_VALIDATE_URL) for certain types of URLs the function will result in invalid user information (username + password part of URLs) being treated as valid user information. This may lead to the downstream code accepting invalid URLs as valid and parsing them incorrectly.",
+    "severity": "Unknown"
+  }
+]

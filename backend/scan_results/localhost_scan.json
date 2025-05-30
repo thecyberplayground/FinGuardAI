@@ -1,0 +1,39 @@
+{
+    "target": "localhost",
+    "scan_time": "2025-05-17T12:00:00Z",
+    "technologies": [
+        {
+            "name": "apache",
+            "version": "2.4.51"
+        },
+        {
+            "name": "php",
+            "version": "8.0.10"
+        },
+        {
+            "name": "openssh",
+            "version": "8.2p1"
+        }
+    ],
+    "ports": {
+        "80": {
+            "service": "http",
+            "product": "Apache httpd",
+            "version": "2.4.51"
+        },
+        "443": {
+            "service": "https",
+            "product": "Apache httpd",
+            "version": "2.4.51"
+        },
+        "22": {
+            "service": "ssh",
+            "product": "OpenSSH",
+            "version": "8.2p1"
+        }
+    },
+    "os": {
+        "name": "Ubuntu",
+        "version": "20.04"
+    }
+}

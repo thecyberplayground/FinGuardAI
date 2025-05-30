@@ -1,0 +1,21 @@
+{
+  "ftp": [
+    {"cve": "CVE-2021-41617", "desc": "OpenSSH vulnerability allows privilege escalation via FTP.", "severity": 7.8},
+    {"cve": "CVE-2020-9273", "desc": "ProFTPD mod_copy command injection.", "severity": 9.8}
+  ],
+  "telnet": [
+    {"cve": "CVE-2016-0772", "desc": "Telnetd remote code execution.", "severity": 10.0}
+  ],
+  "smb": [
+    {"cve": "CVE-2017-0144", "desc": "SMBv1 vulnerability exploited by WannaCry.", "severity": 8.1}
+  ],
+  "rdp": [
+    {"cve": "CVE-2019-0708", "desc": "Remote Desktop Services Remote Code Execution Vulnerability.", "severity": 9.8}
+  ],
+  "http": [
+    {"cve": "CVE-2021-41773", "desc": "Apache HTTP Path Traversal and RCE.", "severity": 7.5}
+  ],
+  "ssh": [
+    {"cve": "CVE-2018-15473", "desc": "OpenSSH user enumeration.", "severity": 5.3}
+  ]
+}

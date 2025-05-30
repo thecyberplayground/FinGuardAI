@@ -1,0 +1,46 @@
+{
+    "target": "https://portal.lcu.edu.ng",
+    "domain": "portal.lcu.edu.ng",
+    "scan_time": "2025-05-17T12:30:00Z",
+    "technologies": [
+        {
+            "name": "wordpress",
+            "version": "5.8.2",
+            "confidence": 85
+        },
+        {
+            "name": "php",
+            "version": "8.0.10",
+            "confidence": 90
+        },
+        {
+            "name": "nginx",
+            "version": "1.20.1",
+            "confidence": 80
+        },
+        {
+            "name": "mysql",
+            "version": "8.0.26",
+            "confidence": 70
+        },
+        {
+            "name": "centos",
+            "version": "8.4",
+            "confidence": 60
+        },
+        {
+            "name": "jquery",
+            "version": "3.5.1",
+            "confidence": 95
+        },
+        {
+            "name": "bootstrap",
+            "version": "4.6.0",
+            "confidence": 90
+        }
+    ],
+    "headers": {
+        "server": "nginx/1.20.1",
+        "x-powered-by": "PHP/7.4.21"
+    }
+}

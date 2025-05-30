@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///C:/Program Files (x86)/Nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Sat May 24 12:02:55 2025 as: nmap -oX &quot;C:\\Users\\CYBER\\Downloads\\finguardai-admin (3)\\backend\\scan_results\\localhost_20250524_120253_vulns.xml&quot; -p 443,27017,9443,5432,1521,6379,80,1433,8443,8080,8843,9042,3306 -T3 -sV -sC -&#45;script vuln,auth,default,discovery,version,http-headers,http-methods,ssl-cert,mysql-empty-password,ms-sql-info,mongodb-info,redis-info localhost -->
+<nmaprun scanner="nmap" args="nmap -oX &quot;C:\\Users\\CYBER\\Downloads\\finguardai-admin (3)\\backend\\scan_results\\localhost_20250524_120253_vulns.xml&quot; -p 443,27017,9443,5432,1521,6379,80,1433,8443,8080,8843,9042,3306 -T3 -sV -sC -&#45;script vuln,auth,default,discovery,version,http-headers,http-methods,ssl-cert,mysql-empty-password,ms-sql-info,mongodb-info,redis-info localhost" start="1748084575" startstr="Sat May 24 12:02:55 2025" version="7.80" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="13" services="80,443,1433,1521,3306,5432,6379,8080,8443,8843,9042,9443,27017"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<prescript><script id="broadcast-igmp-discovery" output="&#xa;  192.168.105.219&#xa;    Interface: eth5&#xa;    Version: 2&#xa;    Group: 224.0.0.251&#xa;    Description: mDNS (rfc6762)&#xa;  Use the newtargets script-arg to add the results as targets&#xa;"/><script id="ipv6-multicast-mld-list" output="&#xa;  fe80::f827:d5ff:fe72:56e: &#xa;    device: eth5&#xa;    mac: fa:27:d5:72:05:6e&#xa;    multicast_ips: &#xa;      ff02::fb                  (mDNSv6)"><table key="fe80::f827:d5ff:fe72:56e">
+<elem key="device">eth5</elem>
+<elem key="mac">fa:27:d5:72:05:6e</elem>
+<table key="multicast_ips">
+<table>
+<elem key="ip">ff02::fb</elem>
+<elem key="description">mDNSv6</elem>
+</table>
+</table>
+</table>
+</script><script id="targets-asn" output="&#xa;  targets-asn.asn is a mandatory parameter&#xa;"/><script id="targets-ipv6-multicast-echo" output="&#xa;  IP: fe80::2c27:8ff:feaf:1abe  MAC: 2e:27:08:af:1a:be  IFACE: eth5&#xa;  IP: fe80::f827:d5ff:fe72:56e  MAC: fa:27:d5:72:05:6e  IFACE: eth5&#xa;  Use -&#45;script-args=newtargets to add the results as targets&#xa;"/><script id="targets-ipv6-multicast-invalid-dst" output="&#xa;  IP: fe80::2c27:8ff:feaf:1abe  MAC: 2e:27:08:af:1a:be  IFACE: eth5&#xa;  IP: fe80::f827:d5ff:fe72:56e  MAC: fa:27:d5:72:05:6e  IFACE: eth5&#xa;  Use -&#45;script-args=newtargets to add the results as targets&#xa;"/><script id="targets-ipv6-multicast-mld" output="&#xa;  IP: fe80::f827:d5ff:fe72:56e  MAC: fa:27:d5:72:05:6e  IFACE: eth5&#xa;&#xa;  Use -&#45;script-args=newtargets to add the results as targets"><table>
+<elem key="mac">fa:27:d5:72:05:6e</elem>
+<elem key="address">fe80::f827:d5ff:fe72:56e</elem>
+<elem key="iface">eth5</elem>
+</table>
+</script></prescript><host starttime="1748084617" endtime="1748084634"><status state="up" reason="localhost-response" reason_ttl="0"/>
+<address addr="127.0.0.1" addrtype="ipv4"/>
+<hostnames>
+<hostname name="localhost" type="user"/>
+<hostname name="kubernetes.docker.internal" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="unknown" reason="no-response" reason_ttl="0"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="unknown" reason="no-response" reason_ttl="0"/><service name="https" method="table" conf="3"/></port>
+<port protocol="tcp" portid="1433"><state state="unknown" reason="no-response" reason_ttl="0"/><service name="ms-sql-s" method="table" conf="3"/></port>
+<port protocol="tcp" portid="1521"><state state="unknown" reason="no-response" reason_ttl="0"/><service name="oracle" method="table" conf="3"/></port>
+<port protocol="tcp" portid="3306"><state state="unknown" reason="no-response" reason_ttl="0"/><service name="mysql" method="table" conf="3"/></port>
+<port protocol="tcp" portid="5432"><state state="unknown" reason="no-response" reason_ttl="0"/><service name="postgresql" method="table" conf="3"/></port>
+<port protocol="tcp" portid="6379"><state state="unknown" reason="no-response" reason_ttl="0"/><service name="redis" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8080"><state state="unknown" reason="no-response" reason_ttl="0"/><service name="http-proxy" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8443"><state state="unknown" reason="no-response" reason_ttl="0"/><service name="https-alt" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8843"><state state="unknown" reason="no-response" reason_ttl="0"/><service name="unknown" method="table" conf="3"/></port>
+<port protocol="tcp" portid="9042"><state state="unknown" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="9443"><state state="unknown" reason="no-response" reason_ttl="0"/><service name="tungsten-https" method="table" conf="3"/></port>
+<port protocol="tcp" portid="27017"><state state="unknown" reason="no-response" reason_ttl="0"/><service name="mongod" method="table" conf="3"/></port>
+</ports>
+<hostscript><script id="dns-brute" output="Can&apos;t guess domain of &quot;localhost&quot;; use dns-brute.domain script argument."/><script id="fcrdns" output="PASS (localhost)"><table key="localhost">
+<elem key="status">pass</elem>
+<table key="addresses">
+<elem>127.0.0.1</elem>
+</table>
+</table>
+</script><script id="hostmap-crtsh" output="&#xa;  subdomains: Error: could not GET http://crt.sh/?q=%.localhost&amp;output=json"><elem key="subdomains">Error: could not GET http://crt.sh/?q=%.localhost&amp;output=json</elem>
+</script><script id="resolveall" output="&#xa;  Host &apos;localhost&apos; also resolves to:&#xa;  Use the &apos;newtargets&apos; script-arg to add the results as targets&#xa;  Use the -&#45;resolve-all option to scan all resolved addresses without using this script.&#xa;"><elem key="newtargets">0</elem>
+<table key="addresses">
+</table>
+</script></hostscript></host>
+<runstats><finished time="1748084634" timestr="Sat May 24 12:03:54 2025" elapsed="60.30" summary="Nmap done at Sat May 24 12:03:54 2025; 1 IP address (1 host up) scanned in 60.30 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

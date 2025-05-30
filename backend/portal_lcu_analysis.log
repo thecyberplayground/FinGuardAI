@@ -1,0 +1,33 @@
+2025-05-17 16:44:01,762 - finguardai.remediation - INFO - Financial sector specific recommendations loaded successfully
+2025-05-17 16:44:01,768 - finguardai.analysis - INFO - ================================================================================
+2025-05-17 16:44:01,769 - finguardai.analysis - INFO -          FinGuardAI - Financial Security Analysis for portal.lcu.edu.ng         
+2025-05-17 16:44:01,769 - finguardai.analysis - INFO - ================================================================================
+2025-05-17 16:44:01,770 - finguardai.analysis - INFO - Processing scan file: C:\Users\CYBER\Downloads\finguardai-admin (3)\backend\nmap_portal.lcu.edu.ng.txt
+2025-05-17 16:44:01,779 - finguardai.remediation - INFO - Loaded remediation knowledge base from C:\Users\CYBER\Downloads\finguardai-admin (3)\backend\ml\remediation\remediation_db.json
+2025-05-17 16:44:01,921 - finguardai.analysis - INFO - Target: portal.lcu.edu.ng
+2025-05-17 16:44:01,921 - finguardai.analysis - INFO - OS: None
+2025-05-17 16:44:01,922 - finguardai.analysis - INFO - Financial Risk Level: medium
+2025-05-17 16:44:01,923 - finguardai.analysis - INFO - Open Ports: 2
+2025-05-17 16:44:01,941 - finguardai.analysis - INFO -   - Port 21/ftp: FTP - File Transfer
+2025-05-17 16:44:01,942 - finguardai.analysis - INFO -     Financial Impact: Possible sensitive data transfer channel
+2025-05-17 16:44:01,951 - finguardai.analysis - INFO -   - Port 22/ssh: SSH - Secure Shell
+2025-05-17 16:44:01,952 - finguardai.analysis - INFO -     Financial Impact: Administrative access to financial systems
+2025-05-17 16:44:01,971 - finguardai.analysis - INFO -   No specific vulnerabilities detected in the scan
+2025-05-17 16:44:01,976 - finguardai.analysis - INFO -   1. Block connections to known malicious destinations
+2025-05-17 16:44:01,977 - finguardai.analysis - INFO -   2. Implement network behavior analysis
+2025-05-17 16:44:01,978 - finguardai.analysis - INFO -   3. Review and tighten firewall rules
+2025-05-17 16:44:01,978 - finguardai.analysis - INFO -   4. Deploy intrusion prevention systems
+2025-05-17 16:44:01,979 - finguardai.analysis - INFO -   5. Consider zero trust network architecture
+2025-05-17 16:44:01,988 - finguardai.analysis - INFO -   Financial Service Exposure:
+2025-05-17 16:44:01,988 - finguardai.analysis - INFO -   - Port 21/ftp: FTP - Potential financial data transfer risk
+2025-05-17 16:44:01,988 - finguardai.analysis - INFO -     Recommendation: Replace FTP with SFTP or FTPS for secure financial data transfer
+2025-05-17 16:44:01,989 - finguardai.analysis - INFO -   - Port 22/ssh: SSH - Admin access to financial systems
+2025-05-17 16:44:01,991 - finguardai.analysis - INFO -     Recommendation: Implement key-based authentication and disable password login
+2025-05-17 16:44:02,003 - finguardai.analysis - INFO -   Financial Security Risk Level: MEDIUM
+2025-05-17 16:44:02,030 - finguardai.analysis - INFO -   1. Implement separate network segments for financial data (student payments, scholarships)
+2025-05-17 16:44:02,033 - finguardai.analysis - INFO -   2. Use dedicated payment processors rather than handling financial data directly
+2025-05-17 16:44:02,034 - finguardai.analysis - INFO -   3. Ensure compliance with educational sector financial regulations
+2025-05-17 16:44:02,035 - finguardai.analysis - INFO -   4. Implement strong session management for portal access
+2025-05-17 16:44:02,035 - finguardai.analysis - INFO -   5. Deploy data loss prevention tools focused on student financial records
+2025-05-17 16:44:02,036 - finguardai.analysis - INFO - 
+================================================================================

@@ -1,0 +1,3718 @@
+{
+  "resultsPerPage": 50,
+  "startIndex": 0,
+  "totalResults": 464,
+  "format": "NVD_CVE",
+  "version": "2.0",
+  "timestamp": "2025-05-17T19:32:59.938",
+  "vulnerabilities": [
+    {
+      "cve": {
+        "id": "CVE-2024-11924",
+        "sourceIdentifier": "contact@wpscan.com",
+        "published": "2025-04-17T06:15:42.460",
+        "lastModified": "2025-04-29T19:10:33.087",
+        "vulnStatus": "Analyzed",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The Icegram Express formerly known as Email Subscribers  WordPress plugin before 5.7.52 does not sanitise and escape some of its settings, which could allow high privilege users such as admin to perform Stored Cross-Site Scripting attacks even when the unfiltered_html capability is disallowed (for example in multisite setup)."
+          },
+          {
+            "lang": "es",
+            "value": "El complemento Icegram Express formerly known as Email Subscribers WordPress para WordPress antes de la versi\u00f3n 5.7.52 no depura ni escapa de algunas de sus configuraciones, lo que podr\u00eda permitir a usuarios con privilegios elevados como el administrador realizar ataques de Cross Site Scripting almacenado incluso cuando la capacidad unfiltered_html no est\u00e1 permitida (por ejemplo, en una configuraci\u00f3n de varios sitios)."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:U/C:L/I:L/A:N",
+                "baseScore": 3.5,
+                "baseSeverity": "LOW",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "HIGH",
+                "userInteraction": "REQUIRED",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "LOW",
+                "integrityImpact": "LOW",
+                "availabilityImpact": "NONE"
+              },
+              "exploitabilityScore": 0.9,
+              "impactScore": 2.5
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "nvd@nist.gov",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-79"
+              }
+            ]
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:icegram:icegram_express:*:*:*:*:*:wordpress:*:*",
+                    "versionEndExcluding": "5.7.52",
+                    "matchCriteriaId": "4B4184FB-9873-463D-B242-A29482BB1842"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://wpscan.com/vulnerability/70288369-132d-4211-bca0-0411736df747/",
+            "source": "contact@wpscan.com",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2024-13925",
+        "sourceIdentifier": "contact@wpscan.com",
+        "published": "2025-04-17T06:15:43.590",
+        "lastModified": "2025-04-29T19:09:09.200",
+        "vulnStatus": "Analyzed",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The Klarna Checkout for WooCommerce WordPress plugin before 2.13.5 exposes an unauthenticated WooCommerce Ajax endpoint that allows an attacker to flood the log files with data at the maximum size allowed for a POST parameter per request. This can result in rapid consumption of disk space, potentially filling the entire disk."
+          },
+          {
+            "lang": "es",
+            "value": "El complemento Klarna Checkout para WooCommerce de WordPress anterior a la versi\u00f3n 2.13.5 expone un endpoint Ajax de WooCommerce no autenticado que permite a un atacante inundar los archivos de registro con datos del tama\u00f1o m\u00e1ximo permitido para un par\u00e1metro POST por solicitud. Esto puede provocar un consumo r\u00e1pido de espacio en disco, llegando incluso a llenarlo por completo."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                "baseScore": 7.5,
+                "baseSeverity": "HIGH",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "NONE",
+                "userInteraction": "NONE",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "NONE",
+                "integrityImpact": "NONE",
+                "availabilityImpact": "HIGH"
+              },
+              "exploitabilityScore": 3.9,
+              "impactScore": 3.6
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "nvd@nist.gov",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "NVD-CWE-noinfo"
+              }
+            ]
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:klarna:klarna_checkout_for_woocommerce:*:*:*:*:*:wordpress:*:*",
+                    "versionEndExcluding": "2.13.5",
+                    "matchCriteriaId": "45185EB1-9A55-4BD2-BB2C-FFF6B4E15EAA"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://wpscan.com/vulnerability/6aebb52f-d74a-4043-86c4-c24579f24ef4/",
+            "source": "contact@wpscan.com",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2025-1523",
+        "sourceIdentifier": "contact@wpscan.com",
+        "published": "2025-04-17T06:15:43.697",
+        "lastModified": "2025-04-29T19:06:48.263",
+        "vulnStatus": "Analyzed",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The Ultimate Dashboard  WordPress plugin before 3.8.6 does not sanitise and escape some of its settings, which could allow high privilege users such as admin to perform Stored Cross-Site Scripting attacks even when the unfiltered_html capability is disallowed (for example in multisite setup)."
+          },
+          {
+            "lang": "es",
+            "value": "El complemento Ultimate Dashboard de WordPress anterior a la versi\u00f3n 3.8.6 no depura ni escapa de algunas de sus configuraciones, lo que podr\u00eda permitir a usuarios con privilegios elevados como el administrador realizar ataques de Cross Site Scripting almacenado incluso cuando la capacidad unfiltered_html no est\u00e1 permitida (por ejemplo, en una configuraci\u00f3n de varios sitios)."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:U/C:L/I:L/A:N",
+                "baseScore": 3.5,
+                "baseSeverity": "LOW",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "HIGH",
+                "userInteraction": "REQUIRED",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "LOW",
+                "integrityImpact": "LOW",
+                "availabilityImpact": "NONE"
+              },
+              "exploitabilityScore": 0.9,
+              "impactScore": 2.5
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "nvd@nist.gov",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-79"
+              }
+            ]
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:davidvongries:ultimate_dashboard:*:*:*:*:*:wordpress:*:*",
+                    "versionEndExcluding": "3.8.6",
+                    "matchCriteriaId": "4E4AA857-6F04-4A2A-ADE9-3D646A622C8C"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://wpscan.com/vulnerability/5a20768f-3128-4b0a-a06b-2247f3e02c99/",
+            "source": "contact@wpscan.com",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2025-1524",
+        "sourceIdentifier": "contact@wpscan.com",
+        "published": "2025-04-17T06:15:43.793",
+        "lastModified": "2025-04-30T15:47:00.377",
+        "vulnStatus": "Analyzed",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The Ultimate Dashboard  WordPress plugin before 3.8.6 does not sanitise and escape some of its settings, which could allow high privilege users such as admin to perform Stored Cross-Site Scripting attacks even when the unfiltered_html capability is disallowed (for example in multisite setup)."
+          },
+          {
+            "lang": "es",
+            "value": "El complemento Ultimate Dashboard de WordPress anterior a la versi\u00f3n 3.8.6 no depura ni escapa de algunas de sus configuraciones, lo que podr\u00eda permitir a usuarios con privilegios elevados como el administrador realizar ataques de Cross Site Scripting almacenado incluso cuando la capacidad unfiltered_html no est\u00e1 permitida (por ejemplo, en una configuraci\u00f3n de varios sitios)."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:U/C:L/I:L/A:N",
+                "baseScore": 3.5,
+                "baseSeverity": "LOW",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "HIGH",
+                "userInteraction": "REQUIRED",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "LOW",
+                "integrityImpact": "LOW",
+                "availabilityImpact": "NONE"
+              },
+              "exploitabilityScore": 0.9,
+              "impactScore": 2.5
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "nvd@nist.gov",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-79"
+              }
+            ]
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:davidvongries:ultimate_dashboard:*:*:*:*:*:wordpress:*:*",
+                    "versionEndExcluding": "3.8.6",
+                    "matchCriteriaId": "4E4AA857-6F04-4A2A-ADE9-3D646A622C8C"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://wpscan.com/vulnerability/36aed1e4-05cb-42d2-b835-f6336f1a82cd/",
+            "source": "contact@wpscan.com",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2025-1525",
+        "sourceIdentifier": "contact@wpscan.com",
+        "published": "2025-04-17T06:15:43.890",
+        "lastModified": "2025-04-30T15:46:20.947",
+        "vulnStatus": "Analyzed",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The Ultimate Dashboard  WordPress plugin before 3.8.6 does not sanitise and escape some of its settings, which could allow high privilege users such as admin to perform Stored Cross-Site Scripting attacks even when the unfiltered_html capability is disallowed (for example in multisite setup)."
+          },
+          {
+            "lang": "es",
+            "value": "El complemento Ultimate Dashboard de WordPress anterior a la versi\u00f3n 3.8.6 no depura ni escapa de algunas de sus configuraciones, lo que podr\u00eda permitir a usuarios con privilegios elevados como el administrador realizar ataques de Cross Site Scripting almacenado incluso cuando la capacidad unfiltered_html no est\u00e1 permitida (por ejemplo, en una configuraci\u00f3n de varios sitios)."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:U/C:L/I:L/A:N",
+                "baseScore": 3.5,
+                "baseSeverity": "LOW",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "HIGH",
+                "userInteraction": "REQUIRED",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "LOW",
+                "integrityImpact": "LOW",
+                "availabilityImpact": "NONE"
+              },
+              "exploitabilityScore": 0.9,
+              "impactScore": 2.5
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "nvd@nist.gov",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-79"
+              }
+            ]
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:davidvongries:ultimate_dashboard:*:*:*:*:*:wordpress:*:*",
+                    "versionEndExcluding": "3.8.6",
+                    "matchCriteriaId": "4E4AA857-6F04-4A2A-ADE9-3D646A622C8C"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://wpscan.com/vulnerability/d457733f-72e9-45e2-ac07-4e1b94e46102/",
+            "source": "contact@wpscan.com",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2025-3294",
+        "sourceIdentifier": "security@wordfence.com",
+        "published": "2025-04-17T06:15:43.977",
+        "lastModified": "2025-04-17T20:21:48.243",
+        "vulnStatus": "Awaiting Analysis",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The WP Editor plugin for WordPress is vulnerable to arbitrary file update due to missing file path validation in all versions up to, and including, 1.2.9.1. This makes it possible for authenticated attackers, with Administrator-level access and above, to overwrite arbitrary files on the affected site's server which may make remote code execution possible assuming the files can be written to by the web server."
+          },
+          {
+            "lang": "es",
+            "value": "El complemento WP Editor para WordPress es vulnerable a la actualizaci\u00f3n arbitraria de archivos debido a la falta de validaci\u00f3n de la ruta de archivo en todas las versiones hasta la 1.2.9.1 incluida. Esto permite que atacantes autenticados, con acceso de administrador o superior, sobrescriban archivos arbitrarios en el servidor del sitio afectado, lo que podr\u00eda permitir la ejecuci\u00f3n remota de c\u00f3digo, siempre que el servidor web pueda escribir en los archivos."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "security@wordfence.com",
+              "type": "Primary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 7.2,
+                "baseSeverity": "HIGH",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "HIGH",
+                "userInteraction": "NONE",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "HIGH",
+                "integrityImpact": "HIGH",
+                "availabilityImpact": "HIGH"
+              },
+              "exploitabilityScore": 1.2,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "security@wordfence.com",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-22"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://plugins.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&new=3269832%40wp-editor%2Ftrunk&old=3151053%40wp-editor%2Ftrunk&sfp_email=&sfph_mail=",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/9298820e-3753-41b3-8ba6-9fb494e215a8?source=cve",
+            "source": "security@wordfence.com"
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2025-3295",
+        "sourceIdentifier": "security@wordfence.com",
+        "published": "2025-04-17T06:15:44.257",
+        "lastModified": "2025-04-17T20:21:48.243",
+        "vulnStatus": "Awaiting Analysis",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The WP Editor plugin for WordPress is vulnerable to arbitrary file read in all versions up to, and including, 1.2.9.1. This makes it possible for authenticated attackers, with Administrator-level access and above, to read arbitrary files on the affected site's server which may reveal sensitive information."
+          },
+          {
+            "lang": "es",
+            "value": "El complemento WP Editor para WordPress es vulnerable a la lectura arbitraria de archivos en todas las versiones hasta la 1.2.9.1 incluida. Esto permite que atacantes autenticados, con acceso de administrador o superior, lean archivos arbitrarios en el servidor del sitio afectado, lo que podr\u00eda revelar informaci\u00f3n confidencial."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "security@wordfence.com",
+              "type": "Primary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:N/A:N",
+                "baseScore": 4.9,
+                "baseSeverity": "MEDIUM",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "HIGH",
+                "userInteraction": "NONE",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "HIGH",
+                "integrityImpact": "NONE",
+                "availabilityImpact": "NONE"
+              },
+              "exploitabilityScore": 1.2,
+              "impactScore": 3.6
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "security@wordfence.com",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-22"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://plugins.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&new=3269832%40wp-editor%2Ftrunk&old=3151053%40wp-editor%2Ftrunk&sfp_email=&sfph_mail=",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/4618c1f4-c0aa-47f5-8c0b-2cb4a021f2e0?source=cve",
+            "source": "security@wordfence.com"
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2025-3615",
+        "sourceIdentifier": "security@wordfence.com",
+        "published": "2025-04-17T08:15:12.730",
+        "lastModified": "2025-04-17T20:21:48.243",
+        "vulnStatus": "Awaiting Analysis",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The Fluent Forms plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the form-submission.js script in all versions up to, and including, 6.0.2 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with Contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page."
+          },
+          {
+            "lang": "es",
+            "value": "El complemento Fluent Forms para WordPress es vulnerable a Cross Site Scripting almacenado a trav\u00e9s del script form-submission.js en todas las versiones hasta la 6.0.2 incluida, debido a una depuraci\u00f3n de entrada y al escape de salida insuficiente. Esto permite a atacantes autenticados, con acceso de colaborador o superior, inyectar scripts web arbitrarios en p\u00e1ginas que se ejecutar\u00e1n al acceder un usuario a una p\u00e1gina inyectada."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "security@wordfence.com",
+              "type": "Primary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N",
+                "baseScore": 6.4,
+                "baseSeverity": "MEDIUM",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "LOW",
+                "userInteraction": "NONE",
+                "scope": "CHANGED",
+                "confidentialityImpact": "LOW",
+                "integrityImpact": "LOW",
+                "availabilityImpact": "NONE"
+              },
+              "exploitabilityScore": 3.1,
+              "impactScore": 2.7
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "security@wordfence.com",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-79"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/fluentform/tags/6.0.2/assets/js/form-submission.js",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/changeset/3274693/",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://wordpress.org/plugins/fluentform/#developers",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/f31bd18e-57d4-4c87-8a7c-a168e7e70061?source=cve",
+            "source": "security@wordfence.com"
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2025-3453",
+        "sourceIdentifier": "security@wordfence.com",
+        "published": "2025-04-17T12:15:15.467",
+        "lastModified": "2025-04-17T20:21:48.243",
+        "vulnStatus": "Awaiting Analysis",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The Password Protected \u2013 Password Protect your WordPress Site, Pages, & WooCommerce Products \u2013 Restrict Content, Protect WooCommerce Category and more plugin for WordPress is vulnerable to Sensitive Information Exposure in all versions up to, and including, 2.7.7 via the 'password_protected_cookie' function. This makes it possible for unauthenticated attackers to extract sensitive data including all protected site content if the 'Use Transient' setting is enabled."
+          },
+          {
+            "lang": "es",
+            "value": "El complemento Password Protected \u2013 Password Protect your WordPress Site, Pages, &amp; WooCommerce Products \u2013 Restrict Content, Protect WooCommerce Category and more para WordPress es vulnerable a la exposici\u00f3n de informaci\u00f3n confidencial en todas las versiones hasta la 2.7.7 incluida, a trav\u00e9s de la funci\u00f3n \"password_protected_cookie\". Esto permite que atacantes no autenticados extraigan datos confidenciales, incluido todo el contenido protegido del sitio, si la opci\u00f3n \"Usar transitorio\" est\u00e1 activada."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "security@wordfence.com",
+              "type": "Primary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+                "baseScore": 5.3,
+                "baseSeverity": "MEDIUM",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "NONE",
+                "userInteraction": "NONE",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "LOW",
+                "integrityImpact": "NONE",
+                "availabilityImpact": "NONE"
+              },
+              "exploitabilityScore": 3.9,
+              "impactScore": 1.4
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "security@wordfence.com",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-863"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/password-protected/trunk/includes/compatibility.php",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/changeset/3274358/",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/241d75ca-55e3-461a-9844-52e69904da1b?source=cve",
+            "source": "security@wordfence.com"
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2025-3479",
+        "sourceIdentifier": "security@wordfence.com",
+        "published": "2025-04-17T12:15:15.633",
+        "lastModified": "2025-04-17T20:21:48.243",
+        "vulnStatus": "Awaiting Analysis",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The Forminator Forms \u2013 Contact Form, Payment Form & Custom Form Builder plugin for WordPress is vulnerable to Order Replay in all versions up to, and including, 1.42.0 via the 'handle_stripe_single' function due to insufficient validation on a user controlled key. This makes it possible for unauthenticated attackers to reuse a single Stripe PaymentIntent for multiple transactions. Only the first transaction is processed via Stripe, but the plugin sends a successful email message for each transaction, which may trick an administrator into fulfilling each order."
+          },
+          {
+            "lang": "es",
+            "value": "El complemento Forminator Forms \u2013 Contact Form, Payment Form &amp; Custom Form Builder para WordPress es vulnerable a la repetici\u00f3n de pedidos en todas las versiones hasta la 1.42.0 incluida, a trav\u00e9s de la funci\u00f3n 'handle_stripe_single', debido a una validaci\u00f3n insuficiente en una clave controlada por el usuario. Esto permite que atacantes no autenticados reutilicen un \u00fanico PaymentIntent de Stripe para m\u00faltiples transacciones. Solo la primera transacci\u00f3n se procesa a trav\u00e9s de Stripe, pero el complemento env\u00eda un correo electr\u00f3nico con cada transacci\u00f3n realizada correctamente, lo que puede enga\u00f1ar al administrador para que complete cada pedido."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "security@wordfence.com",
+              "type": "Primary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+                "baseScore": 5.3,
+                "baseSeverity": "MEDIUM",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "NONE",
+                "userInteraction": "NONE",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "NONE",
+                "integrityImpact": "LOW",
+                "availabilityImpact": "NONE"
+              },
+              "exploitabilityScore": 3.9,
+              "impactScore": 1.4
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "security@wordfence.com",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-354"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/forminator/tags/1.41.2/library/modules/custom-forms/front/front-action.php#L964",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/changeset/3274844/",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/c873c04e-516e-41ee-a295-b8c5235abc1b?source=cve",
+            "source": "security@wordfence.com"
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2025-3487",
+        "sourceIdentifier": "security@wordfence.com",
+        "published": "2025-04-17T12:15:15.797",
+        "lastModified": "2025-04-17T20:21:48.243",
+        "vulnStatus": "Awaiting Analysis",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The Forminator Forms \u2013 Contact Form, Payment Form & Custom Form Builder plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the \u2018limit\u2019 parameter in all versions up to, and including, 1.42.0 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with Contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page."
+          },
+          {
+            "lang": "es",
+            "value": "El complemento Forminator Forms \u2013 Contact Form, Payment Form &amp; Custom Form Builder para WordPress es vulnerable a Cross Site Scripting almacenado a trav\u00e9s del par\u00e1metro \"limit\" en todas las versiones hasta la 1.42.0 incluida, debido a una depuraci\u00f3n de entrada y un escape de salida insuficientes. Esto permite a atacantes autenticados, con acceso de colaborador o superior, inyectar scripts web arbitrarios en p\u00e1ginas que se ejecutar\u00e1n al acceder un usuario a una p\u00e1gina inyectada."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "security@wordfence.com",
+              "type": "Primary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N",
+                "baseScore": 6.4,
+                "baseSeverity": "MEDIUM",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "LOW",
+                "userInteraction": "NONE",
+                "scope": "CHANGED",
+                "confidentialityImpact": "LOW",
+                "integrityImpact": "LOW",
+                "availabilityImpact": "NONE"
+              },
+              "exploitabilityScore": 3.1,
+              "impactScore": 2.7
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "security@wordfence.com",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-79"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/forminator/tags/1.41.2/assets/js/front/front.loader.js#L320",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/forminator/tags/1.41.2/assets/js/front/front.multi.js#L1006",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/changeset/3274844/",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/5039d63b-377d-435a-be31-4ae81ea30dd3?source=cve",
+            "source": "security@wordfence.com"
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2025-23906",
+        "sourceIdentifier": "audit@patchstack.com",
+        "published": "2025-04-17T16:15:31.040",
+        "lastModified": "2025-04-17T20:21:48.243",
+        "vulnStatus": "Awaiting Analysis",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Missing Authorization vulnerability in wpseek WordPress Dashboard Tweeter allows Exploiting Incorrectly Configured Access Control Security Levels. This issue affects WordPress Dashboard Tweeter: from n/a through 1.3.2."
+          },
+          {
+            "lang": "es",
+            "value": "La vulnerabilidad de falta de autorizaci\u00f3n en wpseek WordPress Dashboard Tweeter permite explotar niveles de seguridad de control de acceso configurados incorrectamente. Este problema afecta al Tweeter del panel de WordPress desde la versi\u00f3n n/d hasta la 1.3.2."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "audit@patchstack.com",
+              "type": "Secondary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L",
+                "baseScore": 6.5,
+                "baseSeverity": "MEDIUM",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "NONE",
+                "userInteraction": "NONE",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "NONE",
+                "integrityImpact": "LOW",
+                "availabilityImpact": "LOW"
+              },
+              "exploitabilityScore": 3.9,
+              "impactScore": 2.5
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "audit@patchstack.com",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-862"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://patchstack.com/database/wordpress/plugin/wordpress-dashboard-twitter/vulnerability/wordpress-wordpress-dashboard-tweeter-plugin-1-3-2-settings-change-vulnerability?_s_id=cve",
+            "source": "audit@patchstack.com"
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2025-24548",
+        "sourceIdentifier": "audit@patchstack.com",
+        "published": "2025-04-17T16:15:31.437",
+        "lastModified": "2025-04-17T20:21:48.243",
+        "vulnStatus": "Awaiting Analysis",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Autoglot Autoglot \u2013 Automatic WordPress Translation allows Reflected XSS. This issue affects Autoglot \u2013 Automatic WordPress Translation: from n/a through 2.4.7."
+          },
+          {
+            "lang": "es",
+            "value": "Vulnerabilidad de neutralizaci\u00f3n incorrecta de la entrada durante la generaci\u00f3n de p\u00e1ginas web ('Cross-site Scripting') en Autoglot Autoglot \u2013 Automatic WordPress Translation permite XSS reflejado. Este problema afecta a Autoglot \u2013 Traducci\u00f3n Autom\u00e1tica de WordPress: desde n/d hasta la versi\u00f3n 2.4.7."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "audit@patchstack.com",
+              "type": "Secondary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
+                "baseScore": 7.1,
+                "baseSeverity": "HIGH",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "NONE",
+                "userInteraction": "REQUIRED",
+                "scope": "CHANGED",
+                "confidentialityImpact": "LOW",
+                "integrityImpact": "LOW",
+                "availabilityImpact": "LOW"
+              },
+              "exploitabilityScore": 2.8,
+              "impactScore": 3.7
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "audit@patchstack.com",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-79"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://patchstack.com/database/wordpress/plugin/autoglot/vulnerability/wordpress-autoglot-automatic-wordpress-translation-plugin-2-4-7-reflected-cross-site-scripting-xss-vulnerability?_s_id=cve",
+            "source": "audit@patchstack.com"
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2025-24651",
+        "sourceIdentifier": "audit@patchstack.com",
+        "published": "2025-04-17T16:15:33.600",
+        "lastModified": "2025-04-17T20:21:48.243",
+        "vulnStatus": "Awaiting Analysis",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Insertion of Sensitive Information into Log File vulnerability in WebToffee WordPress Backup & Migration allows Retrieve Embedded Sensitive Data. This issue affects WordPress Backup & Migration: from n/a through 1.5.3."
+          },
+          {
+            "lang": "es",
+            "value": "La vulnerabilidad de inserci\u00f3n de informaci\u00f3n confidencial en el archivo de registro en WebToffee WordPress Backup &amp; Migration permite recuperar datos confidenciales incrustados. Este problema afecta a WordPress Backup &amp; Migration desde la versi\u00f3n n/d hasta la 1.5.3."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "audit@patchstack.com",
+              "type": "Secondary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+                "baseScore": 5.9,
+                "baseSeverity": "MEDIUM",
+                "attackVector": "NETWORK",
+                "attackComplexity": "HIGH",
+                "privilegesRequired": "NONE",
+                "userInteraction": "NONE",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "HIGH",
+                "integrityImpact": "NONE",
+                "availabilityImpact": "NONE"
+              },
+              "exploitabilityScore": 2.2,
+              "impactScore": 3.6
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "audit@patchstack.com",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-532"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://patchstack.com/database/wordpress/plugin/wp-migration-duplicator/vulnerability/wordpress-webtoffee-wp-backup-and-migration-plugin-1-5-3-sensitive-data-exposure-vulnerability?_s_id=cve",
+            "source": "audit@patchstack.com"
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2025-27291",
+        "sourceIdentifier": "audit@patchstack.com",
+        "published": "2025-04-17T16:15:35.800",
+        "lastModified": "2025-04-17T20:21:48.243",
+        "vulnStatus": "Awaiting Analysis",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in uxgallery WordPress Photo Gallery \u2013 Image Gallery allows Reflected XSS. This issue affects WordPress Photo Gallery \u2013 Image Gallery: from n/a through 2.0.4."
+          },
+          {
+            "lang": "es",
+            "value": "Vulnerabilidad de neutralizaci\u00f3n incorrecta de la entrada durante la generaci\u00f3n de p\u00e1ginas web ('Cross-site Scripting') en uxgallery WordPress Photo Gallery \u2013 Image Gallery permite XSS reflejado. Este problema afecta a la Galer\u00eda de Fotos de WordPress (Galer\u00eda de Im\u00e1genes): desde n/d hasta la versi\u00f3n 2.0.4."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "audit@patchstack.com",
+              "type": "Secondary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
+                "baseScore": 7.1,
+                "baseSeverity": "HIGH",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "NONE",
+                "userInteraction": "REQUIRED",
+                "scope": "CHANGED",
+                "confidentialityImpact": "LOW",
+                "integrityImpact": "LOW",
+                "availabilityImpact": "LOW"
+              },
+              "exploitabilityScore": 2.8,
+              "impactScore": 3.7
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "audit@patchstack.com",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-79"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://patchstack.com/database/wordpress/plugin/photo-image-gallery/vulnerability/wordpress-photo-gallery-image-gallery-plugin-2-0-4-reflected-cross-site-scripting-xss-vulnerability?_s_id=cve",
+            "source": "audit@patchstack.com"
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2025-32520",
+        "sourceIdentifier": "audit@patchstack.com",
+        "published": "2025-04-17T16:15:40.960",
+        "lastModified": "2025-04-17T20:21:05.203",
+        "vulnStatus": "Awaiting Analysis",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in M. Ali Saleem WordPress Health and Server Condition \u2013 Integrated with Google Page Speed allows Reflected XSS. This issue affects WordPress Health and Server Condition \u2013 Integrated with Google Page Speed: from n/a through 4.1.1."
+          },
+          {
+            "lang": "es",
+            "value": "Vulnerabilidad de neutralizaci\u00f3n incorrecta de la entrada durante la generaci\u00f3n de p\u00e1ginas web ('Cross-site Scripting') en M. Ali Saleem WordPress Health and Server Condition \u2013 Integrated with Google Page Speed permite XSS reflejado. Este problema afecta a WordPress Health and Server Condition \u2013 Integrated with Google Page Speed: desde n/d hasta la versi\u00f3n 4.1.1."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "audit@patchstack.com",
+              "type": "Secondary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
+                "baseScore": 7.1,
+                "baseSeverity": "HIGH",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "NONE",
+                "userInteraction": "REQUIRED",
+                "scope": "CHANGED",
+                "confidentialityImpact": "LOW",
+                "integrityImpact": "LOW",
+                "availabilityImpact": "LOW"
+              },
+              "exploitabilityScore": 2.8,
+              "impactScore": 3.7
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "audit@patchstack.com",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-79"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://patchstack.com/database/wordpress/plugin/wp-condition/vulnerability/wordpress-wordpress-health-and-server-condition-plugin-4-1-1-reflected-cross-site-scripting-xss-vulnerability?_s_id=cve",
+            "source": "audit@patchstack.com"
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2025-32592",
+        "sourceIdentifier": "audit@patchstack.com",
+        "published": "2025-04-17T16:15:45.360",
+        "lastModified": "2025-04-17T20:21:05.203",
+        "vulnStatus": "Awaiting Analysis",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in RealMag777 TableOn \u2013 WordPress Posts Table Filterable allows Stored XSS. This issue affects TableOn \u2013 WordPress Posts Table Filterable: from n/a through 1.0.3."
+          },
+          {
+            "lang": "es",
+            "value": "Vulnerabilidad de neutralizaci\u00f3n incorrecta de la entrada durante la generaci\u00f3n de p\u00e1ginas web ('Cross-site Scripting') en RealMag777 TableOn \u2013 WordPress Posts Table Filterable permite XSS almacenado. Este problema afecta a TableOn \u2013 Tabla de entradas de WordPress filtrable: desde n/d hasta la versi\u00f3n 1.0.3."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "audit@patchstack.com",
+              "type": "Secondary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
+                "baseScore": 7.1,
+                "baseSeverity": "HIGH",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "NONE",
+                "userInteraction": "REQUIRED",
+                "scope": "CHANGED",
+                "confidentialityImpact": "LOW",
+                "integrityImpact": "LOW",
+                "availabilityImpact": "LOW"
+              },
+              "exploitabilityScore": 2.8,
+              "impactScore": 3.7
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "audit@patchstack.com",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-79"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://patchstack.com/database/wordpress/plugin/posts-table-filterable/vulnerability/wordpress-tableon-plugin-1-0-3-cross-site-scripting-xss-vulnerability?_s_id=cve",
+            "source": "audit@patchstack.com"
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2025-32630",
+        "sourceIdentifier": "audit@patchstack.com",
+        "published": "2025-04-17T16:15:47.717",
+        "lastModified": "2025-04-17T20:21:05.203",
+        "vulnStatus": "Awaiting Analysis",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in CMSJunkie - WordPress Business Directory Plugins WP-BusinessDirectory allows Reflected XSS. This issue affects WP-BusinessDirectory: from n/a through 3.1.2."
+          },
+          {
+            "lang": "es",
+            "value": "Vulnerabilidad de neutralizaci\u00f3n incorrecta de la entrada durante la generaci\u00f3n de p\u00e1ginas web ('Cross-site Scripting') en CMSJunkie - WordPress Business Directory Plugins WP-BusinessDirectory permite XSS reflejado. Este problema afecta a WP-BusinessDirectory desde n/d hasta la versi\u00f3n 3.1.2."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "audit@patchstack.com",
+              "type": "Secondary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
+                "baseScore": 7.1,
+                "baseSeverity": "HIGH",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "NONE",
+                "userInteraction": "REQUIRED",
+                "scope": "CHANGED",
+                "confidentialityImpact": "LOW",
+                "integrityImpact": "LOW",
+                "availabilityImpact": "LOW"
+              },
+              "exploitabilityScore": 2.8,
+              "impactScore": 3.7
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "audit@patchstack.com",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-79"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://patchstack.com/database/wordpress/plugin/wp-businessdirectory/vulnerability/wordpress-wp-businessdirectory-plugin-3-1-2-reflected-cross-site-scripting-xss-vulnerability?_s_id=cve",
+            "source": "audit@patchstack.com"
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2025-39417",
+        "sourceIdentifier": "audit@patchstack.com",
+        "published": "2025-04-17T16:15:51.410",
+        "lastModified": "2025-04-17T20:21:05.203",
+        "vulnStatus": "Awaiting Analysis",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Cross-Site Request Forgery (CSRF) vulnerability in Eslam Mahmoud Redirect wordpress to welcome or landing page allows Stored XSS. This issue affects Redirect wordpress to welcome or landing page: from n/a through 2.0."
+          },
+          {
+            "lang": "es",
+            "value": "Vulnerabilidad de Cross-Site Request Forgery (CSRF) en Eslam Mahmoud Redirect WordPress a la p\u00e1gina de bienvenida o de aterrizaje permite XSS almacenado. Este problema afecta a Redirect WordPress a la p\u00e1gina de bienvenida o de aterrizaje desde n/d hasta la versi\u00f3n 2.0."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "audit@patchstack.com",
+              "type": "Secondary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
+                "baseScore": 7.1,
+                "baseSeverity": "HIGH",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "NONE",
+                "userInteraction": "REQUIRED",
+                "scope": "CHANGED",
+                "confidentialityImpact": "LOW",
+                "integrityImpact": "LOW",
+                "availabilityImpact": "LOW"
+              },
+              "exploitabilityScore": 2.8,
+              "impactScore": 3.7
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "audit@patchstack.com",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-352"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://patchstack.com/database/wordpress/plugin/redirect-to-welcome-or-landing-page/vulnerability/wordpress-redirect-wordpress-to-welcome-or-landing-page-plugin-2-0-csrf-to-stored-xss-vulnerability?_s_id=cve",
+            "source": "audit@patchstack.com"
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2025-39431",
+        "sourceIdentifier": "audit@patchstack.com",
+        "published": "2025-04-17T16:15:53.307",
+        "lastModified": "2025-04-17T20:21:05.203",
+        "vulnStatus": "Awaiting Analysis",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Cross-Site Request Forgery (CSRF) vulnerability in Aaron Forgue Amazon Showcase WordPress Plugin allows Stored XSS. This issue affects Amazon Showcase WordPress Plugin: from n/a through 2.2."
+          },
+          {
+            "lang": "es",
+            "value": "Vulnerabilidad de Cross-Site Request Forgery (CSRF) en Aaron Forgue Amazon Showcase WordPress Plugin permite XSS almacenado. Este problema afecta al plugin de WordPress para Amazon Showcase: desde n/d hasta la versi\u00f3n 2.2."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "audit@patchstack.com",
+              "type": "Secondary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
+                "baseScore": 7.1,
+                "baseSeverity": "HIGH",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "NONE",
+                "userInteraction": "REQUIRED",
+                "scope": "CHANGED",
+                "confidentialityImpact": "LOW",
+                "integrityImpact": "LOW",
+                "availabilityImpact": "LOW"
+              },
+              "exploitabilityScore": 2.8,
+              "impactScore": 3.7
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "audit@patchstack.com",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-352"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://patchstack.com/database/wordpress/plugin/amazon-showcase-wordpress-widget/vulnerability/wordpress-amazon-showcase-wordpress-plugin-plugin-2-2-csrf-to-xss-vulnerability?_s_id=cve",
+            "source": "audit@patchstack.com"
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2024-13650",
+        "sourceIdentifier": "security@wordfence.com",
+        "published": "2025-04-18T02:15:14.060",
+        "lastModified": "2025-04-21T14:23:45.950",
+        "vulnStatus": "Awaiting Analysis",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The Piotnet Addons For Elementor plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'PAFE Before After Image Comparison Slider' widget in all versions up to, and including, 2.4.34 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with Contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page."
+          },
+          {
+            "lang": "es",
+            "value": "El complemento Piotnet Addons para Elementor para WordPress es vulnerable a Cross Site Scripting almacenado a trav\u00e9s del widget \"PAFE Before After Image Comparison Slider\" en todas las versiones hasta la 2.4.34 incluida, debido a una depuraci\u00f3n de entrada y al escape de salida insuficiente. Esto permite a atacantes autenticados, con acceso de colaborador o superior, inyectar scripts web arbitrarios en p\u00e1ginas que se ejecutar\u00e1n al acceder un usuario a una p\u00e1gina inyectada."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "security@wordfence.com",
+              "type": "Primary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N",
+                "baseScore": 6.4,
+                "baseSeverity": "MEDIUM",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "LOW",
+                "userInteraction": "NONE",
+                "scope": "CHANGED",
+                "confidentialityImpact": "LOW",
+                "integrityImpact": "LOW",
+                "availabilityImpact": "NONE"
+              },
+              "exploitabilityScore": 3.1,
+              "impactScore": 2.7
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "security@wordfence.com",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-79"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://wordpress.org/plugins/piotnet-addons-for-elementor/",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/4e3d0ffd-209b-4e29-bc1d-91f2498b4632?source=cve",
+            "source": "security@wordfence.com"
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2025-2613",
+        "sourceIdentifier": "security@wordfence.com",
+        "published": "2025-04-18T02:15:14.250",
+        "lastModified": "2025-04-21T14:23:45.950",
+        "vulnStatus": "Awaiting Analysis",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The Login Manager \u2013 Design Login Page, View Login Activity, Limit Login Attempts plugin for WordPress is vulnerable to Stored Cross-Site Scripting via Custom logo and background URLs in all versions up to, and including, 2.0.5 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with administrator-level permissions and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. This only affects multi-site installations and installations where unfiltered_html has been disabled."
+          },
+          {
+            "lang": "es",
+            "value": "El complemento Login Manager \u2013 Design Login Page, View Login Activity, Limit Login Attempts para WordPress es vulnerable a Cross Site Scripting almacenado mediante URL personalizadas de logotipos y fondos en todas las versiones hasta la 2.0.5 incluida, debido a una depuraci\u00f3n de entrada y al escape de salida insuficiente. Esto permite a atacantes autenticados, con permisos de administrador o superiores, inyectar scripts web arbitrarios en p\u00e1ginas que se ejecutar\u00e1n al acceder un usuario a una p\u00e1gina inyectada. Esto solo afecta a instalaciones multisitio y a instalaciones donde se ha deshabilitado unfiltered_html."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "security@wordfence.com",
+              "type": "Primary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:C/C:L/I:L/A:N",
+                "baseScore": 4.4,
+                "baseSeverity": "MEDIUM",
+                "attackVector": "NETWORK",
+                "attackComplexity": "HIGH",
+                "privilegesRequired": "HIGH",
+                "userInteraction": "NONE",
+                "scope": "CHANGED",
+                "confidentialityImpact": "LOW",
+                "integrityImpact": "LOW",
+                "availabilityImpact": "NONE"
+              },
+              "exploitabilityScore": 1.3,
+              "impactScore": 2.7
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "security@wordfence.com",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-79"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/customized-login/trunk/customized-login.php#L199",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/d2ea5e34-9303-43c8-8579-80ef02e1d9c4?source=cve",
+            "source": "security@wordfence.com"
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2025-3520",
+        "sourceIdentifier": "security@wordfence.com",
+        "published": "2025-04-18T02:15:14.397",
+        "lastModified": "2025-04-21T14:23:45.950",
+        "vulnStatus": "Awaiting Analysis",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The Avatar plugin for WordPress is vulnerable to arbitrary file deletion due to insufficient file path validation in a function in all versions up to, and including, 0.1.4. This makes it possible for authenticated attackers, with Subscriber-level access and above, to delete arbitrary files on the server, which can easily lead to remote code execution when the right file is deleted (such as wp-config.php)."
+          },
+          {
+            "lang": "es",
+            "value": "El complemento Avatar para WordPress es vulnerable a la eliminaci\u00f3n arbitraria de archivos debido a una validaci\u00f3n insuficiente de la ruta de archivo en una funci\u00f3n en todas las versiones hasta la 0.1.4 incluida. Esto permite que atacantes autenticados, con acceso de suscriptor o superior, eliminen archivos arbitrarios en el servidor, lo que puede provocar f\u00e1cilmente la ejecuci\u00f3n remota de c\u00f3digo al eliminar el archivo correcto (como wp-config.php)."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "security@wordfence.com",
+              "type": "Primary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H",
+                "baseScore": 8.1,
+                "baseSeverity": "HIGH",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "LOW",
+                "userInteraction": "NONE",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "NONE",
+                "integrityImpact": "HIGH",
+                "availabilityImpact": "HIGH"
+              },
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.2
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "security@wordfence.com",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-22"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/avatar/trunk/avatar.php#L417",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://wordpress.org/plugins/avatar/",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/01769760-5bfe-4352-bc5b-141f078c0b6d?source=cve",
+            "source": "security@wordfence.com"
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2025-2162",
+        "sourceIdentifier": "contact@wpscan.com",
+        "published": "2025-04-18T06:15:43.593",
+        "lastModified": "2025-04-21T14:23:45.950",
+        "vulnStatus": "Undergoing Analysis",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The MapPress Maps for WordPress plugin before 2.94.10 does not sanitise and escape some of its settings, which could allow high privilege users such as admin to perform Stored Cross-Site Scripting attacks even when the unfiltered_html capability is disallowed (for example in multisite setup)."
+          },
+          {
+            "lang": "es",
+            "value": "El complemento MapPress Maps para WordPress anterior a la versi\u00f3n 2.94.10 no depura ni escapa de algunas de sus configuraciones, lo que podr\u00eda permitir a usuarios con privilegios elevados, como el administrador, realizar ataques de Cross Site Scripting almacenado incluso cuando la capacidad unfiltered_html no est\u00e1 permitida (por ejemplo, en una configuraci\u00f3n de varios sitios)."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:L/I:L/A:N",
+                "baseScore": 4.8,
+                "baseSeverity": "MEDIUM",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "HIGH",
+                "userInteraction": "REQUIRED",
+                "scope": "CHANGED",
+                "confidentialityImpact": "LOW",
+                "integrityImpact": "LOW",
+                "availabilityImpact": "NONE"
+              },
+              "exploitabilityScore": 1.7,
+              "impactScore": 2.7
+            }
+          ]
+        },
+        "references": [
+          {
+            "url": "https://wpscan.com/vulnerability/06063788-7ab8-49cc-9911-1d9926fcf99d/",
+            "source": "contact@wpscan.com"
+          },
+          {
+            "url": "https://wpscan.com/vulnerability/06063788-7ab8-49cc-9911-1d9926fcf99d/",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2025-3598",
+        "sourceIdentifier": "security@wordfence.com",
+        "published": "2025-04-18T06:15:44.987",
+        "lastModified": "2025-04-21T14:23:45.950",
+        "vulnStatus": "Awaiting Analysis",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The Coupon Affiliates \u2013 Affiliate Plugin for WooCommerce plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via the commission_summary parameter in all versions up to, and including, .6.3.0 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link."
+          },
+          {
+            "lang": "es",
+            "value": "El complemento Coupon Affiliates \u2013 Affiliate Plugin for WooCommerce para WordPress es vulnerable a ataques de Cross-Site Scripting Reflejado a trav\u00e9s del par\u00e1metro commission_summary en todas las versiones hasta la 6.3.0 incluida, debido a una depuraci\u00f3n de entrada y al escape de salida insuficiente. Esto permite a atacantes no autenticados inyectar scripts web arbitrarios en p\u00e1ginas que se ejecutan si logran enga\u00f1ar al usuario para que realice una acci\u00f3n, como hacer clic en un enlace."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "security@wordfence.com",
+              "type": "Primary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+                "baseScore": 6.1,
+                "baseSeverity": "MEDIUM",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "NONE",
+                "userInteraction": "REQUIRED",
+                "scope": "CHANGED",
+                "confidentialityImpact": "LOW",
+                "integrityImpact": "LOW",
+                "availabilityImpact": "NONE"
+              },
+              "exploitabilityScore": 2.8,
+              "impactScore": 2.7
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "security@wordfence.com",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-79"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/woo-coupon-usage/tags/6.2.2/inc/functions/functions-all-time.php#L245",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/2d6cf33c-ac40-4892-9345-64ebe61e6be6?source=cve",
+            "source": "security@wordfence.com"
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2025-3056",
+        "sourceIdentifier": "security@wordfence.com",
+        "published": "2025-04-18T09:15:15.230",
+        "lastModified": "2025-04-21T14:23:45.950",
+        "vulnStatus": "Awaiting Analysis",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The Download Manager plugin for WordPress is vulnerable to Stored Cross-Site Scripting via SVG File uploads in all versions up to, and including, 3.3.12 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with Author-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses the SVG file."
+          },
+          {
+            "lang": "es",
+            "value": "El complemento Download Manager para WordPress es vulnerable a Cross Site Scripting almacenado al subir archivos SVG en todas las versiones hasta la 3.3.12 incluida, debido a una depuraci\u00f3n de entrada y al escape de salida insuficiente. Esto permite a atacantes autenticados, con acceso de autor o superior, inyectar scripts web arbitrarios en p\u00e1ginas que se ejecutar\u00e1n al acceder un usuario al archivo SVG."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "security@wordfence.com",
+              "type": "Primary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N",
+                "baseScore": 5.4,
+                "baseSeverity": "MEDIUM",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "LOW",
+                "userInteraction": "REQUIRED",
+                "scope": "CHANGED",
+                "confidentialityImpact": "LOW",
+                "integrityImpact": "LOW",
+                "availabilityImpact": "NONE"
+              },
+              "exploitabilityScore": 2.3,
+              "impactScore": 2.7
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "security@wordfence.com",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-79"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://plugins.trac.wordpress.org/changeset/3275196/",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://wordpress.org/plugins/download-manager/#developers",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/dd9e6ba7-f107-4d7c-a7da-35e603f3a1a8?source=cve",
+            "source": "security@wordfence.com"
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2025-3106",
+        "sourceIdentifier": "security@wordfence.com",
+        "published": "2025-04-18T10:15:14.243",
+        "lastModified": "2025-04-21T14:23:45.950",
+        "vulnStatus": "Awaiting Analysis",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The LA-Studio Element Kit for Elementor plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the plugin's Table of Contents widget in all versions up to, and including, 1.4.9 due to insufficient input sanitization and output escaping on user supplied attributes. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page."
+          },
+          {
+            "lang": "es",
+            "value": "El complemento LA-Studio Element Kit para Elementor de WordPress es vulnerable a Cross Site Scripting almacenado a trav\u00e9s del widget de tabla de contenido en todas las versiones hasta la 1.4.9 incluida, debido a una depuraci\u00f3n de entrada y al escape de salida insuficiente en los atributos proporcionados por el usuario. Esto permite a atacantes autenticados, con acceso de colaborador o superior, inyectar scripts web arbitrarios en p\u00e1ginas que se ejecutar\u00e1n al acceder un usuario a una p\u00e1gina inyectada."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "security@wordfence.com",
+              "type": "Primary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N",
+                "baseScore": 6.4,
+                "baseSeverity": "MEDIUM",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "LOW",
+                "userInteraction": "NONE",
+                "scope": "CHANGED",
+                "confidentialityImpact": "LOW",
+                "integrityImpact": "LOW",
+                "availabilityImpact": "NONE"
+              },
+              "exploitabilityScore": 3.1,
+              "impactScore": 2.7
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "security@wordfence.com",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-79"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/lastudio-element-kit/trunk/assets/js/addons/tablet-contents.min.js",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/changeset/3275257/",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://wordpress.org/plugins/lastudio-element-kit/#developers",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/7c633419-e231-437f-a2af-6f564cffc2df?source=cve",
+            "source": "security@wordfence.com"
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2025-2010",
+        "sourceIdentifier": "security@wordfence.com",
+        "published": "2025-04-19T03:15:13.563",
+        "lastModified": "2025-04-21T14:23:45.950",
+        "vulnStatus": "Awaiting Analysis",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The JobWP \u2013 Job Board, Job Listing, Career Page and Recruitment Plugin plugin for WordPress is vulnerable to SQL Injection via the 'jobwp_upload_resume' parameter in all versions up to, and including, 2.3.9 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query.  This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database."
+          },
+          {
+            "lang": "es",
+            "value": "El complemento JobWP \u2013 Job Board, Job Listing, Career Page and Recruitment Plugin para WordPress es vulnerable a la inyecci\u00f3n SQL a trav\u00e9s del par\u00e1metro 'jobwp_upload_resume' en todas las versiones hasta la 2.3.9 incluida, debido a un escape insuficiente del par\u00e1metro proporcionado por el usuario y a la falta de preparaci\u00f3n de la consulta SQL existente. Esto permite a atacantes no autenticados a\u00f1adir consultas SQL adicionales a las consultas existentes, las cuales pueden utilizarse para extraer informaci\u00f3n confidencial de la base de datos."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "security@wordfence.com",
+              "type": "Primary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+                "baseScore": 7.5,
+                "baseSeverity": "HIGH",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "NONE",
+                "userInteraction": "NONE",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "HIGH",
+                "integrityImpact": "NONE",
+                "availabilityImpact": "NONE"
+              },
+              "exploitabilityScore": 3.9,
+              "impactScore": 3.6
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "security@wordfence.com",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-89"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://plugins.trac.wordpress.org/changeset/3271612/jobwp/tags/2.4.0/core/job_application.php?old=3230672&old_path=jobwp%2Ftags%2F2.3.9%2Fcore%2Fjob_application.php",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/b3b658f0-b9d8-4b7f-8d40-39ce185ef797?source=cve",
+            "source": "security@wordfence.com"
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2025-3278",
+        "sourceIdentifier": "security@wordfence.com",
+        "published": "2025-04-19T03:15:13.730",
+        "lastModified": "2025-04-21T14:23:45.950",
+        "vulnStatus": "Awaiting Analysis",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The UrbanGo Membership plugin for WordPress is vulnerable to privilege escalation in versions up to, and including, 1.0.4. This is due to the plugin allowing users who are registering new accounts to set their own role or by supplying 'user_register_role' field. This makes it possible for unauthenticated attackers to gain elevated privileges by creating an account with the administrator role."
+          },
+          {
+            "lang": "es",
+            "value": "El complemento UrbanGo Membership para WordPress es vulnerable a la escalada de privilegios en versiones hasta la 1.0.4 incluida. Esto se debe a que el complemento permite a los usuarios que registran nuevas cuentas configurar su propio rol o proporcionar el campo \"user_register_role\". Esto permite que atacantes no autenticados obtengan privilegios elevados creando una cuenta con el rol de administrador."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "security@wordfence.com",
+              "type": "Primary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "NONE",
+                "userInteraction": "NONE",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "HIGH",
+                "integrityImpact": "HIGH",
+                "availabilityImpact": "HIGH"
+              },
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "security@wordfence.com",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-269"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://themeforest.net/item/urbango-directory-and-listing-wordpress-theme/22712624",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/913ffe0c-c8f8-4cda-be9a-96c056d4c4a8?source=cve",
+            "source": "security@wordfence.com"
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2025-3284",
+        "sourceIdentifier": "security@wordfence.com",
+        "published": "2025-04-19T03:15:13.870",
+        "lastModified": "2025-04-21T14:23:45.950",
+        "vulnStatus": "Awaiting Analysis",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The User Registration & Membership \u2013 Custom Registration Form, Login Form, and User Profile plugin for WordPress is vulnerable to Cross-Site Request Forgery in all versions up to, and including, 5.1.3. This is due to missing or incorrect nonce validation on the user_registration_pro_delete_account() function. This makes it possible for unauthenticated attackers to force delete users, including administrators, via a forged request granted they can trick a site administrator into performing an action such as clicking on a link."
+          },
+          {
+            "lang": "es",
+            "value": "El complemento User Registration &amp; Membership \u2013 Custom Registration Form, Login Form, and User Profile para WordPress es vulnerable a Cross-Site Request Forgery en todas las versiones hasta la 5.1.3 incluida. Esto se debe a la falta o a una validaci\u00f3n de nonce incorrecta en la funci\u00f3n user_registration_pro_delete_account(). Esto permite a atacantes no autenticados forzar la eliminaci\u00f3n de usuarios, incluidos administradores, mediante una solicitud falsificada, dado que pueden enga\u00f1ar al administrador del sitio para que realice una acci\u00f3n como hacer clic en un enlace."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "security@wordfence.com",
+              "type": "Primary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N",
+                "baseScore": 4.3,
+                "baseSeverity": "MEDIUM",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "NONE",
+                "userInteraction": "REQUIRED",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "NONE",
+                "integrityImpact": "LOW",
+                "availabilityImpact": "NONE"
+              },
+              "exploitabilityScore": 2.8,
+              "impactScore": 1.4
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "security@wordfence.com",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-352"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://wpuserregistration.com/changelog/",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/4616b609-e8dc-4004-a5b7-2de3e83719be?source=cve",
+            "source": "security@wordfence.com"
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2025-1093",
+        "sourceIdentifier": "security@wordfence.com",
+        "published": "2025-04-19T04:15:21.733",
+        "lastModified": "2025-04-21T14:23:45.950",
+        "vulnStatus": "Awaiting Analysis",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The AIHub theme for WordPress is vulnerable to arbitrary file uploads due to missing file type validation in the generate_image function in all versions up to, and including, 1.3.7. This makes it possible for unauthenticated attackers to upload arbitrary files on the affected site's server which may make remote code execution possible."
+          },
+          {
+            "lang": "es",
+            "value": "El tema AIHub para WordPress es vulnerable a la carga de archivos arbitrarios debido a la falta de validaci\u00f3n del tipo de archivo en la funci\u00f3n generate_image en todas las versiones hasta la 1.3.7 incluida. Esto permite que atacantes no autenticados carguen archivos arbitrarios en el servidor del sitio afectado, lo que podr\u00eda posibilitar la ejecuci\u00f3n remota de c\u00f3digo."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "security@wordfence.com",
+              "type": "Primary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "NONE",
+                "userInteraction": "NONE",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "HIGH",
+                "integrityImpact": "HIGH",
+                "availabilityImpact": "HIGH"
+              },
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "security@wordfence.com",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-434"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://themeforest.net/item/ai-hub-startup-technology-wordpress-theme/47473638",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/09adfe7e-f154-4143-827f-957ded3ffc8f?source=cve",
+            "source": "security@wordfence.com"
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2025-1457",
+        "sourceIdentifier": "security@wordfence.com",
+        "published": "2025-04-19T04:15:22.357",
+        "lastModified": "2025-04-21T14:23:45.950",
+        "vulnStatus": "Awaiting Analysis",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The Element Pack Addons for Elementor \u2013 Free Templates and Widgets for Your WordPress Websites plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the Wrapper Link, Countdown and Gallery widgets in all versions up to, and including, 5.10.28 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with Contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page."
+          },
+          {
+            "lang": "es",
+            "value": "El complemento Element Pack Addons for Elementor \u2013 Free Templates and Widgets for Your WordPress Websites para WordPress es vulnerable a Cross Site Scripting almacenado a trav\u00e9s de los widgets Wrapper Link, Countdown y Gallery en todas las versiones hasta la 5.10.28 incluida, debido a una depuraci\u00f3n de entrada y al escape de salida insuficiente. Esto permite a atacantes autenticados, con acceso de Colaborador o superior, inyectar scripts web arbitrarios en las p\u00e1ginas que se ejecutar\u00e1n al acceder un usuario a una p\u00e1gina inyectada."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "security@wordfence.com",
+              "type": "Primary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N",
+                "baseScore": 6.4,
+                "baseSeverity": "MEDIUM",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "LOW",
+                "userInteraction": "NONE",
+                "scope": "CHANGED",
+                "confidentialityImpact": "LOW",
+                "integrityImpact": "LOW",
+                "availabilityImpact": "NONE"
+              },
+              "exploitabilityScore": 3.1,
+              "impactScore": 2.7
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "security@wordfence.com",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-79"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/bdthemes-element-pack-lite/trunk/assets/js/modules/ep-countdown.min.js",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/bdthemes-element-pack-lite/trunk/assets/js/modules/ep-wrapper-link.min.js",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&old=3272946%40bdthemes-element-pack-lite&new=3272946%40bdthemes-element-pack-lite&sfp_email=&sfph_mail=#file1095",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&old=3272946%40bdthemes-element-pack-lite&new=3272946%40bdthemes-element-pack-lite&sfp_email=&sfph_mail=#file1097",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/c6ac5484-3caa-4821-990b-cd49c2c4873d?source=cve",
+            "source": "security@wordfence.com"
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2025-3275",
+        "sourceIdentifier": "security@wordfence.com",
+        "published": "2025-04-19T04:15:22.540",
+        "lastModified": "2025-04-21T14:23:45.950",
+        "vulnStatus": "Awaiting Analysis",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The Themesflat Addons For Elementor plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the TF E Slider widget in all versions up to, and including, 2.2.5 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with Contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page."
+          },
+          {
+            "lang": "es",
+            "value": "El complemento Themesflat Addons para Elementor para WordPress es vulnerable a Cross Site Scripting almacenado a trav\u00e9s del widget TF E Slider en todas las versiones hasta la 2.2.5 incluida, debido a una depuraci\u00f3n de entrada y al escape de salida insuficiente. Esto permite a atacantes autenticados, con acceso de colaborador o superior, inyectar scripts web arbitrarios en p\u00e1ginas que se ejecutar\u00e1n al acceder un usuario a una p\u00e1gina inyectada."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "security@wordfence.com",
+              "type": "Primary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N",
+                "baseScore": 6.4,
+                "baseSeverity": "MEDIUM",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "LOW",
+                "userInteraction": "NONE",
+                "scope": "CHANGED",
+                "confidentialityImpact": "LOW",
+                "integrityImpact": "LOW",
+                "availabilityImpact": "NONE"
+              },
+              "exploitabilityScore": 3.1,
+              "impactScore": 2.7
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "security@wordfence.com",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-79"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/themesflat-addons-for-elementor/trunk/assets/js/tf-flexslider.js",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/changeset/3268183/themesflat-addons-for-elementor/tags/2.2.2/assets/js/tf-flexslider.js",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/4ec73a61-9ae2-4e6f-b1fa-2d61f27d6809?source=cve",
+            "source": "security@wordfence.com"
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2025-3103",
+        "sourceIdentifier": "security@wordfence.com",
+        "published": "2025-04-19T05:15:44.380",
+        "lastModified": "2025-04-21T14:23:45.950",
+        "vulnStatus": "Awaiting Analysis",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The CLEVER - HTML5 Radio Player With History - Shoutcast and Icecast - Elementor Widget Addon plugin for WordPress is vulnerable to arbitrary file read due to insufficient file path validation in the 'history.php' file in all versions up to, and including, 2.4. This makes it possible for unauthenticated attackers to read arbitrary files on the affected site's server, which may contain sensitive information including database credentials. The vulnerability was partially patched in version 2.4."
+          },
+          {
+            "lang": "es",
+            "value": "El complemento CLEVER - HTML5 Radio Player With History - Shoutcast and Icecast - Elementor Widget Addon para WordPress es vulnerable a la lectura arbitraria de archivos debido a una validaci\u00f3n insuficiente de la ruta en el archivo 'history.php' en todas las versiones hasta la 2.4 incluida. Esto permite que atacantes no autenticados lean archivos arbitrarios en el servidor del sitio afectado, que pueden contener informaci\u00f3n confidencial, como credenciales de la base de datos. La vulnerabilidad se corrigi\u00f3 parcialmente en la versi\u00f3n 2.4."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "security@wordfence.com",
+              "type": "Primary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+                "baseScore": 7.5,
+                "baseSeverity": "HIGH",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "NONE",
+                "userInteraction": "NONE",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "HIGH",
+                "integrityImpact": "NONE",
+                "availabilityImpact": "NONE"
+              },
+              "exploitabilityScore": 3.9,
+              "impactScore": 3.6
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "security@wordfence.com",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-73"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://codecanyon.net/item/clever-html5-radio-player-with-history-shoutcast-and-icecast-elementor-widget-addon/26708087#item-description__updates-release-log",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/0733261f-a2e1-4bd1-a57d-fdaaa8c904db?source=cve",
+            "source": "security@wordfence.com"
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2024-13926",
+        "sourceIdentifier": "contact@wpscan.com",
+        "published": "2025-04-19T06:15:18.347",
+        "lastModified": "2025-04-21T14:23:45.950",
+        "vulnStatus": "Undergoing Analysis",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The WP-Syntax WordPress plugin through 1.2 does not properly handle input, allowing an attacker to create a post containing a large number of tags, thereby exploiting a catastrophic backtracking issue in the regular expression processing to cause a DoS."
+          },
+          {
+            "lang": "es",
+            "value": "El complemento WP-Syntax para WordPress hasta la versi\u00f3n 1.2 no gestiona adecuadamente la entrada, lo que permite que un atacante cree una publicaci\u00f3n que contenga una gran cantidad de etiquetas, explotando as\u00ed un problema de retroceso catastr\u00f3fico en el procesamiento de expresiones regulares para provocar un DoS."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                "baseScore": 7.5,
+                "baseSeverity": "HIGH",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "NONE",
+                "userInteraction": "NONE",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "NONE",
+                "integrityImpact": "NONE",
+                "availabilityImpact": "HIGH"
+              },
+              "exploitabilityScore": 3.9,
+              "impactScore": 3.6
+            }
+          ]
+        },
+        "references": [
+          {
+            "url": "https://wpscan.com/vulnerability/b5f0092e-7cd5-412f-a8ea-7bd4a8bf86d2/",
+            "source": "contact@wpscan.com"
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2025-2111",
+        "sourceIdentifier": "security@wordfence.com",
+        "published": "2025-04-19T06:15:19.657",
+        "lastModified": "2025-04-21T14:23:45.950",
+        "vulnStatus": "Awaiting Analysis",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The Insert Headers And Footers plugin for WordPress is vulnerable to Cross-Site Request Forgery in all versions up to, and including, 3.1.1. This is due to missing or incorrect nonce validation on the 'custom_plugin_set_option' function. This makes it possible for unauthenticated attackers to update arbitrary options on the WordPress site via a forged request granted they can trick a site administrator into performing an action such as clicking on a link. This can be leveraged to update the default role for registration to administrator and enable user registration for attackers to gain administrative user access to a vulnerable site. The 'WPBRIGADE_SDK__DEV_MODE' constant must be set to 'true' to exploit the vulnerability."
+          },
+          {
+            "lang": "es",
+            "value": "El complemento Insert Headers And Footers para WordPress es vulnerable a Cross-Site Request Forgery en todas las versiones hasta la 3.1.1 incluida. Esto se debe a la falta o a una validaci\u00f3n incorrecta de nonce en la funci\u00f3n 'custom_plugin_set_option'. Esto permite a atacantes no autenticados actualizar opciones arbitrarias en el sitio de WordPress mediante una solicitud falsificada, ya que pueden enga\u00f1ar al administrador del sitio para que realice una acci\u00f3n como hacer clic en un enlace. Esto puede aprovecharse para actualizar el rol predeterminado de registro a administrador y habilitar el registro de usuarios para que los atacantes obtengan acceso administrativo a un sitio vulnerable. La constante 'WPBRIGADE_SDK__DEV_MODE' debe establecerse en 'true' para explotar la vulnerabilidad."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "security@wordfence.com",
+              "type": "Primary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                "baseScore": 7.5,
+                "baseSeverity": "HIGH",
+                "attackVector": "NETWORK",
+                "attackComplexity": "HIGH",
+                "privilegesRequired": "NONE",
+                "userInteraction": "REQUIRED",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "HIGH",
+                "integrityImpact": "HIGH",
+                "availabilityImpact": "HIGH"
+              },
+              "exploitabilityScore": 1.6,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "security@wordfence.com",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-352"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/wp-headers-and-footers/trunk/lib/wpb-sdk/views/wpb-debug.php#L63",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/wp-headers-and-footers/trunk/lib/wpb-sdk/views/wpb-debug.php#L69",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/changeset/3276361/",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/7b00d175-261d-46e3-bf3c-2d18f4e4972d?source=cve",
+            "source": "security@wordfence.com"
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2025-3809",
+        "sourceIdentifier": "security@wordfence.com",
+        "published": "2025-04-19T06:15:19.960",
+        "lastModified": "2025-04-21T14:23:45.950",
+        "vulnStatus": "Awaiting Analysis",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The Debug Log Manager plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the auto-refresh debug log in all versions up to, and including, 2.3.4 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page."
+          },
+          {
+            "lang": "es",
+            "value": "El complemento Debug Log Manager para WordPress es vulnerable a Cross Site Scripting almacenado a trav\u00e9s de la actualizaci\u00f3n autom\u00e1tica del registro de depuraci\u00f3n en todas las versiones hasta la 2.3.4 incluida, debido a una depuraci\u00f3n de entrada y al escape de salida insuficiente. Esto permite a atacantes no autenticados inyectar scripts web arbitrarios en p\u00e1ginas que se ejecutar\u00e1n al acceder un usuario a una p\u00e1gina inyectada."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "security@wordfence.com",
+              "type": "Primary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
+                "baseScore": 7.2,
+                "baseSeverity": "HIGH",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "NONE",
+                "userInteraction": "NONE",
+                "scope": "CHANGED",
+                "confidentialityImpact": "LOW",
+                "integrityImpact": "LOW",
+                "availabilityImpact": "NONE"
+              },
+              "exploitabilityScore": 3.9,
+              "impactScore": 2.7
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "security@wordfence.com",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-79"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://plugins.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&old=3267252%40debug-log-manager&new=3267252%40debug-log-manager&sfp_email=&sfph_mail=",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/cbc3210d-224e-4ed2-ada7-dc17deb17584?source=cve",
+            "source": "security@wordfence.com"
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2021-4455",
+        "sourceIdentifier": "security@wordfence.com",
+        "published": "2025-04-19T08:15:13.220",
+        "lastModified": "2025-04-21T14:23:45.950",
+        "vulnStatus": "Awaiting Analysis",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The Wordpress Plugin Smart Product Review plugin for WordPress is vulnerable to arbitrary file uploads due to missing file type validation in all versions up to, and including, 1.0.4. This makes it possible for unauthenticated attackers to upload arbitrary files on the affected site's server which may make remote code execution possible."
+          },
+          {
+            "lang": "es",
+            "value": "El complemento Wordpress Plugin Smart Product Review para Wordpress es vulnerable a la carga de archivos arbitrarios debido a la falta de validaci\u00f3n del tipo de archivo en todas las versiones hasta la 1.0.4 incluida. Esto permite que atacantes no autenticados carguen archivos arbitrarios en el servidor del sitio afectado, lo que podr\u00eda posibilitar la ejecuci\u00f3n remota de c\u00f3digo."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "security@wordfence.com",
+              "type": "Primary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "NONE",
+                "userInteraction": "NONE",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "HIGH",
+                "integrityImpact": "HIGH",
+                "availabilityImpact": "HIGH"
+              },
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "security@wordfence.com",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-434"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.exploit-db.com/exploits/50533",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/1de9183c-95b9-4500-85e2-08dcee956360?source=cve",
+            "source": "security@wordfence.com"
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2025-3404",
+        "sourceIdentifier": "security@wordfence.com",
+        "published": "2025-04-19T08:15:13.780",
+        "lastModified": "2025-04-21T14:23:45.950",
+        "vulnStatus": "Awaiting Analysis",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The Download Manager plugin for WordPress is vulnerable to arbitrary file deletion due to insufficient file path validation in the savePackage function in all versions up to, and including, 3.3.12. This makes it possible for authenticated attackers, with Author-level access and above, to delete arbitrary files on the server, which can easily lead to remote code execution when the right file is deleted (such as wp-config.php)."
+          },
+          {
+            "lang": "es",
+            "value": "El complemento Download Manager para WordPress es vulnerable a la eliminaci\u00f3n arbitraria de archivos debido a una validaci\u00f3n insuficiente de la ruta de archivo en la funci\u00f3n savePackage en todas las versiones hasta la 3.3.12 incluida. Esto permite que atacantes autenticados, con acceso de autor o superior, eliminen archivos arbitrarios en el servidor, lo que puede provocar f\u00e1cilmente la ejecuci\u00f3n remota de c\u00f3digo al eliminar el archivo correcto (como wp-config.php)."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "security@wordfence.com",
+              "type": "Primary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "LOW",
+                "userInteraction": "NONE",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "HIGH",
+                "integrityImpact": "HIGH",
+                "availabilityImpact": "HIGH"
+              },
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "security@wordfence.com",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-22"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/download-manager/tags/3.3.12/src/Admin/Menu/Packages.php#L45",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/download-manager/tags/3.3.12/src/Admin/Menu/Packages.php#L56",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/21f8f5be-b513-4040-af39-c1a61d7e313f?source=cve",
+            "source": "security@wordfence.com"
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2025-3661",
+        "sourceIdentifier": "security@wordfence.com",
+        "published": "2025-04-19T10:15:14.200",
+        "lastModified": "2025-04-21T14:23:45.950",
+        "vulnStatus": "Awaiting Analysis",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The SB Chart block plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the \u2018className\u2019 parameter in all versions up to, and including, 1.2.6 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with Contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page."
+          },
+          {
+            "lang": "es",
+            "value": "El complemento SB Chart block para WordPress es vulnerable a Cross Site Scripting almacenado a trav\u00e9s del par\u00e1metro 'className' en todas las versiones hasta la 1.2.6 incluida, debido a una depuraci\u00f3n de entrada y al escape de salida insuficiente. Esto permite a atacantes autenticados, con acceso de colaborador o superior, inyectar scripts web arbitrarios en p\u00e1ginas que se ejecutar\u00e1n al acceder un usuario a una p\u00e1gina inyectada."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "security@wordfence.com",
+              "type": "Primary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N",
+                "baseScore": 6.4,
+                "baseSeverity": "MEDIUM",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "LOW",
+                "userInteraction": "NONE",
+                "scope": "CHANGED",
+                "confidentialityImpact": "LOW",
+                "integrityImpact": "LOW",
+                "availabilityImpact": "NONE"
+              },
+              "exploitabilityScore": 3.1,
+              "impactScore": 2.7
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "security@wordfence.com",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-79"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/sb-chart-block/trunk/sb-chart-block.php#L104",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/changeset/3276462/",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://wordpress.org/plugins/sb-chart-block/#developers",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/f6afe4b6-c38c-46fa-82d5-95cb35c2c30f?source=cve",
+            "source": "security@wordfence.com"
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2025-3616",
+        "sourceIdentifier": "security@wordfence.com",
+        "published": "2025-04-22T05:15:30.780",
+        "lastModified": "2025-04-23T14:08:13.383",
+        "vulnStatus": "Awaiting Analysis",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The Greenshift \u2013 animation and page builder blocks plugin for WordPress is vulnerable to arbitrary file uploads due to missing file type validation in the gspb_make_proxy_api_request() function in versions 11.4 to 11.4.5. This makes it possible for authenticated attackers, with Subscriber-level access and above, to upload arbitrary files on the affected site's server which may make remote code execution possible. The arbitrary file upload was sufficiently patched in 11.4.5, but a capability check was added in 11.4.6 to properly prevent unauthorized limited file uploads."
+          },
+          {
+            "lang": "es",
+            "value": "El complemento Greenshift \u2013 animation and page builder blocks para WordPress es vulnerable a la carga de archivos arbitrarios debido a la falta de validaci\u00f3n del tipo de archivo en la funci\u00f3n gspb_make_proxy_api_request() en las versiones 11.4 a 11.4.5. Esto permite que atacantes autenticados, con acceso de suscriptor o superior, carguen archivos arbitrarios en el servidor del sitio afectado, lo que podr\u00eda posibilitar la ejecuci\u00f3n remota de c\u00f3digo. La carga de archivos arbitrarios se corrigi\u00f3 adecuadamente en la versi\u00f3n 11.4.5, pero se a\u00f1adi\u00f3 una comprobaci\u00f3n de capacidad en la versi\u00f3n 11.4.6 para evitar la carga no autorizada de archivos limitados."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "security@wordfence.com",
+              "type": "Primary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "LOW",
+                "userInteraction": "NONE",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "HIGH",
+                "integrityImpact": "HIGH",
+                "availabilityImpact": "HIGH"
+              },
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "security@wordfence.com",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-434"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/greenshift-animation-and-page-builder-blocks/trunk/init.php#L3340",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/changeset/3270279/greenshift-animation-and-page-builder-blocks/trunk/init.php",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/changeset/3273212/greenshift-animation-and-page-builder-blocks/trunk/init.php",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/changeset/3276168/greenshift-animation-and-page-builder-blocks/trunk/init.php",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/0db4671e-1989-44a4-babe-ed699c7f3a52?source=cve",
+            "source": "security@wordfence.com"
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2024-13569",
+        "sourceIdentifier": "contact@wpscan.com",
+        "published": "2025-04-22T06:15:44.120",
+        "lastModified": "2025-05-07T19:28:20.447",
+        "vulnStatus": "Analyzed",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The Front End Users WordPress plugin through 3.2.32 does not sanitise and escape a parameter before outputting it back in the page, leading to a Reflected Cross-Site Scripting which could be used against high privilege users such as admin."
+          },
+          {
+            "lang": "es",
+            "value": "El complemento Front End Users de WordPress hasta la versi\u00f3n 3.2.32 no depura ni escapa un par\u00e1metro antes de mostrarlo nuevamente en la p\u00e1gina, lo que genera un Cross-Site Scripting reflejado que podr\u00eda usarse contra usuarios con privilegios altos, como el administrador."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L",
+                "baseScore": 7.1,
+                "baseSeverity": "HIGH",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "NONE",
+                "userInteraction": "REQUIRED",
+                "scope": "CHANGED",
+                "confidentialityImpact": "LOW",
+                "integrityImpact": "LOW",
+                "availabilityImpact": "LOW"
+              },
+              "exploitabilityScore": 2.8,
+              "impactScore": 3.7
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "nvd@nist.gov",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-79"
+              }
+            ]
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:etoilewebdesign:front_end_users:*:*:*:*:*:wordpress:*:*",
+                    "versionEndIncluding": "3.2.32",
+                    "matchCriteriaId": "A6EED9AF-1E4E-411A-8ACF-E8370C5DC9E8"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://wpscan.com/vulnerability/b9742440-0e36-4900-b58e-41c9854a62b2/",
+            "source": "contact@wpscan.com",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2025-2594",
+        "sourceIdentifier": "contact@wpscan.com",
+        "published": "2025-04-22T06:15:44.860",
+        "lastModified": "2025-05-07T19:27:47.673",
+        "vulnStatus": "Analyzed",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The User Registration & Membership  WordPress plugin before 4.1.3 does not properly validate data in an AJAX action when the Membership Addon is enabled, allowing attackers to authenticate as any user, including administrators, by simply using the target account's user ID."
+          },
+          {
+            "lang": "es",
+            "value": "El complemento User Registration &amp; Membership de WordPress anterior a la versi\u00f3n 4.1.3 no valida correctamente los datos en una acci\u00f3n AJAX cuando el complemento de membres\u00eda est\u00e1 habilitado, lo que permite a los atacantes autenticarse como cualquier usuario, incluidos los administradores, simplemente usando el ID de usuario de la cuenta de destino."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 8.1,
+                "baseSeverity": "HIGH",
+                "attackVector": "NETWORK",
+                "attackComplexity": "HIGH",
+                "privilegesRequired": "NONE",
+                "userInteraction": "NONE",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "HIGH",
+                "integrityImpact": "HIGH",
+                "availabilityImpact": "HIGH"
+              },
+              "exploitabilityScore": 2.2,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "nvd@nist.gov",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "NVD-CWE-noinfo"
+              }
+            ]
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:wpeverest:user_registration_\\&_membership:*:*:*:*:free:wordpress:*:*",
+                    "versionEndExcluding": "4.1.3",
+                    "matchCriteriaId": "6640CB90-56BC-4065-BF6D-2FE498EA0B30"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:wpeverest:user_registration_\\&_membership:*:*:*:*:pro:wordpress:*:*",
+                    "versionEndExcluding": "5.1.3",
+                    "matchCriteriaId": "D2B24846-7730-436E-B383-B7026269929F"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://wpscan.com/vulnerability/1c1be47a-d5c0-4ac1-b9fd-475b382a7d8f/",
+            "source": "contact@wpscan.com",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2025-2839",
+        "sourceIdentifier": "security@wordfence.com",
+        "published": "2025-04-22T06:15:44.973",
+        "lastModified": "2025-04-23T14:08:13.383",
+        "vulnStatus": "Awaiting Analysis",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The WP Import Export Lite plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the \u2018wpiePreviewData\u2019 function in all versions up to, and including, 3.9.27 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with Contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page."
+          },
+          {
+            "lang": "es",
+            "value": "El complemento WP Import Export Lite para WordPress es vulnerable a cross-site scripting almacenado a trav\u00e9s de la funci\u00f3n 'wpiePreviewData' en todas las versiones hasta la 3.9.27 incluida, debido a una depuraci\u00f3n de entrada y un escape de salida insuficientes. Esto permite a atacantes autenticados, con acceso de colaborador o superior, inyectar scripts web arbitrarios en p\u00e1ginas que se ejecutar\u00e1n al acceder un usuario a una p\u00e1gina inyectada."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "security@wordfence.com",
+              "type": "Primary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N",
+                "baseScore": 6.4,
+                "baseSeverity": "MEDIUM",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "LOW",
+                "userInteraction": "NONE",
+                "scope": "CHANGED",
+                "confidentialityImpact": "LOW",
+                "integrityImpact": "LOW",
+                "availabilityImpact": "NONE"
+              },
+              "exploitabilityScore": 3.1,
+              "impactScore": 2.7
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "security@wordfence.com",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-79"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/wp-import-export-lite/trunk/assets/js/wpie-export-admin.min.js",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/changeset/3274100/",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/a8ca1ead-1bc5-4ccc-9034-559db27f5e82?source=cve",
+            "source": "security@wordfence.com"
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2025-3814",
+        "sourceIdentifier": "security@wordfence.com",
+        "published": "2025-04-22T06:15:45.210",
+        "lastModified": "2025-04-23T14:08:13.383",
+        "vulnStatus": "Awaiting Analysis",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The Tax Switch for WooCommerce plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the \u2018class-name\u2019 parameter in all versions up to, and including, 1.4.2 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with Contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page."
+          },
+          {
+            "lang": "es",
+            "value": "El complemento Tax Switch para WooCommerce de WordPress es vulnerable a cross-site scripting almacenado a trav\u00e9s del par\u00e1metro 'class-name' en todas las versiones hasta la 1.4.2 incluida, debido a una depuraci\u00f3n de entrada y un escape de salida insuficientes. Esto permite a atacantes autenticados, con acceso de colaborador o superior, inyectar scripts web arbitrarios en p\u00e1ginas que se ejecutar\u00e1n al acceder un usuario a una p\u00e1gina inyectada."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "security@wordfence.com",
+              "type": "Primary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N",
+                "baseScore": 6.4,
+                "baseSeverity": "MEDIUM",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "LOW",
+                "userInteraction": "NONE",
+                "scope": "CHANGED",
+                "confidentialityImpact": "LOW",
+                "integrityImpact": "LOW",
+                "availabilityImpact": "NONE"
+              },
+              "exploitabilityScore": 3.1,
+              "impactScore": 2.7
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "security@wordfence.com",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-79"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/tax-switch-for-woocommerce/tags/1.4.0/includes/class-wdevs-tax-switch-block.php#L112",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/changeset/3277044/",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://wordpress.org/plugins/tax-switch-for-woocommerce/#developers",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/e290f1aa-d20a-4e76-b77b-3e5b79e9d379?source=cve",
+            "source": "security@wordfence.com"
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2024-11299",
+        "sourceIdentifier": "security@wordfence.com",
+        "published": "2025-04-22T12:15:14.677",
+        "lastModified": "2025-04-30T14:52:15.387",
+        "vulnStatus": "Analyzed",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The Memberpress plugin for WordPress is vulnerable to Sensitive Information Exposure in all versions up to, and including, 1.11.37 via the WordPress core search feature. This makes it possible for unauthenticated attackers to extract sensitive data from posts that have been restricted to higher-level roles such as administrator."
+          },
+          {
+            "lang": "es",
+            "value": "El complemento Memberpress para WordPress es vulnerable a la exposici\u00f3n de informaci\u00f3n confidencial en todas las versiones hasta la 1.11.37 incluida, a trav\u00e9s de la funci\u00f3n de b\u00fasqueda principal de WordPress. Esto permite que atacantes no autenticados extraigan informaci\u00f3n confidencial de publicaciones restringidas a roles de alto nivel, como el de administrador."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "security@wordfence.com",
+              "type": "Secondary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+                "baseScore": 5.3,
+                "baseSeverity": "MEDIUM",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "NONE",
+                "userInteraction": "NONE",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "LOW",
+                "integrityImpact": "NONE",
+                "availabilityImpact": "NONE"
+              },
+              "exploitabilityScore": 3.9,
+              "impactScore": 1.4
+            },
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+                "baseScore": 7.5,
+                "baseSeverity": "HIGH",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "NONE",
+                "userInteraction": "NONE",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "HIGH",
+                "integrityImpact": "NONE",
+                "availabilityImpact": "NONE"
+              },
+              "exploitabilityScore": 3.9,
+              "impactScore": 3.6
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "security@wordfence.com",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-200"
+              }
+            ]
+          },
+          {
+            "source": "nvd@nist.gov",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "NVD-CWE-noinfo"
+              }
+            ]
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:caseproof:memberpress:*:*:*:*:*:wordpress:*:*",
+                    "versionEndIncluding": "1.11.37",
+                    "matchCriteriaId": "DF8A0E29-E17E-4716-B46B-2F5A5302C2CF"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://memberpress.com/change-log/#1.12.0",
+            "source": "security@wordfence.com",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/787cd2bb-489f-471a-82e0-073b4766b45a?source=cve",
+            "source": "security@wordfence.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2025-3457",
+        "sourceIdentifier": "security@wordfence.com",
+        "published": "2025-04-22T12:15:16.350",
+        "lastModified": "2025-04-30T14:07:52.490",
+        "vulnStatus": "Analyzed",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The Ocean Extra plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the plugin's 'oceanwp_icon' shortcode in all versions up to, and including, 2.4.6 due to insufficient input sanitization and output escaping on user supplied attributes. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page."
+          },
+          {
+            "lang": "es",
+            "value": "El complemento Ocean Extra para WordPress es vulnerable a cross-site scripting almacenado, a trav\u00e9s del shortcode 'oceanwp_icon' en todas las versiones hasta la 2.4.6 incluida, debido a una depuraci\u00f3n de entrada insuficiente y al escape de salida en los atributos proporcionados por el usuario. Esto permite a atacantes autenticados, con acceso de colaborador o superior, inyectar scripts web arbitrarios en p\u00e1ginas que se ejecutar\u00e1n al acceder un usuario a una p\u00e1gina inyectada."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "security@wordfence.com",
+              "type": "Secondary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N",
+                "baseScore": 6.4,
+                "baseSeverity": "MEDIUM",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "LOW",
+                "userInteraction": "NONE",
+                "scope": "CHANGED",
+                "confidentialityImpact": "LOW",
+                "integrityImpact": "LOW",
+                "availabilityImpact": "NONE"
+              },
+              "exploitabilityScore": 3.1,
+              "impactScore": 2.7
+            },
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N",
+                "baseScore": 5.4,
+                "baseSeverity": "MEDIUM",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "LOW",
+                "userInteraction": "REQUIRED",
+                "scope": "CHANGED",
+                "confidentialityImpact": "LOW",
+                "integrityImpact": "LOW",
+                "availabilityImpact": "NONE"
+              },
+              "exploitabilityScore": 2.3,
+              "impactScore": 2.7
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "security@wordfence.com",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-79"
+              }
+            ]
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oceanwp:ocean_extra:*:*:*:*:*:wordpress:*:*",
+                    "versionEndExcluding": "2.4.7",
+                    "matchCriteriaId": "BC6D521C-0C9D-49F8-AB62-6FCD28233625"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/ocean-extra/tags/2.4.5/includes/shortcodes/shortcodes.php#L838",
+            "source": "security@wordfence.com",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/changeset/3277977/",
+            "source": "security@wordfence.com",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://themes.trac.wordpress.org/browser/oceanwp/4.0.6/inc/oceanwp-theme-icons.php#L819",
+            "source": "security@wordfence.com",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://themes.trac.wordpress.org/browser/oceanwp/4.0.6/inc/oceanwp-theme-icons.php#L866",
+            "source": "security@wordfence.com",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/362a01c0-8b97-40dc-8af5-0d904da96576?source=cve",
+            "source": "security@wordfence.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2025-3458",
+        "sourceIdentifier": "security@wordfence.com",
+        "published": "2025-04-22T12:15:16.507",
+        "lastModified": "2025-04-30T14:05:12.373",
+        "vulnStatus": "Analyzed",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The Ocean Extra plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'ocean_gallery_id\u2019 parameter in all versions up to, and including, 2.4.6 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with Contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. The Classic Editor plugin must be installed and activated to exploit the vulnerability."
+          },
+          {
+            "lang": "es",
+            "value": "El complemento Ocean Extra para WordPress es vulnerable a cross-site scripting almacenado, a trav\u00e9s del par\u00e1metro 'ocean_gallery_id' en todas las versiones hasta la 2.4.6 incluida, debido a una depuraci\u00f3n de entrada y un escape de salida insuficientes. Esto permite a atacantes autenticados, con acceso de colaborador o superior, inyectar scripts web arbitrarios en p\u00e1ginas que se ejecutar\u00e1n al acceder un usuario a una p\u00e1gina inyectada. El complemento Classic Editor debe estar instalado y activado para explotar esta vulnerabilidad."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "security@wordfence.com",
+              "type": "Secondary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N",
+                "baseScore": 6.4,
+                "baseSeverity": "MEDIUM",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "LOW",
+                "userInteraction": "NONE",
+                "scope": "CHANGED",
+                "confidentialityImpact": "LOW",
+                "integrityImpact": "LOW",
+                "availabilityImpact": "NONE"
+              },
+              "exploitabilityScore": 3.1,
+              "impactScore": 2.7
+            },
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N",
+                "baseScore": 5.4,
+                "baseSeverity": "MEDIUM",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "LOW",
+                "userInteraction": "REQUIRED",
+                "scope": "CHANGED",
+                "confidentialityImpact": "LOW",
+                "integrityImpact": "LOW",
+                "availabilityImpact": "NONE"
+              },
+              "exploitabilityScore": 2.3,
+              "impactScore": 2.7
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "security@wordfence.com",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-79"
+              }
+            ]
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oceanwp:ocean_extra:*:*:*:*:*:wordpress:*:*",
+                    "versionEndExcluding": "2.4.7",
+                    "matchCriteriaId": "BC6D521C-0C9D-49F8-AB62-6FCD28233625"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/ocean-extra/tags/2.4.6/includes/metabox/gallery-metabox/gallery-metabox.php#L113",
+            "source": "security@wordfence.com",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/ocean-extra/tags/2.4.6/includes/metabox/gallery-metabox/gallery-metabox.php#L162",
+            "source": "security@wordfence.com",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/changeset/3277977/",
+            "source": "security@wordfence.com",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/7595a1f6-6923-4102-8efe-a414adebce65?source=cve",
+            "source": "security@wordfence.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2025-3472",
+        "sourceIdentifier": "security@wordfence.com",
+        "published": "2025-04-22T12:15:16.657",
+        "lastModified": "2025-04-30T14:01:15.660",
+        "vulnStatus": "Analyzed",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The Ocean Extra plugin for WordPress is vulnerable to arbitrary shortcode execution in all versions up to, and including, 2.4.6. This is due to the software allowing users to execute an action that does not properly validate a value before running do_shortcode. This makes it possible for unauthenticated attackers to execute arbitrary shortcodes when WooCommerce is also installed and activated."
+          },
+          {
+            "lang": "es",
+            "value": "El complemento Ocean Extra para WordPress es vulnerable a la ejecuci\u00f3n de shortcodes arbitrarios en todas las versiones hasta la 2.4.6 incluida. Esto se debe a que el software permite a los usuarios ejecutar una acci\u00f3n que no valida correctamente un valor antes de ejecutar do_shortcode. Esto permite que atacantes no autenticados ejecuten shortcodes arbitrarios cuando WooCommerce tambi\u00e9n est\u00e1 instalado y activado."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "security@wordfence.com",
+              "type": "Secondary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N",
+                "baseScore": 6.5,
+                "baseSeverity": "MEDIUM",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "NONE",
+                "userInteraction": "NONE",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "LOW",
+                "integrityImpact": "LOW",
+                "availabilityImpact": "NONE"
+              },
+              "exploitabilityScore": 3.9,
+              "impactScore": 2.5
+            },
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "NONE",
+                "userInteraction": "NONE",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "HIGH",
+                "integrityImpact": "HIGH",
+                "availabilityImpact": "HIGH"
+              },
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "security@wordfence.com",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-94"
+              }
+            ]
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oceanwp:ocean_extra:*:*:*:*:*:wordpress:*:*",
+                    "versionEndExcluding": "2.4.7",
+                    "matchCriteriaId": "BC6D521C-0C9D-49F8-AB62-6FCD28233625"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/ocean-extra/trunk/includes/shortcodes/shortcodes.php#L618",
+            "source": "security@wordfence.com",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/changeset/3277977/",
+            "source": "security@wordfence.com",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/74428e76-1946-408f-8adc-24ab4b7e46c5?source=cve",
+            "source": "security@wordfence.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2025-3529",
+        "sourceIdentifier": "security@wordfence.com",
+        "published": "2025-04-23T08:15:14.527",
+        "lastModified": "2025-04-23T14:08:13.383",
+        "vulnStatus": "Awaiting Analysis",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The WordPress Simple Shopping Cart plugin for WordPress is vulnerable to Sensitive Information Exposure in all versions up to, and including, 5.1.2 via the 'file_url' parameter. This makes it possible for unauthenticated attackers to view potentially sensitive information and download a digital product without paying for it."
+          },
+          {
+            "lang": "es",
+            "value": "El complemento WordPress Simple Shopping Cart para WordPress es vulnerable a la exposici\u00f3n de informaci\u00f3n confidencial en todas las versiones hasta la 5.1.2 incluida, a trav\u00e9s del par\u00e1metro 'file_url'. Esto permite que atacantes no autenticados accedan a informaci\u00f3n potencialmente confidencial y descarguen un producto digital sin pagar."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "security@wordfence.com",
+              "type": "Primary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:H/A:N",
+                "baseScore": 8.2,
+                "baseSeverity": "HIGH",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "NONE",
+                "userInteraction": "NONE",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "LOW",
+                "integrityImpact": "HIGH",
+                "availabilityImpact": "NONE"
+              },
+              "exploitabilityScore": 3.9,
+              "impactScore": 4.2
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "security@wordfence.com",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-201"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/wordpress-simple-paypal-shopping-cart/tags/5.1.2/includes/wpsc-shortcodes-related.php#L92",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/changeset/3275373/",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://wordpress.org/plugins/wordpress-simple-paypal-shopping-cart/#developers",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://www.tipsandtricks-hq.com/ecommerce/wp-simple-cart-sell-digital-downloads-2468",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/8fecc015-518f-4aab-a17e-17cf4b8cf123?source=cve",
+            "source": "security@wordfence.com"
+          }
+        ]
+      }
+    }
+  ]
+}
