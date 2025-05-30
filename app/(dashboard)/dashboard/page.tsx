@@ -578,7 +578,7 @@ export default function DashboardPage() {
                     name: `+${index * 5}min`,
                     value: value
                   }))}
-                  height={210}
+                  height="210"
                   showLegend={false}
                   lineColor="#7b2cbf"
                   areaColor="rgba(123, 43, 191, 0.3)"
