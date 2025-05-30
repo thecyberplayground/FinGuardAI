@@ -472,7 +472,7 @@ export default function DashboardPage() {
                 <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#00d4b8] to-[#7b2cbf] drop-shadow-[0_0_5px_rgba(0,212,184,0.5)] mb-2">
                   {monitorStats && monitorStats.security_health !== undefined ? monitorStats.security_health : 100}%
                 </div>
-                <ProgressBar value={monitorStats && monitorStats.security_health !== undefined ? monitorStats.security_health : 100} height={10} glowEffect={true} />
+                <ProgressBar value={monitorStats && monitorStats.security_health !== undefined ? monitorStats.security_health : 100} height="10" glowEffect={true} />
                 <div className="mt-2 text-xs text-gray-400">
                   {monitorStats && monitorStats.risky_services && monitorStats.risky_services.length > 0
                     ? `Risky Services: ${monitorStats.risky_services.join(", ")}`
@@ -508,7 +508,7 @@ export default function DashboardPage() {
                 <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#ffaa00] to-[#ff5555] drop-shadow-[0_0_5px_rgba(255,170,0,0.5)] mb-2">
                   {monitorStats && monitorStats.vulnerability_risk !== undefined ? monitorStats.vulnerability_risk : 0}%
                 </div>
-                <ProgressBar value={monitorStats && monitorStats.vulnerability_risk !== undefined ? monitorStats.vulnerability_risk : 0} color="url(#risk-gradient)" height={10} glowEffect={true} />
+                <ProgressBar value={monitorStats && monitorStats.vulnerability_risk !== undefined ? monitorStats.vulnerability_risk : 0} color="url(#risk-gradient)" height="10" glowEffect={true} />
                 <svg width="0" height="0">
                   <defs>
                     <linearGradient id="risk-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
