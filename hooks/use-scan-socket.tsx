@@ -54,7 +54,7 @@ interface ScanSocketState {
   mlPredictions?: MLPrediction[];
   scanReport?: ScanReport;
   scanError: string | null;
-  startScan: (target: string, scanParams?: { ports?: string, intensity?: string, format?: string, environment?: string }) => void;
+  startScan: (target: string, scanParams?: { ports?: string, intensity?: string, scan_type?: string, format?: string, environment?: string }) => void;
   cancelScan: () => void;
 }
 
