@@ -31,7 +31,8 @@ export const startIntegratedScan = async (
   target: string, 
   options: {
     ports?: string;
-    intensity?: "stealthy" | "normal" | "aggressive";
+    scan_type?: "basic" | "deep";
+    intensity?: "stealthy" | "normal" | "aggressive"; // kept for backwards compatibility
     format?: "html" | "text" | "json";
     env?: "dev" | "test" | "prod";
   }

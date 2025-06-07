@@ -99,9 +99,26 @@ export default function DashboardPage() {
   // --- Passive monitoring socket logic (only live data) ---
   useEffect(() => {
     if (!monitoringActive || !monitorHost) return;
-    const socket: Socket = io("http://127.0.0.1:5001");
+    
+    // Create socket with correct connection parameters
+    const socket: Socket = io("http://localhost:5001", {
+      transports: ['websocket', 'polling'],
+      reconnectionAttempts: 5,
+      reconnectionDelay: 1000
+    });
+    
     console.log("Emitting start_passive_monitoring", { host: monitorHost });
-    socket.emit("start_passive_monitoring", { host: monitorHost });
+    
+    // Add connection event handlers
+    socket.on('connect', () => {
+      console.log('Socket connected successfully');
+      socket.emit("start_passive_monitoring", { host: monitorHost });
+    });
+    
+    socket.on('connect_error', (error) => {
+      console.error('Socket connection error:', error);
+      setMonitorError("Could not connect to monitoring service. Please ensure the backend is running.");
+    });
     socket.on("passive_stats_update", (data: any) => {
       console.log("Received passive_stats_update:", data);
       setMonitorStats(data);
@@ -137,7 +154,12 @@ export default function DashboardPage() {
   }, [])
 
   const handleStartScan = () => {
-    startScan(target, scanType);
+    startScan(target, {
+      environment: "prod",
+      scan_type: "basic",  // Changed from intensity to scan_type
+      format: "json",
+      ports: "1-1000"
+    });
   }
 
   const toggleMonitoring = () => {
@@ -261,7 +283,11 @@ export default function DashboardPage() {
                 </div>
                 <div className="bg-black/20 backdrop-blur-sm rounded-lg p-3 text-center border border-white/5">
                   <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#ff5555] to-[#ff9955] drop-shadow-[0_0_5px_rgba(255,85,85,0.5)]">
-                    <Counter from={0} to={totalThreats} duration={1.5} />
+                    <Counter 
+                      from={0} 
+                      to={monitorStats && monitorStats.vulnerability_risk ? Math.ceil(monitorStats.vulnerability_risk / 10) : 0} 
+                      duration={1.5} 
+                    />
                   </div>
                   <div className="text-xs text-gray-400 mt-1">Current Threats</div>
                 </div>
@@ -270,7 +296,24 @@ export default function DashboardPage() {
               <div className="space-y-2">
                 <Label className="dark:text-gray-300 text-xs font-medium">Next 24h Risk Prediction</Label>
                 <div className="h-[120px]">
-                  <LineChart labels={riskPredictionData.labels} datasets={riskPredictionData.datasets} height="120px" />
+                  {monitorStats && monitorStats.risk_prediction && Array.isArray(monitorStats.risk_prediction) ? (
+                    <LineChart 
+                      labels={monitorStats.risk_prediction.map((item: any) => item.time || `+${item.timeOffset || 0}min`)}
+                      datasets={[{
+                        label: 'Risk Prediction',
+                        data: monitorStats.risk_prediction.map((item: any) => item.value || 0),
+                        borderColor: 'rgba(255, 85, 85, 0.8)',
+                        backgroundColor: 'rgba(255, 85, 85, 0.3)',
+                        tension: 0.3,
+                        fill: true
+                      }]}
+                      height="120px" 
+                    />
+                  ) : (
+                    <div className="flex items-center justify-center h-full text-gray-400">
+                      No prediction data available
+                    </div>
+                  )}
                 </div>
               </div>
             </CardContent>
@@ -341,19 +384,19 @@ export default function DashboardPage() {
                 <div className="grid grid-cols-3 gap-4 text-center">
                   <div className="bg-black/20 backdrop-blur-sm rounded-lg p-2 border border-white/5">
                     <div className="text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#00d4b8] to-[#7b2cbf] drop-shadow-[0_0_5px_rgba(0,212,184,0.5)]">
-                      <Counter from={0} to={monitoringActive ? 120 : 0} duration={1} />
+                      <Counter from={0} to={monitorStats?.packets || 0} duration={1} />
                     </div>
                     <div className="text-xs text-gray-400">Packets</div>
                   </div>
                   <div className="bg-black/20 backdrop-blur-sm rounded-lg p-2 border border-white/5">
                     <div className="text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#ffaa00] to-[#ff5555] drop-shadow-[0_0_5px_rgba(255,170,0,0.5)]">
-                      <Counter from={0} to={monitoringActive ? 3 : 0} duration={1} />
+                      <Counter from={0} to={monitorStats?.predicted_threats || (monitorStats?.threat_details?.length || 0)} duration={1} />
                     </div>
                     <div className="text-xs text-gray-400">Alerts</div>
                   </div>
                   <div className="bg-black/20 backdrop-blur-sm rounded-lg p-2 border border-white/5">
                     <div className="text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#00d4b8] to-[#00a0e9] drop-shadow-[0_0_5px_rgba(0,212,184,0.5)]">
-                      <Counter from={0} to={monitoringActive ? 8 : 0} duration={1} />
+                      <Counter from={0} to={monitorStats?.open_ports || 0} duration={1} />
                     </div>
                     <div className="text-xs text-gray-400">Services</div>
                   </div>
@@ -472,7 +515,7 @@ export default function DashboardPage() {
                 <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#00d4b8] to-[#7b2cbf] drop-shadow-[0_0_5px_rgba(0,212,184,0.5)] mb-2">
                   {monitorStats && monitorStats.security_health !== undefined ? monitorStats.security_health : 100}%
                 </div>
-                <ProgressBar value={monitorStats && monitorStats.security_health !== undefined ? monitorStats.security_health : 100} height="10" glowEffect={true} />
+                <ProgressBar value={monitorStats && monitorStats.security_health !== undefined ? Number(monitorStats.security_health) : 100} height={10} glowEffect={true} />
                 <div className="mt-2 text-xs text-gray-400">
                   {monitorStats && monitorStats.risky_services && monitorStats.risky_services.length > 0
                     ? `Risky Services: ${monitorStats.risky_services.join(", ")}`
@@ -508,7 +551,7 @@ export default function DashboardPage() {
                 <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#ffaa00] to-[#ff5555] drop-shadow-[0_0_5px_rgba(255,170,0,0.5)] mb-2">
                   {monitorStats && monitorStats.vulnerability_risk !== undefined ? monitorStats.vulnerability_risk : 0}%
                 </div>
-                <ProgressBar value={monitorStats && monitorStats.vulnerability_risk !== undefined ? monitorStats.vulnerability_risk : 0} color="url(#risk-gradient)" height="10" glowEffect={true} />
+                <ProgressBar value={monitorStats && monitorStats.vulnerability_risk !== undefined ? Number(monitorStats.vulnerability_risk) : 0} color="url(#risk-gradient)" height={10} glowEffect={true} />
                 <svg width="0" height="0">
                   <defs>
                     <linearGradient id="risk-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -572,17 +615,19 @@ export default function DashboardPage() {
               </CardTitle>
             </CardHeader>
             <CardContent className="p-4">
-              {monitorStats && monitorStats.risk_prediction ? (
+              {monitorStats && monitorStats.risk_prediction && Array.isArray(monitorStats.risk_prediction) ? (
                 <LineChart 
-                  data={monitorStats.risk_prediction.map((value: number, index: number) => ({
-                    name: `+${index * 5}min`,
-                    value: value
-                  }))}
-                  height="210"
-                  showLegend={false}
-                  lineColor="#7b2cbf"
-                  areaColor="rgba(123, 43, 191, 0.3)"
-                  className="mt-2"
+                  labels={monitorStats.risk_prediction.map((item: any) => item.time || `+${item.timeOffset || 0}min`)}
+                  datasets={[
+                    {
+                      label: 'Risk Prediction',
+                      data: monitorStats.risk_prediction.map((item: any) => item.value || 0),
+                      borderColor: 'rgba(123, 44, 191, 0.8)',
+                      backgroundColor: 'rgba(123, 44, 191, 0.5)',
+                      tension: 0.3,
+                    }
+                  ]}
+                  height="210px"
                 />
               ) : (
                 <div className="flex items-center justify-center h-[210px] text-gray-400">
@@ -622,7 +667,7 @@ export default function DashboardPage() {
                       </TableRow>
                     </TableHeader>
                     <TableBody>
-                      {monitorStats.threat_details.filter((t: any) => t.is_threat || t.threat_probability > 0.3).map((threat: any, idx: number) => (
+                      {monitorStats.threat_details.map((threat: any, idx: number) => (
                         <TableRow key={idx} className="border-t border-white/10">
                           <TableCell>{threat.protocol}</TableCell>
                           <TableCell className="font-mono text-xs">{threat.src_ip}</TableCell>
@@ -630,17 +675,17 @@ export default function DashboardPage() {
                           <TableCell>
                             <div className="w-full bg-black/30 rounded-full h-2">
                               <div
-                                className={`h-2 rounded-full ${threat.threat_probability > 0.7 ? 'bg-red-500' : threat.threat_probability > 0.4 ? 'bg-yellow-500' : 'bg-green-500'}`}
-                                style={{ width: `${Math.round(threat.threat_probability * 100)}%` }}
+                                className={`h-2 rounded-full ${(threat.probability || threat.threat_probability) > 0.7 ? 'bg-red-500' : (threat.probability || threat.threat_probability) > 0.4 ? 'bg-yellow-500' : 'bg-green-500'}`}
+                                style={{ width: `${Math.round((threat.probability || threat.threat_probability || 0) * 100)}%` }}
                               ></div>
                             </div>
-                            <div className="text-xs text-right mt-1">{Math.round(threat.threat_probability * 100)}%</div>
+                            <div className="text-xs text-right mt-1">{Math.round((threat.probability || threat.threat_probability || 0) * 100)}%</div>
                           </TableCell>
                           <TableCell>
                             <Badge 
-                              className={`${threat.is_threat ? 'bg-red-500 hover:bg-red-600' : 'bg-green-500 hover:bg-green-600'}`}
+                              className={`${(threat.is_threat || (threat.level && threat.level !== 'low') || (threat.probability || threat.threat_probability) > 0.5) ? 'bg-red-500 hover:bg-red-600' : 'bg-green-500 hover:bg-green-600'}`}
                             >
-                              {threat.is_threat ? 'THREAT' : 'SAFE'}
+                              {(threat.is_threat || (threat.level && threat.level !== 'low') || (threat.probability || threat.threat_probability) > 0.5) ? 'THREAT' : 'SAFE'}
                             </Badge>
                           </TableCell>
                         </TableRow>

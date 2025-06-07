@@ -28,7 +28,7 @@ interface BarChartProps {
 }
 
 export function BarChart({ data, title, height = "200px", futuristic = true }: BarChartProps) {
-  const chartRef = useRef<ChartJS>(null)
+  const chartRef = useRef<ChartJS<"bar">>(null)
 
   const chartData: ChartData<"bar"> = {
     labels: ["High", "Medium", "Low"],

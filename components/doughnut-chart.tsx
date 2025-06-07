@@ -17,7 +17,7 @@ interface DoughnutChartProps {
 }
 
 export function DoughnutChart({ data, title, height = "200px", futuristic = true }: DoughnutChartProps) {
-  const chartRef = useRef<ChartJS>(null)
+  const chartRef = useRef<ChartJS<"doughnut">>(null)
 
   const chartData: ChartData<"doughnut"> = {
     labels: ["Normal", "Anomalous"],

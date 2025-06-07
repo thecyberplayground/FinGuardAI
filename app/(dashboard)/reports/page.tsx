@@ -83,7 +83,7 @@ export default function ReportsPage() {
           return `${date.getMonth()+1}/${date.getDate()}`
         }).reverse()
         
-        const historicalRisk = sortedReports.map(r => {
+        const historicalRisk: number[] = sortedReports.map(r => {
           return r.severity === "critical" ? 90 :
                  r.severity === "high" ? 75 :
                  r.severity === "medium" ? 50 :

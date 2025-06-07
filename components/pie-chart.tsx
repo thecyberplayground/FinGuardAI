@@ -17,7 +17,7 @@ interface PieChartProps {
 }
 
 export function PieChart({ data, title, height = "200px" }: PieChartProps) {
-  const chartRef = useRef<ChartJS>(null)
+  const chartRef = useRef<ChartJS<"pie">>(null)
 
   const chartData: ChartData<"pie"> = {
     labels: ["High", "Medium", "Low"],

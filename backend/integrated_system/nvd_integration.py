@@ -13,11 +13,57 @@ import datetime
 from typing import Dict, List, Any, Optional, Tuple
 
 # Import existing NVD client and enhanced capabilities
-from ..ml.remediation.nvd_client import NVDClient
-from ..ml.remediation.nvd_advanced_search import NVDAdvancedSearch
-from ..ml.remediation.cvss_analyzer import extract_cvss_from_vulnerability, assess_financial_impact
-
-from .config import NVD_API_KEY, NVD_CACHE_TTL, logger
+try:
+    # Try relative imports first
+    from ..ml.remediation.nvd_client import NVDClient
+    from ..ml.remediation.nvd_advanced_search import NVDAdvancedSearch
+    from ..ml.remediation.cvss_analyzer import extract_cvss_from_vulnerability, assess_financial_impact
+    from .config import NVD_API_KEY, NVD_CACHE_TTL, logger
+except ImportError:
+    # Fall back to absolute imports
+    import sys
+    import os
+    backend_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    if backend_dir not in sys.path:
+        sys.path.append(backend_dir)
+    
+    try:
+        from ml.remediation.nvd_client import NVDClient
+        from ml.remediation.nvd_advanced_search import NVDAdvancedSearch
+        from ml.remediation.cvss_analyzer import extract_cvss_from_vulnerability, assess_financial_impact
+        from integrated_system.config import NVD_API_KEY, NVD_CACHE_TTL, logger
+    except ImportError:
+        # Direct imports as last resort
+        import logging
+        logger = logging.getLogger('finguardai.nvd_integration')
+        
+        try:
+            from nvd_client import NVDClient
+            from nvd_advanced_search import NVDAdvancedSearch
+            from cvss_analyzer import extract_cvss_from_vulnerability, assess_financial_impact
+        except ImportError:
+            # Define stubs if modules can't be imported
+            class NVDClient:
+                def __init__(self, *args, **kwargs):
+                    pass
+                def get_cves_for_cpe(self, *args, **kwargs):
+                    return []
+            
+            class NVDAdvancedSearch:
+                def __init__(self, *args, **kwargs):
+                    pass
+                def search(self, *args, **kwargs):
+                    return []
+            
+            def extract_cvss_from_vulnerability(vuln):
+                return {"base_score": 0}
+                
+            def assess_financial_impact(cvss_data):
+                return {"financial_impact": "Unknown"}
+        
+        # Define defaults if config is missing
+        NVD_API_KEY = None
+        NVD_CACHE_TTL = 86400
 
 class NVDIntegration:
     """

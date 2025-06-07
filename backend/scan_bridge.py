@@ -14,6 +14,9 @@ import re
 from urllib.parse import urlparse
 from typing import Dict, Any, Optional
 
+# Import the new NVD-based threat detector
+from ml.nvd_threat_detector import NVDThreatDetector
+
 # Add parent directory to path to allow importing scan.py
 parent_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.append(parent_dir)
@@ -90,6 +93,16 @@ def run_integrated_scan(target: str, scan_options: Dict[str, Any] = None, env: s
         if report_path.endswith(".json"):
             with open(report_path, "r") as f:
                 results = json.load(f)
+                
+            # Process the results with the NVD-based threat detector
+            logger.info("Processing scan results with NVD-based threat detector...")
+            nvd_detector = NVDThreatDetector()
+            enhanced_results = nvd_detector.detect_threats_from_scan_result(results)
+            results = enhanced_results
+            
+            # Save the enhanced results back to the report file
+            with open(report_path, "w") as f:
+                json.dump(results, f, indent=4)
         else:
             # If report is not JSON, provide basic info and path
             results = {

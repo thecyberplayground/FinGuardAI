@@ -1,0 +1,43 @@
+Starting Nmap 7.80 ( https://nmap.org ) at 2025-06-02 06:27 W. Central Africa Standard Time
+Initiating Ping Scan at 06:27
+Scanning 74.81.88.2 [4 ports]
+Stats: 0:00:10 elapsed; 0 hosts completed (0 up), 1 undergoing Ping Scan
+Ping Scan Timing: About 12.50% done; ETC: 06:27 (0:00:07 remaining)
+Completed Ping Scan at 06:27, 1.02s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 06:27
+Completed Parallel DNS resolution of 1 host. at 06:27, 0.67s elapsed
+Initiating SYN Stealth Scan at 06:27
+Scanning server.lcu.edu.ng (74.81.88.2) [1000 ports]
+Discovered open port 587/tcp on 74.81.88.2
+Discovered open port 25/tcp on 74.81.88.2
+Discovered open port 443/tcp on 74.81.88.2
+Discovered open port 995/tcp on 74.81.88.2
+Discovered open port 80/tcp on 74.81.88.2
+Discovered open port 22/tcp on 74.81.88.2
+Discovered open port 21/tcp on 74.81.88.2
+Discovered open port 53/tcp on 74.81.88.2
+Discovered open port 143/tcp on 74.81.88.2
+Discovered open port 110/tcp on 74.81.88.2
+Discovered open port 993/tcp on 74.81.88.2
+Discovered open port 465/tcp on 74.81.88.2
+Completed SYN Stealth Scan at 06:28, 50.98s elapsed (1000 total ports)
+Nmap scan report for server.lcu.edu.ng (74.81.88.2)
+Host is up (0.33s latency).
+Not shown: 931 filtered ports, 57 closed ports
+PORT    STATE SERVICE
+21/tcp  open  ftp
+22/tcp  open  ssh
+25/tcp  open  smtp
+53/tcp  open  domain
+80/tcp  open  http
+110/tcp open  pop3
+143/tcp open  imap
+443/tcp open  https
+465/tcp open  smtps
+587/tcp open  submission
+993/tcp open  imaps
+995/tcp open  pop3s
+
+Read data files from: C:\Program Files (x86)\Nmap
+Nmap done: 1 IP address (1 host up) scanned in 62.40 seconds
+           Raw packets sent: 2884 (126.880KB) | Rcvd: 130 (5.400KB)

@@ -198,6 +198,140 @@ class NVDClient:
         # Extract vulnerabilities
         return result.get("vulnerabilities", [])
     
+    def get_cve_details(self, cve_id: str) -> Dict[str, Any]:
+        """
+        Get details for a specific CVE ID
+        
+        Args:
+            cve_id: CVE ID (e.g., CVE-2021-44228)
+            
+        Returns:
+            Dictionary with CVE details or empty dict if not found
+        """
+        # Build query parameters - using exact match for CVE ID
+        params = {
+            "cveId": cve_id
+        }
+        
+        # Generate cache key
+        cache_key = f"cve_details_{cve_id}"
+        
+        # Get vulnerability data
+        result = self.get_vulnerabilities(params, cache_key)
+        
+        # Extract the vulnerability if found
+        vulnerabilities = result.get("vulnerabilities", [])
+        if vulnerabilities and len(vulnerabilities) > 0:
+            return vulnerabilities[0]
+        
+        logger.warning(f"CVE details not found for {cve_id}")
+        return {}
+    
+    def get_remediation_info(self, cve_id: str) -> Dict[str, Any]:
+        """
+        Extract remediation information for a CVE
+        
+        Args:
+            cve_id: CVE ID to get remediation for
+            
+        Returns:
+            Dictionary with remediation information
+        """
+        # Get the CVE details
+        cve_data = self.get_cve_details(cve_id)
+        
+        # Initialize remediation info with default values
+        remediation_info = {
+            "id": f"rem_{cve_id}",
+            "vulnerability_id": cve_id,
+            "recommendation": "Update affected components to the latest secure version.",
+            "difficulty": "medium",
+            "estimated_time": "4h",
+            "priority": "high",
+            "references": [
+                f"https://nvd.nist.gov/vuln/detail/{cve_id}",
+                f"https://cve.mitre.org/cgi-bin/cvename.cgi?name={cve_id}"
+            ]
+        }
+        
+        # If we found data for this CVE
+        if cve_data:
+            cve_item = cve_data.get("cve", {})
+            
+            # Extract descriptions
+            descriptions = cve_item.get("descriptions", [])
+            for desc in descriptions:
+                if desc.get("lang") == "en":
+                    # Get full description
+                    full_desc = desc.get("value", "")
+                    remediation_info["description"] = full_desc
+                    
+                    # Look for remediation information in description
+                    remediation_text = ""
+                    for remedy_indicator in ["fix", "patch", "update", "upgrade", "mitigate", "workaround", "remediation"]:
+                        if remedy_indicator in full_desc.lower():
+                            # Extract sentences containing remediation info
+                            sentences = full_desc.split(". ")
+                            for sentence in sentences:
+                                if remedy_indicator in sentence.lower():
+                                    remediation_text += sentence + ". "
+                    
+                    if remediation_text:
+                        remediation_info["recommendation"] = remediation_text
+            
+            # Extract references for more detailed information
+            references = cve_item.get("references", [])
+            if references:
+                ref_links = []
+                for ref in references:
+                    ref_url = ref.get("url")
+                    if ref_url:
+                        ref_links.append(ref_url)
+                if ref_links:
+                    remediation_info["references"] = ref_links[:5]  # Limit to 5 references
+            
+            # Extract metrics to determine priority and difficulty
+            metrics = cve_item.get("metrics", {})
+            cvss_v31 = metrics.get("cvssMetricV31", [{}])[0] if "cvssMetricV31" in metrics else {}
+            cvss_v30 = metrics.get("cvssMetricV30", [{}])[0] if "cvssMetricV30" in metrics else {}
+            cvss_v2 = metrics.get("cvssMetricV2", [{}])[0] if "cvssMetricV2" in metrics else {}
+            
+            # Use the most recent CVSS version available
+            cvss_data = cvss_v31 or cvss_v30 or cvss_v2 or {}
+            cvss_data = cvss_data.get("cvssData", {})
+            
+            # Set priority based on base score
+            base_score = cvss_data.get("baseScore")
+            if base_score is not None:
+                if base_score >= 9.0:
+                    remediation_info["priority"] = "critical"
+                    remediation_info["cost_of_inaction"] = 100000
+                    remediation_info["difficulty"] = "high"
+                    remediation_info["estimated_time"] = "24h"
+                elif base_score >= 7.0:
+                    remediation_info["priority"] = "high"
+                    remediation_info["cost_of_inaction"] = 50000
+                    remediation_info["difficulty"] = "medium"
+                    remediation_info["estimated_time"] = "12h"
+                elif base_score >= 4.0:
+                    remediation_info["priority"] = "medium"
+                    remediation_info["cost_of_inaction"] = 25000
+                    remediation_info["difficulty"] = "medium"
+                    remediation_info["estimated_time"] = "8h"
+                else:
+                    remediation_info["priority"] = "low"
+                    remediation_info["cost_of_inaction"] = 10000
+                    remediation_info["difficulty"] = "easy"
+                    remediation_info["estimated_time"] = "4h"
+            
+            # Look for code examples or configurations in references
+            for ref in references:
+                tags = ref.get("tags", [])
+                if "Patch" in tags or "Vendor Advisory" in tags:
+                    remediation_info["patch_available"] = True
+        
+        return remediation_info
+    
     def _is_cache_valid(self, cache_file: str) -> bool:
         """
         Check if the cached data is still valid

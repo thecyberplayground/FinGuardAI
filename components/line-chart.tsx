@@ -43,7 +43,7 @@ export function LineChart({
   height = "200px",
   futuristic = true,
 }: LineChartProps) {
-  const chartRef = useRef<ChartJS>(null)
+  const chartRef = useRef<ChartJS<"line">>(null)
   const [chartData, setChartData] = useState<ChartData<"line">>({
     labels: initialLabels || [],
     datasets: initialDatasets || [

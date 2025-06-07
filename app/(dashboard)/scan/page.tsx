@@ -71,14 +71,16 @@ export default function ScanPage() {
         setDashboardScanMsg("Scan complete. You may review the results below.");
         localStorage.removeItem("dashboardQuickScanTarget");
         if (progressTimer.current) clearInterval(progressTimer.current);
-      } else if (data.line.startsWith("Error:")) {
+      } else if (data.line && typeof data.line === 'string' && data.line.startsWith("Error:")) {
         setScanError(data.line);
         setIsScanning(false);
         setDashboardScanMsg(null);
         localStorage.removeItem("dashboardQuickScanTarget");
         if (progressTimer.current) clearInterval(progressTimer.current);
       } else {
-        setScanResult((prev) => [...prev, data.line]);
+        // Ensure data.line is always a string
+        const formattedLine = typeof data.line === 'object' ? JSON.stringify(data.line) : String(data.line || '');
+        setScanResult((prev) => [...prev, formattedLine]);
       }
     });
     socket.on("disconnect", () => {
@@ -128,7 +130,7 @@ export default function ScanPage() {
         if (progressTimer.current) {
           clearInterval(progressTimer.current);
         }
-      } else if (data.line.startsWith("Error:")) {
+      } else if (data.line && typeof data.line === 'string' && data.line.startsWith("Error:")) {
         setScanError(data.line);
         setIsScanning(false);
         socket.disconnect();
@@ -136,7 +138,9 @@ export default function ScanPage() {
           clearInterval(progressTimer.current);
         }
       } else {
-        setScanResult(prev => [...prev, data.line]);
+        // Ensure data.line is always a string
+        const formattedLine = typeof data.line === 'object' ? JSON.stringify(data.line) : String(data.line || '');
+        setScanResult(prev => [...prev, formattedLine]);
       }
     });
     socket.on("disconnect", () => {
@@ -239,7 +243,7 @@ export default function ScanPage() {
 
                 {isScanning && (
                   <div className="flex flex-col items-center gap-4 p-4">
-                    <CircularProgress value={scanProgress} size="lg" />
+                    <CircularProgress value={scanProgress} size={160} />
                     <div className="text-center">
                       <p className="text-sm text-muted-foreground">
                         Scanning {target}... ({scanProgress}% complete)
@@ -248,7 +252,10 @@ export default function ScanPage() {
                   </div>
                 )}
 
-                <StatusLog title="Scan Log" messages={scanResult} />
+                <StatusLog title="Scan Log" messages={scanResult ? scanResult.map(item => {
+                  if (item === null || item === undefined) return '';
+                  return typeof item === 'object' ? JSON.stringify(item) : String(item);
+                }).filter(Boolean) : []} />
               </div>
             </CardContent>
           </Card>

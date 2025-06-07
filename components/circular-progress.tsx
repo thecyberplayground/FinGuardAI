@@ -15,7 +15,7 @@ interface CircularProgressProps {
 }
 
 export function CircularProgress({
-  value,
+  value = 0,
   size = 120,
   strokeWidth = 8,
   color = "url(#gradient)",
@@ -24,20 +24,27 @@ export function CircularProgress({
   label,
   glowEffect = true,
 }: CircularProgressProps) {
+  // Ensure value is a valid number and between 0-100
+  const safeValue = typeof value === 'number' && !isNaN(value) ? Math.max(0, Math.min(100, value)) : 0;
   const [progress, setProgress] = useState(0)
 
   // Animate progress on mount or when value changes
   useEffect(() => {
-    setProgress(value)
-  }, [value])
+    setProgress(safeValue)
+  }, [safeValue])
 
-  const radius = (size - strokeWidth) / 2
-  const circumference = radius * 2 * Math.PI
+  // Ensure size and strokeWidth are valid numbers
+  const safeSize = typeof size === 'number' && !isNaN(size) && size > 0 ? size : 120;
+  const safeStrokeWidth = typeof strokeWidth === 'number' && !isNaN(strokeWidth) && strokeWidth > 0 ? strokeWidth : 8;
+  
+  // Calculate dimensions with safe values
+  const radius = Math.max(0, (safeSize - safeStrokeWidth) / 2);
+  const circumference = radius * 2 * Math.PI;
   const strokeDashoffset = circumference - (progress / 100) * circumference
 
   return (
-    <div className="relative" style={{ width: size, height: size }}>
-      <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`} className="transform -rotate-90">
+    <div className="relative" style={{ width: safeSize, height: safeSize }}>
+      <svg width={safeSize} height={safeSize} viewBox={`0 0 ${safeSize} ${safeSize}`} className="transform -rotate-90">
         {/* Gradient definition */}
         <defs>
           <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -56,26 +63,26 @@ export function CircularProgress({
 
         {/* Background circle */}
         <circle
-          cx={size / 2}
-          cy={size / 2}
+          cx={safeSize / 2}
+          cy={safeSize / 2}
           r={radius}
           fill="transparent"
           stroke={backgroundColor}
-          strokeWidth={strokeWidth}
+          strokeWidth={safeStrokeWidth}
           className="opacity-20"
         />
 
         {/* Progress circle */}
         <motion.circle
-          cx={size / 2}
-          cy={size / 2}
+          cx={safeSize / 2}
+          cy={safeSize / 2}
           r={radius}
           fill="transparent"
           stroke={color}
-          strokeWidth={strokeWidth}
-          strokeDasharray={circumference}
-          initial={{ strokeDashoffset: circumference }}
-          animate={{ strokeDashoffset }}
+          strokeWidth={safeStrokeWidth}
+          strokeDasharray={`${circumference}`}
+          initial={{ strokeDashoffset: `${circumference}` }}
+          animate={{ strokeDashoffset: `${strokeDashoffset}` }}
           transition={{ duration: 1, ease: "easeInOut" }}
           strokeLinecap="round"
           filter={glowEffect ? "url(#glow)" : undefined}

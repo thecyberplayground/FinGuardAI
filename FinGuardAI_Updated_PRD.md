@@ -15,8 +15,8 @@ Single-branch banks lack affordable, automated tools to proactively identify vul
 ### 1.4 Goals
 - Reduce breach costs through proactive VAPT with environment-specific scanning profiles.
 - Provide a clean, intuitive UI with real-time scan feedback and reporting.
-- Automate threat detection and vulnerability identification using real scan data.
-- Offer recommendations and remediation steps for identified vulnerabilities.
+- Automate threat detection and vulnerability identification using integrated scanning and ML processing.
+- Offer actionable recommendations and remediation steps for identified vulnerabilities.
 - Support different operational environments (development, testing, production).
 
 ## 2. Features and Requirements (Current Implementation)
@@ -36,33 +36,37 @@ Single-branch banks lack affordable, automated tools to proactively identify vul
 - Basic authentication mechanism.
 - Role-based access (planned for future).
 
-### 2.3 Scanning Engine
-**Overview**: Automated vulnerability scanning and passive monitoring for network assets.
+### 2.3 Integrated Scanning Engine
+**Overview**: Consolidated vulnerability scanning with nmap integration and automated processing of results.
 
 **Requirements**:
-- **Active Scans**:
-  - Primary tool: Nmap with advanced script capabilities
+- **Integrated Scanning**:
+  - Primary tool: Nmap with comprehensive script capabilities
+  - Consolidated approach merging vulnerability testing and port scanning
   - Scan depths: Basic (ports/services) and deep (versions, vulnerabilities)
   - Environment-specific configurations (dev/test/prod)
   - Support for different scan intensities (stealthy, normal, aggressive)
-- **Passive Monitoring**:
-  - Real-time network monitoring with Socket.IO communications
-  - Port monitoring and connection tracking
-  - Traffic pattern analysis for anomaly detection
+- **Real-time Monitoring**:
+  - WebSocket-based real-time scan status via Socket.IO
+  - Progress tracking and live result display
+  - Immediate notification of detected vulnerabilities
   - Live updates to dashboard via Socket.IO
-- **Results Analysis**:
-  - XML parsing and structured result storage
-  - Financial impact assessment
-  - Severity classification
+- **Results Processing**:
+  - Automated XML parsing and structured result storage
+  - Direct feed into ML analysis pipeline
+  - Financial impact assessment based on detected vulnerabilities
+  - Severity classification with CVSS scoring integration
 
 ### 2.4 ML-Driven Analysis
-**Overview**: Uses network traffic and scan data to detect threats.
+**Overview**: Directly processes scan results for threat detection, vulnerability prediction, and remediation recommendations.
 
 **Requirements**:
-- **Threat Detection**: Classification based on traffic patterns using RandomForest classifier
-- **Vulnerability Assessment**: Evaluates scan results for security weaknesses
-- **Model Training**: Dynamically trains on first use if model doesn't exist 
-- **Environment Support**: Different models/settings for dev, test, and production
+- **Integrated Processing**: Directly processes nmap scan results through ML pipeline
+- **Threat Detection**: Classification based on scan patterns using trained models
+- **Vulnerability Prediction**: Identifies potential vulnerabilities based on detected system configurations
+- **Fix Recommendations**: Provides specific remediation steps for each identified vulnerability
+- **NVD Integration**: Leverages National Vulnerability Database to enrich scan findings
+- **Environment Support**: Configurable models/settings for dev, test, and production environments
 
 ### 2.5 Dashboard
 **Overview**: Central hub for monitoring and analysis.
@@ -74,13 +78,16 @@ Single-branch banks lack affordable, automated tools to proactively identify vul
 - **Settings**: Environment configuration and scan parameters
 
 ### 2.6 Reporting
-**Overview**: Detailed insights with output options.
+**Overview**: Comprehensive reporting with enhanced data flow to dashboard.
 
 **Requirements**:
-- Multiple formats: HTML, text, and JSON
-- Detailed vulnerability information with severity levels
-- Remediation recommendations
-- Financial impact analysis for financial sector clients
+- **Multiple formats**: HTML, text, and JSON outputs
+- **Detailed vulnerability information**: Complete findings with severity levels
+- **Direct dashboard integration**: Scan results properly populated to reports page
+- **Remediation recommendations**: Actionable fix suggestions for each finding
+- **Financial impact analysis**: Cost-benefit assessment for financial sector clients
+- **Report persistence**: Reports stored and accessible through dashboard interface
+- **Data visualization**: Visual representation of scan findings with severity indicators
 
 ### 2.7 Integration
 **Overview**: Hooks into existing security tools.
@@ -128,36 +135,45 @@ finguardai-admin/
 
 ### 4.2 Component Overview
 
-#### Scanning Components
-- `scan.py`: Primary entry point for vulnerability scanning
-- `vulnerability_scanner.py`: Core scanning engine using nmap
-- `enhanced_report.py`: Advanced report generation
+#### Integrated Scanning Components
+- `scan.py`: Primary entry point for the consolidated scanning system
+- `vulnerability_scanner.py`: Core scanning engine using nmap with integrated vulnerability testing
+- `enhanced_report.py`: Advanced report generation with ML-processed data
+- `use-scan-socket.tsx`: Real-time scan progress and result handling
 
-#### Machine Learning Components
-- `threat_model.py`: Network threat detection model
-- `detect_threats.py`: Threat detection implementation 
+#### Machine Learning Integration
+- Direct processing of scan results through ML pipeline
+- Integration with vulnerability scanners for immediate analysis
+- Automatic classification and prediction based on scan data
+- Recommendation engine for identified vulnerabilities
 
 #### Analysis Components
 - `financial_impact_analyzer.py`: Financial risk assessment
-- `vulnerability_predictor.py`: Vulnerability prediction engine
+- Automated vulnerability-to-fix mapping system
+- Severity classification with business impact assessment
 
 #### Web Application
 - Flask-based API server with Socket.IO for real-time updates
-- React frontend with dashboard components
+- React/Next.js frontend with dashboard components
+- Dedicated reports page with proper data integration
+- Real-time scan monitoring and result visualization
 
 ## 5. Technical Details
 
 ### 5.1 Tech Stack
 - **Frontend**: React, Next.js, Tailwind CSS
-- **Backend**: Flask (Python), Socket.IO
-- **ML**: Scikit-Learn, Pandas, NumPy, Joblib
-- **Primary Tools**: Nmap for comprehensive scanning
+- **Backend**: Flask (Python), Socket.IO for real-time communications
+- **ML**: Scikit-Learn, Pandas, NumPy, Joblib for model persistence
+- **Primary Tools**: Integrated Nmap-based scanning engine
 - **Data Storage**: JSON-based result storage, SQLite for persistent data
+- **Real-time Monitoring**: WebSocket connections with progress tracking
 
 ### 5.2 Data Sources
-- Network scan results from Nmap
-- NVD data for vulnerability information
-- ML training data (CICIDS dataset)
+- Integrated scan results from Nmap vulnerability testing
+- NVD database for comprehensive vulnerability information and fixes
+- Scan results directly fed to ML models
+- Environment-specific configuration settings
+- Historical scan data for trend analysis
 
 ### 5.3 Environment Support
 - Development: Lightweight scanning for rapid iteration
@@ -167,16 +183,19 @@ finguardai-admin/
 ## 6. Future Roadmap
 
 ### 6.1 Short-term Improvements
-- Enhanced error handling and logging
-- Improved documentation
-- More comprehensive test coverage
+- Fix dashboard reports page data flow issues
+- Enhanced error handling for scan failures
+- Improve ML model accuracy for vulnerability prediction
+- Better visualization of scan results and remediation steps
 
 ### 6.2 Mid-term Development
-- Additional scanning tools integration (OpenVAS, Nikto)
-- Enhanced ML models with more data sources
-- Expanded dashboard visualizations
+- Additional scanning capabilities integration
+- Enhanced vulnerability-to-fix mapping accuracy
+- Expanded dashboard visualizations with interactive elements
+- Improved real-time monitoring capabilities
 
 ### 6.3 Long-term Vision
 - Multi-location scanning support
 - Advanced threat hunting capabilities
 - Cloud deployment options
+- Automated remediation implementation

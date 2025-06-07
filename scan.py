@@ -18,7 +18,7 @@ from typing import Dict, Any, Optional
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
 # Import scanner components
-from backend.integrated_system.vulnerability_scanner import VulnerabilityScanner
+from backend.integrated_system.nvd_scanner import NVDVulnerabilityScanner
 from backend.integrated_system.enhanced_report import EnhancedReportGenerator
 
 # Configure logging
@@ -60,7 +60,7 @@ def scan_target(target: str, output_dir: str = "reports", args: Optional[Dict[st
     
     try:
         # Initialize components
-        scanner = VulnerabilityScanner(output_dir=output_dir)
+        scanner = NVDVulnerabilityScanner(output_dir=output_dir)
         report_generator = EnhancedReportGenerator(report_dir=output_dir)
         
         # Run the scan

@@ -83,26 +83,50 @@ def run_backend_server(env, port=5001):
     # Set environment variable for configuration
     env_vars = os.environ.copy()
     env_vars["FINGUARD_ENV"] = env
+    env_vars["PYTHONUNBUFFERED"] = "1"  # Ensure Python output is unbuffered
     
     logger.info(f"Starting FinGuardAI backend server on port {port} in {env} environment...")
     try:
-        process = subprocess.Popen([sys.executable, app_path], 
-                                  env=env_vars,
-                                  stdout=subprocess.PIPE,
-                                  stderr=subprocess.STDOUT,
-                                  text=True,
-                                  bufsize=1)
+        # Run with Python's verbose error reporting
+        cmd = [sys.executable, "-v", app_path]
+        logger.info(f"Running command: {' '.join(cmd)}")
+        
+        # Start the process with full output capture
+        process = subprocess.Popen(
+            cmd, 
+            env=env_vars,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.STDOUT,
+            text=True,
+            bufsize=1
+        )
         
         # Monitor the process output for confirmation that server is running
+        server_started = False
         for line in iter(process.stdout.readline, ''):
             print(line, end='')
             if "Starting server on" in line:
                 logger.info("Backend server started successfully")
+                server_started = True
                 break
+            # Check for common error patterns
+            elif "Error:" in line or "Exception:" in line or "Traceback" in line:
+                logger.error(f"Detected error during startup: {line.strip()}")
+        
+        # If we've exited the loop without seeing the startup message, check if process is still running
+        if not server_started and process.poll() is not None:
+            logger.error(f"Server process exited with code {process.returncode} before confirming startup")
+            # Try to get any remaining output
+            remaining_output = process.stdout.read()
+            if remaining_output:
+                print("Remaining output:")
+                print(remaining_output)
         
         return process
     except Exception as e:
         logger.error(f"Error starting backend server: {e}")
+        import traceback
+        traceback.print_exc()
         return None
 
 def main():
