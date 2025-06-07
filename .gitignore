@@ -25,3 +25,39 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+
+# reports
+/reports/
+/backend/reports/
+
+# misc
+.DS_Store
+*.pem
+
+# temp files
+*.tmp
+*.temp
+*.bak
+
+# logs
+/logs
+*.log
+
+# database
+*.sqlite
+*.db
+
+# ML models and data
+/backend/models/*.pkl
+/backend/ml/models/*.pkl
+/data/

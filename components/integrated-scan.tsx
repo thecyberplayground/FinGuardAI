@@ -1,46 +1,24 @@
 "use client"
 
-import { useState, useEffect, useCallback } from "react"
+import { useState, useEffect } from "react"
+import { API_BASE_URL } from "@/app/services/api"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { CircularProgress } from "@/components/circular-progress"
-import { StatusLog } from "@/components/status-log"
-import { io, Socket } from "socket.io-client"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { MLPredictionDisplay } from "@/components/ml-prediction-display"
 import { FinancialImpactDisplay } from "@/components/financial-impact-display"
 import { AlertCircle, Check, Info, Loader2 } from "lucide-react"
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 
-// Import API services
-import { 
-  startIntegratedScan, 
-  fetchScanStatus, 
-  fetchEnvironmentConfigs, 
-  fetchMLPredictions, 
-  fetchFinancialImpact 
-} from "@/app/services/api"
+// Import useScanSocket hook
+import { useScanSocket } from "@/hooks/use-scan-socket"
 
-interface EnvConfig {
-  ports: string;
-  intensity: string;
-  format: string;
-  [key: string]: any;
-}
-
-interface EnvironmentConfigs {
-  [key: string]: EnvConfig;
-}
-
-interface IntegratedScanProps {
-  className?: string
-}
-
-// Define ML prediction and financial impact types
-interface MLPrediction {
+// Define the Prediction interface expected by MLPredictionDisplay
+interface Prediction {
   id: string;
   type: string;
   name: string;
@@ -57,255 +35,143 @@ interface MLPrediction {
   };
 }
 
-interface FinancialImpactItem {
-  id: string;
-  category: string;
-  name: string;
-  estimatedCost: number;
-  recoveryTime: string;
-  businessRisk: "critical" | "high" | "medium" | "low";
-  description: string;
-  relatedVulnerability?: string;
-  mitigationCost?: number;
-  regulatoryImpact?: string;
+// Import API services
+import { fetchEnvironmentConfigs } from "@/app/services/api"
+
+interface EnvConfig {
+  ports: string;
+  scan_type: string; // Changed intensity to scan_type for consistency
+  format: string;
+  [key: string]: any;
 }
 
+interface EnvironmentConfigs {
+  [key: string]: EnvConfig;
+}
+
+interface IntegratedScanProps {
+  className?: string
+}
+
+// Helper function to convert MLPrediction to Prediction format
+const convertMLPredictionsToDisplayFormat = (mlPredictions: any[]): Prediction[] => {
+  if (!mlPredictions || !Array.isArray(mlPredictions)) return [];
+  
+  return mlPredictions.map((prediction, index) => ({
+    id: prediction.id || `pred-${index}`,
+    type: prediction.type || 'vulnerability',
+    name: prediction.recommendation || prediction.name || 'Unknown Prediction',
+    confidence: prediction.confidence || 0,
+    severity: prediction.severity || 'medium',
+    description: prediction.description || prediction.recommendation || '',
+    remediation: prediction.remediation || '',
+    impact: prediction.impact || '',
+    cve: prediction.cve_id || '',
+    financialImpact: prediction.financial_impact ? {
+      estimatedCost: prediction.financial_impact.estimated_cost || 0,
+      recoveryTime: prediction.financial_impact.recovery_time || 'Unknown',
+      businessRisk: prediction.financial_impact.business_risk || 'Unknown'
+    } : undefined
+  }));
+};
+
 export function IntegratedScan({ className }: IntegratedScanProps) {
-  // Basic scan state
+  // Use the scan socket hook
+  const {
+    isScanning,
+    scanProgress,
+    currentPhase,
+    phaseProgress,
+    scanResult,
+    vulnerabilities,
+    financialImpact,
+    mlPredictions,
+    scanReport,
+    scanError,
+    startScan: startSocketScan,
+    cancelScan
+  } = useScanSocket();
+  
+  // Form state
   const [target, setTarget] = useState<string>("");
-  const [scanInProgress, setScanInProgress] = useState<boolean>(false);
-  const [scanCompleted, setScanCompleted] = useState<boolean>(false);
-  const [scanProgress, setScanProgress] = useState<number>(0);
-  const [logs, setLogs] = useState<string[]>([]);
   const [environment, setEnvironment] = useState<string>("prod");
   const [portRange, setPortRange] = useState<string>("1-1000");
-  const [intensity, setIntensity] = useState<string>("normal");
+  const [scanType, setScanType] = useState<string>("basic"); // Changed from intensity to scan_type
   const [reportFormat, setReportFormat] = useState<string>("json");
-  const [socket, setSocket] = useState<Socket | null>(null);
-  const [error, setError] = useState<string | null>(null);
   
   // Environment config state
   const [envConfigs, setEnvConfigs] = useState<EnvironmentConfigs>({});
   const [loadingEnvConfigs, setLoadingEnvConfigs] = useState<boolean>(false);
   
-  // ML and financial impact state
-  const [scanId, setScanId] = useState<string>("");
-  const [scanResults, setScanResults] = useState<any>(null);
+  // UI state
   const [activeTab, setActiveTab] = useState<string>("logs");
-  const [mlPredictions, setMlPredictions] = useState<MLPrediction[]>([]);
-  const [financialImpacts, setFinancialImpacts] = useState<FinancialImpactItem[]>([]);
-  const [modelAccuracy, setModelAccuracy] = useState<number>(0);
-  const [industryBenchmark, setIndustryBenchmark] = useState<number>(0);
-  const [loadingMlData, setLoadingMlData] = useState<boolean>(false);
   const [scanStartTime, setScanStartTime] = useState<string>("");
-  const [scanFinishTime, setScanFinishTime] = useState<string>("");
+  
+  // Derive scan completed state from hook data
+  const scanCompleted = !isScanning && (scanProgress >= 100 || scanReport !== null);
 
-  // Helper function to add log messages
-  const addLog = useCallback((message: string) => {
-    setLogs(prev => [...prev, `[${new Date().toLocaleTimeString()}] ${message}`]);
-  }, []);
-
-  // Connect to Socket.IO server when component mounts
+  // Load environment configurations
   useEffect(() => {
-    // Use the same API_BASE_URL from our API service
-    const socketUrl = typeof window !== 'undefined' && window.location.hostname === 'localhost'
-      ? "http://localhost:5001"
-      : process.env.NEXT_PUBLIC_API_URL || "";
-      
-    const newSocket = io(socketUrl);
-
-    newSocket.on("connect", () => {
-      addLog("Connected to server");
-    });
-
-    newSocket.on("disconnect", () => {
-      addLog("Disconnected from server");
-    });
-
-    newSocket.on("scan_progress", (data) => {
-      setScanProgress(data.progress);
-      addLog(`Scan progress: ${data.progress}% - ${data.message || ""}`);
-      
-      if (data.progress === 100) {
-        setScanInProgress(false);
-        setScanCompleted(true);
-        setScanFinishTime(new Date().toISOString());
-        addLog("Scan completed");
-        fetchScanResults(target);
-      }
-    });
-
-    newSocket.on("scan_error", (data) => {
-      setError(data.message);
-      setScanInProgress(false);
-      addLog(`Scan error: ${data.message}`);
-    });
-
-    // ML prediction events
-    newSocket.on("ml_prediction", (data) => {
-      addLog(`ML Prediction received: ${data.prediction_type}`);
-      // Update UI with new ML prediction data
-      fetchMLData(scanId);
-    });
-
-    // Vulnerability detected event
-    newSocket.on("vulnerability_detected", (data) => {
-      addLog(`Vulnerability detected: ${data.name} (${data.severity})`);
-    });
-
-    setSocket(newSocket);
-
-    return () => {
-      newSocket.disconnect();
-    };
-  }, [addLog, target, scanId]);
-
-  // Fetch environment configurations on mount
-  useEffect(() => {
-    const loadEnvironmentConfigs = async () => {
+    async function loadEnvironmentConfigs() {
       try {
         setLoadingEnvConfigs(true);
-        addLog("Fetching environment configurations...");
         const configs = await fetchEnvironmentConfigs();
         setEnvConfigs(configs);
         
-        // Set default configuration based on selected environment
-        if (configs[environment]) {
+        // Set initial values if available
+        if (configs && configs[environment]) {
           setPortRange(configs[environment].ports || "1-1000");
-          setIntensity(configs[environment].intensity || "normal");
+          setScanType(configs[environment].scan_type || "basic");
           setReportFormat(configs[environment].format || "json");
         }
-        
-        addLog("Environment configurations loaded");
       } catch (error) {
-        setError(`Failed to load environment configurations: ${error instanceof Error ? error.message : String(error)}`);
-        addLog(`Error loading environment configurations: ${error instanceof Error ? error.message : String(error)}`);
+        console.error("Failed to load environment configurations:", error);
       } finally {
         setLoadingEnvConfigs(false);
       }
-    };
+    }
 
     loadEnvironmentConfigs();
-  }, [addLog]);
+  }, [environment]);
 
   // Update configuration when environment changes
   useEffect(() => {
     if (envConfigs && envConfigs[environment]) {
       setPortRange(envConfigs[environment].ports || "1-1000");
-      setIntensity(envConfigs[environment].intensity || "normal");
+      setScanType(envConfigs[environment].scan_type || "basic");
       setReportFormat(envConfigs[environment].format || "json");
-      addLog(`Environment switched to: ${environment}`);
     }
-  }, [environment, envConfigs, addLog]);
-
-  // Fetch scan results
-  const fetchScanResults = async (targetHost: string) => {
-    try {
-      addLog(`Fetching scan results for ${targetHost}...`);
-      const results = await fetchScanStatus(targetHost);
-      setScanResults(results);
-      setScanId(results.scan_id || "");
-      
-      if (results.scan_id) {
-        fetchMLData(results.scan_id);
-      }
-      
-      addLog("Scan results retrieved successfully");
-    } catch (error) {
-      setError(`Failed to fetch scan results: ${error instanceof Error ? error.message : String(error)}`);
-      addLog(`Error fetching scan results: ${error instanceof Error ? error.message : String(error)}`);
-    }
-  };
-
-  // Fetch ML predictions and financial impact data
-  const fetchMLData = async (currentScanId: string) => {
-    if (!currentScanId) return;
-    
-    try {
-      setLoadingMlData(true);
-      addLog("Fetching ML predictions...");
-      
-      // Fetch ML predictions
-      const predictions = await fetchMLPredictions(currentScanId);
-      setMlPredictions(predictions.items || []);
-      setModelAccuracy(predictions.model_accuracy || 0);
-      
-      // Fetch financial impact data
-      const financialData = await fetchFinancialImpact(currentScanId);
-      setFinancialImpacts(financialData.impacts || []);
-      setIndustryBenchmark(financialData.industry_benchmark || 0);
-      
-      addLog("ML data retrieved successfully");
-    } catch (error) {
-      addLog(`Error fetching ML data: ${error instanceof Error ? error.message : String(error)}`);
-    } finally {
-      setLoadingMlData(false);
-    }
-  };
-
-  // Start a scan
-  const startScan = async () => {
+  }, [environment, envConfigs]);
+  
+  // Function to start a scan
+  const handleStartScan = () => {
     if (!target) {
-      setError("Please enter a target to scan");
       return;
     }
-
-    // Validate target format
-    let processedTarget = target.trim();
     
-    // Simple URL validation
+    setScanStartTime(new Date().toISOString());
+    setActiveTab("logs");
+    
+    // Process target to ensure proper format
+    let processedTarget = target.trim();
     if (!processedTarget.startsWith('http://') && !processedTarget.startsWith('https://')) {
-      // If it's just a domain without protocol, add http:// prefix
       if (processedTarget.includes('.') && !processedTarget.includes(' ')) {
         processedTarget = `http://${processedTarget}`;
-        addLog(`Added http:// prefix to ${target} for scanning`);
       }
     }
-
-    try {
-      setError(null);
-      setScanInProgress(true);
-      setScanCompleted(false);
-      setScanProgress(0);
-      setScanResults(null);
-      setMlPredictions([]);
-      setFinancialImpacts([]);
-      setLogs([]);
-      setActiveTab("logs");
-      setScanStartTime(new Date().toISOString());
-      
-      addLog(`Starting scan of ${processedTarget} in ${environment} environment...`);
-      addLog(`Scan configuration: ports=${portRange}, intensity=${intensity}, format=${reportFormat}`);
-      
-      const startTime = Date.now();
-      const response = await startIntegratedScan(processedTarget, {
-        ports: portRange,
-        intensity: intensity as "stealthy" | "normal" | "aggressive",
-        format: reportFormat as "html" | "text" | "json",
-        env: environment as "dev" | "test" | "prod"
-      });
-      const endTime = Date.now();
-      
-      addLog(`API response received in ${(endTime - startTime) / 1000} seconds`);
-      
-      if (response.status === "error") {
-        throw new Error(`API returned error: ${response.error || 'Unknown error'}`);
-      }
-      
-      setScanId(response.scan_id || "");
-      addLog(`Scan initiated with ID: ${response.scan_id || response.scanId || 'N/A'}`);
-      
-      if (response.processed_target) {
-        addLog(`Target processed as: ${response.processed_target}`);
-      }
-      
-    } catch (error) {
-      const errorMsg = error instanceof Error ? error.message : String(error);
-      setError(`Failed to start scan: ${errorMsg}`);
-      addLog(`Error starting scan: ${errorMsg}`);
-      addLog(`Detailed error info: ${JSON.stringify(error)}`); 
-      setScanInProgress(false);
-    }
+    
+    // Call our hook's startScan with the environment context
+    startSocketScan(processedTarget, {
+      ports: portRange || "1-1000",
+      scan_type: scanType || "basic", // Using scanType consistently
+      format: reportFormat || "json",
+      environment: environment || "prod"
+    });
+  };
+  
+  // Function to handle canceling a scan
+  const handleCancelScan = () => {
+    cancelScan();
   };
 
   return (
@@ -315,187 +181,213 @@ export function IntegratedScan({ className }: IntegratedScanProps) {
       </CardHeader>
       <CardContent>
         <div className="space-y-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            <div className="flex flex-col gap-2 md:col-span-2 lg:col-span-1">
-              <Label htmlFor="target">Target</Label>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="space-y-2">
+              <Label htmlFor="target">Target (IP or Domain)</Label>
               <Input
                 id="target"
-                placeholder="IP address or hostname"
+                placeholder="e.g., 192.168.1.1 or example.com"
                 value={target}
                 onChange={(e) => setTarget(e.target.value)}
-                disabled={scanInProgress}
+                disabled={isScanning}
               />
             </div>
-
-            <div className="flex flex-col gap-2">
+            <div className="space-y-2">
               <Label htmlFor="environment">Environment</Label>
-              <Select 
-                value={environment} 
+              <Select
+                value={environment}
                 onValueChange={setEnvironment}
-                disabled={scanInProgress || loadingEnvConfigs}
+                disabled={isScanning || loadingEnvConfigs}
               >
-                <SelectTrigger>
-                  <SelectValue placeholder="Select Environment" />
+                <SelectTrigger id="environment">
+                  <SelectValue placeholder="Select environment" />
                 </SelectTrigger>
                 <SelectContent>
-                  {Object.keys(envConfigs).map((env) => (
-                    <SelectItem key={env} value={env}>
-                      {env.charAt(0).toUpperCase() + env.slice(1)}
-                    </SelectItem>
-                  ))}
+                  <SelectItem value="dev">Development</SelectItem>
+                  <SelectItem value="test">Testing</SelectItem>
+                  <SelectItem value="prod">Production</SelectItem>
                 </SelectContent>
               </Select>
             </div>
-
-            <div className="flex flex-col gap-2">
-              <Label htmlFor="scan-type">Scan Intensity</Label>
-              <Select 
-                value={intensity} 
-                onValueChange={setIntensity}
-                disabled={scanInProgress}
-              >
-                <SelectTrigger>
-                  <SelectValue placeholder="Select Scan Intensity" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="stealthy">Stealthy</SelectItem>
-                  <SelectItem value="normal">Normal</SelectItem>
-                  <SelectItem value="aggressive">Aggressive</SelectItem>
-                </SelectContent>
-              </Select>
-            </div>
-
-            <div className="flex flex-col gap-2">
-              <Label htmlFor="port-range">Port Range</Label>
+          </div>
+          
+          <div className="flex flex-wrap gap-4">
+            <div className="space-y-2 flex-1">
+              <Label htmlFor="ports">Port Range</Label>
               <Input
-                id="port-range"
-                placeholder="e.g., 80,443,8080-8090"
+                id="ports"
+                placeholder="e.g., 1-1000"
                 value={portRange}
                 onChange={(e) => setPortRange(e.target.value)}
-                disabled={scanInProgress}
+                disabled={isScanning || loadingEnvConfigs}
               />
             </div>
-
-            <div className="flex flex-col gap-2">
-              <Label htmlFor="report-format">Report Format</Label>
-              <Select 
-                value={reportFormat} 
-                onValueChange={setReportFormat}
-                disabled={scanInProgress}
+            <div className="space-y-2 flex-1">
+              <Label htmlFor="scan-type">Scan Type</Label>
+              <Select
+                value={scanType}
+                onValueChange={setScanType}
+                disabled={isScanning}
               >
-                <SelectTrigger>
-                  <SelectValue placeholder="Select Format" />
+                <SelectTrigger id="scan-type">
+                  <SelectValue placeholder="Select scan type" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="html">HTML</SelectItem>
-                  <SelectItem value="text">Text</SelectItem>
-                  <SelectItem value="json">JSON</SelectItem>
+                  <SelectItem value="basic">Basic</SelectItem>
+                  <SelectItem value="deep">Deep</SelectItem>
                 </SelectContent>
               </Select>
             </div>
-
-            <div className="flex items-end">
-              <Button 
-                className="w-full" 
-                onClick={startScan} 
-                disabled={scanInProgress || !target}
+            <div className="space-y-2 flex-1">
+              <Label htmlFor="format">Report Format</Label>
+              <Select
+                value={reportFormat}
+                onValueChange={setReportFormat}
+                disabled={isScanning || loadingEnvConfigs}
               >
-                {scanInProgress ? (
+                <SelectTrigger id="format">
+                  <SelectValue placeholder="Select format" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="json">JSON</SelectItem>
+                  <SelectItem value="html">HTML</SelectItem>
+                  <SelectItem value="xml">XML</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+          </div>
+
+          <div className="flex justify-end space-x-2 pt-2">
+            {isScanning ? (
+              <Button 
+                variant="destructive" 
+                onClick={handleCancelScan}
+              >
+                Cancel Scan
+              </Button>
+            ) : (
+              <Button 
+                onClick={handleStartScan} 
+                disabled={!target || loadingEnvConfigs}
+              >
+                {isScanning ? (
                   <>
                     <Loader2 className="mr-2 h-4 w-4 animate-spin" />
                     Scanning...
                   </>
                 ) : "Start Scan"}
               </Button>
+            )}
+          </div>
+        </div>
+
+        {scanError && (
+          <Alert variant="destructive" className="mt-4">
+            <AlertCircle className="h-4 w-4" />
+            <AlertTitle>Error</AlertTitle>
+            <AlertDescription>{scanError}</AlertDescription>
+          </Alert>
+        )}
+
+        {isScanning && (
+          <div className="flex flex-col items-center gap-4 p-4 mt-4">
+            <CircularProgress value={scanProgress ? Number(scanProgress) : 0} size={160} />
+            <div className="text-center">
+              <p className="text-sm text-muted-foreground">
+                {currentPhase ? (
+                  <>
+                    Phase: {currentPhase} - {phaseProgress && typeof phaseProgress[currentPhase] === 'number' ? phaseProgress[currentPhase] : 0}% complete
+                    <br />
+                    Overall progress: {scanProgress || 0}%
+                  </>
+                ) : (
+                  <>Scanning {target}... ({scanProgress || 0}% complete)</>
+                )}
+              </p>
             </div>
           </div>
+        )}
 
-          {error && (
-            <Alert variant="destructive">
-              <AlertCircle className="h-4 w-4" />
-              <AlertTitle>Error</AlertTitle>
-              <AlertDescription>{error}</AlertDescription>
-            </Alert>
-          )}
-
-          {scanInProgress && (
-            <div className="flex flex-col items-center gap-4 p-4">
-              <CircularProgress value={Number(scanProgress)} size="lg" />
-              <div className="text-center">
-                <p className="text-sm text-muted-foreground">
-                  Scanning {target}... ({scanProgress}% complete)
-                </p>
+        {(isScanning || scanCompleted) && (
+          <Tabs defaultValue={activeTab} onValueChange={setActiveTab} className="w-full mt-4">
+            <TabsList className="grid w-full grid-cols-3">
+              <TabsTrigger value="logs">Scan Logs</TabsTrigger>
+              <TabsTrigger value="ml" disabled={!mlPredictions || mlPredictions.length === 0}>
+                ML Predictions
+              </TabsTrigger>
+              <TabsTrigger value="financial" disabled={!financialImpact}>
+                Financial Impact
+              </TabsTrigger>
+            </TabsList>
+            
+            <TabsContent value="logs" className="mt-4">
+              <div className="rounded-md border p-4">
+                <h3 className="text-sm font-medium mb-2">Scan Log</h3>
+                <div className="bg-muted rounded-md p-2 max-h-[300px] overflow-auto">
+                  {scanResult && scanResult.map((log: any, index: number) => (
+                    <div key={index} className="text-xs font-mono py-0.5">
+                      {typeof log === 'object' && log !== null ? JSON.stringify(log) : log === null || log === undefined ? "" : String(log)}
+                    </div>
+                  ))}
+                  {(!scanResult || scanResult.length === 0) && (
+                    <div className="text-xs font-mono py-0.5">No logs available yet...</div>
+                  )}
+                </div>
               </div>
-            </div>
-          )}
-
-          {(scanInProgress || scanCompleted) && (
-            <Tabs defaultValue={activeTab} onValueChange={setActiveTab} className="w-full">
-              <TabsList className="grid w-full grid-cols-3">
-                <TabsTrigger value="logs">Scan Logs</TabsTrigger>
-                <TabsTrigger value="ml" disabled={mlPredictions.length === 0 && !loadingMlData}>
-                  ML Predictions {loadingMlData && <Loader2 className="ml-2 h-3 w-3 animate-spin" />}
-                </TabsTrigger>
-                <TabsTrigger value="financial" disabled={financialImpacts.length === 0 && !loadingMlData}>
-                  Financial Impact
-                </TabsTrigger>
-              </TabsList>
               
-              <TabsContent value="logs" className="mt-4">
-                <div className="rounded-md border p-4">
-                  <h3 className="text-sm font-medium mb-2">Scan Log</h3>
-                  <div className="bg-muted rounded-md p-2 max-h-[300px] overflow-auto">
-                    {logs.map((log, index) => (
-                      <div key={index} className="text-xs font-mono py-0.5">
-                        {log}
-                      </div>
-                    ))}
+              {scanReport && (
+                <div className="mt-4 border rounded-md p-4">
+                  <h3 className="font-medium mb-2">Scan Report</h3>
+                  <div className="mt-4">
+                    <Button 
+                      variant="outline" 
+                      size="sm"
+                      onClick={() => {
+                        // Ensure we have a valid report ID format
+                        const reportId = scanReport.reportId || scanReport.id;
+                        console.log('Opening report with ID:', reportId);
+                        window.open(`${API_BASE_URL}/reports/${reportId}?format=html`, '_blank');
+                      }}
+                    >
+                      View Full Report
+                    </Button>
                   </div>
                 </div>
-                
-                {scanResults && (
-                  <div className="mt-4 border rounded-md p-4">
-                    <h3 className="font-medium mb-2">Scan Results</h3>
-                    <pre className="text-xs bg-muted p-2 rounded overflow-auto max-h-[300px]">
-                      {JSON.stringify(scanResults, null, 2)}
-                    </pre>
-                    
-                    {scanResults.report_path && (
-                      <div className="mt-4">
-                        <Button 
-                          variant="outline" 
-                          size="sm"
-                          onClick={() => window.open(`/reports/${scanResults.report_path}`, '_blank')}
-                        >
-                          View Full Report
-                        </Button>
-                      </div>
-                    )}
-                  </div>
-                )}
-              </TabsContent>
-              
-              <TabsContent value="ml" className="mt-4">
+              )}
+            </TabsContent>
+            
+            <TabsContent value="ml" className="mt-4">
+              {mlPredictions && Array.isArray(mlPredictions) && mlPredictions.length > 0 ? (
                 <MLPredictionDisplay 
-                  predictions={mlPredictions}
-                  modelAccuracy={modelAccuracy}
+                  predictions={convertMLPredictionsToDisplayFormat(mlPredictions || [])}
+                  modelAccuracy={0.85}
                   scanTime={scanStartTime ? `Scan started: ${new Date(scanStartTime).toLocaleString()}` : ""}
-                  isLoading={loadingMlData}
+                  isLoading={isScanning}
                 />
-              </TabsContent>
-              
-              <TabsContent value="financial" className="mt-4">
+              ) : (
+                <div className="p-4 text-center text-muted-foreground">
+                  {isScanning ? "Waiting for ML predictions..." : "No ML predictions available"}
+                </div>
+              )}
+            </TabsContent>
+            
+            <TabsContent value="financial" className="mt-4">
+              {financialImpact && Array.isArray(financialImpact) && financialImpact.length > 0 ? (
                 <FinancialImpactDisplay 
-                  financialImpacts={financialImpacts}
+                  financialImpacts={financialImpact}
                   scanTarget={target}
                   scanDate={scanStartTime ? new Date(scanStartTime).toLocaleString() : ""}
-                  isLoading={loadingMlData}
-                  industryBenchmark={industryBenchmark}
+                  isLoading={isScanning}
+                  industryBenchmark={0.78}
                 />
-              </TabsContent>
-            </Tabs>
-          )}
-        </div>
+              ) : (
+                <div className="p-4 text-center text-muted-foreground">
+                  {isScanning ? "Calculating financial impact..." : "No financial impact data available"}
+                </div>
+              )}
+            </TabsContent>
+          </Tabs>
+        )}
       </CardContent>
     </Card>
   );
