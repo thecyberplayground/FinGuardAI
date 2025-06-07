@@ -343,8 +343,8 @@ export function IntegratedScan({ className }: IntegratedScanProps) {
                       variant="outline" 
                       size="sm"
                       onClick={() => {
-                        // Ensure we have a valid report ID format
-                        const reportId = scanReport.reportId || scanReport.id;
+                        // Use the report ID from scanReport
+                        const reportId = scanReport.reportId;
                         console.log('Opening report with ID:', reportId);
                         window.open(`${API_BASE_URL}/reports/${reportId}?format=html`, '_blank');
                       }}
