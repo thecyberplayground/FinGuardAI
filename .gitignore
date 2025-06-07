@@ -2,13 +2,53 @@
 
 # dependencies
 /node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+/__tests__
+/test
 
 # next.js
 /.next/
 /out/
+.next/
 
 # production
 /build
+/dist
+
+# backend python
+*.pyc
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+/env/
+/venv/
+/ENV/
+/env.bak/
+/venv.bak/
+
+# backend temporary files
+/reports/*.json
+/reports/*.html
+/reports/*.txt
+/backend/reports/
+/logs/
+/backend/logs/
+/temp/
+/backend/temp/
+
+# ML artifacts
+/ml/models/*
+!/ml/models/.gitkeep
+
+# misc
+.DS_Store
+*.pem
 
 # debug
 npm-debug.log*
@@ -16,8 +56,9 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# env files
-.env*
+# local env files
+.env*.local
+.env
 
 # vercel
 .vercel
@@ -26,38 +67,17 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# python
-__pycache__/
-*.py[cod]
-*$py.class
-*.so
-.Python
-env/
-venv/
-ENV/
+# IDE / editors
+.idea/
+.vscode/
+*.swp
+*.swo
 
-# reports
-/reports/
-/backend/reports/
+# cache directories
+.npm
+.eslintcache
+.stylelintcache
+.__pycache__
 
-# misc
-.DS_Store
-*.pem
-
-# temp files
-*.tmp
-*.temp
-*.bak
-
-# logs
-/logs
-*.log
-
-# database
-*.sqlite
-*.db
-
-# ML models and data
-/backend/models/*.pkl
-/backend/ml/models/*.pkl
-/data/
+# OS files
+Thumbs.db

@@ -1,0 +1,1222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///C:/Program Files (x86)/Nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Tue Jun 03 16:01:40 2025 as: nmap -oX &quot;C:\\Users\\CYBER\\Downloads\\finguardai-admin (3)\\reports\\74_81_88_2\\74_81_88_2_20250603_160139_vulns.xml&quot; -p 1433,53,5432,23,1-1000,8443,8080-8090,3306,25,8843,21,9042,27017,9443,6379,22,1521 -T3 -sV -sC -&#45;script vuln,auth,default,discovery,version,http-headers,http-methods,ssl-cert,mysql-empty-password,ms-sql-info,mongodb-info,redis-info 74.81.88.2 -->
+<nmaprun scanner="nmap" args="nmap -oX &quot;C:\\Users\\CYBER\\Downloads\\finguardai-admin (3)\\reports\\74_81_88_2\\74_81_88_2_20250603_160139_vulns.xml&quot; -p 1433,53,5432,23,1-1000,8443,8080-8090,3306,25,8843,21,9042,27017,9443,6379,22,1521 -T3 -sV -sC -&#45;script vuln,auth,default,discovery,version,http-headers,http-methods,ssl-cert,mysql-empty-password,ms-sql-info,mongodb-info,redis-info 74.81.88.2" start="1748962900" startstr="Tue Jun 03 16:01:40 2025" version="7.80" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="1021" services="1-1000,1433,1521,3306,5432,6379,8080-8090,8443,8843,9042,9443,27017"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<prescript><script id="targets-asn" output="&#xa;  targets-asn.asn is a mandatory parameter&#xa;"/><script id="targets-ipv6-multicast-echo" output="&#xa;  IP: fe80::2c27:8ff:feaf:1abe  MAC: 2e:27:08:af:1a:be  IFACE: eth5&#xa;  Use -&#45;script-args=newtargets to add the results as targets&#xa;"/><script id="targets-ipv6-multicast-invalid-dst" output="&#xa;  IP: fe80::2c27:8ff:feaf:1abe  MAC: 2e:27:08:af:1a:be  IFACE: eth5&#xa;  Use -&#45;script-args=newtargets to add the results as targets&#xa;"/></prescript><host starttime="1748962927" endtime="1748963533"><status state="up" reason="reset" reason_ttl="250"/>
+<address addr="74.81.88.2" addrtype="ipv4"/>
+<hostnames>
+<hostname name="server.lcu.edu.ng" type="PTR"/>
+</hostnames>
+<ports><extraports state="filtered" count="1007">
+<extrareasons reason="no-responses" count="1007"/>
+</extraports>
+<port protocol="tcp" portid="20"><state state="closed" reason="reset" reason_ttl="46"/><service name="ftp-data" method="table" conf="3"/></port>
+<port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="45"/><service name="ftp" product="Pure-FTPd" method="probed" conf="10"><cpe>cpe:/a:pureftpd:pure-ftpd</cpe></service><script id="banner" output="220-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; Welcome to Pure-FTPd [privsep] [TLS] -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;...&#xa;"/><script id="clamav-exec" output="ERROR: Script execution failed (use -d to debug)"/><script id="ssl-cert" output="Subject: commonName=server.lcu.edu.ng&#xa;Subject Alternative Name: DNS:server.lcu.edu.ng&#xa;Not valid before: 2025-04-15T19:50:12&#xa;Not valid after:  2025-07-14T19:50:11"><table key="subject">
+<elem key="commonName">server.lcu.edu.ng</elem>
+</table>
+<table key="issuer">
+<elem key="countryName">US</elem>
+<elem key="organizationName">Let&apos;s Encrypt</elem>
+<elem key="commonName">R11</elem>
+</table>
+<table key="pubkey">
+<elem key="modulus">BIGNUM: 03C7AF18</elem>
+<elem key="exponent">BIGNUM: 03C7ADD8</elem>
+<elem key="bits">2048</elem>
+<elem key="type">rsa</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Key Usage</elem>
+<elem key="critical">true</elem>
+<elem key="value">Digital Signature, Key Encipherment</elem>
+</table>
+<table>
+<elem key="name">X509v3 Extended Key Usage</elem>
+<elem key="value">TLS Web Server Authentication, TLS Web Client Authentication</elem>
+</table>
+<table>
+<elem key="name">X509v3 Basic Constraints</elem>
+<elem key="critical">true</elem>
+<elem key="value">CA:FALSE</elem>
+</table>
+<table>
+<elem key="name">X509v3 Subject Key Identifier</elem>
+<elem key="value">54:2D:F8:AD:BB:26:30:6F:07:9C:9A:41:16:CD:93:B9:BF:33:36:1C</elem>
+</table>
+<table>
+<elem key="name">X509v3 Authority Key Identifier</elem>
+<elem key="value">keyid:C5:CF:46:A4:EA:F4:C3:C0:7A:6C:95:C4:2D:B0:5E:92:2F:26:E3:B9&#xa;</elem>
+</table>
+<table>
+<elem key="name">Authority Information Access</elem>
+<elem key="value">OCSP - URI:http://r11.o.lencr.org&#xa;CA Issuers - URI:http://r11.i.lencr.org/&#xa;</elem>
+</table>
+<table>
+<elem key="name">X509v3 Subject Alternative Name</elem>
+<elem key="value">DNS:server.lcu.edu.ng</elem>
+</table>
+<table>
+<elem key="name">X509v3 Certificate Policies</elem>
+<elem key="value">Policy: 2.23.140.1.2.1&#xa;</elem>
+</table>
+<table>
+<elem key="name">X509v3 CRL Distribution Points</elem>
+<elem key="value">&#xa;Full Name:&#xa;  URI:http://r11.c.lencr.org/15.crl&#xa;</elem>
+</table>
+<table>
+<elem key="name">CT Precertificate SCTs</elem>
+<elem key="value">Signed Certificate Timestamp:&#xa;    Version   : v1(0)&#xa;    Log ID    : CC:FB:0F:6A:85:71:09:65:FE:95:9B:53:CE:E9:B2:7C:&#xa;                22:E9:85:5C:0D:97:8D:B6:A9:7E:54:C0:FE:4C:0D:B0&#xa;    Timestamp : Apr 15 20:48:42.750 2025 GMT&#xa;    Extensions: none&#xa;    Signature : ecdsa-with-SHA256&#xa;                30:46:02:21:00:C3:FD:79:ED:A5:88:40:A1:C4:16:75:&#xa;                5C:2A:67:5B:70:B6:DF:8E:70:F0:62:08:DE:68:2A:CB:&#xa;                FC:E8:A2:E4:AD:02:21:00:AC:64:9E:63:AC:F1:76:BB:&#xa;                59:7F:D7:30:36:D0:47:B7:95:9C:68:B8:08:9C:C1:15:&#xa;                55:B3:A0:B4:89:54:97:07&#xa;Signed Certificate Timestamp:&#xa;    Version   : v1(0)&#xa;    Log ID    : AF:18:1A:28:D6:8C:A3:E0:A9:8A:4C:9C:67:AB:09:F8:&#xa;                BB:BC:22:BA:AE:BC:B1:38:A3:A1:9D:D3:F9:B6:03:0D&#xa;    Timestamp : Apr 15 20:48:43.090 2025 GMT&#xa;    Extensions: none&#xa;    Signature : ecdsa-with-SHA256&#xa;                30:44:02:20:32:1D:E8:F0:43:06:5C:CB:B1:0F:25:96:&#xa;                61:59:D1:81:E8:E6:B9:4C:60:55:CE:23:4E:03:6D:40:&#xa;                C5:66:3F:27:02:20:1A:22:E1:75:C4:C0:B1:60:1F:85:&#xa;                81:E3:90:00:3E:56:51:8B:8C:F0:ED:39:85:34:03:2D:&#xa;                D9:06:07:E2:DD:3B</elem>
+</table>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2025-04-15T19:50:12</elem>
+<elem key="notAfter">2025-07-14T19:50:11</elem>
+</table>
+<elem key="md5">ad78e3ac10d865b14e9e7edb88f7e219</elem>
+<elem key="sha1">3668afb6417f5f9444ec70c7c49fe074f6916fab</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIFIjCCBAqgAwIBAgISBoqbd69oTHPmqjAgR+G1/c+OMA0GCSqGSIb3DQEBCwUA&#xa;MDMxCzAJBgNVBAYTAlVTMRYwFAYDVQQKEw1MZXQncyBFbmNyeXB0MQwwCgYDVQQD&#xa;EwNSMTEwHhcNMjUwNDE1MTk1MDEyWhcNMjUwNzE0MTk1MDExWjAcMRowGAYDVQQD&#xa;ExFzZXJ2ZXIubGN1LmVkdS5uZzCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoC&#xa;ggEBAKYbsIomhY3681rx7+5nfj4fB1AeAZdOF4RvUoYrxjafOp2VUlBzsLlvD0Hl&#xa;S8jl70RQv7NGbNahFsW47BuD/gfFWm7w8JHWLTwzxVPsbfPEsBZA+rRETMl0YIEZ&#xa;IdcPirZs5OPiiXJD7Il6A17jqDuc21bkxcn9XsLX1VFdrB6FWsmn0vBhR+Z/Wmrj&#xa;uoAfgbCfUMlCUH3YU6Y5KSjEuYIExgLRcru6XeYG2N530cds9XEm+y4ysKxZI1YD&#xa;zK2mpqnEDJuAMzGIXS5rhWcuuDyZdEThDEgFfT2Qa2LbGjk64Gt3+/DMf75gJNIB&#xa;zdrcrYXLIQ3tWkSwxCR3VDo7YMECAwEAAaOCAkUwggJBMA4GA1UdDwEB/wQEAwIF&#xa;oDAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwDAYDVR0TAQH/BAIwADAd&#xa;BgNVHQ4EFgQUVC34rbsmMG8HnJpBFs2Tub8zNhwwHwYDVR0jBBgwFoAUxc9GpOr0&#xa;w8B6bJXELbBeki8m47kwVwYIKwYBBQUHAQEESzBJMCIGCCsGAQUFBzABhhZodHRw&#xa;Oi8vcjExLm8ubGVuY3Iub3JnMCMGCCsGAQUFBzAChhdodHRwOi8vcjExLmkubGVu&#xa;Y3Iub3JnLzAcBgNVHREEFTATghFzZXJ2ZXIubGN1LmVkdS5uZzATBgNVHSAEDDAK&#xa;MAgGBmeBDAECATAuBgNVHR8EJzAlMCOgIaAfhh1odHRwOi8vcjExLmMubGVuY3Iu&#xa;b3JnLzE1LmNybDCCAQQGCisGAQQB1nkCBAIEgfUEgfIA8AB3AMz7D2qFcQll/pWb&#xa;U87psnwi6YVcDZeNtql+VMD+TA2wAAABljs2Fv4AAAQDAEgwRgIhAMP9ee2liECh&#xa;xBZ1XCpnW3C2345w8GII3mgqy/zoouStAiEArGSeY6zxdrtZf9cwNtBHt5WcaLgI&#xa;nMEVVbOgtIlUlwcAdQCvGBoo1oyj4KmKTJxnqwn4u7wiuq68sTijoZ3T+bYDDQAA&#xa;AZY7NhhSAAAEAwBGMEQCIDId6PBDBlzLsQ8llmFZ0YHo5rlMYFXOI04DbUDFZj8n&#xa;AiAaIuF1xMCxYB+FgeOQAD5WUYuM8O05hTQDLdkGB+LdOzANBgkqhkiG9w0BAQsF&#xa;AAOCAQEAS4CeyWQhyHUA26qAOgq/4yLZPuOtwQPJmeBp5LT0j0pBCjxHgWX9wGf6&#xa;pQLhsYxjev/TsY8dOq0OzJe0/8g2SzOnxeUpRgCCv82U9NV+u6H0dIxN7u9OF3y8&#xa;Ikpn+U+qCSTv7wCYyi4Outlj+WZadmPZmVxC/sjOLfdeUV2BBU/APwNnV+d+O1/g&#xa;z3mKgcxmw6aLVG3qE7ZCEo3lJVcDJFeFOoWnPMLyxGo4RTOGOGO/DD8RKqfIB5ek&#xa;hFpi2wSiTO8625Ltdn4qpu88tKhchxD6wtoKTl0s31jVTHDpQNTWEGJhBL0LAi70&#xa;Ec+RYy0mkgOkXGYgNH29Eb0ZWM3OVQ==&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="ssl-date" output="TLS randomness does not represent time"></script><script id="ssl-enum-ciphers" output="&#xa;  TLSv1.2: &#xa;    ciphers: &#xa;      TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - A&#xa;      TLS_DHE_RSA_WITH_AES_128_CBC_SHA256 (dh 2048) - A&#xa;      TLS_DHE_RSA_WITH_AES_128_CCM (dh 2048) - A&#xa;      TLS_DHE_RSA_WITH_AES_128_CCM_8 (dh 2048) - A&#xa;      TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 2048) - A&#xa;      TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - A&#xa;      TLS_DHE_RSA_WITH_AES_256_CBC_SHA256 (dh 2048) - A&#xa;      TLS_DHE_RSA_WITH_AES_256_CCM (dh 2048) - A&#xa;      TLS_DHE_RSA_WITH_AES_256_CCM_8 (dh 2048) - A&#xa;      TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 2048) - A&#xa;      TLS_DHE_RSA_WITH_ARIA_128_GCM_SHA256 (dh 2048) - A&#xa;      TLS_DHE_RSA_WITH_ARIA_256_GCM_SHA384 (dh 2048) - A&#xa;      TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 2048) - A&#xa;      TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA256 (dh 2048) - A&#xa;      TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 2048) - A&#xa;      TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA256 (dh 2048) - A&#xa;      TLS_DHE_RSA_WITH_CHACHA20_POLY1305_SHA256 (dh 2048) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (ecdh_x25519) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (ecdh_x25519) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (ecdh_x25519) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (ecdh_x25519) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (ecdh_x25519) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (ecdh_x25519) - A&#xa;      TLS_ECDHE_RSA_WITH_ARIA_128_GCM_SHA256 (ecdh_x25519) - A&#xa;      TLS_ECDHE_RSA_WITH_ARIA_256_GCM_SHA384 (ecdh_x25519) - A&#xa;      TLS_ECDHE_RSA_WITH_CAMELLIA_128_CBC_SHA256 (ecdh_x25519) - A&#xa;      TLS_ECDHE_RSA_WITH_CAMELLIA_256_CBC_SHA384 (ecdh_x25519) - A&#xa;      TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256 (ecdh_x25519) - A&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_128_CCM (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_128_CCM_8 (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_256_CCM (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_256_CCM_8 (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A&#xa;      TLS_RSA_WITH_ARIA_128_GCM_SHA256 (rsa 2048) - A&#xa;      TLS_RSA_WITH_ARIA_256_GCM_SHA384 (rsa 2048) - A&#xa;      TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - A&#xa;      TLS_RSA_WITH_CAMELLIA_128_CBC_SHA256 (rsa 2048) - A&#xa;      TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - A&#xa;      TLS_RSA_WITH_CAMELLIA_256_CBC_SHA256 (rsa 2048) - A&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference: server&#xa;    cipher preference error: Network error&#xa;  least strength: A"><table key="TLSv1.2">
+<table key="ciphers">
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_CBC_SHA256</elem>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_CCM</elem>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_CCM_8</elem>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_GCM_SHA256</elem>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_CBC_SHA256</elem>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_CCM</elem>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_CCM_8</elem>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_GCM_SHA384</elem>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_ARIA_128_GCM_SHA256</elem>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_ARIA_256_GCM_SHA384</elem>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA</elem>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA256</elem>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA</elem>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA256</elem>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_CHACHA20_POLY1305_SHA256</elem>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">ecdh_x25519</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256</elem>
+<elem key="kex_info">ecdh_x25519</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256</elem>
+<elem key="kex_info">ecdh_x25519</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">ecdh_x25519</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384</elem>
+<elem key="kex_info">ecdh_x25519</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384</elem>
+<elem key="kex_info">ecdh_x25519</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_ARIA_128_GCM_SHA256</elem>
+<elem key="kex_info">ecdh_x25519</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_ARIA_256_GCM_SHA384</elem>
+<elem key="kex_info">ecdh_x25519</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_CAMELLIA_128_CBC_SHA256</elem>
+<elem key="kex_info">ecdh_x25519</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_CAMELLIA_256_CBC_SHA384</elem>
+<elem key="kex_info">ecdh_x25519</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256</elem>
+<elem key="kex_info">ecdh_x25519</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA256</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_AES_128_CCM</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_AES_128_CCM_8</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_AES_128_GCM_SHA256</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_AES_256_CBC_SHA256</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_AES_256_CCM</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_AES_256_CCM_8</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_AES_256_GCM_SHA384</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_ARIA_128_GCM_SHA256</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_ARIA_256_GCM_SHA384</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_CAMELLIA_128_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_CAMELLIA_128_CBC_SHA256</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_CAMELLIA_256_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_CAMELLIA_256_CBC_SHA256</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="strength">A</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">server</elem>
+<elem key="cipher preference error">Network error</elem>
+</table>
+<elem key="least strength">A</elem>
+</script><script id="sslv2-drown" output="&#xa;"></script></port>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="46"/><service name="ssh" product="OpenSSH" version="8.0" extrainfo="protocol 2.0" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:8.0</cpe></service><script id="banner" output="SSH-2.0-OpenSSH_8.0"/><script id="clamav-exec" output="ERROR: Script execution failed (use -d to debug)"/><script id="ssh-auth-methods" output="&#xa;  Supported authentication methods: &#xa;    publickey&#xa;    gssapi-keyex&#xa;    gssapi-with-mic&#xa;    password"><table key="Supported authentication methods">
+<elem>publickey</elem>
+<elem>gssapi-keyex</elem>
+<elem>gssapi-with-mic</elem>
+<elem>password</elem>
+</table>
+</script><script id="ssh-hostkey" output="&#xa;  3072 7b:7e:17:4a:d3:b9:f1:6e:e2:8e:f3:47:0c:dd:d0:db (RSA)&#xa;  256 bf:bd:65:4d:29:97:b8:6a:9b:36:bb:7e:d9:10:62:83 (ECDSA)&#xa;  256 8f:3a:6c:f4:60:24:1c:42:d0:5e:92:5f:bf:5c:f9:83 (ED25519)"><table>
+<elem key="bits">3072</elem>
+<elem key="key">AAAAB3NzaC1yc2EAAAADAQABAAABgQDRGjJyHi2LpDpSBnl7O/1IV5UzsrUpl1jO2b97exM+2/Db3TkToRZGlOsUfngJMdAd6UiuHGE8Xf6lC0LkMmflT/typmFwc8KOF67h4xh2G/LQH2ZisjH8yUOQ+GFC9VnPSDO8auKKExD5jgRJxbNFlUmbxhfgUJy7EkWmRjQbcQIrpC3W5nC1H/odcURi1KLydjLtHpOu6U9n7ZB6IQrhnaE+cj/8ZiqtUCYhRpOPDzvPlq6iaHZXXDtRKN1fTemOHojrCa8OFqPkq7a3m1jjiI7uxGlScFqMhBAt03FiBSisb5YZI+nOlEVGQ5ZlhP+pEDj956ZNR+/lSFgw+knpyHM8AKyE+zkhFy/isrfbPy9Ymo2IcWqT7KS6ZP4wWmeVqLm58XVJmUF8cX43nye+efw7GGdESS+kK5hveCQfT2ZiXTjA34yZ+mzXJhuXil7N/XmnsalvGHTMqnERW89sebPWRYxRsStqOCCxAQObiRWvF7owkglpW+HykVBCk9s=</elem>
+<elem key="type">ssh-rsa</elem>
+<elem key="fingerprint">7b7e174ad3b9f16ee28ef3470cddd0db</elem>
+</table>
+<table>
+<elem key="bits">256</elem>
+<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBH57dmSGbgire1Qph3BPMEfGHyIYblb9uhk0dZGLI9rDkdR3YpyKtbSsEPjj+8FqWvq9r1xIcinNt3O/whbFPEw=</elem>
+<elem key="type">ecdsa-sha2-nistp256</elem>
+<elem key="fingerprint">bfbd654d2997b86a9b36bb7ed9106283</elem>
+</table>
+<table>
+<elem key="bits">256</elem>
+<elem key="key">AAAAC3NzaC1lZDI1NTE5AAAAIHE/cCPHU5zy2W/1POUX1Kfwf9qiDWDwRlUHM7Xw8PKX</elem>
+<elem key="type">ssh-ed25519</elem>
+<elem key="fingerprint">8f3a6cf460241c42d05e925fbf5cf983</elem>
+</table>
+</script><script id="ssh-publickey-acceptance" output="&#xa;  Accepted Public Keys: No public keys accepted"><elem key="Accepted Public Keys">No public keys accepted</elem>
+</script><script id="ssh2-enum-algos" output="&#xa;  kex_algorithms: (12)&#xa;  server_host_key_algorithms: (5)&#xa;  encryption_algorithms: (7)&#xa;  mac_algorithms: (8)&#xa;  compression_algorithms: (2)"><table key="kex_algorithms">
+<elem>curve25519-sha256</elem>
+<elem>curve25519-sha256@libssh.org</elem>
+<elem>ecdh-sha2-nistp256</elem>
+<elem>ecdh-sha2-nistp384</elem>
+<elem>ecdh-sha2-nistp521</elem>
+<elem>diffie-hellman-group-exchange-sha256</elem>
+<elem>diffie-hellman-group14-sha256</elem>
+<elem>diffie-hellman-group16-sha512</elem>
+<elem>diffie-hellman-group18-sha512</elem>
+<elem>diffie-hellman-group-exchange-sha1</elem>
+<elem>diffie-hellman-group14-sha1</elem>
+<elem>kex-strict-s-v00@openssh.com</elem>
+</table>
+<table key="server_host_key_algorithms">
+<elem>rsa-sha2-512</elem>
+<elem>rsa-sha2-256</elem>
+<elem>ssh-rsa</elem>
+<elem>ecdsa-sha2-nistp256</elem>
+<elem>ssh-ed25519</elem>
+</table>
+<table key="encryption_algorithms">
+<elem>aes256-gcm@openssh.com</elem>
+<elem>chacha20-poly1305@openssh.com</elem>
+<elem>aes256-ctr</elem>
+<elem>aes256-cbc</elem>
+<elem>aes128-gcm@openssh.com</elem>
+<elem>aes128-ctr</elem>
+<elem>aes128-cbc</elem>
+</table>
+<table key="mac_algorithms">
+<elem>hmac-sha2-256-etm@openssh.com</elem>
+<elem>hmac-sha1-etm@openssh.com</elem>
+<elem>umac-128-etm@openssh.com</elem>
+<elem>hmac-sha2-512-etm@openssh.com</elem>
+<elem>hmac-sha2-256</elem>
+<elem>hmac-sha1</elem>
+<elem>umac-128@openssh.com</elem>
+<elem>hmac-sha2-512</elem>
+</table>
+<table key="compression_algorithms">
+<elem>none</elem>
+<elem>zlib@openssh.com</elem>
+</table>
+</script><script id="vulners" output="&#xa;  cpe:/a:openbsd:openssh:8.0: &#xa;    &#x9;F0979183-AE88-53B4-86CF-3AF0523F3807&#x9;9.8&#x9;https://vulners.com/githubexploit/F0979183-AE88-53B4-86CF-3AF0523F3807&#x9;*EXPLOIT*&#xa;    &#x9;CVE-2023-38408&#x9;9.8&#x9;https://vulners.com/cve/CVE-2023-38408&#xa;    &#x9;B8190CDB-3EB9-5631-9828-8064A1575B23&#x9;9.8&#x9;https://vulners.com/githubexploit/B8190CDB-3EB9-5631-9828-8064A1575B23&#x9;*EXPLOIT*&#xa;    &#x9;8FC9C5AB-3968-5F3C-825E-E8DB5379A623&#x9;9.8&#x9;https://vulners.com/githubexploit/8FC9C5AB-3968-5F3C-825E-E8DB5379A623&#x9;*EXPLOIT*&#xa;    &#x9;8AD01159-548E-546E-AA87-2DE89F3927EC&#x9;9.8&#x9;https://vulners.com/githubexploit/8AD01159-548E-546E-AA87-2DE89F3927EC&#x9;*EXPLOIT*&#xa;    &#x9;5E6968B4-DBD6-57FA-BF6E-D9B2219DB27A&#x9;9.8&#x9;https://vulners.com/githubexploit/5E6968B4-DBD6-57FA-BF6E-D9B2219DB27A&#x9;*EXPLOIT*&#xa;    &#x9;2227729D-6700-5C8F-8930-1EEAFD4B9FF0&#x9;9.8&#x9;https://vulners.com/githubexploit/2227729D-6700-5C8F-8930-1EEAFD4B9FF0&#x9;*EXPLOIT*&#xa;    &#x9;0221525F-07F5-5790-912D-F4B9E2D1B587&#x9;9.8&#x9;https://vulners.com/githubexploit/0221525F-07F5-5790-912D-F4B9E2D1B587&#x9;*EXPLOIT*&#xa;    &#x9;CVE-2020-15778&#x9;7.8&#x9;https://vulners.com/cve/CVE-2020-15778&#xa;    &#x9;CVE-2019-16905&#x9;7.8&#x9;https://vulners.com/cve/CVE-2019-16905&#xa;    &#x9;C94132FD-1FA5-5342-B6EE-0DAF45EEFFE3&#x9;7.8&#x9;https://vulners.com/githubexploit/C94132FD-1FA5-5342-B6EE-0DAF45EEFFE3&#x9;*EXPLOIT*&#xa;    &#x9;10213DBE-F683-58BB-B6D3-353173626207&#x9;7.8&#x9;https://vulners.com/githubexploit/10213DBE-F683-58BB-B6D3-353173626207&#x9;*EXPLOIT*&#xa;    &#x9;SSV:92579&#x9;7.5&#x9;https://vulners.com/seebug/SSV:92579&#x9;*EXPLOIT*&#xa;    &#x9;PACKETSTORM:173661&#x9;7.5&#x9;https://vulners.com/packetstorm/PACKETSTORM:173661&#x9;*EXPLOIT*&#xa;    &#x9;1337DAY-ID-26576&#x9;7.5&#x9;https://vulners.com/zdt/1337DAY-ID-26576&#x9;*EXPLOIT*&#xa;    &#x9;CVE-2021-41617&#x9;7.0&#x9;https://vulners.com/cve/CVE-2021-41617&#xa;    &#x9;PACKETSTORM:189283&#x9;6.8&#x9;https://vulners.com/packetstorm/PACKETSTORM:189283&#x9;*EXPLOIT*&#xa;    &#x9;F79E574D-30C8-5C52-A801-66FFA0610BAA&#x9;6.8&#x9;https://vulners.com/githubexploit/F79E574D-30C8-5C52-A801-66FFA0610BAA&#x9;*EXPLOIT*&#xa;    &#x9;CVE-2025-26465&#x9;6.8&#x9;https://vulners.com/cve/CVE-2025-26465&#xa;    &#x9;1337DAY-ID-39918&#x9;6.8&#x9;https://vulners.com/zdt/1337DAY-ID-39918&#x9;*EXPLOIT*&#xa;    &#x9;CVE-2023-51385&#x9;6.5&#x9;https://vulners.com/cve/CVE-2023-51385&#xa;    &#x9;CVE-2023-48795&#x9;5.9&#x9;https://vulners.com/cve/CVE-2023-48795&#xa;    &#x9;CVE-2020-14145&#x9;5.9&#x9;https://vulners.com/cve/CVE-2020-14145&#xa;    &#x9;CC3AE4FC-CF04-5EDA-A010-6D7E71538C92&#x9;5.9&#x9;https://vulners.com/githubexploit/CC3AE4FC-CF04-5EDA-A010-6D7E71538C92&#x9;*EXPLOIT*&#xa;    &#x9;54E1BB01-2C69-5AFD-A23D-9783C9D9FC4C&#x9;5.9&#x9;https://vulners.com/githubexploit/54E1BB01-2C69-5AFD-A23D-9783C9D9FC4C&#x9;*EXPLOIT*&#xa;    &#x9;CVE-2016-20012&#x9;5.3&#x9;https://vulners.com/cve/CVE-2016-20012&#xa;    &#x9;CVE-2025-32728&#x9;4.3&#x9;https://vulners.com/cve/CVE-2025-32728&#xa;    &#x9;CVE-2021-36368&#x9;3.7&#x9;https://vulners.com/cve/CVE-2021-36368&#xa;    &#x9;PACKETSTORM:140261&#x9;0.0&#x9;https://vulners.com/packetstorm/PACKETSTORM:140261&#x9;*EXPLOIT*"><table key="cpe:/a:openbsd:openssh:8.0">
+<table>
+<elem key="is_exploit">true</elem>
+<elem key="type">githubexploit</elem>
+<elem key="cvss">9.8</elem>
+<elem key="id">F0979183-AE88-53B4-86CF-3AF0523F3807</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">cve</elem>
+<elem key="cvss">9.8</elem>
+<elem key="id">CVE-2023-38408</elem>
+</table>
+<table>
+<elem key="is_exploit">true</elem>
+<elem key="type">githubexploit</elem>
+<elem key="cvss">9.8</elem>
+<elem key="id">B8190CDB-3EB9-5631-9828-8064A1575B23</elem>
+</table>
+<table>
+<elem key="is_exploit">true</elem>
+<elem key="type">githubexploit</elem>
+<elem key="cvss">9.8</elem>
+<elem key="id">8FC9C5AB-3968-5F3C-825E-E8DB5379A623</elem>
+</table>
+<table>
+<elem key="is_exploit">true</elem>
+<elem key="type">githubexploit</elem>
+<elem key="cvss">9.8</elem>
+<elem key="id">8AD01159-548E-546E-AA87-2DE89F3927EC</elem>
+</table>
+<table>
+<elem key="is_exploit">true</elem>
+<elem key="type">githubexploit</elem>
+<elem key="cvss">9.8</elem>
+<elem key="id">5E6968B4-DBD6-57FA-BF6E-D9B2219DB27A</elem>
+</table>
+<table>
+<elem key="is_exploit">true</elem>
+<elem key="type">githubexploit</elem>
+<elem key="cvss">9.8</elem>
+<elem key="id">2227729D-6700-5C8F-8930-1EEAFD4B9FF0</elem>
+</table>
+<table>
+<elem key="is_exploit">true</elem>
+<elem key="type">githubexploit</elem>
+<elem key="cvss">9.8</elem>
+<elem key="id">0221525F-07F5-5790-912D-F4B9E2D1B587</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">cve</elem>
+<elem key="cvss">7.8</elem>
+<elem key="id">CVE-2020-15778</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">cve</elem>
+<elem key="cvss">7.8</elem>
+<elem key="id">CVE-2019-16905</elem>
+</table>
+<table>
+<elem key="is_exploit">true</elem>
+<elem key="type">githubexploit</elem>
+<elem key="cvss">7.8</elem>
+<elem key="id">C94132FD-1FA5-5342-B6EE-0DAF45EEFFE3</elem>
+</table>
+<table>
+<elem key="is_exploit">true</elem>
+<elem key="type">githubexploit</elem>
+<elem key="cvss">7.8</elem>
+<elem key="id">10213DBE-F683-58BB-B6D3-353173626207</elem>
+</table>
+<table>
+<elem key="is_exploit">true</elem>
+<elem key="type">seebug</elem>
+<elem key="cvss">7.5</elem>
+<elem key="id">SSV:92579</elem>
+</table>
+<table>
+<elem key="is_exploit">true</elem>
+<elem key="type">packetstorm</elem>
+<elem key="cvss">7.5</elem>
+<elem key="id">PACKETSTORM:173661</elem>
+</table>
+<table>
+<elem key="is_exploit">true</elem>
+<elem key="type">zdt</elem>
+<elem key="cvss">7.5</elem>
+<elem key="id">1337DAY-ID-26576</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">cve</elem>
+<elem key="cvss">7.0</elem>
+<elem key="id">CVE-2021-41617</elem>
+</table>
+<table>
+<elem key="is_exploit">true</elem>
+<elem key="type">packetstorm</elem>
+<elem key="cvss">6.8</elem>
+<elem key="id">PACKETSTORM:189283</elem>
+</table>
+<table>
+<elem key="is_exploit">true</elem>
+<elem key="type">githubexploit</elem>
+<elem key="cvss">6.8</elem>
+<elem key="id">F79E574D-30C8-5C52-A801-66FFA0610BAA</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">cve</elem>
+<elem key="cvss">6.8</elem>
+<elem key="id">CVE-2025-26465</elem>
+</table>
+<table>
+<elem key="is_exploit">true</elem>
+<elem key="type">zdt</elem>
+<elem key="cvss">6.8</elem>
+<elem key="id">1337DAY-ID-39918</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">cve</elem>
+<elem key="cvss">6.5</elem>
+<elem key="id">CVE-2023-51385</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">cve</elem>
+<elem key="cvss">5.9</elem>
+<elem key="id">CVE-2023-48795</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">cve</elem>
+<elem key="cvss">5.9</elem>
+<elem key="id">CVE-2020-14145</elem>
+</table>
+<table>
+<elem key="is_exploit">true</elem>
+<elem key="type">githubexploit</elem>
+<elem key="cvss">5.9</elem>
+<elem key="id">CC3AE4FC-CF04-5EDA-A010-6D7E71538C92</elem>
+</table>
+<table>
+<elem key="is_exploit">true</elem>
+<elem key="type">githubexploit</elem>
+<elem key="cvss">5.9</elem>
+<elem key="id">54E1BB01-2C69-5AFD-A23D-9783C9D9FC4C</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">cve</elem>
+<elem key="cvss">5.3</elem>
+<elem key="id">CVE-2016-20012</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">cve</elem>
+<elem key="cvss">4.3</elem>
+<elem key="id">CVE-2025-32728</elem>
+</table>
+<table>
+<elem key="is_exploit">false</elem>
+<elem key="type">cve</elem>
+<elem key="cvss">3.7</elem>
+<elem key="id">CVE-2021-36368</elem>
+</table>
+<table>
+<elem key="is_exploit">true</elem>
+<elem key="type">packetstorm</elem>
+<elem key="cvss">0.0</elem>
+<elem key="id">PACKETSTORM:140261</elem>
+</table>
+</table>
+</script></port>
+<port protocol="tcp" portid="53"><state state="open" reason="syn-ack" reason_ttl="45"/><service name="domain" product="PowerDNS Authoritative Server" version="4.9.5" method="probed" conf="10"><cpe>cpe:/a:powerdns:authoritative:4.9.5</cpe></service><script id="clamav-exec" output="ERROR: Script execution failed (use -d to debug)"/><script id="dns-nsec-enum" output="&#xa;  No NSEC records found&#xa;"/><script id="dns-nsec3-enum" output="&#xa;  DNSSEC NSEC3 not supported&#xa;"/><script id="dns-nsid" output="&#xa;  NSID: server.lcu.edu.ng (7365727665722e6c63752e6564752e6e67)&#xa;  id.server: server.lcu.edu.ng&#xa;  bind.version: PowerDNS Authoritative Server 4.9.5 (built May 12 2025 13:41:30 by root@bh-centos-8.dev.cpanel.net)"><table key="NSID">
+<elem key="raw">server.lcu.edu.ng</elem>
+<elem key="hex">7365727665722e6c63752e6564752e6e67</elem>
+</table>
+<elem key="id.server">server.lcu.edu.ng</elem>
+<elem key="bind.version">PowerDNS Authoritative Server 4.9.5 (built May 12 2025 13:41:30 by root@bh-centos-8.dev.cpanel.net)</elem>
+</script></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="45"/><service name="http" product="Apache httpd" method="probed" conf="10"><cpe>cpe:/a:apache:http_server</cpe></service><script id="clamav-exec" output="ERROR: Script execution failed (use -d to debug)"/><script id="http-chrono" output="Request times for /; avg: 1022.80ms; min: 678.00ms; max: 1832.00ms"/><script id="http-comments-displayer" output="Couldn&apos;t find any comments."/><script id="http-csrf" output="Couldn&apos;t find any CSRF vulnerabilities."/><script id="http-date" output="Tue, 03 Jun 2025 15:03:05 GMT; -1s from local time."><elem key="date">2025-06-03T15:03:05+00:00</elem>
+<elem key="delta">-1.0</elem>
+</script><script id="http-devframework" output="Couldn&apos;t determine the underlying framework or CMS. Try increasing &apos;httpspider.maxpagecount&apos; value to spider more pages."/><script id="http-dombased-xss" output="Couldn&apos;t find any DOM based XSS."/><script id="http-errors" output="Couldn&apos;t find any error pages."/><script id="http-feed" output="Couldn&apos;t find any feeds."/><script id="http-headers" output="&#xa;  Date: Tue, 03 Jun 2025 15:03:41 GMT&#xa;  Server: Apache&#xa;  Last-Modified: Thu, 12 Dec 2024 17:28:00 GMT&#xa;  Accept-Ranges: bytes&#xa;  Content-Length: 163&#xa;  Cache-Control: no-cache, no-store, must-revalidate&#xa;  Pragma: no-cache&#xa;  Expires: 0&#xa;  Connection: close&#xa;  Content-Type: text/html&#xa;  &#xa;  (Request type: HEAD)&#xa;"/><script id="http-mobileversion-checker" output="No mobile version detected."/><script id="http-referer-checker" output="Couldn&apos;t find any cross-domain scripts."/><script id="http-security-headers" output="&#xa;  Cache_Control: &#xa;    Header: Cache-Control: no-cache, no-store, must-revalidate&#xa;  Pragma: &#xa;    Header: Pragma: no-cache&#xa;  Expires: &#xa;    Header: Expires: 0"><table key="Cache_Control">
+<elem>Header: Cache-Control: no-cache, no-store, must-revalidate</elem>
+</table>
+<table key="Pragma">
+<elem>Header: Pragma: no-cache</elem>
+</table>
+<table key="Expires">
+<elem>Header: Expires: 0</elem>
+</table>
+</script><script id="http-server-header" output="Apache"><elem>Apache</elem>
+</script><script id="http-sitemap-generator" output="&#xa;  Directory structure:&#xa;    /&#xa;      Other: 1&#xa;  Longest directory structure:&#xa;    Depth: 0&#xa;    Dir: /&#xa;  Total files found (by extension):&#xa;    Other: 1&#xa;"/><script id="http-slowloris-check" output="&#xa;  VULNERABLE:&#xa;  Slowloris DOS attack&#xa;    State: LIKELY VULNERABLE&#xa;    IDs:  CVE:CVE-2007-6750&#xa;      Slowloris tries to keep many connections to the target web server open and hold&#xa;      them open as long as possible.  It accomplishes this by opening connections to&#xa;      the target web server and sending a partial request. By doing so, it starves&#xa;      the http server&apos;s resources causing Denial Of Service.&#xa;      &#xa;    Disclosure date: 2009-09-17&#xa;    References:&#xa;      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-6750&#xa;      http://ha.ckers.org/slowloris/&#xa;"><table key="CVE-2007-6750">
+<elem key="title">Slowloris DOS attack</elem>
+<elem key="state">LIKELY VULNERABLE</elem>
+<table key="ids">
+<elem>CVE:CVE-2007-6750</elem>
+</table>
+<table key="description">
+<elem>Slowloris tries to keep many connections to the target web server open and hold&#xa;them open as long as possible.  It accomplishes this by opening connections to&#xa;the target web server and sending a partial request. By doing so, it starves&#xa;the http server&apos;s resources causing Denial Of Service.&#xa;</elem>
+</table>
+<table key="dates">
+<table key="disclosure">
+<elem key="day">17</elem>
+<elem key="month">09</elem>
+<elem key="year">2009</elem>
+</table>
+</table>
+<elem key="disclosure">2009-09-17</elem>
+<table key="exploit_results">
+</table>
+<table key="refs">
+<elem>https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-6750</elem>
+<elem>http://ha.ckers.org/slowloris/</elem>
+</table>
+</table>
+</script><script id="http-stored-xss" output="Couldn&apos;t find any stored XSS vulnerabilities."/><script id="http-title" output="Site doesn&apos;t have a title (text/html)."></script><script id="http-useragent-tester" output="&#xa;  Status for browser useragent: 200&#xa;  Allowed User Agents: &#xa;    Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)&#xa;    libwww&#xa;    lwp-trivial&#xa;    libcurl-agent/1.0&#xa;    PHP/&#xa;    Python-urllib/2.5&#xa;    GT::WWW&#xa;    Snoopy&#xa;    MFC_Tear_Sample&#xa;    HTTP::Lite&#xa;    PHPCrawl&#xa;    URI::Fetch&#xa;    Zend_Http_Client&#xa;    http client&#xa;    PECL::HTTP&#xa;    Wget/1.13.4 (linux-gnu)&#xa;    WWW-Mechanize/1.34"><elem key="Status for browser useragent">200</elem>
+<table key="Allowed User Agents">
+<elem>Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)</elem>
+<elem>libwww</elem>
+<elem>lwp-trivial</elem>
+<elem>libcurl-agent/1.0</elem>
+<elem>PHP/</elem>
+<elem>Python-urllib/2.5</elem>
+<elem>GT::WWW</elem>
+<elem>Snoopy</elem>
+<elem>MFC_Tear_Sample</elem>
+<elem>HTTP::Lite</elem>
+<elem>PHPCrawl</elem>
+<elem>URI::Fetch</elem>
+<elem>Zend_Http_Client</elem>
+<elem>http client</elem>
+<elem>PECL::HTTP</elem>
+<elem>Wget/1.13.4 (linux-gnu)</elem>
+<elem>WWW-Mechanize/1.34</elem>
+</table>
+</script><script id="http-userdir-enum" output="Potential Users: root"/><script id="http-vhosts" output="&#xa;mail.lcu.edu.ng : 301 -&gt; https://mail.lcu.edu.ng/&#xa;www.lcu.edu.ng : 301 -&gt; https://www.lcu.edu.ng/&#xa;125 names had status 200"/><script id="http-xssed" output="No previously reported XSS vuln."/></port>
+<port protocol="tcp" portid="110"><state state="open" reason="syn-ack" reason_ttl="45"/><service name="pop3" product="Dovecot pop3d" method="probed" conf="10"><cpe>cpe:/a:dovecot:dovecot</cpe></service><script id="banner" output="+OK Dovecot ready."/><script id="clamav-exec" output="ERROR: Script execution failed (use -d to debug)"/><script id="pop3-capabilities" output="TOP PIPELINING STLS CAPA RESP-CODES AUTH-RESP-CODE SASL(PLAIN LOGIN) USER UIDL"/><script id="ssl-ccs-injection" output="ERROR: Script execution failed (use -d to debug)"/><script id="ssl-cert" output="Subject: commonName=server.lcu.edu.ng&#xa;Subject Alternative Name: DNS:server.lcu.edu.ng&#xa;Not valid before: 2025-04-15T19:50:12&#xa;Not valid after:  2025-07-14T19:50:11"><table key="subject">
+<elem key="commonName">server.lcu.edu.ng</elem>
+</table>
+<table key="issuer">
+<elem key="countryName">US</elem>
+<elem key="organizationName">Let&apos;s Encrypt</elem>
+<elem key="commonName">R11</elem>
+</table>
+<table key="pubkey">
+<elem key="modulus">BIGNUM: 06A26E88</elem>
+<elem key="exponent">BIGNUM: 06A26F50</elem>
+<elem key="bits">2048</elem>
+<elem key="type">rsa</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Key Usage</elem>
+<elem key="critical">true</elem>
+<elem key="value">Digital Signature, Key Encipherment</elem>
+</table>
+<table>
+<elem key="name">X509v3 Extended Key Usage</elem>
+<elem key="value">TLS Web Server Authentication, TLS Web Client Authentication</elem>
+</table>
+<table>
+<elem key="name">X509v3 Basic Constraints</elem>
+<elem key="critical">true</elem>
+<elem key="value">CA:FALSE</elem>
+</table>
+<table>
+<elem key="name">X509v3 Subject Key Identifier</elem>
+<elem key="value">54:2D:F8:AD:BB:26:30:6F:07:9C:9A:41:16:CD:93:B9:BF:33:36:1C</elem>
+</table>
+<table>
+<elem key="name">X509v3 Authority Key Identifier</elem>
+<elem key="value">keyid:C5:CF:46:A4:EA:F4:C3:C0:7A:6C:95:C4:2D:B0:5E:92:2F:26:E3:B9&#xa;</elem>
+</table>
+<table>
+<elem key="name">Authority Information Access</elem>
+<elem key="value">OCSP - URI:http://r11.o.lencr.org&#xa;CA Issuers - URI:http://r11.i.lencr.org/&#xa;</elem>
+</table>
+<table>
+<elem key="name">X509v3 Subject Alternative Name</elem>
+<elem key="value">DNS:server.lcu.edu.ng</elem>
+</table>
+<table>
+<elem key="name">X509v3 Certificate Policies</elem>
+<elem key="value">Policy: 2.23.140.1.2.1&#xa;</elem>
+</table>
+<table>
+<elem key="name">X509v3 CRL Distribution Points</elem>
+<elem key="value">&#xa;Full Name:&#xa;  URI:http://r11.c.lencr.org/15.crl&#xa;</elem>
+</table>
+<table>
+<elem key="name">CT Precertificate SCTs</elem>
+<elem key="value">Signed Certificate Timestamp:&#xa;    Version   : v1(0)&#xa;    Log ID    : CC:FB:0F:6A:85:71:09:65:FE:95:9B:53:CE:E9:B2:7C:&#xa;                22:E9:85:5C:0D:97:8D:B6:A9:7E:54:C0:FE:4C:0D:B0&#xa;    Timestamp : Apr 15 20:48:42.750 2025 GMT&#xa;    Extensions: none&#xa;    Signature : ecdsa-with-SHA256&#xa;                30:46:02:21:00:C3:FD:79:ED:A5:88:40:A1:C4:16:75:&#xa;                5C:2A:67:5B:70:B6:DF:8E:70:F0:62:08:DE:68:2A:CB:&#xa;                FC:E8:A2:E4:AD:02:21:00:AC:64:9E:63:AC:F1:76:BB:&#xa;                59:7F:D7:30:36:D0:47:B7:95:9C:68:B8:08:9C:C1:15:&#xa;                55:B3:A0:B4:89:54:97:07&#xa;Signed Certificate Timestamp:&#xa;    Version   : v1(0)&#xa;    Log ID    : AF:18:1A:28:D6:8C:A3:E0:A9:8A:4C:9C:67:AB:09:F8:&#xa;                BB:BC:22:BA:AE:BC:B1:38:A3:A1:9D:D3:F9:B6:03:0D&#xa;    Timestamp : Apr 15 20:48:43.090 2025 GMT&#xa;    Extensions: none&#xa;    Signature : ecdsa-with-SHA256&#xa;                30:44:02:20:32:1D:E8:F0:43:06:5C:CB:B1:0F:25:96:&#xa;                61:59:D1:81:E8:E6:B9:4C:60:55:CE:23:4E:03:6D:40:&#xa;                C5:66:3F:27:02:20:1A:22:E1:75:C4:C0:B1:60:1F:85:&#xa;                81:E3:90:00:3E:56:51:8B:8C:F0:ED:39:85:34:03:2D:&#xa;                D9:06:07:E2:DD:3B</elem>
+</table>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2025-04-15T19:50:12</elem>
+<elem key="notAfter">2025-07-14T19:50:11</elem>
+</table>
+<elem key="md5">ad78e3ac10d865b14e9e7edb88f7e219</elem>
+<elem key="sha1">3668afb6417f5f9444ec70c7c49fe074f6916fab</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIFIjCCBAqgAwIBAgISBoqbd69oTHPmqjAgR+G1/c+OMA0GCSqGSIb3DQEBCwUA&#xa;MDMxCzAJBgNVBAYTAlVTMRYwFAYDVQQKEw1MZXQncyBFbmNyeXB0MQwwCgYDVQQD&#xa;EwNSMTEwHhcNMjUwNDE1MTk1MDEyWhcNMjUwNzE0MTk1MDExWjAcMRowGAYDVQQD&#xa;ExFzZXJ2ZXIubGN1LmVkdS5uZzCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoC&#xa;ggEBAKYbsIomhY3681rx7+5nfj4fB1AeAZdOF4RvUoYrxjafOp2VUlBzsLlvD0Hl&#xa;S8jl70RQv7NGbNahFsW47BuD/gfFWm7w8JHWLTwzxVPsbfPEsBZA+rRETMl0YIEZ&#xa;IdcPirZs5OPiiXJD7Il6A17jqDuc21bkxcn9XsLX1VFdrB6FWsmn0vBhR+Z/Wmrj&#xa;uoAfgbCfUMlCUH3YU6Y5KSjEuYIExgLRcru6XeYG2N530cds9XEm+y4ysKxZI1YD&#xa;zK2mpqnEDJuAMzGIXS5rhWcuuDyZdEThDEgFfT2Qa2LbGjk64Gt3+/DMf75gJNIB&#xa;zdrcrYXLIQ3tWkSwxCR3VDo7YMECAwEAAaOCAkUwggJBMA4GA1UdDwEB/wQEAwIF&#xa;oDAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwDAYDVR0TAQH/BAIwADAd&#xa;BgNVHQ4EFgQUVC34rbsmMG8HnJpBFs2Tub8zNhwwHwYDVR0jBBgwFoAUxc9GpOr0&#xa;w8B6bJXELbBeki8m47kwVwYIKwYBBQUHAQEESzBJMCIGCCsGAQUFBzABhhZodHRw&#xa;Oi8vcjExLm8ubGVuY3Iub3JnMCMGCCsGAQUFBzAChhdodHRwOi8vcjExLmkubGVu&#xa;Y3Iub3JnLzAcBgNVHREEFTATghFzZXJ2ZXIubGN1LmVkdS5uZzATBgNVHSAEDDAK&#xa;MAgGBmeBDAECATAuBgNVHR8EJzAlMCOgIaAfhh1odHRwOi8vcjExLmMubGVuY3Iu&#xa;b3JnLzE1LmNybDCCAQQGCisGAQQB1nkCBAIEgfUEgfIA8AB3AMz7D2qFcQll/pWb&#xa;U87psnwi6YVcDZeNtql+VMD+TA2wAAABljs2Fv4AAAQDAEgwRgIhAMP9ee2liECh&#xa;xBZ1XCpnW3C2345w8GII3mgqy/zoouStAiEArGSeY6zxdrtZf9cwNtBHt5WcaLgI&#xa;nMEVVbOgtIlUlwcAdQCvGBoo1oyj4KmKTJxnqwn4u7wiuq68sTijoZ3T+bYDDQAA&#xa;AZY7NhhSAAAEAwBGMEQCIDId6PBDBlzLsQ8llmFZ0YHo5rlMYFXOI04DbUDFZj8n&#xa;AiAaIuF1xMCxYB+FgeOQAD5WUYuM8O05hTQDLdkGB+LdOzANBgkqhkiG9w0BAQsF&#xa;AAOCAQEAS4CeyWQhyHUA26qAOgq/4yLZPuOtwQPJmeBp5LT0j0pBCjxHgWX9wGf6&#xa;pQLhsYxjev/TsY8dOq0OzJe0/8g2SzOnxeUpRgCCv82U9NV+u6H0dIxN7u9OF3y8&#xa;Ikpn+U+qCSTv7wCYyi4Outlj+WZadmPZmVxC/sjOLfdeUV2BBU/APwNnV+d+O1/g&#xa;z3mKgcxmw6aLVG3qE7ZCEo3lJVcDJFeFOoWnPMLyxGo4RTOGOGO/DD8RKqfIB5ek&#xa;hFpi2wSiTO8625Ltdn4qpu88tKhchxD6wtoKTl0s31jVTHDpQNTWEGJhBL0LAi70&#xa;Ec+RYy0mkgOkXGYgNH29Eb0ZWM3OVQ==&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="ssl-dh-params" output="ERROR: Script execution failed (use -d to debug)"/><script id="ssl-enum-ciphers" output="&#xa;  TLSv1.2: &#xa;    ciphers: &#xa;      TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 2048) - A&#xa;      TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 2048) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A&#xa;      TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256 (secp256r1) - A&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference: client&#xa;  least strength: A"><table key="TLSv1.2">
+<table key="ciphers">
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_GCM_SHA256</elem>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_GCM_SHA384</elem>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256</elem>
+<elem key="kex_info">secp256r1</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384</elem>
+<elem key="kex_info">secp256r1</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256</elem>
+<elem key="kex_info">secp256r1</elem>
+<elem key="strength">A</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">client</elem>
+</table>
+<elem key="least strength">A</elem>
+</script><script id="sslv2-drown" output="&#xa;"></script><script id="tls-ticketbleed" output="ERROR: Script execution failed (use -d to debug)"/></port>
+<port protocol="tcp" portid="143"><state state="open" reason="syn-ack" reason_ttl="46"/><service name="imap" product="Dovecot imapd" method="probed" conf="10"><cpe>cpe:/a:dovecot:dovecot</cpe></service><script id="banner" output="* OK [CAPABILITY IMAP4rev1 SASL-IR LOGIN-REFERRALS ID ENABLE...&#xa;"/><script id="clamav-exec" output="ERROR: Script execution failed (use -d to debug)"/><script id="imap-capabilities" output="AUTH=LOGINA0001 OK ID IDLE IMAP4rev1 STARTTLS listed SASL-IR more AUTH=PLAIN Pre-login post-login LITERAL+ LOGIN-REFERRALS NAMESPACE have capabilities ENABLE"/><script id="ssl-cert" output="Subject: commonName=server.lcu.edu.ng&#xa;Subject Alternative Name: DNS:server.lcu.edu.ng&#xa;Not valid before: 2025-04-15T19:50:12&#xa;Not valid after:  2025-07-14T19:50:11"><table key="subject">
+<elem key="commonName">server.lcu.edu.ng</elem>
+</table>
+<table key="issuer">
+<elem key="countryName">US</elem>
+<elem key="organizationName">Let&apos;s Encrypt</elem>
+<elem key="commonName">R11</elem>
+</table>
+<table key="pubkey">
+<elem key="modulus">BIGNUM: 06565648</elem>
+<elem key="exponent">BIGNUM: 065658C8</elem>
+<elem key="bits">2048</elem>
+<elem key="type">rsa</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Key Usage</elem>
+<elem key="critical">true</elem>
+<elem key="value">Digital Signature, Key Encipherment</elem>
+</table>
+<table>
+<elem key="name">X509v3 Extended Key Usage</elem>
+<elem key="value">TLS Web Server Authentication, TLS Web Client Authentication</elem>
+</table>
+<table>
+<elem key="name">X509v3 Basic Constraints</elem>
+<elem key="critical">true</elem>
+<elem key="value">CA:FALSE</elem>
+</table>
+<table>
+<elem key="name">X509v3 Subject Key Identifier</elem>
+<elem key="value">54:2D:F8:AD:BB:26:30:6F:07:9C:9A:41:16:CD:93:B9:BF:33:36:1C</elem>
+</table>
+<table>
+<elem key="name">X509v3 Authority Key Identifier</elem>
+<elem key="value">keyid:C5:CF:46:A4:EA:F4:C3:C0:7A:6C:95:C4:2D:B0:5E:92:2F:26:E3:B9&#xa;</elem>
+</table>
+<table>
+<elem key="name">Authority Information Access</elem>
+<elem key="value">OCSP - URI:http://r11.o.lencr.org&#xa;CA Issuers - URI:http://r11.i.lencr.org/&#xa;</elem>
+</table>
+<table>
+<elem key="name">X509v3 Subject Alternative Name</elem>
+<elem key="value">DNS:server.lcu.edu.ng</elem>
+</table>
+<table>
+<elem key="name">X509v3 Certificate Policies</elem>
+<elem key="value">Policy: 2.23.140.1.2.1&#xa;</elem>
+</table>
+<table>
+<elem key="name">X509v3 CRL Distribution Points</elem>
+<elem key="value">&#xa;Full Name:&#xa;  URI:http://r11.c.lencr.org/15.crl&#xa;</elem>
+</table>
+<table>
+<elem key="name">CT Precertificate SCTs</elem>
+<elem key="value">Signed Certificate Timestamp:&#xa;    Version   : v1(0)&#xa;    Log ID    : CC:FB:0F:6A:85:71:09:65:FE:95:9B:53:CE:E9:B2:7C:&#xa;                22:E9:85:5C:0D:97:8D:B6:A9:7E:54:C0:FE:4C:0D:B0&#xa;    Timestamp : Apr 15 20:48:42.750 2025 GMT&#xa;    Extensions: none&#xa;    Signature : ecdsa-with-SHA256&#xa;                30:46:02:21:00:C3:FD:79:ED:A5:88:40:A1:C4:16:75:&#xa;                5C:2A:67:5B:70:B6:DF:8E:70:F0:62:08:DE:68:2A:CB:&#xa;                FC:E8:A2:E4:AD:02:21:00:AC:64:9E:63:AC:F1:76:BB:&#xa;                59:7F:D7:30:36:D0:47:B7:95:9C:68:B8:08:9C:C1:15:&#xa;                55:B3:A0:B4:89:54:97:07&#xa;Signed Certificate Timestamp:&#xa;    Version   : v1(0)&#xa;    Log ID    : AF:18:1A:28:D6:8C:A3:E0:A9:8A:4C:9C:67:AB:09:F8:&#xa;                BB:BC:22:BA:AE:BC:B1:38:A3:A1:9D:D3:F9:B6:03:0D&#xa;    Timestamp : Apr 15 20:48:43.090 2025 GMT&#xa;    Extensions: none&#xa;    Signature : ecdsa-with-SHA256&#xa;                30:44:02:20:32:1D:E8:F0:43:06:5C:CB:B1:0F:25:96:&#xa;                61:59:D1:81:E8:E6:B9:4C:60:55:CE:23:4E:03:6D:40:&#xa;                C5:66:3F:27:02:20:1A:22:E1:75:C4:C0:B1:60:1F:85:&#xa;                81:E3:90:00:3E:56:51:8B:8C:F0:ED:39:85:34:03:2D:&#xa;                D9:06:07:E2:DD:3B</elem>
+</table>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2025-04-15T19:50:12</elem>
+<elem key="notAfter">2025-07-14T19:50:11</elem>
+</table>
+<elem key="md5">ad78e3ac10d865b14e9e7edb88f7e219</elem>
+<elem key="sha1">3668afb6417f5f9444ec70c7c49fe074f6916fab</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIFIjCCBAqgAwIBAgISBoqbd69oTHPmqjAgR+G1/c+OMA0GCSqGSIb3DQEBCwUA&#xa;MDMxCzAJBgNVBAYTAlVTMRYwFAYDVQQKEw1MZXQncyBFbmNyeXB0MQwwCgYDVQQD&#xa;EwNSMTEwHhcNMjUwNDE1MTk1MDEyWhcNMjUwNzE0MTk1MDExWjAcMRowGAYDVQQD&#xa;ExFzZXJ2ZXIubGN1LmVkdS5uZzCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoC&#xa;ggEBAKYbsIomhY3681rx7+5nfj4fB1AeAZdOF4RvUoYrxjafOp2VUlBzsLlvD0Hl&#xa;S8jl70RQv7NGbNahFsW47BuD/gfFWm7w8JHWLTwzxVPsbfPEsBZA+rRETMl0YIEZ&#xa;IdcPirZs5OPiiXJD7Il6A17jqDuc21bkxcn9XsLX1VFdrB6FWsmn0vBhR+Z/Wmrj&#xa;uoAfgbCfUMlCUH3YU6Y5KSjEuYIExgLRcru6XeYG2N530cds9XEm+y4ysKxZI1YD&#xa;zK2mpqnEDJuAMzGIXS5rhWcuuDyZdEThDEgFfT2Qa2LbGjk64Gt3+/DMf75gJNIB&#xa;zdrcrYXLIQ3tWkSwxCR3VDo7YMECAwEAAaOCAkUwggJBMA4GA1UdDwEB/wQEAwIF&#xa;oDAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwDAYDVR0TAQH/BAIwADAd&#xa;BgNVHQ4EFgQUVC34rbsmMG8HnJpBFs2Tub8zNhwwHwYDVR0jBBgwFoAUxc9GpOr0&#xa;w8B6bJXELbBeki8m47kwVwYIKwYBBQUHAQEESzBJMCIGCCsGAQUFBzABhhZodHRw&#xa;Oi8vcjExLm8ubGVuY3Iub3JnMCMGCCsGAQUFBzAChhdodHRwOi8vcjExLmkubGVu&#xa;Y3Iub3JnLzAcBgNVHREEFTATghFzZXJ2ZXIubGN1LmVkdS5uZzATBgNVHSAEDDAK&#xa;MAgGBmeBDAECATAuBgNVHR8EJzAlMCOgIaAfhh1odHRwOi8vcjExLmMubGVuY3Iu&#xa;b3JnLzE1LmNybDCCAQQGCisGAQQB1nkCBAIEgfUEgfIA8AB3AMz7D2qFcQll/pWb&#xa;U87psnwi6YVcDZeNtql+VMD+TA2wAAABljs2Fv4AAAQDAEgwRgIhAMP9ee2liECh&#xa;xBZ1XCpnW3C2345w8GII3mgqy/zoouStAiEArGSeY6zxdrtZf9cwNtBHt5WcaLgI&#xa;nMEVVbOgtIlUlwcAdQCvGBoo1oyj4KmKTJxnqwn4u7wiuq68sTijoZ3T+bYDDQAA&#xa;AZY7NhhSAAAEAwBGMEQCIDId6PBDBlzLsQ8llmFZ0YHo5rlMYFXOI04DbUDFZj8n&#xa;AiAaIuF1xMCxYB+FgeOQAD5WUYuM8O05hTQDLdkGB+LdOzANBgkqhkiG9w0BAQsF&#xa;AAOCAQEAS4CeyWQhyHUA26qAOgq/4yLZPuOtwQPJmeBp5LT0j0pBCjxHgWX9wGf6&#xa;pQLhsYxjev/TsY8dOq0OzJe0/8g2SzOnxeUpRgCCv82U9NV+u6H0dIxN7u9OF3y8&#xa;Ikpn+U+qCSTv7wCYyi4Outlj+WZadmPZmVxC/sjOLfdeUV2BBU/APwNnV+d+O1/g&#xa;z3mKgcxmw6aLVG3qE7ZCEo3lJVcDJFeFOoWnPMLyxGo4RTOGOGO/DD8RKqfIB5ek&#xa;hFpi2wSiTO8625Ltdn4qpu88tKhchxD6wtoKTl0s31jVTHDpQNTWEGJhBL0LAi70&#xa;Ec+RYy0mkgOkXGYgNH29Eb0ZWM3OVQ==&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="ssl-enum-ciphers" output="&#xa;  TLSv1.2: &#xa;    ciphers: &#xa;      TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 2048) - A&#xa;      TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 2048) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A&#xa;      TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256 (secp256r1) - A&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference: client&#xa;  least strength: A"><table key="TLSv1.2">
+<table key="ciphers">
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_GCM_SHA256</elem>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_GCM_SHA384</elem>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256</elem>
+<elem key="kex_info">secp256r1</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384</elem>
+<elem key="kex_info">secp256r1</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256</elem>
+<elem key="kex_info">secp256r1</elem>
+<elem key="strength">A</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">client</elem>
+</table>
+<elem key="least strength">A</elem>
+</script><script id="sslv2-drown" output="ERROR: Script execution failed (use -d to debug)"/><script id="tls-alpn" output="ERROR: Script execution failed (use -d to debug)"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="46"/><service name="http" product="Apache httpd" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:apache:http_server</cpe></service><script id="clamav-exec" output="ERROR: Script execution failed (use -d to debug)"/><script id="http-affiliate-id" output="&#xa;  Google Analytics ID: UA-188132848-1&#xa;"/><script id="http-chrono" output="Request times for /; avg: 1338.20ms; min: 1131.00ms; max: 1916.00ms"/><script id="http-comments-displayer" output="Couldn&apos;t find any comments."/><script id="http-csrf" output="Couldn&apos;t find any CSRF vulnerabilities."/><script id="http-date" output="Tue, 03 Jun 2025 15:03:04 GMT; -2s from local time."><elem key="date">2025-06-03T15:03:04+00:00</elem>
+<elem key="delta">-2.0</elem>
+</script><script id="http-devframework" output="Couldn&apos;t determine the underlying framework or CMS. Try increasing &apos;httpspider.maxpagecount&apos; value to spider more pages."/><script id="http-dombased-xss" output="Couldn&apos;t find any DOM based XSS."/><script id="http-errors" output="Couldn&apos;t find any error pages."/><script id="http-feed" output="Couldn&apos;t find any feeds."/><script id="http-headers" output="&#xa;  Date: Tue, 03 Jun 2025 15:03:11 GMT&#xa;  Server: Apache&#xa;  Last-Modified: Thu, 12 Dec 2024 17:28:00 GMT&#xa;  Accept-Ranges: bytes&#xa;  Content-Length: 163&#xa;  Cache-Control: no-cache, no-store, must-revalidate&#xa;  Pragma: no-cache&#xa;  Expires: 0&#xa;  Connection: close&#xa;  Content-Type: text/html&#xa;  &#xa;  (Request type: HEAD)&#xa;"/><script id="http-mobileversion-checker" output="No mobile version detected."/><script id="http-referer-checker" output="Couldn&apos;t find any cross-domain scripts."/><script id="http-security-headers" output="&#xa;  Strict_Transport_Security: &#xa;    HSTS not configured in HTTPS Server&#xa;  Cache_Control: &#xa;    Header: Cache-Control: no-cache, no-store, must-revalidate&#xa;  Pragma: &#xa;    Header: Pragma: no-cache&#xa;  Expires: &#xa;    Header: Expires: 0"><table key="Strict_Transport_Security">
+<elem>HSTS not configured in HTTPS Server</elem>
+</table>
+<table key="Cache_Control">
+<elem>Header: Cache-Control: no-cache, no-store, must-revalidate</elem>
+</table>
+<table key="Pragma">
+<elem>Header: Pragma: no-cache</elem>
+</table>
+<table key="Expires">
+<elem>Header: Expires: 0</elem>
+</table>
+</script><script id="http-sitemap-generator" output="&#xa;  Directory structure:&#xa;    /&#xa;      Other: 1&#xa;  Longest directory structure:&#xa;    Depth: 0&#xa;    Dir: /&#xa;  Total files found (by extension):&#xa;    Other: 1&#xa;"/><script id="http-stored-xss" output="Couldn&apos;t find any stored XSS vulnerabilities."/><script id="http-title" output="Site doesn&apos;t have a title (text/html)."></script><script id="http-traceroute" output="ERROR: Script execution failed (use -d to debug)"/><script id="http-useragent-tester" output="&#xa;  Status for browser useragent: 200&#xa;  Allowed User Agents: &#xa;    Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)&#xa;    libwww&#xa;    lwp-trivial&#xa;    libcurl-agent/1.0&#xa;    PHP/&#xa;    Python-urllib/2.5&#xa;    GT::WWW&#xa;    HTTP::Lite&#xa;    Wget/1.13.4 (linux-gnu)&#xa;  Change in Status Code: &#xa;    Snoopy: 400&#xa;    WWW-Mechanize/1.34: 400&#xa;    PHPCrawl: 400&#xa;    http client: 400&#xa;    MFC_Tear_Sample: 400&#xa;    PECL::HTTP: 400&#xa;    URI::Fetch: 400&#xa;    Zend_Http_Client: 400"><elem key="Status for browser useragent">200</elem>
+<table key="Allowed User Agents">
+<elem>Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)</elem>
+<elem>libwww</elem>
+<elem>lwp-trivial</elem>
+<elem>libcurl-agent/1.0</elem>
+<elem>PHP/</elem>
+<elem>Python-urllib/2.5</elem>
+<elem>GT::WWW</elem>
+<elem>HTTP::Lite</elem>
+<elem>Wget/1.13.4 (linux-gnu)</elem>
+</table>
+<table key="Change in Status Code">
+<elem key="Snoopy">400</elem>
+<elem key="WWW-Mechanize/1.34">400</elem>
+<elem key="PHPCrawl">400</elem>
+<elem key="http client">400</elem>
+<elem key="MFC_Tear_Sample">400</elem>
+<elem key="PECL::HTTP">400</elem>
+<elem key="URI::Fetch">400</elem>
+<elem key="Zend_Http_Client">400</elem>
+</table>
+</script><script id="http-vhosts" output="&#xa;vm.lcu.edu.ng : 400&#xa;ns.lcu.edu.ng : 400&#xa;exchange.lcu.edu.ng : 400&#xa;124 names had status 200"/><script id="http-xssed" output="No previously reported XSS vuln."/><script id="ssl-cert" output="Subject: commonName=www.portal.lcu.edu.ng&#xa;Subject Alternative Name: DNS:*.lcu.edu.ng, DNS:lcu.edu.ng, DNS:www.admissions.lcu.edu.ng, DNS:www.elearning.lcu.edu.ng, DNS:www.events.lcu.edu.ng, DNS:www.facaec.lcu.edu.ng, DNS:www.fascon.lcu.edu.ng, DNS:www.hostel.lcu.edu.ng, DNS:www.icaict.lcu.edu.ng, DNS:www.ilearn.lcu.edu.ng, DNS:www.journals.lcu.edu.ng, DNS:www.opac.lcu.edu.ng, DNS:www.ouralumni.lcu.edu.ng, DNS:www.pgc.lcu.edu.ng, DNS:www.pgportal.lcu.edu.ng, DNS:www.portal.lcu.edu.ng, DNS:www.registration.lcu.edu.ng, DNS:www.repository.lcu.edu.ng, DNS:www.staffclient.lcu.edu.ng&#xa;Not valid before: 2025-04-23T08:13:20&#xa;Not valid after:  2025-07-22T08:13:19"><table key="subject">
+<elem key="commonName">www.portal.lcu.edu.ng</elem>
+</table>
+<table key="issuer">
+<elem key="countryName">US</elem>
+<elem key="organizationName">Let&apos;s Encrypt</elem>
+<elem key="commonName">R11</elem>
+</table>
+<table key="pubkey">
+<elem key="modulus">BIGNUM: 066BC1E8</elem>
+<elem key="exponent">BIGNUM: 066BC350</elem>
+<elem key="bits">2048</elem>
+<elem key="type">rsa</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Key Usage</elem>
+<elem key="critical">true</elem>
+<elem key="value">Digital Signature, Key Encipherment</elem>
+</table>
+<table>
+<elem key="name">X509v3 Extended Key Usage</elem>
+<elem key="value">TLS Web Server Authentication, TLS Web Client Authentication</elem>
+</table>
+<table>
+<elem key="name">X509v3 Basic Constraints</elem>
+<elem key="critical">true</elem>
+<elem key="value">CA:FALSE</elem>
+</table>
+<table>
+<elem key="name">X509v3 Subject Key Identifier</elem>
+<elem key="value">5E:51:F3:72:61:7C:77:C8:6D:21:D1:CF:DC:67:70:C0:45:A4:8D:35</elem>
+</table>
+<table>
+<elem key="name">X509v3 Authority Key Identifier</elem>
+<elem key="value">keyid:C5:CF:46:A4:EA:F4:C3:C0:7A:6C:95:C4:2D:B0:5E:92:2F:26:E3:B9&#xa;</elem>
+</table>
+<table>
+<elem key="name">Authority Information Access</elem>
+<elem key="value">OCSP - URI:http://r11.o.lencr.org&#xa;CA Issuers - URI:http://r11.i.lencr.org/&#xa;</elem>
+</table>
+<table>
+<elem key="name">X509v3 Subject Alternative Name</elem>
+<elem key="value">DNS:*.lcu.edu.ng, DNS:lcu.edu.ng, DNS:www.admissions.lcu.edu.ng, DNS:www.elearning.lcu.edu.ng, DNS:www.events.lcu.edu.ng, DNS:www.facaec.lcu.edu.ng, DNS:www.fascon.lcu.edu.ng, DNS:www.hostel.lcu.edu.ng, DNS:www.icaict.lcu.edu.ng, DNS:www.ilearn.lcu.edu.ng, DNS:www.journals.lcu.edu.ng, DNS:www.opac.lcu.edu.ng, DNS:www.ouralumni.lcu.edu.ng, DNS:www.pgc.lcu.edu.ng, DNS:www.pgportal.lcu.edu.ng, DNS:www.portal.lcu.edu.ng, DNS:www.registration.lcu.edu.ng, DNS:www.repository.lcu.edu.ng, DNS:www.staffclient.lcu.edu.ng</elem>
+</table>
+<table>
+<elem key="name">X509v3 Certificate Policies</elem>
+<elem key="value">Policy: 2.23.140.1.2.1&#xa;</elem>
+</table>
+<table>
+<elem key="name">X509v3 CRL Distribution Points</elem>
+<elem key="value">&#xa;Full Name:&#xa;  URI:http://r11.c.lencr.org/79.crl&#xa;</elem>
+</table>
+<table>
+<elem key="name">CT Precertificate SCTs</elem>
+<elem key="value">Signed Certificate Timestamp:&#xa;    Version   : v1(0)&#xa;    Log ID    : 0D:E1:F2:30:2B:D3:0D:C1:40:62:12:09:EA:55:2E:FC:&#xa;                47:74:7C:B1:D7:E9:30:EF:0E:42:1E:B4:7E:4E:AA:34&#xa;    Timestamp : Apr 23 09:11:50.710 2025 GMT&#xa;    Extensions: none&#xa;    Signature : ecdsa-with-SHA256&#xa;                30:45:02:20:7B:34:4F:53:90:FA:66:E5:6F:E8:8A:B9:&#xa;                70:D2:44:99:5A:FB:E8:9E:D5:36:F5:DA:82:00:74:3A:&#xa;                A6:2E:00:85:02:21:00:D0:63:D2:2D:CC:63:EF:0F:BC:&#xa;                D6:8F:42:41:DD:C1:AA:98:98:AE:78:DA:B8:5C:FB:D1:&#xa;                41:FA:F7:31:6B:42:86&#xa;Signed Certificate Timestamp:&#xa;    Version   : v1(0)&#xa;    Log ID    : CC:FB:0F:6A:85:71:09:65:FE:95:9B:53:CE:E9:B2:7C:&#xa;                22:E9:85:5C:0D:97:8D:B6:A9:7E:54:C0:FE:4C:0D:B0&#xa;    Timestamp : Apr 23 09:11:50.722 2025 GMT&#xa;    Extensions: none&#xa;    Signature : ecdsa-with-SHA256&#xa;                30:45:02:21:00:DD:FF:37:A1:53:4B:AD:01:5E:B8:AF:&#xa;                95:79:6C:B2:F1:BB:DD:3E:D8:CF:30:44:2B:6B:E6:FD:&#xa;                33:60:D4:07:37:02:20:07:D3:CA:4A:0A:44:E1:B1:0D:&#xa;                EC:BE:35:A4:5B:B0:DD:05:32:40:5D:BC:5B:F4:E0:74:&#xa;                8B:2A:1A:B3:81:C1:AC</elem>
+</table>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2025-04-23T08:13:20</elem>
+<elem key="notAfter">2025-07-22T08:13:19</elem>
+</table>
+<elem key="md5">d1fdf6d514ceabd771e92636a7b5a07e</elem>
+<elem key="sha1">f83fc3908cb201ed26d4509042fb4a9e88f23ad0</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIG0jCCBbqgAwIBAgISBc1diVFgxZAOl8lFrA4hKz5OMA0GCSqGSIb3DQEBCwUA&#xa;MDMxCzAJBgNVBAYTAlVTMRYwFAYDVQQKEw1MZXQncyBFbmNyeXB0MQwwCgYDVQQD&#xa;EwNSMTEwHhcNMjUwNDIzMDgxMzIwWhcNMjUwNzIyMDgxMzE5WjAgMR4wHAYDVQQD&#xa;ExV3d3cucG9ydGFsLmxjdS5lZHUubmcwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAw&#xa;ggEKAoIBAQDiUqOwx89iIXseZFWUKnBlakgBzlkOy7d3CFcBLYGW+j4fAMy4sA89&#xa;TVdsAqDBHnVdfj0oFTJoouCKlMyHMpgits8FMnKcI0MNTwyWHzzXylUIMqNPgxIH&#xa;cm7uMEzmHBvE7SJSXLUBvgf8q8EOVXzVWIzqYNalkwGRp8TM+jRHx1cPo/7y7Tb8&#xa;QZ1B90x3VGjlsJxDCdbKhdg0zLwfy1LkrEG5C6FpMxTM5Syacz2FmrYfial+ryXT&#xa;gW4+zqZ/skJ8xLgTJ05PGyM3OTVCVJm0LLsf0X6K7qxBLUpI5nN2Eqv8CRvuSl1+&#xa;qUCAngK/FvTSE3/TkSCBvkKz8JcbPc0fAgMBAAGjggPxMIID7TAOBgNVHQ8BAf8E&#xa;BAMCBaAwHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMAwGA1UdEwEB/wQC&#xa;MAAwHQYDVR0OBBYEFF5R83JhfHfIbSHRz9xncMBFpI01MB8GA1UdIwQYMBaAFMXP&#xa;RqTq9MPAemyVxC2wXpIvJuO5MFcGCCsGAQUFBwEBBEswSTAiBggrBgEFBQcwAYYW&#xa;aHR0cDovL3IxMS5vLmxlbmNyLm9yZzAjBggrBgEFBQcwAoYXaHR0cDovL3IxMS5p&#xa;LmxlbmNyLm9yZy8wggHGBgNVHREEggG9MIIBuYIMKi5sY3UuZWR1Lm5nggpsY3Uu&#xa;ZWR1Lm5nghl3d3cuYWRtaXNzaW9ucy5sY3UuZWR1Lm5nghh3d3cuZWxlYXJuaW5n&#xa;LmxjdS5lZHUubmeCFXd3dy5ldmVudHMubGN1LmVkdS5uZ4IVd3d3LmZhY2FlYy5s&#xa;Y3UuZWR1Lm5nghV3d3cuZmFzY29uLmxjdS5lZHUubmeCFXd3dy5ob3N0ZWwubGN1&#xa;LmVkdS5uZ4IVd3d3LmljYWljdC5sY3UuZWR1Lm5nghV3d3cuaWxlYXJuLmxjdS5l&#xa;ZHUubmeCF3d3dy5qb3VybmFscy5sY3UuZWR1Lm5nghN3d3cub3BhYy5sY3UuZWR1&#xa;Lm5nghh3d3cub3VyYWx1bW5pLmxjdS5lZHUubmeCEnd3dy5wZ2MubGN1LmVkdS5u&#xa;Z4IXd3d3LnBncG9ydGFsLmxjdS5lZHUubmeCFXd3dy5wb3J0YWwubGN1LmVkdS5u&#xa;Z4Ibd3d3LnJlZ2lzdHJhdGlvbi5sY3UuZWR1Lm5nghl3d3cucmVwb3NpdG9yeS5s&#xa;Y3UuZWR1Lm5nghp3d3cuc3RhZmZjbGllbnQubGN1LmVkdS5uZzATBgNVHSAEDDAK&#xa;MAgGBmeBDAECATAuBgNVHR8EJzAlMCOgIaAfhh1odHRwOi8vcjExLmMubGVuY3Iu&#xa;b3JnLzc5LmNybDCCAQQGCisGAQQB1nkCBAIEgfUEgfIA8AB2AA3h8jAr0w3BQGIS&#xa;CepVLvxHdHyx1+kw7w5CHrR+Tqo0AAABlmHq9rYAAAQDAEcwRQIgezRPU5D6ZuVv&#xa;6Iq5cNJEmVr76J7VNvXaggB0OqYuAIUCIQDQY9ItzGPvD7zWj0JB3cGqmJiueNq4&#xa;XPvRQfr3MWtChgB2AMz7D2qFcQll/pWbU87psnwi6YVcDZeNtql+VMD+TA2wAAAB&#xa;lmHq9sIAAAQDAEcwRQIhAN3/N6FTS60BXrivlXlssvG73T7YzzBEK2vm/TNg1Ac3&#xa;AiAH08pKCkThsQ3svjWkW7DdBTJAXbxb9OB0iyoas4HBrDANBgkqhkiG9w0BAQsF&#xa;AAOCAQEAhYqXEcnAP+FnDf8sVvi5ZBok/x1NIX6ZOnnoOJbdpwnhWMy0A7AWdxPJ&#xa;IJNh3s3pVYnmRmmciHFQZYzuUpNN6n0STDxZdD7iQRGlvwDXNBXVNgKXyI4c1UYK&#xa;4zYEDA8gADu8D58u3LtmFwLYINLyVjwTou6LIJBJ1vOjFMtWzrtdj9s+BjwmLkGt&#xa;Xc65ZGYHRflqUqAbfGVxPc4EPPvnJ9p4JDLLygVFgFsg9I6lhlOOU2agJ44dd91C&#xa;sFYi1ZkKsjprD9VKZU3Kq8/U+DzMaWP3bJiSGK9PTmqvHAubG/EYTdSoV7JsNLpY&#xa;alcBuU6ol1i61twWmWizvDNLc6JwhQ==&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="ssl-enum-ciphers" output="&#xa;  TLSv1.2: &#xa;    ciphers: &#xa;      TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 2048) - A&#xa;      TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 2048) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A&#xa;      TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256 (secp256r1) - A&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference: client&#xa;  least strength: A"><table key="TLSv1.2">
+<table key="ciphers">
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_GCM_SHA256</elem>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_GCM_SHA384</elem>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256</elem>
+<elem key="kex_info">secp256r1</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384</elem>
+<elem key="kex_info">secp256r1</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256</elem>
+<elem key="kex_info">secp256r1</elem>
+<elem key="strength">A</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">client</elem>
+</table>
+<elem key="least strength">A</elem>
+</script><script id="sslv2-drown" output="&#xa;"></script></port>
+<port protocol="tcp" portid="465"><state state="open" reason="syn-ack" reason_ttl="59"/><service name="smtps" method="table" conf="3"/><script id="clamav-exec" output="ERROR: Script execution failed (use -d to debug)"/><script id="smtp-commands" output="Couldn&apos;t establish connection on port 465"/><script id="smtp-enum-users" output="&#xa;  Couldn&apos;t establish connection on port 465&#xa;"/><script id="smtp-open-relay" output="Couldn&apos;t establish connection on port 465"/><script id="sslv2-drown" output="&#xa;"></script></port>
+<port protocol="tcp" portid="587"><state state="open" reason="syn-ack" reason_ttl="59"/><service name="submission" method="table" conf="3"/><script id="clamav-exec" output="ERROR: Script execution failed (use -d to debug)"/><script id="smtp-commands" output="Couldn&apos;t establish connection on port 587"/><script id="smtp-enum-users" output="&#xa;  Couldn&apos;t establish connection on port 587&#xa;"/><script id="smtp-open-relay" output="Couldn&apos;t establish connection on port 587"/><script id="sslv2-drown" output="&#xa;"></script></port>
+<port protocol="tcp" portid="853"><state state="closed" reason="reset" reason_ttl="46"/><service name="domain-s" method="table" conf="3"/></port>
+<port protocol="tcp" portid="993"><state state="open" reason="syn-ack" reason_ttl="47"/><service name="imaps" method="table" conf="3"/><script id="banner" output="* OK [CAPABILITY IMAP4rev1 SASL-IR LOGIN-REFERRALS ID ENABLE...&#xa;"/><script id="clamav-exec" output="ERROR: Script execution failed (use -d to debug)"/><script id="imap-capabilities" output="AUTH=LOGINA0001 OK ID IDLE IMAP4rev1 listed SASL-IR more AUTH=PLAIN Pre-login post-login LITERAL+ ENABLE NAMESPACE have capabilities LOGIN-REFERRALS"/><script id="ssl-cert" output="Subject: commonName=server.lcu.edu.ng&#xa;Subject Alternative Name: DNS:server.lcu.edu.ng&#xa;Not valid before: 2025-04-15T19:50:12&#xa;Not valid after:  2025-07-14T19:50:11"><table key="subject">
+<elem key="commonName">server.lcu.edu.ng</elem>
+</table>
+<table key="issuer">
+<elem key="countryName">US</elem>
+<elem key="organizationName">Let&apos;s Encrypt</elem>
+<elem key="commonName">R11</elem>
+</table>
+<table key="pubkey">
+<elem key="modulus">BIGNUM: 037A9EF0</elem>
+<elem key="exponent">BIGNUM: 037A9E00</elem>
+<elem key="bits">2048</elem>
+<elem key="type">rsa</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Key Usage</elem>
+<elem key="critical">true</elem>
+<elem key="value">Digital Signature, Key Encipherment</elem>
+</table>
+<table>
+<elem key="name">X509v3 Extended Key Usage</elem>
+<elem key="value">TLS Web Server Authentication, TLS Web Client Authentication</elem>
+</table>
+<table>
+<elem key="name">X509v3 Basic Constraints</elem>
+<elem key="critical">true</elem>
+<elem key="value">CA:FALSE</elem>
+</table>
+<table>
+<elem key="name">X509v3 Subject Key Identifier</elem>
+<elem key="value">54:2D:F8:AD:BB:26:30:6F:07:9C:9A:41:16:CD:93:B9:BF:33:36:1C</elem>
+</table>
+<table>
+<elem key="name">X509v3 Authority Key Identifier</elem>
+<elem key="value">keyid:C5:CF:46:A4:EA:F4:C3:C0:7A:6C:95:C4:2D:B0:5E:92:2F:26:E3:B9&#xa;</elem>
+</table>
+<table>
+<elem key="name">Authority Information Access</elem>
+<elem key="value">OCSP - URI:http://r11.o.lencr.org&#xa;CA Issuers - URI:http://r11.i.lencr.org/&#xa;</elem>
+</table>
+<table>
+<elem key="name">X509v3 Subject Alternative Name</elem>
+<elem key="value">DNS:server.lcu.edu.ng</elem>
+</table>
+<table>
+<elem key="name">X509v3 Certificate Policies</elem>
+<elem key="value">Policy: 2.23.140.1.2.1&#xa;</elem>
+</table>
+<table>
+<elem key="name">X509v3 CRL Distribution Points</elem>
+<elem key="value">&#xa;Full Name:&#xa;  URI:http://r11.c.lencr.org/15.crl&#xa;</elem>
+</table>
+<table>
+<elem key="name">CT Precertificate SCTs</elem>
+<elem key="value">Signed Certificate Timestamp:&#xa;    Version   : v1(0)&#xa;    Log ID    : CC:FB:0F:6A:85:71:09:65:FE:95:9B:53:CE:E9:B2:7C:&#xa;                22:E9:85:5C:0D:97:8D:B6:A9:7E:54:C0:FE:4C:0D:B0&#xa;    Timestamp : Apr 15 20:48:42.750 2025 GMT&#xa;    Extensions: none&#xa;    Signature : ecdsa-with-SHA256&#xa;                30:46:02:21:00:C3:FD:79:ED:A5:88:40:A1:C4:16:75:&#xa;                5C:2A:67:5B:70:B6:DF:8E:70:F0:62:08:DE:68:2A:CB:&#xa;                FC:E8:A2:E4:AD:02:21:00:AC:64:9E:63:AC:F1:76:BB:&#xa;                59:7F:D7:30:36:D0:47:B7:95:9C:68:B8:08:9C:C1:15:&#xa;                55:B3:A0:B4:89:54:97:07&#xa;Signed Certificate Timestamp:&#xa;    Version   : v1(0)&#xa;    Log ID    : AF:18:1A:28:D6:8C:A3:E0:A9:8A:4C:9C:67:AB:09:F8:&#xa;                BB:BC:22:BA:AE:BC:B1:38:A3:A1:9D:D3:F9:B6:03:0D&#xa;    Timestamp : Apr 15 20:48:43.090 2025 GMT&#xa;    Extensions: none&#xa;    Signature : ecdsa-with-SHA256&#xa;                30:44:02:20:32:1D:E8:F0:43:06:5C:CB:B1:0F:25:96:&#xa;                61:59:D1:81:E8:E6:B9:4C:60:55:CE:23:4E:03:6D:40:&#xa;                C5:66:3F:27:02:20:1A:22:E1:75:C4:C0:B1:60:1F:85:&#xa;                81:E3:90:00:3E:56:51:8B:8C:F0:ED:39:85:34:03:2D:&#xa;                D9:06:07:E2:DD:3B</elem>
+</table>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2025-04-15T19:50:12</elem>
+<elem key="notAfter">2025-07-14T19:50:11</elem>
+</table>
+<elem key="md5">ad78e3ac10d865b14e9e7edb88f7e219</elem>
+<elem key="sha1">3668afb6417f5f9444ec70c7c49fe074f6916fab</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIFIjCCBAqgAwIBAgISBoqbd69oTHPmqjAgR+G1/c+OMA0GCSqGSIb3DQEBCwUA&#xa;MDMxCzAJBgNVBAYTAlVTMRYwFAYDVQQKEw1MZXQncyBFbmNyeXB0MQwwCgYDVQQD&#xa;EwNSMTEwHhcNMjUwNDE1MTk1MDEyWhcNMjUwNzE0MTk1MDExWjAcMRowGAYDVQQD&#xa;ExFzZXJ2ZXIubGN1LmVkdS5uZzCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoC&#xa;ggEBAKYbsIomhY3681rx7+5nfj4fB1AeAZdOF4RvUoYrxjafOp2VUlBzsLlvD0Hl&#xa;S8jl70RQv7NGbNahFsW47BuD/gfFWm7w8JHWLTwzxVPsbfPEsBZA+rRETMl0YIEZ&#xa;IdcPirZs5OPiiXJD7Il6A17jqDuc21bkxcn9XsLX1VFdrB6FWsmn0vBhR+Z/Wmrj&#xa;uoAfgbCfUMlCUH3YU6Y5KSjEuYIExgLRcru6XeYG2N530cds9XEm+y4ysKxZI1YD&#xa;zK2mpqnEDJuAMzGIXS5rhWcuuDyZdEThDEgFfT2Qa2LbGjk64Gt3+/DMf75gJNIB&#xa;zdrcrYXLIQ3tWkSwxCR3VDo7YMECAwEAAaOCAkUwggJBMA4GA1UdDwEB/wQEAwIF&#xa;oDAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwDAYDVR0TAQH/BAIwADAd&#xa;BgNVHQ4EFgQUVC34rbsmMG8HnJpBFs2Tub8zNhwwHwYDVR0jBBgwFoAUxc9GpOr0&#xa;w8B6bJXELbBeki8m47kwVwYIKwYBBQUHAQEESzBJMCIGCCsGAQUFBzABhhZodHRw&#xa;Oi8vcjExLm8ubGVuY3Iub3JnMCMGCCsGAQUFBzAChhdodHRwOi8vcjExLmkubGVu&#xa;Y3Iub3JnLzAcBgNVHREEFTATghFzZXJ2ZXIubGN1LmVkdS5uZzATBgNVHSAEDDAK&#xa;MAgGBmeBDAECATAuBgNVHR8EJzAlMCOgIaAfhh1odHRwOi8vcjExLmMubGVuY3Iu&#xa;b3JnLzE1LmNybDCCAQQGCisGAQQB1nkCBAIEgfUEgfIA8AB3AMz7D2qFcQll/pWb&#xa;U87psnwi6YVcDZeNtql+VMD+TA2wAAABljs2Fv4AAAQDAEgwRgIhAMP9ee2liECh&#xa;xBZ1XCpnW3C2345w8GII3mgqy/zoouStAiEArGSeY6zxdrtZf9cwNtBHt5WcaLgI&#xa;nMEVVbOgtIlUlwcAdQCvGBoo1oyj4KmKTJxnqwn4u7wiuq68sTijoZ3T+bYDDQAA&#xa;AZY7NhhSAAAEAwBGMEQCIDId6PBDBlzLsQ8llmFZ0YHo5rlMYFXOI04DbUDFZj8n&#xa;AiAaIuF1xMCxYB+FgeOQAD5WUYuM8O05hTQDLdkGB+LdOzANBgkqhkiG9w0BAQsF&#xa;AAOCAQEAS4CeyWQhyHUA26qAOgq/4yLZPuOtwQPJmeBp5LT0j0pBCjxHgWX9wGf6&#xa;pQLhsYxjev/TsY8dOq0OzJe0/8g2SzOnxeUpRgCCv82U9NV+u6H0dIxN7u9OF3y8&#xa;Ikpn+U+qCSTv7wCYyi4Outlj+WZadmPZmVxC/sjOLfdeUV2BBU/APwNnV+d+O1/g&#xa;z3mKgcxmw6aLVG3qE7ZCEo3lJVcDJFeFOoWnPMLyxGo4RTOGOGO/DD8RKqfIB5ek&#xa;hFpi2wSiTO8625Ltdn4qpu88tKhchxD6wtoKTl0s31jVTHDpQNTWEGJhBL0LAi70&#xa;Ec+RYy0mkgOkXGYgNH29Eb0ZWM3OVQ==&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="ssl-enum-ciphers" output="&#xa;  TLSv1.2: &#xa;    ciphers: &#xa;      TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 2048) - A&#xa;      TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 2048) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A&#xa;      TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256 (secp256r1) - A&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference: client&#xa;  least strength: A"><table key="TLSv1.2">
+<table key="ciphers">
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_GCM_SHA256</elem>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_GCM_SHA384</elem>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256</elem>
+<elem key="kex_info">secp256r1</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384</elem>
+<elem key="kex_info">secp256r1</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256</elem>
+<elem key="kex_info">secp256r1</elem>
+<elem key="strength">A</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">client</elem>
+</table>
+<elem key="least strength">A</elem>
+</script><script id="sslv2-drown" output="&#xa;"></script></port>
+<port protocol="tcp" portid="995"><state state="open" reason="syn-ack" reason_ttl="45"/><service name="pop3s" method="table" conf="3"/><script id="banner" output="+OK Dovecot ready."/><script id="clamav-exec" output="ERROR: Script execution failed (use -d to debug)"/><script id="pop3-capabilities" output="SASL(PLAIN LOGIN) RESP-CODES TOP PIPELINING USER AUTH-RESP-CODE CAPA UIDL"/><script id="ssl-cert" output="Subject: commonName=server.lcu.edu.ng&#xa;Subject Alternative Name: DNS:server.lcu.edu.ng&#xa;Not valid before: 2025-04-15T19:50:12&#xa;Not valid after:  2025-07-14T19:50:11"><table key="subject">
+<elem key="commonName">server.lcu.edu.ng</elem>
+</table>
+<table key="issuer">
+<elem key="countryName">US</elem>
+<elem key="organizationName">Let&apos;s Encrypt</elem>
+<elem key="commonName">R11</elem>
+</table>
+<table key="pubkey">
+<elem key="modulus">BIGNUM: 069F9D80</elem>
+<elem key="exponent">BIGNUM: 069F9D30</elem>
+<elem key="bits">2048</elem>
+<elem key="type">rsa</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Key Usage</elem>
+<elem key="critical">true</elem>
+<elem key="value">Digital Signature, Key Encipherment</elem>
+</table>
+<table>
+<elem key="name">X509v3 Extended Key Usage</elem>
+<elem key="value">TLS Web Server Authentication, TLS Web Client Authentication</elem>
+</table>
+<table>
+<elem key="name">X509v3 Basic Constraints</elem>
+<elem key="critical">true</elem>
+<elem key="value">CA:FALSE</elem>
+</table>
+<table>
+<elem key="name">X509v3 Subject Key Identifier</elem>
+<elem key="value">54:2D:F8:AD:BB:26:30:6F:07:9C:9A:41:16:CD:93:B9:BF:33:36:1C</elem>
+</table>
+<table>
+<elem key="name">X509v3 Authority Key Identifier</elem>
+<elem key="value">keyid:C5:CF:46:A4:EA:F4:C3:C0:7A:6C:95:C4:2D:B0:5E:92:2F:26:E3:B9&#xa;</elem>
+</table>
+<table>
+<elem key="name">Authority Information Access</elem>
+<elem key="value">OCSP - URI:http://r11.o.lencr.org&#xa;CA Issuers - URI:http://r11.i.lencr.org/&#xa;</elem>
+</table>
+<table>
+<elem key="name">X509v3 Subject Alternative Name</elem>
+<elem key="value">DNS:server.lcu.edu.ng</elem>
+</table>
+<table>
+<elem key="name">X509v3 Certificate Policies</elem>
+<elem key="value">Policy: 2.23.140.1.2.1&#xa;</elem>
+</table>
+<table>
+<elem key="name">X509v3 CRL Distribution Points</elem>
+<elem key="value">&#xa;Full Name:&#xa;  URI:http://r11.c.lencr.org/15.crl&#xa;</elem>
+</table>
+<table>
+<elem key="name">CT Precertificate SCTs</elem>
+<elem key="value">Signed Certificate Timestamp:&#xa;    Version   : v1(0)&#xa;    Log ID    : CC:FB:0F:6A:85:71:09:65:FE:95:9B:53:CE:E9:B2:7C:&#xa;                22:E9:85:5C:0D:97:8D:B6:A9:7E:54:C0:FE:4C:0D:B0&#xa;    Timestamp : Apr 15 20:48:42.750 2025 GMT&#xa;    Extensions: none&#xa;    Signature : ecdsa-with-SHA256&#xa;                30:46:02:21:00:C3:FD:79:ED:A5:88:40:A1:C4:16:75:&#xa;                5C:2A:67:5B:70:B6:DF:8E:70:F0:62:08:DE:68:2A:CB:&#xa;                FC:E8:A2:E4:AD:02:21:00:AC:64:9E:63:AC:F1:76:BB:&#xa;                59:7F:D7:30:36:D0:47:B7:95:9C:68:B8:08:9C:C1:15:&#xa;                55:B3:A0:B4:89:54:97:07&#xa;Signed Certificate Timestamp:&#xa;    Version   : v1(0)&#xa;    Log ID    : AF:18:1A:28:D6:8C:A3:E0:A9:8A:4C:9C:67:AB:09:F8:&#xa;                BB:BC:22:BA:AE:BC:B1:38:A3:A1:9D:D3:F9:B6:03:0D&#xa;    Timestamp : Apr 15 20:48:43.090 2025 GMT&#xa;    Extensions: none&#xa;    Signature : ecdsa-with-SHA256&#xa;                30:44:02:20:32:1D:E8:F0:43:06:5C:CB:B1:0F:25:96:&#xa;                61:59:D1:81:E8:E6:B9:4C:60:55:CE:23:4E:03:6D:40:&#xa;                C5:66:3F:27:02:20:1A:22:E1:75:C4:C0:B1:60:1F:85:&#xa;                81:E3:90:00:3E:56:51:8B:8C:F0:ED:39:85:34:03:2D:&#xa;                D9:06:07:E2:DD:3B</elem>
+</table>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2025-04-15T19:50:12</elem>
+<elem key="notAfter">2025-07-14T19:50:11</elem>
+</table>
+<elem key="md5">ad78e3ac10d865b14e9e7edb88f7e219</elem>
+<elem key="sha1">3668afb6417f5f9444ec70c7c49fe074f6916fab</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIFIjCCBAqgAwIBAgISBoqbd69oTHPmqjAgR+G1/c+OMA0GCSqGSIb3DQEBCwUA&#xa;MDMxCzAJBgNVBAYTAlVTMRYwFAYDVQQKEw1MZXQncyBFbmNyeXB0MQwwCgYDVQQD&#xa;EwNSMTEwHhcNMjUwNDE1MTk1MDEyWhcNMjUwNzE0MTk1MDExWjAcMRowGAYDVQQD&#xa;ExFzZXJ2ZXIubGN1LmVkdS5uZzCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoC&#xa;ggEBAKYbsIomhY3681rx7+5nfj4fB1AeAZdOF4RvUoYrxjafOp2VUlBzsLlvD0Hl&#xa;S8jl70RQv7NGbNahFsW47BuD/gfFWm7w8JHWLTwzxVPsbfPEsBZA+rRETMl0YIEZ&#xa;IdcPirZs5OPiiXJD7Il6A17jqDuc21bkxcn9XsLX1VFdrB6FWsmn0vBhR+Z/Wmrj&#xa;uoAfgbCfUMlCUH3YU6Y5KSjEuYIExgLRcru6XeYG2N530cds9XEm+y4ysKxZI1YD&#xa;zK2mpqnEDJuAMzGIXS5rhWcuuDyZdEThDEgFfT2Qa2LbGjk64Gt3+/DMf75gJNIB&#xa;zdrcrYXLIQ3tWkSwxCR3VDo7YMECAwEAAaOCAkUwggJBMA4GA1UdDwEB/wQEAwIF&#xa;oDAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwDAYDVR0TAQH/BAIwADAd&#xa;BgNVHQ4EFgQUVC34rbsmMG8HnJpBFs2Tub8zNhwwHwYDVR0jBBgwFoAUxc9GpOr0&#xa;w8B6bJXELbBeki8m47kwVwYIKwYBBQUHAQEESzBJMCIGCCsGAQUFBzABhhZodHRw&#xa;Oi8vcjExLm8ubGVuY3Iub3JnMCMGCCsGAQUFBzAChhdodHRwOi8vcjExLmkubGVu&#xa;Y3Iub3JnLzAcBgNVHREEFTATghFzZXJ2ZXIubGN1LmVkdS5uZzATBgNVHSAEDDAK&#xa;MAgGBmeBDAECATAuBgNVHR8EJzAlMCOgIaAfhh1odHRwOi8vcjExLmMubGVuY3Iu&#xa;b3JnLzE1LmNybDCCAQQGCisGAQQB1nkCBAIEgfUEgfIA8AB3AMz7D2qFcQll/pWb&#xa;U87psnwi6YVcDZeNtql+VMD+TA2wAAABljs2Fv4AAAQDAEgwRgIhAMP9ee2liECh&#xa;xBZ1XCpnW3C2345w8GII3mgqy/zoouStAiEArGSeY6zxdrtZf9cwNtBHt5WcaLgI&#xa;nMEVVbOgtIlUlwcAdQCvGBoo1oyj4KmKTJxnqwn4u7wiuq68sTijoZ3T+bYDDQAA&#xa;AZY7NhhSAAAEAwBGMEQCIDId6PBDBlzLsQ8llmFZ0YHo5rlMYFXOI04DbUDFZj8n&#xa;AiAaIuF1xMCxYB+FgeOQAD5WUYuM8O05hTQDLdkGB+LdOzANBgkqhkiG9w0BAQsF&#xa;AAOCAQEAS4CeyWQhyHUA26qAOgq/4yLZPuOtwQPJmeBp5LT0j0pBCjxHgWX9wGf6&#xa;pQLhsYxjev/TsY8dOq0OzJe0/8g2SzOnxeUpRgCCv82U9NV+u6H0dIxN7u9OF3y8&#xa;Ikpn+U+qCSTv7wCYyi4Outlj+WZadmPZmVxC/sjOLfdeUV2BBU/APwNnV+d+O1/g&#xa;z3mKgcxmw6aLVG3qE7ZCEo3lJVcDJFeFOoWnPMLyxGo4RTOGOGO/DD8RKqfIB5ek&#xa;hFpi2wSiTO8625Ltdn4qpu88tKhchxD6wtoKTl0s31jVTHDpQNTWEGJhBL0LAi70&#xa;Ec+RYy0mkgOkXGYgNH29Eb0ZWM3OVQ==&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="ssl-enum-ciphers" output="&#xa;  TLSv1.2: &#xa;    ciphers: &#xa;      TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 2048) - A&#xa;      TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 2048) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A&#xa;      TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256 (secp256r1) - A&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference: client&#xa;  least strength: A"><table key="TLSv1.2">
+<table key="ciphers">
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_GCM_SHA256</elem>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_GCM_SHA384</elem>
+<elem key="kex_info">dh 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256</elem>
+<elem key="kex_info">secp256r1</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384</elem>
+<elem key="kex_info">secp256r1</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256</elem>
+<elem key="kex_info">secp256r1</elem>
+<elem key="strength">A</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">client</elem>
+</table>
+<elem key="least strength">A</elem>
+</script><script id="sslv2-drown" output="&#xa;"></script></port>
+<port protocol="tcp" portid="8443"><state state="closed" reason="reset" reason_ttl="46"/><service name="https-alt" method="table" conf="3"/></port>
+</ports>
+<hostscript><script id="asn-query" output="No Answers"/><script id="clock-skew" output="mean: -1s, deviation: 0s, median: -2s"><elem key="stddev">0</elem>
+<elem key="mean">-1</elem>
+<elem key="count">2</elem>
+<elem key="median">-2</elem>
+</script><script id="dns-brute" output="&#xa;  DNS Brute-force hostnames: &#xa;    app.lcu.edu.ng - 76.76.21.164&#xa;    app.lcu.edu.ng - 76.76.21.241&#xa;    ns1.lcu.edu.ng - 74.81.88.3&#xa;    ns2.lcu.edu.ng - 74.81.88.4&#xa;    server.lcu.edu.ng - 74.81.88.2&#xa;    mail.lcu.edu.ng - 74.81.88.2&#xa;    www.lcu.edu.ng - 74.81.88.2&#xa;    ftp.lcu.edu.ng - 74.81.88.2"><table key="DNS Brute-force hostnames">
+<table>
+<elem key="hostname">app.lcu.edu.ng</elem>
+<elem key="address">76.76.21.164</elem>
+</table>
+<table>
+<elem key="hostname">app.lcu.edu.ng</elem>
+<elem key="address">76.76.21.241</elem>
+</table>
+<table>
+<elem key="hostname">ns1.lcu.edu.ng</elem>
+<elem key="address">74.81.88.3</elem>
+</table>
+<table>
+<elem key="hostname">ns2.lcu.edu.ng</elem>
+<elem key="address">74.81.88.4</elem>
+</table>
+<table>
+<elem key="hostname">server.lcu.edu.ng</elem>
+<elem key="address">74.81.88.2</elem>
+</table>
+<table>
+<elem key="hostname">mail.lcu.edu.ng</elem>
+<elem key="address">74.81.88.2</elem>
+</table>
+<table>
+<elem key="hostname">www.lcu.edu.ng</elem>
+<elem key="address">74.81.88.2</elem>
+</table>
+<table>
+<elem key="hostname">ftp.lcu.edu.ng</elem>
+<elem key="address">74.81.88.2</elem>
+</table>
+</table>
+</script><script id="fcrdns" output="PASS (server.lcu.edu.ng)"><table key="server.lcu.edu.ng">
+<elem key="status">pass</elem>
+<table key="addresses">
+<elem>74.81.88.2</elem>
+</table>
+</table>
+</script><script id="hostmap-crtsh" output="&#xa;  subdomains: &#xa;    server.lcu.edu.ng"><table key="subdomains">
+<elem>server.lcu.edu.ng</elem>
+</table>
+</script><script id="hostmap-robtex" output="ERROR: Script execution failed (use -d to debug)"/><script id="ip-geolocation-geoplugin" output="&#xa;74.81.88.2&#xa;"/><script id="ipidseq" output="ERROR: Script execution failed (use -d to debug)"/><script id="path-mtu" output="ERROR: Script execution failed (use -d to debug)"/><script id="qscan" output="ERROR: Script execution failed (use -d to debug)"/><script id="whois-domain" output="You should provide a domain name."/><script id="whois-ip" output="Record found at whois.arin.net&#xa;netrange: 74.81.87.0 - 74.81.95.255&#xa;netname: NTHL&#xa;orgname: NETWORK TRANSIT HOLDINGS LLC&#xa;orgid: NTHL&#xa;country: US stateprov: TX"/></hostscript><times srtt="172445" rttvar="200858" to="975877"/>
+</host>
+<runstats><finished time="1748963533" timestr="Tue Jun 03 16:12:13 2025" elapsed="633.74" summary="Nmap done at Tue Jun 03 16:12:13 2025; 1 IP address (1 host up) scanned in 633.74 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

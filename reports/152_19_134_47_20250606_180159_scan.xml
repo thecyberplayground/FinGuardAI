@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///C:/Program Files (x86)/Nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Fri Jun 06 18:02:01 2025 as: nmap -A -vv -&#45;script=vuln,auth,default -&#45;stats-every 2s -oX reports\\152_19_134_47_20250606_180159_scan.xml -p 1-1000,3306,5432,8080-8090,27017,21,22,23,25,53 http://152.19.134.47 -->
+<nmaprun scanner="nmap" args="nmap -A -vv -&#45;script=vuln,auth,default -&#45;stats-every 2s -oX reports\\152_19_134_47_20250606_180159_scan.xml -p 1-1000,3306,5432,8080-8090,27017,21,22,23,25,53 http://152.19.134.47" start="1749229321" startstr="Fri Jun 06 18:02:01 2025" version="7.80" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="1014" services="1-1000,3306,5432,8080-8090,27017"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1749229324"/>
+<taskprogress task="NSE" time="1749229324" percent="0.00"/>
+<taskprogress task="NSE" time="1749229324" percent="50.00" remaining="1" etc="1749229324"/>
+<taskprogress task="NSE" time="1749229326" percent="50.00" remaining="3" etc="1749229328"/>
+<taskprogress task="NSE" time="1749229328" percent="50.00" remaining="5" etc="1749229332"/>
+<taskprogress task="NSE" time="1749229330" percent="50.00" remaining="7" etc="1749229336"/>
+<taskprogress task="NSE" time="1749229332" percent="50.00" remaining="9" etc="1749229340"/>
+<taskend task="NSE" time="1749229334"/>
+<taskbegin task="NSE" time="1749229334"/>
+<taskend task="NSE" time="1749229334"/>
+<taskbegin task="NSE" time="1749229334"/>
+<taskend task="NSE" time="1749229334"/>
+<target specification="http://152.19.134.47" status="skipped" reason="invalid"/>
+<taskbegin task="NSE" time="1749229334"/>
+<taskend task="NSE" time="1749229334"/>
+<taskbegin task="NSE" time="1749229334"/>
+<taskend task="NSE" time="1749229334"/>
+<taskbegin task="NSE" time="1749229334"/>
+<taskend task="NSE" time="1749229334"/>
+<runstats><finished time="1749229334" timestr="Fri Jun 06 18:02:14 2025" elapsed="14.81" summary="Nmap done at Fri Jun 06 18:02:14 2025; 0 IP addresses (0 hosts up) scanned in 14.81 seconds" exit="success"/><hosts up="0" down="0" total="0"/>
+</runstats>
+</nmaprun>

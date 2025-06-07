@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///C:/Program Files (x86)/Nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Fri Jun 06 08:23:24 2025 as: nmap -sS -v -oX reports\\74_81_88_2_20250606_082323_scan.xml -p 1-1000,3306,5432,8080-8090,27017,21,22,23,25,53 74.81.88.2 -->
+<nmaprun scanner="nmap" args="nmap -sS -v -oX reports\\74_81_88_2_20250606_082323_scan.xml -p 1-1000,3306,5432,8080-8090,27017,21,22,23,25,53 74.81.88.2" start="1749194604" startstr="Fri Jun 06 08:23:24 2025" version="7.80" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="1014" services="1-1000,3306,5432,8080-8090,27017"/>
+<verbose level="1"/>
+<debugging level="0"/>
+<taskbegin task="Ping Scan" time="1749194605"/>
+<taskend task="Ping Scan" time="1749194606" extrainfo="1 total hosts"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1749194606"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1749194606"/>
+<taskbegin task="SYN Stealth Scan" time="1749194606"/>
+<taskend task="SYN Stealth Scan" time="1749194634" extrainfo="1014 total ports"/>
+<host starttime="1749194606" endtime="1749194634"><status state="up" reason="reset" reason_ttl="250"/>
+<address addr="74.81.88.2" addrtype="ipv4"/>
+<hostnames>
+<hostname name="server.lcu.edu.ng" type="PTR"/>
+</hostnames>
+<ports><extraports state="filtered" count="1001">
+<extrareasons reason="no-responses" count="1001"/>
+</extraports>
+<port protocol="tcp" portid="20"><state state="closed" reason="reset" reason_ttl="47"/><service name="ftp-data" method="table" conf="3"/></port>
+<port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="46"/><service name="ftp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="46"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="53"><state state="open" reason="syn-ack" reason_ttl="46"/><service name="domain" method="table" conf="3"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="46"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="110"><state state="open" reason="syn-ack" reason_ttl="47"/><service name="pop3" method="table" conf="3"/></port>
+<port protocol="tcp" portid="143"><state state="open" reason="syn-ack" reason_ttl="46"/><service name="imap" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="47"/><service name="https" method="table" conf="3"/></port>
+<port protocol="tcp" portid="465"><state state="open" reason="syn-ack" reason_ttl="59"/><service name="smtps" method="table" conf="3"/></port>
+<port protocol="tcp" portid="587"><state state="open" reason="syn-ack" reason_ttl="59"/><service name="submission" method="table" conf="3"/></port>
+<port protocol="tcp" portid="853"><state state="closed" reason="reset" reason_ttl="45"/><service name="domain-s" method="table" conf="3"/></port>
+<port protocol="tcp" portid="993"><state state="open" reason="syn-ack" reason_ttl="46"/><service name="imaps" method="table" conf="3"/></port>
+<port protocol="tcp" portid="995"><state state="open" reason="syn-ack" reason_ttl="47"/><service name="pop3s" method="table" conf="3"/></port>
+</ports>
+<times srtt="92880" rttvar="83422" to="426568"/>
+</host>
+<runstats><finished time="1749194634" timestr="Fri Jun 06 08:23:54 2025" elapsed="30.22" summary="Nmap done at Fri Jun 06 08:23:54 2025; 1 IP address (1 host up) scanned in 30.22 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

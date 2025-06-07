@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///C:/Program Files (x86)/Nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Sat Jun 07 01:11:49 2025 as: nmap -sS -v -oX reports\\152_19_134_47_20250607_011148_scan.xml -p 1-1000,3306,5432,8080-8090,27017,21,22,23,25,53 152.19.134.47 -->
+<nmaprun scanner="nmap" args="nmap -sS -v -oX reports\\152_19_134_47_20250607_011148_scan.xml -p 1-1000,3306,5432,8080-8090,27017,21,22,23,25,53 152.19.134.47" start="1749255109" startstr="Sat Jun 07 01:11:49 2025" version="7.80" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="1014" services="1-1000,3306,5432,8080-8090,27017"/>
+<verbose level="1"/>
+<debugging level="0"/>
+<taskbegin task="Ping Scan" time="1749255109"/>
+<taskend task="Ping Scan" time="1749255110" extrainfo="1 total hosts"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1749255110"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1749255110"/>
+<taskbegin task="SYN Stealth Scan" time="1749255110"/>
+<taskend task="SYN Stealth Scan" time="1749255123" extrainfo="1014 total ports"/>
+<host starttime="1749255110" endtime="1749255123"><status state="up" reason="echo-reply" reason_ttl="38"/>
+<address addr="152.19.134.47" addrtype="ipv4"/>
+<hostnames>
+<hostname name="gutenberg.ibiblio.org" type="PTR"/>
+</hostnames>
+<ports><extraports state="filtered" count="1008">
+<extrareasons reason="no-responses" count="990"/>
+<extrareasons reason="admin-prohibiteds" count="18"/>
+</extraports>
+<port protocol="tcp" portid="20"><state state="closed" reason="reset" reason_ttl="39"/><service name="ftp-data" method="table" conf="3"/></port>
+<port protocol="tcp" portid="21"><state state="closed" reason="reset" reason_ttl="39"/><service name="ftp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="22"><state state="closed" reason="reset" reason_ttl="39"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="39"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="40"/><service name="https" method="table" conf="3"/></port>
+<port protocol="tcp" portid="873"><state state="closed" reason="reset" reason_ttl="39"/><service name="rsync" method="table" conf="3"/></port>
+</ports>
+<times srtt="234989" rttvar="17407" to="304617"/>
+</host>
+<runstats><finished time="1749255124" timestr="Sat Jun 07 01:12:04 2025" elapsed="15.32" summary="Nmap done at Sat Jun 07 01:12:04 2025; 1 IP address (1 host up) scanned in 15.32 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

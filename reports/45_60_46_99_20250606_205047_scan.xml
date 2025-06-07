@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///C:/Program Files (x86)/Nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Fri Jun 06 20:50:48 2025 as: nmap -sS -v -oX reports\\45_60_46_99_20250606_205047_scan.xml -p 1-1000,3306,5432,8080-8090,27017,21,22,23,25,53 http://45.60.46.99 -->
+<nmaprun scanner="nmap" args="nmap -sS -v -oX reports\\45_60_46_99_20250606_205047_scan.xml -p 1-1000,3306,5432,8080-8090,27017,21,22,23,25,53 http://45.60.46.99" start="1749239448" startstr="Fri Jun 06 20:50:48 2025" version="7.80" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="1014" services="1-1000,3306,5432,8080-8090,27017"/>
+<verbose level="1"/>
+<debugging level="0"/>
+<target specification="http://45.60.46.99" status="skipped" reason="invalid"/>
+<runstats><finished time="1749239448" timestr="Fri Jun 06 20:50:48 2025" elapsed="0.16" summary="Nmap done at Fri Jun 06 20:50:48 2025; 0 IP addresses (0 hosts up) scanned in 0.16 seconds" exit="success"/><hosts up="0" down="0" total="0"/>
+</runstats>
+</nmaprun>

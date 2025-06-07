@@ -49,6 +49,97 @@ FinGuardAI
 
 ### Prerequisites
 
+- Node.js 18.x or later
+- Python 3.9 or later
+- NPM or Yarn package manager
+- Pip package manager
+
+### Local Setup
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/finguardai.git
+   cd finguardai
+   ```
+
+2. Install frontend dependencies:
+   ```bash
+   npm install --legacy-peer-deps
+   ```
+
+3. Install backend dependencies:
+   ```bash
+   cd backend
+   pip install -r requirements.txt
+   cd ..
+   ```
+
+4. Configure environment variables (if needed):
+   - Create `.env` file in the root directory for frontend
+   - Create `.env` file in the backend directory for backend
+
+5. Start the development servers:
+   ```bash
+   # Start backend server
+   cd backend
+   python app.py
+   
+   # In another terminal, start frontend
+   npm run dev
+   ```
+
+## Deployment
+
+### Deploying the Frontend (Next.js)
+
+The frontend can be deployed to Netlify, Vercel, or any other platform that supports Next.js applications.
+
+#### Netlify Deployment
+
+1. Make sure the `netlify.toml` file is properly configured.
+2. Connect your GitHub repository to Netlify.
+3. Configure the build settings:
+   - Build command: `npm run build`
+   - Publish directory: `.next`
+
+#### Vercel Deployment
+
+1. Connect your GitHub repository to Vercel.
+2. Vercel will automatically detect Next.js and configure the build settings.
+
+### Deploying the Backend (Flask)
+
+The Flask backend can be deployed to platforms like Heroku, Render, or Python Anywhere.
+
+#### Heroku Deployment
+
+1. Create a `Procfile` in the backend directory:
+   ```
+   web: gunicorn app:app
+   ```
+
+2. Create a `requirements.txt` file with all dependencies.
+
+3. Deploy using the Heroku CLI:
+   ```bash
+   cd backend
+   heroku create finguard-api
+   git init
+   heroku git:remote -a finguard-api
+   git add .
+   git commit -m "Initial backend deployment"
+   git push heroku master
+   ```
+
+### Environmental Configuration
+
+FinGuardAI supports different environments (dev, test, prod) with specific configurations for each. Make sure to set the appropriate environment variables on your deployment platform:
+
+- `NODE_ENV` for the frontend
+- `FLASK_ENV` for the backend
+
+Each environment has its own scanning configurations, report formats, and API endpoints as defined in the application code.
+
 - Python 3.8+ (for direct installation)
 - Docker and Docker Compose (for containerized deployment)
 - Access to NVD API (API key required for full functionality)

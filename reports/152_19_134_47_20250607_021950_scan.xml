@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///C:/Program Files (x86)/Nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Sat Jun 07 02:19:52 2025 as: nmap -A -vv -&#45;script=vuln,auth,default -&#45;stats-every 2s -oX reports\\152_19_134_47_20250607_021950_scan.xml -p 1-1000,3306,5432,8080-8090,27017,21,22,23,25,53 152.19.134.47 -->
+<nmaprun scanner="nmap" args="nmap -A -vv -&#45;script=vuln,auth,default -&#45;stats-every 2s -oX reports\\152_19_134_47_20250607_021950_scan.xml -p 1-1000,3306,5432,8080-8090,27017,21,22,23,25,53 152.19.134.47" start="1749259192" startstr="Sat Jun 07 02:19:52 2025" version="7.80" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="1014" services="1-1000,3306,5432,8080-8090,27017"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1749259196"/>
+<taskprogress task="NSE" time="1749259196" percent="0.00"/>
+<taskprogress task="NSE" time="1749259196" percent="50.00" remaining="1" etc="1749259196"/>
+<taskprogress task="NSE" time="1749259198" percent="50.00" remaining="3" etc="1749259200"/>
+<taskprogress task="NSE" time="1749259200" percent="50.00" remaining="5" etc="1749259204"/>
+<taskprogress task="NSE" time="1749259202" percent="50.00" remaining="7" etc="1749259208"/>
+<taskprogress task="NSE" time="1749259204" percent="50.00" remaining="9" etc="1749259212"/>
+<taskend task="NSE" time="1749259206"/>
+<taskbegin task="NSE" time="1749259206"/>
+<taskend task="NSE" time="1749259206"/>
+<taskbegin task="NSE" time="1749259206"/>
+<taskend task="NSE" time="1749259206"/>
+<taskbegin task="Ping Scan" time="1749259206"/>
+<taskprogress task="Ping Scan" time="1749259206" percent="12.50" remaining="1" etc="1749259206"/>
+<taskend task="Ping Scan" time="1749259206" extrainfo="1 total hosts"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1749259206"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1749259206"/>
+<taskbegin task="SYN Stealth Scan" time="1749259206"/>
+<taskprogress task="SYN Stealth Scan" time="1749259208" percent="6.36" remaining="30" etc="1749259237"/>
+<taskprogress task="SYN Stealth Scan" time="1749259210" percent="19.87" remaining="17" etc="1749259226"/>
+<taskprogress task="SYN Stealth Scan" time="1749259212" percent="36.49" remaining="11" etc="1749259222"/>
+<taskprogress task="SYN Stealth Scan" time="1749259214" percent="57.84" remaining="6" etc="1749259220"/>
+<taskprogress task="SYN Stealth Scan" time="1749259216" percent="74.36" remaining="4" etc="1749259219"/>
+<taskprogress task="SYN Stealth Scan" time="1749259218" percent="93.93" remaining="1" etc="1749259219"/>
+<taskend task="SYN Stealth Scan" time="1749259220" extrainfo="1014 total ports"/>
+<taskbegin task="Service scan" time="1749259220"/>
+<taskprogress task="Service scan" time="1749259225" percent="0.00"/>
+<taskprogress task="Service scan" time="1749259226" percent="0.00"/>
+<taskprogress task="Service scan" time="1749259233" percent="0.00"/>
+<taskprogress task="Service scan" time="1749259233" percent="0.00"/>
+<taskprogress task="Service scan" time="1749259235" percent="50.00" remaining="16" etc="1749259250"/>
+<taskprogress task="Service scan" time="1749259238" percent="50.00" remaining="19" etc="1749259256"/>
+<taskprogress task="Service scan" time="1749259240" percent="50.00" remaining="21" etc="1749259260"/>
+<taskprogress task="Service scan" time="1749259241" percent="50.00" remaining="22" etc="1749259262"/>
+<taskprogress task="Service scan" time="1749259244" percent="100.00" remaining="1" etc="1749259244"/>
+<taskend task="Service scan" time="1749259244" extrainfo="2 services on 1 host"/>
+<taskbegin task="Traceroute" time="1749259254"/>
+<taskprogress task="Traceroute" time="1749259254" percent="32.26" remaining="1" etc="1749259254"/>
+<taskprogress task="Traceroute" time="1749259254" percent="32.26" remaining="1" etc="1749259254"/>
+<taskprogress task="Traceroute" time="1749259256" percent="32.26" remaining="5" etc="1749259260"/>
+<taskend task="Traceroute" time="1749259257"/>
+<taskbegin task="Parallel DNS resolution of 4 hosts." time="1749259257"/>
+<taskend task="Parallel DNS resolution of 4 hosts." time="1749259258"/>
+<taskbegin task="NSE" time="1749259258"/>
+<taskprogress task="NSE" time="1749259258" percent="0.00"/>
+<taskprogress task="NSE" time="1749259260" percent="69.07" remaining="1" etc="1749259261"/>
+<taskprogress task="NSE" time="1749259262" percent="75.10" remaining="2" etc="1749259263"/>
+<taskprogress task="NSE" time="1749259264" percent="78.38" remaining="2" etc="1749259266"/>
+<taskprogress task="NSE" time="1749259266" percent="82.33" remaining="2" etc="1749259268"/>
+<taskprogress task="NSE" time="1749259268" percent="85.92" remaining="2" etc="1749259270"/>
+<taskprogress task="NSE" time="1749259270" percent="88.20" remaining="2" etc="1749259272"/>
+<taskprogress task="NSE" time="1749259272" percent="91.51" remaining="2" etc="1749259273"/>
+<taskprogress task="NSE" time="1749259274" percent="93.39" remaining="2" etc="1749259275"/>
+<taskprogress task="NSE" time="1749259276" percent="94.01" remaining="2" etc="1749259277"/>
+<taskprogress task="NSE" time="1749259278" percent="94.63" remaining="2" etc="1749259279"/>
+<taskprogress task="NSE" time="1749259280" percent="95.04" remaining="2" etc="1749259281"/>
+<taskprogress task="NSE" time="1749259282" percent="95.26" remaining="2" etc="1749259283"/>
+<taskprogress task="NSE" time="1749259284" percent="95.26" remaining="2" etc="1749259285"/>
+<taskprogress task="NSE" time="1749259286" percent="95.27" remaining="2" etc="1749259287"/>
+<taskprogress task="NSE" time="1749259288" percent="95.07" remaining="2" etc="1749259290"/>
+<taskprogress task="NSE" time="1749259290" percent="95.48" remaining="2" etc="1749259292"/>
+<taskprogress task="NSE" time="1749259292" percent="95.29" remaining="2" etc="1749259294"/>
+<taskprogress task="NSE" time="1749259294" percent="95.09" remaining="2" etc="1749259296"/>
+<taskprogress task="NSE" time="1749259296" percent="95.10" remaining="2" etc="1749259298"/>
+<taskprogress task="NSE" time="1749259298" percent="95.31" remaining="2" etc="1749259300"/>
+<taskprogress task="NSE" time="1749259300" percent="95.11" remaining="3" etc="1749259302"/>
+<taskprogress task="NSE" time="1749259302" percent="95.32" remaining="3" etc="1749259304"/>
+<taskprogress task="NSE" time="1749259304" percent="95.52" remaining="3" etc="1749259306"/>
+<taskprogress task="NSE" time="1749259306" percent="95.72" remaining="3" etc="1749259308"/>
+<taskprogress task="NSE" time="1749259308" percent="95.93" remaining="3" etc="1749259310"/>
+<taskprogress task="NSE" time="1749259310" percent="96.33" remaining="2" etc="1749259312"/>
+<taskprogress task="NSE" time="1749259312" percent="96.54" remaining="2" etc="1749259314"/>
+<taskprogress task="NSE" time="1749259314" percent="96.54" remaining="3" etc="1749259316"/>
+<taskprogress task="NSE" time="1749259316" percent="96.54" remaining="3" etc="1749259318"/>
+<taskprogress task="NSE" time="1749259318" percent="96.54" remaining="3" etc="1749259320"/>
+<taskprogress task="NSE" time="1749259320" percent="96.54" remaining="3" etc="1749259322"/>
+<taskprogress task="NSE" time="1749259322" percent="96.54" remaining="3" etc="1749259324"/>
+<taskprogress task="NSE" time="1749259324" percent="96.74" remaining="3" etc="1749259326"/>
+<taskprogress task="NSE" time="1749259326" percent="96.74" remaining="3" etc="1749259328"/>
+<taskprogress task="NSE" time="1749259328" percent="96.74" remaining="3" etc="1749259330"/>
+<taskprogress task="NSE" time="1749259330" percent="96.74" remaining="3" etc="1749259332"/>
+<taskprogress task="NSE" time="1749259332" percent="96.74" remaining="3" etc="1749259334"/>
+<taskprogress task="NSE" time="1749259334" percent="96.74" remaining="3" etc="1749259337"/>
+<taskprogress task="NSE" time="1749259336" percent="96.74" remaining="3" etc="1749259339"/>
+<taskprogress task="NSE" time="1749259338" percent="96.74" remaining="3" etc="1749259341"/>
+<taskprogress task="NSE" time="1749259341" percent="96.74" remaining="3" etc="1749259344"/>
+<taskprogress task="NSE" time="1749259342" percent="96.74" remaining="3" etc="1749259345"/>
+<taskprogress task="NSE" time="1749259344" percent="96.74" remaining="3" etc="1749259347"/>
+<taskprogress task="NSE" time="1749259346" percent="96.74" remaining="3" etc="1749259349"/>
+<taskprogress task="NSE" time="1749259348" percent="96.74" remaining="4" etc="1749259351"/>
+<taskprogress task="NSE" time="1749259350" percent="96.74" remaining="4" etc="1749259353"/>
+<taskprogress task="NSE" time="1749259352" percent="96.74" remaining="4" etc="1749259355"/>
+<taskprogress task="NSE" time="1749259354" percent="96.74" remaining="4" etc="1749259357"/>
+<taskprogress task="NSE" time="1749259356" percent="96.74" remaining="4" etc="1749259359"/>
+<taskprogress task="NSE" time="1749259358" percent="96.74" remaining="4" etc="1749259361"/>
+<taskprogress task="NSE" time="1749259360" percent="96.74" remaining="4" etc="1749259363"/>
+<taskprogress task="NSE" time="1749259362" percent="96.74" remaining="4" etc="1749259366"/>
+<taskprogress task="NSE" time="1749259364" percent="96.74" remaining="4" etc="1749259368"/>
+<taskprogress task="NSE" time="1749259366" percent="97.15" remaining="4" etc="1749259369"/>
+<taskprogress task="NSE" time="1749259368" percent="97.15" remaining="4" etc="1749259371"/>
+<taskprogress task="NSE" time="1749259370" percent="97.35" remaining="4" etc="1749259373"/>
+<taskprogress task="NSE" time="1749259372" percent="97.35" remaining="4" etc="1749259375"/>
+<taskprogress task="NSE" time="1749259374" percent="97.96" remaining="3" etc="1749259376"/>
+<taskprogress task="NSE" time="1749259376" percent="98.37" remaining="2" etc="1749259378"/>
+<taskprogress task="NSE" time="1749259378" percent="99.19" remaining="1" etc="1749259379"/>
+<taskprogress task="NSE" time="1749259380" percent="99.19" remaining="2" etc="1749259381"/>
+<taskprogress task="NSE" time="1749259382" percent="99.19" remaining="2" etc="1749259383"/>
+<taskprogress task="NSE" time="1749259384" percent="99.19" remaining="2" etc="1749259385"/>
+<taskprogress task="NSE" time="1749259386" percent="99.19" remaining="2" etc="1749259387"/>
+<taskprogress task="NSE" time="1749259388" percent="99.19" remaining="2" etc="1749259389"/>
+<taskprogress task="NSE" time="1749259390" percent="99.19" remaining="2" etc="1749259391"/>
+<taskprogress task="NSE" time="1749259392" percent="99.19" remaining="2" etc="1749259393"/>
+<taskprogress task="NSE" time="1749259394" percent="99.19" remaining="2" etc="1749259395"/>
+<taskprogress task="NSE" time="1749259396" percent="99.19" remaining="2" etc="1749259397"/>
+<taskprogress task="NSE" time="1749259398" percent="99.39" remaining="1" etc="1749259399"/>
+<taskprogress task="NSE" time="1749259400" percent="99.39" remaining="1" etc="1749259401"/>
+<taskprogress task="NSE" time="1749259402" percent="99.39" remaining="1" etc="1749259403"/>
+<taskprogress task="NSE" time="1749259404" percent="99.39" remaining="1" etc="1749259405"/>
+<taskprogress task="NSE" time="1749259406" percent="99.39" remaining="1" etc="1749259407"/>
+<taskprogress task="NSE" time="1749259408" percent="99.39" remaining="1" etc="1749259409"/>
+<taskprogress task="NSE" time="1749259410" percent="99.39" remaining="1" etc="1749259411"/>
+<taskprogress task="NSE" time="1749259412" percent="99.39" remaining="1" etc="1749259413"/>
+<taskprogress task="NSE" time="1749259414" percent="99.39" remaining="1" etc="1749259415"/>
+<taskprogress task="NSE" time="1749259416" percent="99.39" remaining="1" etc="1749259417"/>
+<taskprogress task="NSE" time="1749259418" percent="99.59" remaining="1" etc="1749259419"/>
+<taskprogress task="NSE" time="1749259420" percent="99.59" remaining="1" etc="1749259421"/>
+<taskprogress task="NSE" time="1749259422" percent="99.59" remaining="1" etc="1749259423"/>
+<taskprogress task="NSE" time="1749259424" percent="99.59" remaining="1" etc="1749259425"/>
+<taskprogress task="NSE" time="1749259426" percent="99.59" remaining="1" etc="1749259427"/>
+<taskprogress task="NSE" time="1749259428" percent="99.59" remaining="1" etc="1749259429"/>
+<taskprogress task="NSE" time="1749259430" percent="99.59" remaining="1" etc="1749259431"/>
+<taskprogress task="NSE" time="1749259432" percent="99.59" remaining="1" etc="1749259433"/>
+<taskprogress task="NSE" time="1749259434" percent="99.59" remaining="1" etc="1749259435"/>
+<taskprogress task="NSE" time="1749259436" percent="99.59" remaining="1" etc="1749259437"/>
+<taskprogress task="NSE" time="1749259438" percent="99.59" remaining="1" etc="1749259439"/>
+<taskprogress task="NSE" time="1749259440" percent="99.59" remaining="1" etc="1749259441"/>
+<taskprogress task="NSE" time="1749259442" percent="99.59" remaining="1" etc="1749259443"/>
+<taskprogress task="NSE" time="1749259444" percent="99.59" remaining="1" etc="1749259445"/>
+<taskprogress task="NSE" time="1749259446" percent="99.59" remaining="1" etc="1749259447"/>
+<taskprogress task="NSE" time="1749259448" percent="99.59" remaining="1" etc="1749259449"/>
+<taskprogress task="NSE" time="1749259450" percent="99.59" remaining="1" etc="1749259451"/>
+<taskprogress task="NSE" time="1749259452" percent="99.80" remaining="1" etc="1749259452"/>
+<taskprogress task="NSE" time="1749259454" percent="99.80" remaining="1" etc="1749259454"/>
+<taskprogress task="NSE" time="1749259456" percent="99.80" remaining="1" etc="1749259456"/>
+<taskprogress task="NSE" time="1749259458" percent="99.80" remaining="1" etc="1749259458"/>
+<taskprogress task="NSE" time="1749259460" percent="99.80" remaining="1" etc="1749259460"/>
+<taskprogress task="NSE" time="1749259462" percent="99.80" remaining="1" etc="1749259462"/>
+<taskprogress task="NSE" time="1749259464" percent="99.80" remaining="1" etc="1749259464"/>
+<taskprogress task="NSE" time="1749259466" percent="99.80" remaining="1" etc="1749259466"/>
+<taskprogress task="NSE" time="1749259468" percent="99.80" remaining="1" etc="1749259468"/>
+<taskprogress task="NSE" time="1749259470" percent="99.80" remaining="1" etc="1749259470"/>
+<taskprogress task="NSE" time="1749259472" percent="99.80" remaining="1" etc="1749259472"/>
+<taskprogress task="NSE" time="1749259474" percent="99.80" remaining="1" etc="1749259474"/>
+<taskprogress task="NSE" time="1749259476" percent="99.80" remaining="1" etc="1749259476"/>
+<taskprogress task="NSE" time="1749259478" percent="99.80" remaining="1" etc="1749259478"/>
+<taskprogress task="NSE" time="1749259480" percent="99.80" remaining="1" etc="1749259480"/>
+<taskprogress task="NSE" time="1749259482" percent="99.80" remaining="1" etc="1749259482"/>
+<taskprogress task="NSE" time="1749259484" percent="99.80" remaining="1" etc="1749259484"/>
+<taskprogress task="NSE" time="1749259486" percent="99.80" remaining="1" etc="1749259486"/>
+<taskprogress task="NSE" time="1749259488" percent="99.80" remaining="1" etc="1749259488"/>
+<taskprogress task="NSE" time="1749259490" percent="99.80" remaining="1" etc="1749259490"/>
+<taskprogress task="NSE" time="1749259492" percent="99.80" remaining="1" etc="1749259492"/>
+<taskprogress task="NSE" time="1749259494" percent="99.80" remaining="1" etc="1749259494"/>
+<taskprogress task="NSE" time="1749259496" percent="99.80" remaining="1" etc="1749259496"/>
+<taskprogress task="NSE" time="1749259498" percent="99.80" remaining="1" etc="1749259498"/>
+<taskprogress task="NSE" time="1749259500" percent="99.80" remaining="1" etc="1749259500"/>
+<taskprogress task="NSE" time="1749259502" percent="99.80" remaining="1" etc="1749259502"/>
+<taskprogress task="NSE" time="1749259504" percent="99.80" remaining="1" etc="1749259505"/>
+<taskprogress task="NSE" time="1749259506" percent="99.59" remaining="2" etc="1749259507"/>
+<taskprogress task="NSE" time="1749259508" percent="99.59" remaining="2" etc="1749259509"/>
+<taskprogress task="NSE" time="1749259510" percent="99.59" remaining="2" etc="1749259511"/>
+<taskprogress task="NSE" time="1749259512" percent="99.59" remaining="2" etc="1749259513"/>
+<taskprogress task="NSE" time="1749259514" percent="99.59" remaining="2" etc="1749259515"/>
+<taskprogress task="NSE" time="1749259516" percent="99.59" remaining="2" etc="1749259517"/>
+<taskprogress task="NSE" time="1749259518" percent="99.59" remaining="2" etc="1749259519"/>
+<taskprogress task="NSE" time="1749259520" percent="99.59" remaining="2" etc="1749259521"/>
+<taskprogress task="NSE" time="1749259523" percent="99.59" remaining="2" etc="1749259524"/>
+<taskprogress task="NSE" time="1749259524" percent="99.59" remaining="2" etc="1749259525"/>
+<taskend task="NSE" time="1749259525"/>
+<taskbegin task="NSE" time="1749259525"/>
+<taskprogress task="NSE" time="1749259526" percent="90.20" remaining="1" etc="1749259526"/>
+<taskprogress task="NSE" time="1749259529" percent="96.08" remaining="1" etc="1749259529"/>
+<taskprogress task="NSE" time="1749259534" percent="96.08" remaining="1" etc="1749259534"/>
+<taskprogress task="NSE" time="1749259534" percent="96.08" remaining="1" etc="1749259534"/>
+<taskprogress task="NSE" time="1749259536" percent="98.04" remaining="1" etc="1749259536"/>
+<taskprogress task="NSE" time="1749259538" percent="98.04" remaining="1" etc="1749259538"/>
+<taskend task="NSE" time="1749259538"/>
+<taskbegin task="NSE" time="1749259538"/>
+<taskend task="NSE" time="1749259539"/>
+<host starttime="1749259206" endtime="1749259539"><status state="up" reason="reset" reason_ttl="252"/>
+<address addr="152.19.134.47" addrtype="ipv4"/>
+<hostnames>
+<hostname name="gutenberg.ibiblio.org" type="PTR"/>
+</hostnames>
+<ports><extraports state="filtered" count="1008">
+<extrareasons reason="no-responses" count="990"/>
+<extrareasons reason="admin-prohibiteds" count="18"/>
+</extraports>
+<port protocol="tcp" portid="20"><state state="closed" reason="reset" reason_ttl="39"/><service name="ftp-data" method="table" conf="3"/></port>
+<port protocol="tcp" portid="21"><state state="closed" reason="reset" reason_ttl="39"/><service name="ftp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="22"><state state="closed" reason="reset" reason_ttl="39"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="40"/><service name="http" servicefp="SF-Port80-TCP:V=7.80%I=7%D=6/7%Time=684393D9%P=i686-pc-windows-windows%r(NULL,E9,&quot;HTTP/1\.1\x20408\x20Request\x20Time-out\r\nContent-length:\x20110\r\nCache-Control:\x20no-cache\r\nConnection:\x20close\r\nContent-Type:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;408\x20Request\x20Time-out&lt;/h1&gt;\nYour\x20browser\x20didn&apos;t\x20send\x20a\x20complete\x20request\x20in\x20time\.\n&lt;/body&gt;&lt;/html&gt;\n&quot;)%r(GetRequest,6A,&quot;HTTP/1\.1\x20302\x20Found\r\ncontent-length:\x200\r\nlocation:\x20https:///\r\ncache-control:\x20no-cache\r\nconnection:\x20close\r\n\r\n&quot;)%r(HTTPOptions,6A,&quot;HTTP/1\.1\x20302\x20Found\r\ncontent-length:\x200\r\nlocation:\x20https:///\r\ncache-control:\x20no-cache\r\nconnection:\x20close\r\n\r\n&quot;)%r(RTSPRequest,CF,&quot;HTTP/1\.1\x20400\x20Bad\x20request\r\nContent-length:\x2090\r\nCache-Control:\x20no-cache\r\nConnection:\x20close\r\nContent-Type:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20request&lt;/h1&gt;\nYour\x20browser\x20sent\x20an\x20invalid\x20request\.\n&lt;/body&gt;&lt;/html&gt;\n&quot;)%r(X11Probe,CF,&quot;HTTP/1\.1\x20400\x20Bad\x20request\r\nContent-length:\x2090\r\nCache-Control:\x20no-cache\r\nConnection:\x20close\r\nContent-Type:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20request&lt;/h1&gt;\nYour\x20browser\x20sent\x20an\x20invalid\x20request\.\n&lt;/body&gt;&lt;/html&gt;\n&quot;)%r(FourOhFourRequest,8D,&quot;HTTP/1\.1\x20302\x20Found\r\ncontent-length:\x200\r\nlocation:\x20https:///nice%20ports%2C/Tri%6Eity\.txt%2ebak\r\ncache-control:\x20no-cache\r\nconnection:\x20close\r\n\r\n&quot;)%r(RPCCheck,CF,&quot;HTTP/1\.1\x20400\x20Bad\x20request\r\nContent-length:\x2090\r\nCache-Control:\x20no-cache\r\nConnection:\x20close\r\nContent-Type:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20request&lt;/h1&gt;\nYour\x20browser\x20sent\x20an\x20invalid\x20request\.\n&lt;/body&gt;&lt;/html&gt;\n&quot;)%r(DNSVersionBindReqTCP,CF,&quot;HTTP/1\.1\x20400\x20Bad\x20request\r\nContent-length:\x2090\r\nCache-Control:\x20no-cache\r\nConnection:\x20close\r\nContent-Type:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20request&lt;/h1&gt;\nYour\x20browser\x20sent\x20an\x20invalid\x20request\.\n&lt;/body&gt;&lt;/html&gt;\n&quot;)%r(DNSStatusRequestTCP,CF,&quot;HTTP/1\.1\x20400\x20Bad\x20request\r\nContent-length:\x2090\r\nCache-Control:\x20no-cache\r\nConnection:\x20close\r\nContent-Type:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20request&lt;/h1&gt;\nYour\x20browser\x20sent\x20an\x20invalid\x20request\.\n&lt;/body&gt;&lt;/html&gt;\n&quot;);" method="probed" conf="10"/><script id="clamav-exec" output="ERROR: Script execution failed (use -d to debug)"/><script id="fingerprint-strings" output="&#xa;  DNSStatusRequestTCP, DNSVersionBindReqTCP, RPCCheck, RTSPRequest, X11Probe: &#xa;    HTTP/1.1 400 Bad request&#xa;    Content-length: 90&#xa;    Cache-Control: no-cache&#xa;    Connection: close&#xa;    Content-Type: text/html&#xa;    &lt;html&gt;&lt;body&gt;&lt;h1&gt;400 Bad request&lt;/h1&gt;&#xa;    Your browser sent an invalid request.&#xa;    &lt;/body&gt;&lt;/html&gt;&#xa;  FourOhFourRequest: &#xa;    HTTP/1.1 302 Found&#xa;    content-length: 0&#xa;    location: https:///nice%20ports%2C/Tri%6Eity.txt%2ebak&#xa;    cache-control: no-cache&#xa;    connection: close&#xa;  GetRequest, HTTPOptions: &#xa;    HTTP/1.1 302 Found&#xa;    content-length: 0&#xa;    location: https:///&#xa;    cache-control: no-cache&#xa;    connection: close&#xa;  NULL: &#xa;    HTTP/1.1 408 Request Time-out&#xa;    Content-length: 110&#xa;    Cache-Control: no-cache&#xa;    Connection: close&#xa;    Content-Type: text/html&#xa;    &lt;html&gt;&lt;body&gt;&lt;h1&gt;408 Request Time-out&lt;/h1&gt;&#xa;    Your browser didn&apos;t send a complete request in time.&#xa;    &lt;/body&gt;&lt;/html&gt;"><elem key="DNSStatusRequestTCP, DNSVersionBindReqTCP, RPCCheck, RTSPRequest, X11Probe">&#xa;    HTTP/1.1 400 Bad request&#xa;    Content-length: 90&#xa;    Cache-Control: no-cache&#xa;    Connection: close&#xa;    Content-Type: text/html&#xa;    &lt;html&gt;&lt;body&gt;&lt;h1&gt;400 Bad request&lt;/h1&gt;&#xa;    Your browser sent an invalid request.&#xa;    &lt;/body&gt;&lt;/html&gt;</elem>
+<elem key="FourOhFourRequest">&#xa;    HTTP/1.1 302 Found&#xa;    content-length: 0&#xa;    location: https:///nice%20ports%2C/Tri%6Eity.txt%2ebak&#xa;    cache-control: no-cache&#xa;    connection: close</elem>
+<elem key="GetRequest, HTTPOptions">&#xa;    HTTP/1.1 302 Found&#xa;    content-length: 0&#xa;    location: https:///&#xa;    cache-control: no-cache&#xa;    connection: close</elem>
+<elem key="NULL">&#xa;    HTTP/1.1 408 Request Time-out&#xa;    Content-length: 110&#xa;    Cache-Control: no-cache&#xa;    Connection: close&#xa;    Content-Type: text/html&#xa;    &lt;html&gt;&lt;body&gt;&lt;h1&gt;408 Request Time-out&lt;/h1&gt;&#xa;    Your browser didn&apos;t send a complete request in time.&#xa;    &lt;/body&gt;&lt;/html&gt;</elem>
+</script><script id="http-csrf" output="Couldn&apos;t find any CSRF vulnerabilities."/><script id="http-dombased-xss" output="Couldn&apos;t find any DOM based XSS."/><script id="http-jsonp-detection" output="Couldn&apos;t find any JSONP endpoints."/><script id="http-litespeed-sourcecode-download" output="Request with null byte did not work. This web server might not be vulnerable"/><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD POST OPTIONS"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>POST</elem>
+<elem>OPTIONS</elem>
+</table>
+</script><script id="http-passwd" output="ERROR: Script execution failed (use -d to debug)"/><script id="http-stored-xss" output="Couldn&apos;t find any stored XSS vulnerabilities."/><script id="http-title" output="Did not follow redirect to https://gutenberg.ibiblio.org/"><elem key="redirect_url">https://gutenberg.ibiblio.org/</elem>
+</script><script id="http-wordpress-users" output="[Error] Wordpress installation was not found. We couldn&apos;t find wp-login.php"/><script id="https-redirect" output="ERROR: Script execution failed (use -d to debug)"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="41"/><service name="http" product="Apache httpd" hostname="gutenweb1.int.ibiblio.org" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:apache:http_server</cpe></service><script id="clamav-exec" output="ERROR: Script execution failed (use -d to debug)"/><script id="http-aspnet-debug" output="ERROR: Script execution failed (use -d to debug)"/><script id="http-csrf" output="&#xa;Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=gutenberg.ibiblio.org&#xa;  Found the following possible CSRF vulnerabilities: &#xa;    &#xa;    Path: http://gutenberg.ibiblio.org:443/&#xa;    Form id: &#xa;    Form action: /ebooks/search/&#xa;    &#xa;    Path: http://gutenberg.ibiblio.org:443/&#xa;    Form id: &#xa;    Form action: https://www.paypal.com/cgi-bin/webscr&#xa;    &#xa;    Path: http://gutenberg.ibiblio.org:443/ebooks/search/?sort_order=downloads&#xa;    Form id: &#xa;    Form action: /ebooks/search/&#xa;    &#xa;    Path: http://gutenberg.ibiblio.org:443/ebooks/search/?sort_order=downloads&#xa;    Form id: &#xa;    Form action: https://www.paypal.com/cgi-bin/webscr&#xa;    &#xa;    Path: http://gutenberg.ibiblio.org:443/policy/terms_of_use.html&#xa;    Form id: &#xa;    Form action: /ebooks/search/&#xa;    &#xa;    Path: http://gutenberg.ibiblio.org:443/policy/terms_of_use.html&#xa;    Form id: &#xa;    Form action: https://www.paypal.com/cgi-bin/webscr&#xa;    &#xa;    Path: http://gutenberg.ibiblio.org:443/ebooks/76229&#xa;    Form id: &#xa;    Form action: /ebooks/search/&#xa;    &#xa;    Path: http://gutenberg.ibiblio.org:443/ebooks/76229&#xa;    Form id: &#xa;    Form action: https://www.paypal.com/cgi-bin/webscr&#xa;    &#xa;    Path: http://gutenberg.ibiblio.org:443/about/background/free_ebook.html&#xa;    Form id: &#xa;    Form action: /ebooks/search/&#xa;    &#xa;    Path: http://gutenberg.ibiblio.org:443/about/background/free_ebook.html&#xa;    Form id: &#xa;    Form action: https://www.paypal.com/cgi-bin/webscr&#xa;    &#xa;    Path: http://gutenberg.ibiblio.org:443/ebooks/76232&#xa;    Form id: &#xa;    Form action: /ebooks/search/&#xa;    &#xa;    Path: http://gutenberg.ibiblio.org:443/ebooks/76232&#xa;    Form id: &#xa;    Form action: https://www.paypal.com/cgi-bin/webscr&#xa;    &#xa;    Path: http://gutenberg.ibiblio.org:443/ebooks/1&#xa;    Form id: &#xa;    Form action: /ebooks/search/&#xa;    &#xa;    Path: http://gutenberg.ibiblio.org:443/ebooks/1&#xa;    Form id: &#xa;    Form action: https://www.paypal.com/cgi-bin/webscr&#xa;    &#xa;    Path: http://gutenberg.ibiblio.org:443/browse/categories/2&#xa;    Form id: &#xa;    Form action: /ebooks/search/&#xa;    &#xa;    Path: http://gutenberg.ibiblio.org:443/browse/categories/2&#xa;    Form id: &#xa;    Form action: https://www.paypal.com/cgi-bin/webscr&#xa;    &#xa;    Path: http://gutenberg.ibiblio.org:443/ebooks/feeds.html&#xa;    Form id: &#xa;    Form action: /ebooks/search/&#xa;    &#xa;    Path: http://gutenberg.ibiblio.org:443/ebooks/feeds.html&#xa;    Form id: &#xa;    Form action: https://www.paypal.com/cgi-bin/webscr&#xa;    &#xa;    Path: http://gutenberg.ibiblio.org:443/policy/privacy_policy.html&#xa;    Form id: &#xa;    Form action: /ebooks/search/&#xa;    &#xa;    Path: http://gutenberg.ibiblio.org:443/policy/privacy_policy.html&#xa;    Form id: &#xa;    Form action: https://www.paypal.com/cgi-bin/webscr&#xa;    &#xa;    Path: http://gutenberg.ibiblio.org:443/about/contact_information.html&#xa;    Form id: &#xa;    Form action: /ebooks/search/&#xa;    &#xa;    Path: http://gutenberg.ibiblio.org:443/about/contact_information.html&#xa;    Form id: &#xa;    Form action: https://www.paypal.com/cgi-bin/webscr&#xa;    &#xa;    Path: http://gutenberg.ibiblio.org:443/donate/index.html&#xa;    Form id: &#xa;    Form action: /ebooks/search/&#xa;    &#xa;    Path: http://gutenberg.ibiblio.org:443/donate/index.html&#xa;    Form id: &#xa;    Form action: https://www.paypal.com/cgi-bin/webscr&#xa;    &#xa;    Path: http://gutenberg.ibiblio.org:443/donate/index.html&#xa;    Form id: &#xa;    Form action: https://www.paypal.com/cgi-bin/webscr&#xa;    &#xa;    Path: http://gutenberg.ibiblio.org:443/donate/index.html&#xa;    Form id: &#xa;    Form action: https://www.paypal.com/cgi-bin/webscr&#xa;    &#xa;    Path: http://gutenberg.ibiblio.org:443/ebooks/categories&#xa;    Form id: &#xa;    Form action: /ebooks/search/&#xa;    &#xa;    Path: http://gutenberg.ibiblio.org:443/ebooks/categories&#xa;    Form id: &#xa;    Form action: https://www.paypal.com/cgi-bin/webscr&#xa;    &#xa;    Path: http://gutenberg.ibiblio.org:443/ebooks/&#xa;    Form id: &#xa;    Form action: /ebooks/search/&#xa;    &#xa;    Path: http://gutenberg.ibiblio.org:443/ebooks/&#xa;    Form id: &#xa;    Form action: https://www.paypal.com/cgi-bin/webscr&#xa;    &#xa;    Path: http://gutenberg.ibiblio.org:443/ebooks/&#xa;    Form id: author&#xa;    Form action: /ebooks/results/&#xa;    &#xa;    Path: http://gutenberg.ibiblio.org:443/ebooks/&#xa;    Form id: duck&#xa;    Form action: https://duckduckgo.com/&#xa;    &#xa;    Path: http://gutenberg.ibiblio.org:443/ebooks/&#xa;    Form id: &#xa;    Form action: https://www.google.com/search&#xa;    &#xa;    Path: http://gutenberg.ibiblio.org:443/about/background/&#xa;    Form id: &#xa;    Form action: /ebooks/search/&#xa;    &#xa;    Path: http://gutenberg.ibiblio.org:443/about/background/&#xa;    Form id: &#xa;    Form action: https://www.paypal.com/cgi-bin/webscr&#xa;    &#xa;    Path: http://gutenberg.ibiblio.org:443/ebooks/76233&#xa;    Form id: &#xa;    Form action: /ebooks/search/&#xa;    &#xa;    Path: http://gutenberg.ibiblio.org:443/ebooks/76233&#xa;    Form id: &#xa;    Form action: https://www.paypal.com/cgi-bin/webscr&#xa;    &#xa;    Path: http://gutenberg.ibiblio.org:443/ebooks/search/&#xa;    Form id: &#xa;    Form action: /ebooks/search/&#xa;    &#xa;    Path: http://gutenberg.ibiblio.org:443/ebooks/search/&#xa;    Form id: &#xa;    Form action: https://www.paypal.com/cgi-bin/webscr&#xa;    &#xa;    Path: http://gutenberg.ibiblio.org:443/policy/robot_access.html&#xa;    Form id: &#xa;    Form action: /ebooks/search/&#xa;    &#xa;    Path: http://gutenberg.ibiblio.org:443/policy/robot_access.html&#xa;    Form id: &#xa;    Form action: https://www.paypal.com/cgi-bin/webscr&#xa;    &#xa;    Path: http://gutenberg.ibiblio.org:443/ebooks/76225&#xa;    Form id: &#xa;    Form action: /ebooks/search/&#xa;    &#xa;    Path: http://gutenberg.ibiblio.org:443/ebooks/76225&#xa;    Form id: &#xa;    Form action: https://www.paypal.com/cgi-bin/webscr&#xa;    &#xa;    Path: http://gutenberg.ibiblio.org:443/about/partners_affiliates.html&#xa;    Form id: &#xa;    Form action: /ebooks/search/&#xa;    &#xa;    Path: http://gutenberg.ibiblio.org:443/about/partners_affiliates.html&#xa;    Form id: &#xa;    Form action: https://www.paypal.com/cgi-bin/webscr&#xa;"/><script id="http-dombased-xss" output="Couldn&apos;t find any DOM based XSS."/><script id="http-jsonp-detection" output="Couldn&apos;t find any JSONP endpoints."/><script id="http-sql-injection" output="ERROR: Script execution failed (use -d to debug)"/><script id="http-stored-xss" output="Couldn&apos;t find any stored XSS vulnerabilities."/><script id="http-vuln-cve2014-3704" output="ERROR: Script execution failed (use -d to debug)"/><script id="http-wordpress-users" output="[Error] Wordpress installation was not found. We couldn&apos;t find wp-login.php"/><script id="ssl-cert" output="Subject: commonName=*.gutenberg.org/organizationName=Project Gutenberg/stateOrProvinceName=Utah/countryName=US&#xa;Subject Alternative Name: DNS:*.gutenberg.org, DNS:gutenberg.org&#xa;Issuer: commonName=Network Solutions RSA OV SSL CA 3/organizationName=Network Solutions L.L.C./countryName=US&#xa;Public Key type: rsa&#xa;Public Key bits: 2048&#xa;Signature Algorithm: sha384WithRSAEncryption&#xa;Not valid before: 2025-04-09T00:00:00&#xa;Not valid after:  2025-10-17T23:59:59&#xa;MD5:   34d3 dd5c 0699 20ac a17e 9c9a b899 23d7&#xa;SHA-1: e81c 17fc a30e 8376 f0ff 5f93 e03d 70da 9ed6 5190&#xa;-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIG/DCCBWSgAwIBAgIRAMHCxr/8BX8KdE02aYlCebowDQYJKoZIhvcNAQEMBQAw&#xa;XDELMAkGA1UEBhMCVVMxITAfBgNVBAoTGE5ldHdvcmsgU29sdXRpb25zIEwuTC5D&#xa;LjEqMCgGA1UEAxMhTmV0d29yayBTb2x1dGlvbnMgUlNBIE9WIFNTTCBDQSAzMB4X&#xa;DTI1MDQwOTAwMDAwMFoXDTI1MTAxNzIzNTk1OVowUjELMAkGA1UEBhMCVVMxDTAL&#xa;BgNVBAgTBFV0YWgxGjAYBgNVBAoTEVByb2plY3QgR3V0ZW5iZXJnMRgwFgYDVQQD&#xa;DA8qLmd1dGVuYmVyZy5vcmcwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIB&#xa;AQCpVzVVBSdJkmAtvBqWqbXUzFOruE8JPy86jqGzCF2flgjzvFJPX4QXiM8UBPpW&#xa;rSqRa+CY3xIJ+LnMyumN7TAukoGXyrcTx8mqgbYG2cPBNhpVPjvIKTeADhGCV29F&#xa;f5hG+muMkCu/UdiI4AdIxWgzpDzI7LYbv0mJEJCXwx2OK8Pn9KOtcI37424Ax+Ix&#xa;mp4+WlGuhCsekFt0J7aJTkfQylEmKsa9COhfLbKFVA+p5fTBk34KAiPwlo6dMYOM&#xa;38+35n5gl7Iu5lmxeWQy6P3Jq5ZAeIImfdrrEhc7fnDn8WgSli18r0qgLD39pGrr&#xa;8sIjkPtMh5UYBMlR0O0iGDVjAgMBAAGjggNBMIIDPTAfBgNVHSMEGDAWgBTqJf9c&#xa;n05PTsEUoNvKvqvy4uJ4pDAdBgNVHQ4EFgQUeei5Pq8kE99gEQEUcmT/QJx7Abkw&#xa;DgYDVR0PAQH/BAQDAgWgMAwGA1UdEwEB/wQCMAAwHQYDVR0lBBYwFAYIKwYBBQUH&#xa;AwEGCCsGAQUFBwMCMEkGA1UdIARCMEAwNAYLKwYBBAGyMQECAgQwJTAjBggrBgEF&#xa;BQcCARYXaHR0cHM6Ly9zZWN0aWdvLmNvbS9DUFMwCAYGZ4EMAQICMEkGA1UdHwRC&#xa;MEAwPqA8oDqGOGh0dHA6Ly9jcmwubmV0c29sc3NsLmNvbS9OZXR3b3JrU29sdXRp&#xa;b25zUlNBT1ZTU0xDQTMuY3JsMHsGCCsGAQUFBwEBBG8wbTBEBggrBgEFBQcwAoY4&#xa;aHR0cDovL2NydC5uZXRzb2xzc2wuY29tL05ldHdvcmtTb2x1dGlvbnNSU0FPVlNT&#xa;TENBMy5jcnQwJQYIKwYBBQUHMAGGGWh0dHA6Ly9vY3NwLm5ldHNvbHNzbC5jb20w&#xa;KQYDVR0RBCIwIIIPKi5ndXRlbmJlcmcub3Jngg1ndXRlbmJlcmcub3JnMIIBfgYK&#xa;KwYBBAHWeQIEAgSCAW4EggFqAWgAdwDd3Mo0ldfhFgXnlTL6x5/4PRxQ39sAOhQS&#xa;dgosrLvIKgAAAZYalRnUAAAEAwBIMEYCIQDFYOKnDZr2v/pKij/E4sALsQ/1zTfP&#xa;JyGh/A3Ri0yC1gIhAMkRNe7TrczfFgXAyvdR/sv8o+2dt5kIIJYcLCEVDFMAAHUA&#xa;DeHyMCvTDcFAYhIJ6lUu/Ed0fLHX6TDvDkIetH5OqjQAAAGWGpUZnQAABAMARjBE&#xa;AiBMaUvFw53HXQytU+54YvYyIbN9ecrTjpCh+FrF1Dr77QIgFtjR3w26BrOyIMcH&#xa;2K3OX3/XVAUgIx7f9Ej7uLbrvRYAdgAS8U40vVNyTIQGGcOPP3oT+Oe1YoeInG0w&#xa;BYTr5YYmOgAAAZYalR1oAAAEAwBHMEUCIBFmBQ5hvKmGGDvRHtQqEPH+Uq/I02Vg&#xa;4E7M2ExTiEvOAiEAlIZN56RoXZs1EODhhmyXglUXzmpE5OjjPzaJtJwNyTIwDQYJ&#xa;KoZIhvcNAQEMBQADggGBADZ+jndtyYnygFcguI7APLE+BNlMTg2pStKbNKj4Mwr7&#xa;3eEaDRcP1uqbs7UDd6lUizYlnYN/ny+hIixkr9R6QOWdwC62lqWjgxslMLdp+PXO&#xa;zIa7aFivAVWtQtjBC3RHKRnKKIMfFje6Tz/NNT3Ddo3YF5DIM/8y37RlLZAj6I2b&#xa;HnneUfjHq5x+vt76UDcGXfdG0v3sFVPXQUH77AStsPV2MLLNnWgkQm826Zu8zVwU&#xa;r2s+zc3uvSnrVU4ippF3jRP7uMiFYSRKg8yZtC6ahj4RxBQpLH1ZfdjR7XS37ynW&#xa;Ze/Po69uU13r7xEVLk3VSRft5bGZbYor2BfR/vy7GR2ZnOKnXRYyuXaxoNAWe0Py&#xa;CJNWlLTfoT+CZ4jQU6M0YKAlFybEB/99GgaDvLUomVR/5LqN+7Id9NUF80R7akFm&#xa;GGV+ZmJOOkFnZ66BKDxgSbVEoXIca1cq4X0wZOHaezroWgAEM6FvJc3pQ7WH+k9A&#xa;RKEOvLPKfrXLo/DI/rlpYg==&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;"><table key="subject">
+<elem key="countryName">US</elem>
+<elem key="stateOrProvinceName">Utah</elem>
+<elem key="commonName">*.gutenberg.org</elem>
+<elem key="organizationName">Project Gutenberg</elem>
+</table>
+<table key="issuer">
+<elem key="countryName">US</elem>
+<elem key="commonName">Network Solutions RSA OV SSL CA 3</elem>
+<elem key="organizationName">Network Solutions L.L.C.</elem>
+</table>
+<table key="pubkey">
+<elem key="modulus">BIGNUM: 06BDFDB8</elem>
+<elem key="exponent">BIGNUM: 06BDF9F8</elem>
+<elem key="bits">2048</elem>
+<elem key="type">rsa</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="value">keyid:EA:25:FF:5C:9F:4E:4F:4E:C1:14:A0:DB:CA:BE:AB:F2:E2:E2:78:A4&#xa;</elem>
+<elem key="name">X509v3 Authority Key Identifier</elem>
+</table>
+<table>
+<elem key="value">79:E8:B9:3E:AF:24:13:DF:60:11:01:14:72:64:FF:40:9C:7B:01:B9</elem>
+<elem key="name">X509v3 Subject Key Identifier</elem>
+</table>
+<table>
+<elem key="value">Digital Signature, Key Encipherment</elem>
+<elem key="critical">true</elem>
+<elem key="name">X509v3 Key Usage</elem>
+</table>
+<table>
+<elem key="value">CA:FALSE</elem>
+<elem key="critical">true</elem>
+<elem key="name">X509v3 Basic Constraints</elem>
+</table>
+<table>
+<elem key="value">TLS Web Server Authentication, TLS Web Client Authentication</elem>
+<elem key="name">X509v3 Extended Key Usage</elem>
+</table>
+<table>
+<elem key="value">Policy: 1.3.6.1.4.1.6449.1.2.2.4&#xa;  CPS: https://sectigo.com/CPS&#xa;Policy: 2.23.140.1.2.2&#xa;</elem>
+<elem key="name">X509v3 Certificate Policies</elem>
+</table>
+<table>
+<elem key="value">&#xa;Full Name:&#xa;  URI:http://crl.netsolssl.com/NetworkSolutionsRSAOVSSLCA3.crl&#xa;</elem>
+<elem key="name">X509v3 CRL Distribution Points</elem>
+</table>
+<table>
+<elem key="value">CA Issuers - URI:http://crt.netsolssl.com/NetworkSolutionsRSAOVSSLCA3.crt&#xa;OCSP - URI:http://ocsp.netsolssl.com&#xa;</elem>
+<elem key="name">Authority Information Access</elem>
+</table>
+<table>
+<elem key="value">DNS:*.gutenberg.org, DNS:gutenberg.org</elem>
+<elem key="name">X509v3 Subject Alternative Name</elem>
+</table>
+<table>
+<elem key="value">Signed Certificate Timestamp:&#xa;    Version   : v1(0)&#xa;    Log ID    : DD:DC:CA:34:95:D7:E1:16:05:E7:95:32:FA:C7:9F:F8:&#xa;                3D:1C:50:DF:DB:00:3A:14:12:76:0A:2C:AC:BB:C8:2A&#xa;    Timestamp : Apr  9 12:45:01.268 2025 GMT&#xa;    Extensions: none&#xa;    Signature : ecdsa-with-SHA256&#xa;                30:46:02:21:00:C5:60:E2:A7:0D:9A:F6:BF:FA:4A:8A:&#xa;                3F:C4:E2:C0:0B:B1:0F:F5:CD:37:CF:27:21:A1:FC:0D:&#xa;                D1:8B:4C:82:D6:02:21:00:C9:11:35:EE:D3:AD:CC:DF:&#xa;                16:05:C0:CA:F7:51:FE:CB:FC:A3:ED:9D:B7:99:08:20:&#xa;                96:1C:2C:21:15:0C:53:00&#xa;Signed Certificate Timestamp:&#xa;    Version   : v1(0)&#xa;    Log ID    : 0D:E1:F2:30:2B:D3:0D:C1:40:62:12:09:EA:55:2E:FC:&#xa;                47:74:7C:B1:D7:E9:30:EF:0E:42:1E:B4:7E:4E:AA:34&#xa;    Timestamp : Apr  9 12:45:01.213 2025 GMT&#xa;    Extensions: none&#xa;    Signature : ecdsa-with-SHA256&#xa;                30:44:02:20:4C:69:4B:C5:C3:9D:C7:5D:0C:AD:53:EE:&#xa;                78:62:F6:32:21:B3:7D:79:CA:D3:8E:90:A1:F8:5A:C5:&#xa;                D4:3A:FB:ED:02:20:16:D8:D1:DF:0D:BA:06:B3:B2:20:&#xa;                C7:07:D8:AD:CE:5F:7F:D7:54:05:20:23:1E:DF:F4:48:&#xa;                FB:B8:B6:EB:BD:16&#xa;Signed Certificate Timestamp:&#xa;    Version   : v1(0)&#xa;    Log ID    : 12:F1:4E:34:BD:53:72:4C:84:06:19:C3:8F:3F:7A:13:&#xa;                F8:E7:B5:62:87:88:9C:6D:30:05:84:EB:E5:86:26:3A&#xa;    Timestamp : Apr  9 12:45:02.184 2025 GMT&#xa;    Extensions: none&#xa;    Signature : ecdsa-with-SHA256&#xa;                30:45:02:20:11:66:05:0E:61:BC:A9:86:18:3B:D1:1E:&#xa;                D4:2A:10:F1:FE:52:AF:C8:D3:65:60:E0:4E:CC:D8:4C:&#xa;                53:88:4B:CE:02:21:00:94:86:4D:E7:A4:68:5D:9B:35:&#xa;                10:E0:E1:86:6C:97:82:55:17:CE:6A:44:E4:E8:E3:3F:&#xa;                36:89:B4:9C:0D:C9:32</elem>
+<elem key="name">CT Precertificate SCTs</elem>
+</table>
+</table>
+<elem key="sig_algo">sha384WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2025-04-09T00:00:00</elem>
+<elem key="notAfter">2025-10-17T23:59:59</elem>
+</table>
+<elem key="md5">34d3dd5c069920aca17e9c9ab89923d7</elem>
+<elem key="sha1">e81c17fca30e8376f0ff5f93e03d70da9ed65190</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIG/DCCBWSgAwIBAgIRAMHCxr/8BX8KdE02aYlCebowDQYJKoZIhvcNAQEMBQAw&#xa;XDELMAkGA1UEBhMCVVMxITAfBgNVBAoTGE5ldHdvcmsgU29sdXRpb25zIEwuTC5D&#xa;LjEqMCgGA1UEAxMhTmV0d29yayBTb2x1dGlvbnMgUlNBIE9WIFNTTCBDQSAzMB4X&#xa;DTI1MDQwOTAwMDAwMFoXDTI1MTAxNzIzNTk1OVowUjELMAkGA1UEBhMCVVMxDTAL&#xa;BgNVBAgTBFV0YWgxGjAYBgNVBAoTEVByb2plY3QgR3V0ZW5iZXJnMRgwFgYDVQQD&#xa;DA8qLmd1dGVuYmVyZy5vcmcwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIB&#xa;AQCpVzVVBSdJkmAtvBqWqbXUzFOruE8JPy86jqGzCF2flgjzvFJPX4QXiM8UBPpW&#xa;rSqRa+CY3xIJ+LnMyumN7TAukoGXyrcTx8mqgbYG2cPBNhpVPjvIKTeADhGCV29F&#xa;f5hG+muMkCu/UdiI4AdIxWgzpDzI7LYbv0mJEJCXwx2OK8Pn9KOtcI37424Ax+Ix&#xa;mp4+WlGuhCsekFt0J7aJTkfQylEmKsa9COhfLbKFVA+p5fTBk34KAiPwlo6dMYOM&#xa;38+35n5gl7Iu5lmxeWQy6P3Jq5ZAeIImfdrrEhc7fnDn8WgSli18r0qgLD39pGrr&#xa;8sIjkPtMh5UYBMlR0O0iGDVjAgMBAAGjggNBMIIDPTAfBgNVHSMEGDAWgBTqJf9c&#xa;n05PTsEUoNvKvqvy4uJ4pDAdBgNVHQ4EFgQUeei5Pq8kE99gEQEUcmT/QJx7Abkw&#xa;DgYDVR0PAQH/BAQDAgWgMAwGA1UdEwEB/wQCMAAwHQYDVR0lBBYwFAYIKwYBBQUH&#xa;AwEGCCsGAQUFBwMCMEkGA1UdIARCMEAwNAYLKwYBBAGyMQECAgQwJTAjBggrBgEF&#xa;BQcCARYXaHR0cHM6Ly9zZWN0aWdvLmNvbS9DUFMwCAYGZ4EMAQICMEkGA1UdHwRC&#xa;MEAwPqA8oDqGOGh0dHA6Ly9jcmwubmV0c29sc3NsLmNvbS9OZXR3b3JrU29sdXRp&#xa;b25zUlNBT1ZTU0xDQTMuY3JsMHsGCCsGAQUFBwEBBG8wbTBEBggrBgEFBQcwAoY4&#xa;aHR0cDovL2NydC5uZXRzb2xzc2wuY29tL05ldHdvcmtTb2x1dGlvbnNSU0FPVlNT&#xa;TENBMy5jcnQwJQYIKwYBBQUHMAGGGWh0dHA6Ly9vY3NwLm5ldHNvbHNzbC5jb20w&#xa;KQYDVR0RBCIwIIIPKi5ndXRlbmJlcmcub3Jngg1ndXRlbmJlcmcub3JnMIIBfgYK&#xa;KwYBBAHWeQIEAgSCAW4EggFqAWgAdwDd3Mo0ldfhFgXnlTL6x5/4PRxQ39sAOhQS&#xa;dgosrLvIKgAAAZYalRnUAAAEAwBIMEYCIQDFYOKnDZr2v/pKij/E4sALsQ/1zTfP&#xa;JyGh/A3Ri0yC1gIhAMkRNe7TrczfFgXAyvdR/sv8o+2dt5kIIJYcLCEVDFMAAHUA&#xa;DeHyMCvTDcFAYhIJ6lUu/Ed0fLHX6TDvDkIetH5OqjQAAAGWGpUZnQAABAMARjBE&#xa;AiBMaUvFw53HXQytU+54YvYyIbN9ecrTjpCh+FrF1Dr77QIgFtjR3w26BrOyIMcH&#xa;2K3OX3/XVAUgIx7f9Ej7uLbrvRYAdgAS8U40vVNyTIQGGcOPP3oT+Oe1YoeInG0w&#xa;BYTr5YYmOgAAAZYalR1oAAAEAwBHMEUCIBFmBQ5hvKmGGDvRHtQqEPH+Uq/I02Vg&#xa;4E7M2ExTiEvOAiEAlIZN56RoXZs1EODhhmyXglUXzmpE5OjjPzaJtJwNyTIwDQYJ&#xa;KoZIhvcNAQEMBQADggGBADZ+jndtyYnygFcguI7APLE+BNlMTg2pStKbNKj4Mwr7&#xa;3eEaDRcP1uqbs7UDd6lUizYlnYN/ny+hIixkr9R6QOWdwC62lqWjgxslMLdp+PXO&#xa;zIa7aFivAVWtQtjBC3RHKRnKKIMfFje6Tz/NNT3Ddo3YF5DIM/8y37RlLZAj6I2b&#xa;HnneUfjHq5x+vt76UDcGXfdG0v3sFVPXQUH77AStsPV2MLLNnWgkQm826Zu8zVwU&#xa;r2s+zc3uvSnrVU4ippF3jRP7uMiFYSRKg8yZtC6ahj4RxBQpLH1ZfdjR7XS37ynW&#xa;Ze/Po69uU13r7xEVLk3VSRft5bGZbYor2BfR/vy7GR2ZnOKnXRYyuXaxoNAWe0Py&#xa;CJNWlLTfoT+CZ4jQU6M0YKAlFybEB/99GgaDvLUomVR/5LqN+7Id9NUF80R7akFm&#xa;GGV+ZmJOOkFnZ66BKDxgSbVEoXIca1cq4X0wZOHaezroWgAEM6FvJc3pQ7WH+k9A&#xa;RKEOvLPKfrXLo/DI/rlpYg==&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="sslv2-drown" output="&#xa;"></script></port>
+<port protocol="tcp" portid="873"><state state="closed" reason="reset" reason_ttl="39"/><service name="rsync" method="table" conf="3"/></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="80"/>
+<portused state="closed" proto="tcp" portid="20"/>
+<osfingerprint fingerprint="SCAN(V=7.80%E=4%D=6/7%OT=80%CT=20%CU=%PV=N%DS=7%DC=T%G=N%TM=68439514%P=i686-pc-windows-windows)&#xa;SEQ(SP=106%GCD=1%ISR=10F%TI=Z%CI=RI%TS=A)&#xa;OPS(O1=M564ST11NW7%O2=M564ST11NW7%O3=M564NNT11NW7%O4=M564ST11NW7%O5=M564ST11NW7%O6=M564ST11)&#xa;WIN(W1=FE88%W2=FE88%W3=FE88%W4=FE88%W5=FE88%W6=FE88)&#xa;ECN(R=Y%DF=Y%TG=40%W=FAF0%O=M564NNSNW7%CC=Y%Q=)&#xa;T1(R=Y%DF=Y%TG=40%S=O%A=S+%F=AS%RD=0%Q=)&#xa;T2(R=N)&#xa;T3(R=N)&#xa;T4(R=Y%DF=N%TG=FF%W=400%S=A%A=S%F=AR%O=%RD=0%Q=)&#xa;T5(R=Y%DF=Y%TG=40%W=0%S=O%A=S+%F=AR%O=%RD=0%Q=)&#xa;T6(R=Y%DF=N%TG=FF%W=8000%S=A%A=S%F=AR%O=%RD=0%Q=)&#xa;T7(R=N)&#xa;U1(R=N)&#xa;IE(R=N)&#xa;"/>
+</os>
+<uptime seconds="494411" lastboot="Sun Jun 01 09:05:29 2025"/>
+<distance value="7"/>
+<tcpsequence index="263" difficulty="Good luck!" values="F67075DE,7912E705,E142B17F,625AE562,76F0DB89,26E15B00"/>
+<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+<tcptssequence class="other" values="9816F091,9816F191,9816F18D,9816F18D,9816EB44,9816F28D"/>
+<trace port="80" proto="tcp">
+<hop ttl="1" ipaddr="192.168.43.1" rtt="19.00"/>
+<hop ttl="3" ipaddr="10.170.129.161" rtt="132.00"/>
+<hop ttl="6" ipaddr="10.202.1.154" rtt="49.00"/>
+<hop ttl="7" ipaddr="152.19.134.47" rtt="56.00" host="gutenberg.ibiblio.org"/>
+</trace>
+<times srtt="148506" rttvar="82440" to="478266"/>
+</host>
+<taskbegin task="NSE" time="1749259540"/>
+<taskend task="NSE" time="1749259540"/>
+<taskbegin task="NSE" time="1749259540"/>
+<taskend task="NSE" time="1749259540"/>
+<taskbegin task="NSE" time="1749259540"/>
+<taskend task="NSE" time="1749259540"/>
+<runstats><finished time="1749259540" timestr="Sat Jun 07 02:25:40 2025" elapsed="349.82" summary="Nmap done at Sat Jun 07 02:25:40 2025; 1 IP address (1 host up) scanned in 349.82 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

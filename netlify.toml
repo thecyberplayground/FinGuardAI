@@ -3,18 +3,21 @@
   publish = ".next"
 
 [build.environment]
-  NODE_VERSION = "16"
-  NPM_VERSION = "8"
+  NODE_VERSION = "18"
+  NPM_FLAGS = "--legacy-peer-deps"
 
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+# Proxy API requests to backend when deployed
 [[redirects]]
   from = "/api/*"
-  to = "/.netlify/functions/api/:splat"
+  to = "https://finguard-api.herokuapp.com/:splat"
   status = 200
+  force = true
 
+# SPA fallback
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
-
-[functions]
-  directory = "functions"

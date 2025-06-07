@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///C:/Program Files (x86)/Nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Tue Jun 03 13:29:56 2025 as: nmap -oX &quot;C:\\Users\\CYBER\\Downloads\\finguardai-admin (3)\\reports\\104_21_92_181\\104_21_92_181_20250603_132941_vulns.xml&quot; -p 8843,6379,9443,21,8080-8090,22,8443,25,53,5432,1-1000,1521,9042,27017,3306,1433,23 -T3 -sV -sC -&#45;script vuln,auth,default,discovery,version,http-headers,http-methods,ssl-cert,mysql-empty-password,ms-sql-info,mongodb-info,redis-info 104.21.92.181 -->
+<nmaprun scanner="nmap" args="nmap -oX &quot;C:\\Users\\CYBER\\Downloads\\finguardai-admin (3)\\reports\\104_21_92_181\\104_21_92_181_20250603_132941_vulns.xml&quot; -p 8843,6379,9443,21,8080-8090,22,8443,25,53,5432,1-1000,1521,9042,27017,3306,1433,23 -T3 -sV -sC -&#45;script vuln,auth,default,discovery,version,http-headers,http-methods,ssl-cert,mysql-empty-password,ms-sql-info,mongodb-info,redis-info 104.21.92.181" start="1748953796" startstr="Tue Jun 03 13:29:56 2025" version="7.80" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="1021" services="1-1000,1433,1521,3306,5432,6379,8080-8090,8443,8843,9042,9443,27017"/>
