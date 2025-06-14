@@ -11,7 +11,8 @@
     }
   ],
   "env": {
-    "NEXT_PUBLIC_API_URL": "https://finguardai.onrender.com"
+    "NEXT_PUBLIC_API_URL": "https://finguardai.onrender.com",
+    "BACKEND_URL": "finguardai.onrender.com"
   },
   "github": {
     "enabled": true,
