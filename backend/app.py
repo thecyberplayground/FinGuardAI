@@ -6,8 +6,8 @@ import sys
 from flask import Flask, jsonify, make_response
 from flask_cors import CORS
 from flask_socketio import SocketIO, emit
-import eventlet
-from eventlet import greenthread
+# Removed eventlet due to compatibility issues with Python 3.13
+import time
 import shlex
 import sqlite3
 import re
@@ -86,7 +86,8 @@ except ImportError as e:
 
 app = Flask(__name__)
 CORS(app)
-socketio = SocketIO(app, cors_allowed_origins="*", async_mode='eventlet')
+# Changed async_mode from 'eventlet' to 'threading' for compatibility with Python 3.13
+socketio = SocketIO(app, cors_allowed_origins="*", async_mode='threading')
 
 # Import the scan bridge for integrated scanning
 try:
@@ -1344,16 +1345,18 @@ def start_passive_monitoring(data):
                 print(f"[MONITOR] Stopping monitor thread for {host}", flush=True)
                 break
 
-            # Use eventlet's sleep
-            greenthread.sleep(10)
+            # Use standard time.sleep instead of eventlet's sleep
+            time.sleep(10)
 
         db.close()
         print(f"[MONITOR] Monitor thread exited for {host}", flush=True)
 
-    # Use eventlet's green thread
+    # Use standard Python threading instead of eventlet greenthread
     monitoring_threads[sid] = {'active': True}
-    t = greenthread.spawn(monitor)
-    t.link(lambda gt: monitoring_threads.pop(sid, None))  # Clean up when thread ends
+    t = threading.Thread(target=monitor)
+    t.daemon = True
+    t.start()
+    # Note: Cleanup will happen in the monitor function itself
 
 @socketio.on('stop_passive_monitoring')
 def stop_passive_monitoring():
